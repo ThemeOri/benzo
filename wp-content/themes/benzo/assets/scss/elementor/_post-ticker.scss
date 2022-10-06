@@ -1,0 +1,73 @@
+/** ===== Post Ticker ===== **/
+.benzo-post-ticker {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    justify-content: space-between;
+
+    .single-post-ticker {
+        position: relative;
+        padding-right: 20px;
+        transition: 0.3s;
+
+        .post-ticker-inner {
+            display: flex;
+            align-items: center;
+        }
+
+        a {
+            color: $color-body;
+            font-size: 16px;
+            font-weight: 400;
+            transition: 0.3s;
+            display: block;
+
+            &:hover {
+                color: $color-primary;
+                text-decoration: underline;
+            }
+        }
+
+        .dots {
+            content: "";
+            height: 8px;
+            width: 8px;
+            flex: 0 0 auto;
+            background-color: $color-body;
+            border-radius: 50%;
+            transition: 0.3s;
+            margin-right: 20px;
+        }
+
+        &.slick-current  {
+            .dots {
+                display: none;
+            }
+        }
+    }
+
+    .post-ticker-slider {
+        flex: 0 0 auto;
+        max-width: calc( 100% - 100px );
+    }
+
+    .post-ticker-arrows {
+        display: flex;
+        align-items: center;
+    }
+
+    .slick-arrow {
+        color: $color-body;
+        width: 35px;
+        height: 16px;
+        line-height: 1;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        &.next {
+            border-left: 1px solid #ff8378;
+        }
+    }
+}

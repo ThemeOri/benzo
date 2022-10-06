@@ -1,0 +1,55 @@
+/** ===== Contact Information ===== **/
+.benzo-contact-info {
+    .single-contact-info {
+        padding: 30px;
+        display: flex;
+        transition: 0.3s;
+        background: $color-light;
+        border: 1px solid transparent;
+        line-height: 1;
+
+        .icon {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-secondary;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 20px;
+            color: $color-primary;
+
+            img {
+                max-width: 30px;
+            }
+        }
+
+        .info-title {
+            font-size: 20px;
+            margin: 0 0 5px;
+            line-height: 1.3;
+            transition: 0.3s;
+        }
+
+        .info-content {
+            color: $color-body;
+            line-height: 1.4;
+            margin: 0;
+            transition: 0.3s;
+
+            a {
+                color: inherit;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            background-color: $color-white;
+            border-color: $color-secondary;
+        }
+    }
+}

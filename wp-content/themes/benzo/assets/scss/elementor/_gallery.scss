@@ -1,0 +1,75 @@
+/** ===== Image Gallery ===== **/
+.benzo-image-gallery {
+    overflow: hidden;
+
+    .row {
+        margin: -15px;
+
+        & > [class*=col-] {
+            padding: 15px;
+        }
+    }
+
+    .single-image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1);
+            transition: 0.3s;
+        }
+
+        .image-popup {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: $color-primary;
+            background-color: $color-white;
+            border-radius: 50%;
+            font-size: 25px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        &::before {
+            position: absolute;
+            z-index: 1;
+            content: '';
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: $color-secondary;
+            opacity: 0;
+            transition: 0.3s
+        }
+
+        &:hover {
+            &::before {
+                opacity: 0.65;
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+
+            .image-popup {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}

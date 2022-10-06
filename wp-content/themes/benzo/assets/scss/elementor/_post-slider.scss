@@ -1,0 +1,129 @@
+/** ===== Post Slider ===== **/
+.benzo-post-slider {
+    position: relative;
+
+    .post-slider-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .slick-list {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.post-slider-arrows {
+    position: absolute;
+    z-index: 2;
+    left: 30px;
+    top: 30px;
+    display: flex;
+
+    .slick-arrow {
+        padding: 0;
+        border: none;
+        width: 50px;
+        height: 35px;
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-secondary;
+        font-size: 18px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background-color: #f0f0f0;
+    }
+
+    &.arrows-right-top {
+        left: auto;
+        right: 30px;
+    }
+
+    &.arrows-left-bottom {
+        top: auto;
+        bottom: 30px;
+    }
+
+    &.arrows-right-bottom {
+        left: auto;
+        right: 30px;
+        top: auto;
+        bottom: 30px;
+    }
+}
+
+.post-slider-dots {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    z-index: 2;
+
+    .slick-dots {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+            transition: 0.3s;
+            border-radius: 50%;
+            background-color: $color-secondary;
+            cursor: pointer;
+
+            &.slick-active {
+                background-color: $color-primary;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    &.dots-left-top {
+        left: 40px;
+        right: auto;
+    }
+
+    &.dots-center-top {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+    }
+
+    &.dots-left-bottom {
+        top: auto;
+        bottom: 40px;
+        right: auto;
+        left: 40px;
+    }
+
+    &.dots-right-bottom {
+        left: auto;
+        right: 40px;
+        top: auto;
+        bottom: 40px;
+    }
+
+    &.dots-center-bottom {
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 20px;
+    }
+}

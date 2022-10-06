@@ -1,0 +1,40 @@
+/** ===== Pagination ===== **/
+.benzo-pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 15px 0 0;
+    margin: 0;
+
+    .page-numbers {
+        height: 60px;
+        width: 60px;
+        margin: 5px 5px 0;
+        padding: 0;
+        color: $color-secondary;
+        font: {
+            family: $font-secondary;
+            size: 18px;
+        }
+        line-height: 1;
+        border: 1px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+
+        @include respond-below(c1400) {
+            width: 45px;
+            height: 45px;
+            font-size: 15px;
+        }
+
+        &.current,
+        &:hover {
+            color: $color-white;
+            background-color: $color-primary;
+            border-color: $color-primary;
+        }
+    }
+}

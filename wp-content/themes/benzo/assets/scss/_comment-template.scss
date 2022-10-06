@@ -1,0 +1,255 @@
+/** ===== Comment Template ===== **/
+.comments-area {
+    margin: 40px 0 0;
+    padding: 40px 0 0;
+    border-top: 1px solid #f1f1f1;
+
+    .comments-title,
+    .comment-reply-title {
+        font-size: 36px;
+        margin: 0 0 30px;
+        line-height: 1.2;
+
+        @include respond-below(lg) {
+            font-size: 32px;
+        }
+
+        @include respond-below(md) {
+            font-size: 28px;
+        }
+    }
+
+    .comment-reply-title {
+        margin: 0 0 10px;
+    }
+
+    .comment-respond {
+        form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .comment-notes {
+            order: -3;
+            display: block;
+            margin-bottom: 30px;
+
+            @include respond-below(md) {
+                font-size: 15px;
+            }
+        }
+
+        .comment-form-comment,
+        .comment-form-url,
+        .comment-form-cookies-consent,
+        .comment-form-author,
+        .comment-form-email {
+            margin-bottom: 30px;
+
+            @include respond-below(md) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .comment-form-comment,
+        .comment-form-url,
+        .comment-form-cookies-consent {
+            flex: 0 0 100%;
+        }
+
+        .comment-form-author,
+        .comment-form-email {
+            flex: 0 0 50%;
+            order: -2;
+
+            @include respond-below(md) {
+                flex: 0 0 100%;
+            }
+        }
+
+        .comment-form-url {
+            order: -1;
+        }
+
+        .comment-form-author {
+            padding-right: 15px;
+
+            @include respond-below(md) {
+                padding: 0;
+            }
+        }
+
+        .comment-form-email {
+            padding-left: 15px;
+
+            @include respond-below(md) {
+                padding: 0;
+            }
+        }
+
+        .comment-form-cookies-consent {
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.4;
+
+            #wp-comment-cookies-consent {
+                flex: 0 0 auto;
+                margin-right: 10px;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .form-submit {
+            margin: 0;
+        }
+
+        .logged-in-as {
+            font-weight: 600;
+            flex: 0 0 100%;
+            margin: 0 0 20px;
+
+            a {
+                color: $color-secondary;
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+
+            .required-field-message {
+                display: none;
+            }
+        }
+
+    }
+
+    .comment-list {
+        margin: 0 0 40px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            &:not(:last-child) {
+                margin: 0 0 40px;
+            }
+        }
+
+        .children {
+            margin: 0 0 0 40px;
+            padding: 0;
+            list-style: none;
+
+            li {
+                &:first-child {
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        .comment-body {
+            display: flex;
+
+            @include respond-below(md) {
+                flex-direction: column;
+            }
+
+            .comment-avatar {
+                flex: 0 0 80px;
+                margin-right: 25px;
+
+                @include respond-below(md) {
+                    margin-right: 0;
+                    margin-bottom: 25px;
+                }
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .comment-content {
+                @include respond-below(c480) {
+                    font-size: 15px;
+                }
+
+                p:last-of-type {
+                    margin: 0;
+                }
+
+                img {
+                    margin: 15px 0;
+                }
+
+                li {
+                    margin-bottom: 10px;
+                }
+
+                .author-info {
+                    line-height: 1;
+                }
+
+                .name {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    letter-spacing: -0.03em;
+
+                    @include respond-below(c480) {
+                        font-size: 18px;
+                    }
+                }
+
+                .date {
+                    line-height: 1;
+                    font: {
+                        size: 15px;
+                        weight: 500;
+                    }
+                    margin-bottom: 15px;
+
+                    @include respond-below(c480) {
+                        font-size: 14px;
+                    }
+                }
+
+                .comment-reply-wrapper {
+                    display: block;
+                }
+
+                .comment-reply-link {
+                    margin-top: 15px;
+                    color: $color-secondary;
+                    font: {
+                        family: $font-secondary;
+                        size: 15px;
+                        weight: 500;
+                    }
+                    line-height: 1.2;
+                    i {
+                        font-size: 13px;
+                        margin-left: 8px;
+                    }
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+
+                    @include respond-below(c480) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .comment-respond {
+            margin-top: 50px;
+        }
+    }
+
+    .no-comments {
+        margin: 40px 0 0;
+        font-weight: 700;
+        color: $color-secondary;
+    }
+}

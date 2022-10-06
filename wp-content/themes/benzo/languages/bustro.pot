@@ -1,0 +1,879 @@
+# Copyright (C) 2022 Webtend
+# This file is distributed under the GNU General Public License version 3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Benzo 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/benzo\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-09T12:40:15+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: benzo\n"
+
+#. Theme Name of the theme
+msgid "Benzo"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://demo.webtend.net/wp/benzo"
+msgstr ""
+
+#. Description of the theme
+msgid "A Multipurpose, Newspaper, Blog WordPress Theme"
+msgstr ""
+
+#. Author of the theme
+msgid "Webtend"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.templatemonster.com/authors/webtend/"
+msgstr ""
+
+#: 404.php:14
+msgid "The page you are looking for doesn&rsquo;t exist. It may have been moved or removed altogether. Please try searching for some other page, or return to the website&rsquo;s homepage to find what you&rsquo;re looking for."
+msgstr ""
+
+#: 404.php:15
+msgid "Return To Home"
+msgstr ""
+
+#: 404.php:23
+msgid "404"
+msgstr ""
+
+#: comments.php:32
+msgid "Comments (0)"
+msgstr ""
+
+#: comments.php:33
+msgid "Comments (1)"
+msgstr ""
+
+#: comments.php:34
+msgid "Comments (%)"
+msgstr ""
+
+#: comments.php:55
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:71
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:73
+msgid "Enter Your Name *"
+msgstr ""
+
+#: comments.php:74
+msgid "Enter Your Email *"
+msgstr ""
+
+#: comments.php:75
+msgid "Enter Website URL"
+msgstr ""
+
+#: comments.php:77
+msgid "Type Your Comment"
+msgstr ""
+
+#: comments.php:79
+msgid "Post Comment"
+msgstr ""
+
+#: includes/admin/class-admin-panel.php:45
+#: includes/admin/class-admin-panel.php:46
+msgid "Welcome"
+msgstr ""
+
+#: includes/admin/class-admin-panel.php:53
+#: includes/admin/class-admin-panel.php:54
+msgid "Requirements"
+msgstr ""
+
+#: includes/admin/class-admin-panel.php:62
+#: includes/admin/class-admin-panel.php:63
+msgid "Required Plugins"
+msgstr ""
+
+#: includes/admin/class-admin-panel.php:71
+#: includes/admin/class-admin-panel.php:72
+msgid "Help Center"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:21
+msgid "Need Help? Webtend Help Center Here"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:25
+msgid "Please read a <a target=\"_blank\" href=\"https://www.templatemonster.com/support-policy/\">Support Policy</a> before submitting a ticket and make sure that your question related to our product issues."
+msgstr ""
+
+#: includes/admin/templates/help-center.php:27
+msgid "If you did not find an answer to your question, feel free to contact us."
+msgstr ""
+
+#: includes/admin/templates/help-center.php:37
+msgid "Documentation"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:40
+msgid "Before submitting a ticket, please read the documentation. Probably, your issue already described."
+msgstr ""
+
+#: includes/admin/templates/help-center.php:43
+msgid "Visit Documentation"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:53
+msgid "Video Tutorials"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:56
+msgid "There you can watch tutorial for main issues. How to import demo content? etc."
+msgstr ""
+
+#: includes/admin/templates/help-center.php:59
+msgid "Watch Tutorials"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:69
+msgid "Support forum"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:72
+msgid "If you did not find an answer to your question, submit a ticket with well describe your issue."
+msgstr ""
+
+#: includes/admin/templates/help-center.php:75
+msgid "Create a ticket"
+msgstr ""
+
+#: includes/admin/templates/help-center.php:81
+msgid "Do You have some other questions? Need Customization? Pre-purchase questions? Ask it <a  target=\"_blank\"  href=\"mailto:12hasibur@gmail.com\">there!</a>"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:23
+msgid "Theme Config"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:28
+msgid "Theme Name"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:32
+#: includes/admin/templates/requirements.php:220
+#: includes/library/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:36
+msgid "Author"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:40
+msgid "Author URL"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:53
+msgid "Server Settings"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:58
+msgid "PHP Version"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:65
+msgid "- We recommend a minimum PHP version of "
+msgstr ""
+
+#: includes/admin/templates/requirements.php:77
+msgid "PHP Post Max Size"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:82
+msgid "You cannot upload images, themes and plugins that have a size bigger than this value: "
+msgstr ""
+
+#: includes/admin/templates/requirements.php:87
+msgid "To know how you to change this please check this guide"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:93
+msgid "PHP Max Execution Time Limit"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:100
+#: includes/admin/templates/requirements.php:123
+#: includes/admin/templates/requirements.php:146
+msgid "- We recommend setting max execution time to at least "
+msgstr ""
+
+#: includes/admin/templates/requirements.php:105
+#: includes/admin/templates/requirements.php:128
+#: includes/admin/templates/requirements.php:151
+#: includes/admin/templates/requirements.php:177
+#: includes/admin/templates/requirements.php:235
+msgid "To see how you can change this please check this guide"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:116
+msgid "PHP Max Input Time"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:139
+msgid "PHP Max Input Vars"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:162
+msgid "MySql Version"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:166
+msgid "Max upload size"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:173
+msgid "- We recommend minimum value: 128 MB."
+msgstr ""
+
+#: includes/admin/templates/requirements.php:188
+msgid "SimpleXML"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:192
+msgid "To ensure successful installation of demo content The SimpleXML extension should be installed on your web server. Please contact your hosting provider to install and activate SimpleXML extension."
+msgstr ""
+
+#: includes/admin/templates/requirements.php:196
+msgid "Enabled"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:207
+msgid "WordPress Settings"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:212
+msgid "Home URL"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:216
+msgid "Site Url"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:224
+msgid "Memory Limit"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:231
+msgid "- .We recommend setting memory to be at least 128MB"
+msgstr ""
+
+#: includes/admin/templates/requirements.php:252
+msgid "WP_DEBUG is enabled."
+msgstr ""
+
+#: includes/admin/templates/requirements.php:254
+msgid " How to disable WP_DEBUG mode."
+msgstr ""
+
+#: includes/admin/templates/requirements.php:257
+msgid "WP_DEBUG is disabled."
+msgstr ""
+
+#: includes/admin/templates/welcome.php:21
+msgid "Welcome to"
+msgstr ""
+
+#: includes/admin/templates/welcome.php:25
+msgid "Version - "
+msgstr ""
+
+#: includes/admin/templates/welcome.php:30
+msgid "%s is already installed and ready to use! Let's build something impressive."
+msgstr ""
+
+#: includes/admin/templates/welcome.php:44
+msgid "Just complete the steps below and you will be able to use all functionalities of %s theme by <a href=\"%s\" target=\"_blank\">WebTend</a>"
+msgstr ""
+
+#: includes/admin/templates/welcome.php:53
+msgid "Step 1"
+msgstr ""
+
+#: includes/admin/templates/welcome.php:57
+msgid "Check <a href=\"%s\">requirements</a> to avoid errors with your WordPress."
+msgstr ""
+
+#: includes/admin/templates/welcome.php:64
+msgid "Step 2"
+msgstr ""
+
+#: includes/admin/templates/welcome.php:66
+msgid "Install Required and recommended plugins."
+msgstr ""
+
+#: includes/admin/templates/welcome.php:70
+msgid "Step 3"
+msgstr ""
+
+#: includes/admin/templates/welcome.php:72
+msgid "Import demo content"
+msgstr ""
+
+#: includes/classes/class-assets.php:42
+msgctxt "Work Sans"
+msgid "on"
+msgstr ""
+
+#: includes/classes/class-assets.php:48
+msgctxt "Epilogue"
+msgid "on"
+msgstr ""
+
+#: includes/classes/class-comment-walker.php:69
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/classes/class-comment-walker.php:79
+msgid "Reply Comments"
+msgstr ""
+
+#: includes/classes/class-post-helper.php:131
+msgid "by"
+msgstr ""
+
+#: includes/classes/class-post-helper.php:165
+msgid "Previous Post"
+msgstr ""
+
+#: includes/classes/class-post-helper.php:183
+msgid "Next Post"
+msgstr ""
+
+#: includes/classes/class-post-helper.php:253
+msgid "Load More"
+msgstr ""
+
+#: includes/classes/class-setup.php:135
+msgid "Primary Sidebar"
+msgstr ""
+
+#: includes/classes/class-setup.php:137
+#: includes/classes/class-setup.php:149
+msgid "Add widgets here."
+msgstr ""
+
+#: includes/classes/class-setup.php:147
+msgid "Footer Widgets"
+msgstr ""
+
+#: includes/classes/class-setup.php:165
+msgid "Primary Menu"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: includes/library/class-tgm-plugin-activation.php:334
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: includes/library/class-tgm-plugin-activation.php:340
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: includes/library/class-tgm-plugin-activation.php:346
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: includes/library/class-tgm-plugin-activation.php:352
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: includes/library/class-tgm-plugin-activation.php:358
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: includes/library/class-tgm-plugin-activation.php:364
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/library/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/library/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/library/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/library/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:386
+#: includes/library/class-tgm-plugin-activation.php:827
+#: includes/library/class-tgm-plugin-activation.php:2533
+#: includes/library/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:387
+#: includes/library/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:388
+#: includes/library/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:390
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:392
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: includes/library/class-tgm-plugin-activation.php:394
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:396
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:934
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:934
+#: includes/library/class-tgm-plugin-activation.php:937
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:937
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:1121
+#: includes/library/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: includes/library/class-tgm-plugin-activation.php:1982
+msgid "TGMPA v%s"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: includes/library/class-tgm-plugin-activation.php:2342
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: includes/library/class-tgm-plugin-activation.php:2388
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: includes/library/class-tgm-plugin-activation.php:2392
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: includes/library/class-tgm-plugin-activation.php:2396
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: includes/library/class-tgm-plugin-activation.php:2400
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/library/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: includes/library/class-tgm-plugin-activation.php:2603
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: includes/library/class-tgm-plugin-activation.php:2608
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: includes/library/class-tgm-plugin-activation.php:2614
+msgid "Activate %2$s"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: includes/library/class-tgm-plugin-activation.php:3498
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: includes/library/class-tgm-plugin-activation.php:3501
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:3503
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:3507
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:3509
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:3509
+#: includes/library/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:3509
+#: includes/library/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: includes/library/class-tgm-plugin-activation.php:3512
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:3515
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/library/class-tgm-plugin-activation.php:3517
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: includes/library/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: includes/library/class-tgm-plugin-activation.php:3520
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/library/required-plugin.php:16
+msgid "Elementor Website Builder"
+msgstr ""
+
+#: includes/library/required-plugin.php:22
+msgid "Benzo Toolkit"
+msgstr ""
+
+#: includes/library/required-plugin.php:29
+msgid "Contact Form 7"
+msgstr ""
+
+#: includes/library/required-plugin.php:34
+msgid "Breadcrumb NavXT"
+msgstr ""
+
+#: includes/library/required-plugin.php:39
+msgid "MC4WP: Mailchimp for WordPress"
+msgstr ""
+
+#: includes/library/required-plugin.php:44
+msgid "One Click Demo Import"
+msgstr ""
+
+#: search.php:16
+msgid "Search Here:"
+msgstr ""
+
+#: search.php:17
+msgid "If you are not happy with the results below please do another search"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Enter your keyword"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "label"
+msgid "Enter your keyword"
+msgstr ""
+
+#: template-parts/contents/content-none.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/contents/content-none.php:17
+msgid "Ready to publish your first post?."
+msgstr ""
+
+#: template-parts/contents/content-none.php:19
+msgid "Get started here"
+msgstr ""
+
+#: template-parts/contents/content-none.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/contents/content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/contents/content-page.php:16
+#: template-parts/contents/content-single.php:37
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/contents/content-post-grid.php:32
+msgid "Read More"
+msgstr ""
+
+#: template-parts/contents/content.php:17
+msgid "Continue Reading"
+msgstr ""
+
+#: template-parts/footer/footer-default.php:14
+msgid "Copyright © 2022. All rights reserved."
+msgstr ""
+
+#: template-parts/page-title.php:44
+msgid "News Details"
+msgstr ""
+
+#: template-parts/page-title.php:60
+msgid "Latest News"
+msgstr ""
+
+#: template-parts/page-title.php:62
+msgid "Search Results for: "
+msgstr ""
+
+#: template-parts/page-title.php:66
+msgid "Author Details"
+msgstr ""
+
+#: template-parts/preloader.php:20
+msgid "Preloader"
+msgstr ""

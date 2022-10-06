@@ -1,0 +1,38 @@
+/** ===== Button Style ===== **/
+.load-more-btn-wrap {
+    text-align: center;
+    margin-top: 50px;
+
+    .load-more-btn {
+        position: relative;
+        padding: 17px 35px;
+        font: {
+            family: $font-secondary;
+            size: 14px;
+            weight: 600;
+        }
+        line-height: 1;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        color: $color-white;
+        border: 1px solid $color-primary;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font: {
+                size: 90%;
+                weight: 400;
+            }
+            margin-left: 6px;
+            line-height: 1;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: $color-secondary;
+            border-color: $color-secondary;
+        }
+    }
+}

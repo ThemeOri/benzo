@@ -1,0 +1,87 @@
+/** ===== Error 404 ===== **/
+.error-content-area {
+    padding: 100px 15px;
+
+    .row {
+        justify-content: center;
+    }
+}
+
+.error-content {
+    text-align: center;
+
+    .error-title {
+        font-size: 300px;
+        color: #dddddd;
+        line-height: 1;
+    }
+
+    .error-note {
+        color: $color-secondary;
+
+        font: {
+            size: 18px;
+            family: $font-secondary;
+        }
+
+        line-height: 28px;
+    }
+
+    .error-btn {
+        margin-top: 30px;
+        height: auto;
+        padding: 17px 45px;
+
+        font: {
+            family: $font-secondary;
+            size: 14px;
+            weight: 600;
+        }
+
+        line-height: 1;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        color: $color-white;
+        border: 1px solid $color-primary;
+
+        i {
+            margin-left: 5px;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: $color-secondary;
+            border-color: $color-secondary;
+        }
+    }
+}
+
+/** ===== Not Found ===== **/
+.not-found-wrapper {
+    .not-found-title {
+        font-size: 28px;
+        margin: 0 0 15px;
+    }
+
+    .search-form {
+        position: relative;
+
+        input {
+            padding: 0 55px 0 30px;
+        }
+
+        button {
+            position: absolute;
+            right: 20px;
+            top: 52%;
+            transform: translateY(-50%);
+            background: transparent;
+            color: $color-secondary;
+            border: none;
+            font-size: 15px;
+            line-height: 1;
+            width: auto;
+            padding: 0;
+        }
+    }
+}

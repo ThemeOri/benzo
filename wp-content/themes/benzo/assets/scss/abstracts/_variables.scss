@@ -1,0 +1,27 @@
+// Font Family
+$font-primary: var(--font-primary);
+$font-secondary: var(--font-secondary);
+
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-white: var(--color-white);
+$color-body: var(--color-body);
+$color-border: var(--color-border);
+$color-light: var(--color-light);
+
+// Breakpoints.
+$breakpoints: (
+    md: 768px,
+    lg: 1025px,
+    c480: 480px,
+    c1400: 1400px,
+    c1200: 1200px,
+);
+
+$grid-breakpoints: (
+    sm: 0,
+    md: 768px,
+    lg: 1025px,
+);
+
+$columns: 12;

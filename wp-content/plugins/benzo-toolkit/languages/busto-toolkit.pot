@@ -1,0 +1,3862 @@
+# Copyright (C) 2022 Webtend
+# This file is distributed under the GPL2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Benzo Toolkit 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/benzo-toolkit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-09T16:11:30+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: benzo-toolkit\n"
+
+#. Plugin Name of the plugin
+#: benzo-toolkit.php:202
+#: benzo-toolkit.php:227
+msgid "Benzo Toolkit"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "#"
+msgstr ""
+
+#. Description of the plugin
+msgid "A Helper plugin for all benzo Wordpress Themes"
+msgstr ""
+
+#. Author of the plugin
+msgid "Webtend"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://webtend.net/"
+msgstr ""
+
+#. translators: 1: Plugin name 2: PHP 3: Required PHP version
+#: benzo-toolkit.php:201
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: benzo-toolkit.php:203
+msgid "PHP"
+msgstr ""
+
+#: benzo-toolkit.php:226
+msgid "\"%1$s\" plugin requires Benzo theme to be installed and activated"
+msgstr ""
+
+#: includes/demo-config/demo-config.php:31
+msgid "Main Demo"
+msgstr ""
+
+#: includes/demo-config/demo-config.php:35
+msgid "Works best on a new install of WordPress. Before you begin, make sure all the required plugins are install and activated. After you import this demo, you need to setup menu and front page. Read documentation for more information."
+msgstr ""
+
+#: includes/demo-config/demo-config.php:73
+msgid "Elementor Website Builder"
+msgstr ""
+
+#: includes/demo-config/demo-config.php:87
+msgid "Contact Form 7"
+msgstr ""
+
+#: includes/demo-config/demo-config.php:92
+msgid "Breadcrumb NavXT"
+msgstr ""
+
+#: includes/demo-config/demo-config.php:97
+msgid "MC4WP: Mailchimp for WordPress"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:24
+msgid "Query"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:31
+msgid "Post count"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:42
+msgid "Order by"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:46
+#: includes/elementor/widgets/benzo-date.php:302
+msgid "Date"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:47
+#: includes/elementor/widgets/benzo-author-boxes.php:334
+#: includes/elementor/widgets/benzo-contact-info.php:110
+#: includes/elementor/widgets/benzo-contact-info.php:297
+#: includes/elementor/widgets/benzo-counter.php:196
+#: includes/elementor/widgets/benzo-counter.php:410
+#: includes/elementor/widgets/benzo-highlight-posts.php:390
+#: includes/elementor/widgets/benzo-highlight-posts.php:501
+#: includes/elementor/widgets/benzo-highlight-posts.php:543
+#: includes/elementor/widgets/benzo-masonry-posts.php:581
+#: includes/elementor/widgets/benzo-post-grid.php:706
+#: includes/elementor/widgets/benzo-post-list.php:394
+#: includes/elementor/widgets/benzo-post-slider.php:653
+#: includes/elementor/widgets/benzo-post-tab.php:871
+#: includes/helper/metaboxes.php:690
+#: includes/helper/theme-options.php:529
+msgid "Title"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:48
+#: includes/elementor/helper/query-builder.php:166
+#: includes/elementor/widgets/benzo-author-boxes.php:138
+#: includes/wp-widgets/benzo-author.php:38
+msgid "Author"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:49
+msgid "Modified"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:50
+msgid "Random"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:51
+msgid "Comments"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:52
+msgid "Menu Order"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:60
+#: includes/elementor/widgets/benzo-author-boxes.php:152
+#: includes/wp-widgets/benzo-author.php:48
+msgid "Order"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:64
+msgid "Descending"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:65
+msgid "Ascending"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:80
+msgid "Filter By Category"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:90
+msgid "Exclude These Categories"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:92
+#: includes/elementor/helper/query-builder.php:123
+#: includes/elementor/helper/query-builder.php:179
+#: includes/elementor/helper/query-builder.php:191
+msgid "On"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:93
+#: includes/elementor/helper/query-builder.php:124
+#: includes/elementor/helper/query-builder.php:180
+#: includes/elementor/helper/query-builder.php:192
+msgid "Off"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:95
+#: includes/elementor/helper/query-builder.php:126
+msgid "Leave empty for all"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:110
+msgid "Filter By Tags Slug"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:121
+msgid "Exclude These Tags"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:140
+msgid "Individual Posts"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:151
+msgid "Exclude These Posts"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:177
+msgid "Exclude Author"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:182
+msgid "Filter by author name"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:189
+msgid "Hide Sticky Post"
+msgstr ""
+
+#: includes/elementor/helper/query-builder.php:269
+msgid " (Parent categories: ("
+msgstr ""
+
+#: includes/elementor/helper/render-templates.php:77
+#: includes/elementor/helper/render-templates.php:128
+#: includes/elementor/widgets/benzo-post-list.php:581
+msgid "By "
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:37
+msgid "Benzo Extra Options"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:44
+msgid "Horizontal Column Alignment"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:47
+#: includes/elementor/widgets/benzo-cf7.php:460
+#: includes/elementor/widgets/benzo-counter.php:323
+#: includes/elementor/widgets/benzo-date.php:265
+#: includes/elementor/widgets/benzo-masonry-posts.php:816
+#: includes/elementor/widgets/benzo-nav-menu.php:152
+#: includes/elementor/widgets/benzo-nav-menu.php:216
+#: includes/elementor/widgets/benzo-offcanvas.php:132
+#: includes/elementor/widgets/benzo-offcanvas.php:155
+#: includes/elementor/widgets/benzo-post-grid.php:942
+#: includes/elementor/widgets/benzo-post-list.php:173
+#: includes/elementor/widgets/benzo-post-tab.php:455
+#: includes/elementor/widgets/benzo-search.php:109
+#: includes/elementor/widgets/benzo-search.php:138
+#: includes/elementor/widgets/benzo-site-logo.php:137
+msgid "Left"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:48
+#: includes/elementor/widgets/benzo-cf7.php:464
+#: includes/elementor/widgets/benzo-counter.php:327
+#: includes/elementor/widgets/benzo-date.php:269
+#: includes/elementor/widgets/benzo-masonry-posts.php:820
+#: includes/elementor/widgets/benzo-nav-menu.php:156
+#: includes/elementor/widgets/benzo-nav-menu.php:220
+#: includes/elementor/widgets/benzo-offcanvas.php:136
+#: includes/elementor/widgets/benzo-post-grid.php:946
+#: includes/elementor/widgets/benzo-post-tab.php:459
+#: includes/elementor/widgets/benzo-search.php:113
+#: includes/elementor/widgets/benzo-site-logo.php:141
+msgid "Center"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:49
+msgid "End"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:70
+msgid "Section Sticky"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:78
+msgid "Enable Sticky"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:81
+msgid "Set sticky options by enable this option."
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:88
+msgid "Offset"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:102
+msgid "Active Background Color"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:116
+msgid "Active Padding"
+msgstr ""
+
+#: includes/elementor/helper/section-settings.php:131
+msgid "Active Box Shadow"
+msgstr ""
+
+#: includes/elementor/init.php:99
+msgid "Benzo Elements"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:36
+msgid "Benzo Author Boxes"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:97
+#: includes/elementor/widgets/benzo-category-boxes.php:96
+#: includes/elementor/widgets/benzo-date.php:97
+#: includes/elementor/widgets/benzo-highlight-posts.php:101
+#: includes/elementor/widgets/benzo-image-gallery.php:114
+#: includes/elementor/widgets/benzo-mailchimp.php:98
+#: includes/elementor/widgets/benzo-masonry-posts.php:100
+#: includes/elementor/widgets/benzo-nav-menu.php:115
+#: includes/elementor/widgets/benzo-offcanvas.php:112
+#: includes/elementor/widgets/benzo-post-grid.php:100
+#: includes/elementor/widgets/benzo-post-list.php:101
+#: includes/elementor/widgets/benzo-post-slider.php:100
+#: includes/elementor/widgets/benzo-post-tab.php:101
+#: includes/elementor/widgets/benzo-post-ticker.php:98
+#: includes/elementor/widgets/benzo-search.php:97
+#: includes/elementor/widgets/benzo-site-logo.php:98
+#: includes/elementor/widgets/benzo-social-followers.php:100
+#: includes/helper/metaboxes.php:51
+#: includes/helper/metaboxes.php:55
+#: includes/helper/theme-options.php:122
+#: includes/helper/theme-options.php:126
+#: includes/helper/theme-options.php:448
+#: includes/helper/theme-options.php:452
+msgid "General"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:104
+#: includes/wp-widgets/benzo-author.php:21
+msgid "User From"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:107
+#: includes/wp-widgets/benzo-author.php:24
+msgid "All"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:108
+msgid "Specific User"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:117
+msgid "Select User"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:131
+#: includes/wp-widgets/benzo-author.php:32
+msgid "Role in"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:136
+#: includes/wp-widgets/benzo-author.php:36
+msgid "Administrator"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:137
+#: includes/helper/metaboxes.php:680
+#: includes/wp-widgets/benzo-author.php:37
+msgid "Editor"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:139
+#: includes/wp-widgets/benzo-author.php:39
+msgid "Contributor"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:140
+#: includes/wp-widgets/benzo-author.php:40
+msgid "Subscriber"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:155
+#: includes/wp-widgets/benzo-author.php:50
+msgid "ASC"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:156
+#: includes/wp-widgets/benzo-author.php:51
+msgid "DESC"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:176
+#: includes/elementor/widgets/benzo-category-boxes.php:212
+#: includes/elementor/widgets/benzo-post-grid.php:339
+#: includes/elementor/widgets/benzo-post-tab.php:359
+msgid "Column"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:185
+#: includes/elementor/widgets/benzo-image-gallery.php:161
+#: includes/elementor/widgets/benzo-post-grid.php:348
+#: includes/elementor/widgets/benzo-post-slider.php:291
+#: includes/elementor/widgets/benzo-post-tab.php:371
+msgid "Desktop"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:188
+#: includes/elementor/widgets/benzo-author-boxes.php:203
+#: includes/elementor/widgets/benzo-author-boxes.php:218
+#: includes/elementor/widgets/benzo-category-boxes.php:215
+#: includes/elementor/widgets/benzo-post-grid.php:351
+#: includes/elementor/widgets/benzo-post-grid.php:366
+#: includes/elementor/widgets/benzo-post-grid.php:381
+#: includes/elementor/widgets/benzo-post-slider.php:294
+#: includes/elementor/widgets/benzo-post-slider.php:309
+#: includes/elementor/widgets/benzo-post-slider.php:324
+#: includes/elementor/widgets/benzo-post-tab.php:374
+#: includes/elementor/widgets/benzo-post-tab.php:392
+#: includes/elementor/widgets/benzo-post-tab.php:410
+msgid "One"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:189
+#: includes/elementor/widgets/benzo-author-boxes.php:204
+#: includes/elementor/widgets/benzo-author-boxes.php:219
+#: includes/elementor/widgets/benzo-category-boxes.php:216
+#: includes/elementor/widgets/benzo-post-grid.php:352
+#: includes/elementor/widgets/benzo-post-grid.php:367
+#: includes/elementor/widgets/benzo-post-grid.php:382
+#: includes/elementor/widgets/benzo-post-slider.php:295
+#: includes/elementor/widgets/benzo-post-slider.php:310
+#: includes/elementor/widgets/benzo-post-slider.php:325
+#: includes/elementor/widgets/benzo-post-tab.php:375
+#: includes/elementor/widgets/benzo-post-tab.php:393
+#: includes/elementor/widgets/benzo-post-tab.php:411
+msgid "Two"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:190
+#: includes/elementor/widgets/benzo-author-boxes.php:205
+#: includes/elementor/widgets/benzo-author-boxes.php:220
+#: includes/elementor/widgets/benzo-category-boxes.php:217
+#: includes/elementor/widgets/benzo-post-grid.php:353
+#: includes/elementor/widgets/benzo-post-grid.php:368
+#: includes/elementor/widgets/benzo-post-grid.php:383
+#: includes/elementor/widgets/benzo-post-slider.php:296
+#: includes/elementor/widgets/benzo-post-slider.php:311
+#: includes/elementor/widgets/benzo-post-slider.php:326
+#: includes/elementor/widgets/benzo-post-tab.php:376
+#: includes/elementor/widgets/benzo-post-tab.php:394
+#: includes/elementor/widgets/benzo-post-tab.php:412
+msgid "Three"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:191
+#: includes/elementor/widgets/benzo-author-boxes.php:206
+#: includes/elementor/widgets/benzo-author-boxes.php:221
+#: includes/elementor/widgets/benzo-category-boxes.php:218
+#: includes/elementor/widgets/benzo-post-grid.php:354
+#: includes/elementor/widgets/benzo-post-grid.php:369
+#: includes/elementor/widgets/benzo-post-grid.php:384
+#: includes/elementor/widgets/benzo-post-slider.php:297
+#: includes/elementor/widgets/benzo-post-slider.php:312
+#: includes/elementor/widgets/benzo-post-slider.php:327
+#: includes/elementor/widgets/benzo-post-tab.php:377
+#: includes/elementor/widgets/benzo-post-tab.php:395
+#: includes/elementor/widgets/benzo-post-tab.php:413
+msgid "Four"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:200
+#: includes/elementor/widgets/benzo-post-grid.php:363
+#: includes/elementor/widgets/benzo-post-slider.php:306
+#: includes/elementor/widgets/benzo-post-tab.php:389
+msgid "Tab"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:215
+#: includes/elementor/widgets/benzo-image-gallery.php:193
+#: includes/elementor/widgets/benzo-post-grid.php:378
+#: includes/elementor/widgets/benzo-post-slider.php:321
+#: includes/elementor/widgets/benzo-post-tab.php:407
+msgid "Mobile"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:232
+msgid "Author Box"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:240
+#: includes/elementor/widgets/benzo-cf7.php:368
+#: includes/elementor/widgets/benzo-cf7.php:482
+#: includes/elementor/widgets/benzo-counter.php:295
+#: includes/elementor/widgets/benzo-highlight-posts.php:214
+#: includes/elementor/widgets/benzo-masonry-posts.php:394
+#: includes/elementor/widgets/benzo-masonry-posts.php:454
+#: includes/elementor/widgets/benzo-masonry-posts.php:557
+#: includes/elementor/widgets/benzo-masonry-posts.php:798
+#: includes/elementor/widgets/benzo-post-grid.php:405
+#: includes/elementor/widgets/benzo-post-grid.php:476
+#: includes/elementor/widgets/benzo-post-grid.php:529
+#: includes/elementor/widgets/benzo-post-grid.php:682
+#: includes/elementor/widgets/benzo-post-grid.php:924
+#: includes/elementor/widgets/benzo-post-list.php:221
+#: includes/elementor/widgets/benzo-post-list.php:274
+#: includes/elementor/widgets/benzo-post-list.php:338
+#: includes/elementor/widgets/benzo-post-slider.php:423
+#: includes/elementor/widgets/benzo-post-slider.php:476
+#: includes/elementor/widgets/benzo-post-slider.php:629
+#: includes/elementor/widgets/benzo-post-tab.php:437
+#: includes/elementor/widgets/benzo-post-tab.php:540
+#: includes/elementor/widgets/benzo-post-tab.php:601
+#: includes/elementor/widgets/benzo-post-tab.php:694
+#: includes/elementor/widgets/benzo-post-tab.php:847
+#: includes/elementor/widgets/benzo-social-followers.php:219
+msgid "Margin"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:252
+#: includes/elementor/widgets/benzo-category-boxes.php:259
+#: includes/elementor/widgets/benzo-cf7.php:211
+#: includes/elementor/widgets/benzo-cf7.php:380
+#: includes/elementor/widgets/benzo-cf7.php:494
+#: includes/elementor/widgets/benzo-contact-info.php:257
+#: includes/elementor/widgets/benzo-counter.php:307
+#: includes/elementor/widgets/benzo-highlight-posts.php:226
+#: includes/elementor/widgets/benzo-highlight-posts.php:256
+#: includes/elementor/widgets/benzo-mailchimp.php:178
+#: includes/elementor/widgets/benzo-mailchimp.php:306
+#: includes/elementor/widgets/benzo-masonry-posts.php:406
+#: includes/elementor/widgets/benzo-masonry-posts.php:466
+#: includes/elementor/widgets/benzo-masonry-posts.php:569
+#: includes/elementor/widgets/benzo-masonry-posts.php:839
+#: includes/elementor/widgets/benzo-post-grid.php:417
+#: includes/elementor/widgets/benzo-post-grid.php:488
+#: includes/elementor/widgets/benzo-post-grid.php:694
+#: includes/elementor/widgets/benzo-post-grid.php:965
+#: includes/elementor/widgets/benzo-post-list.php:233
+#: includes/elementor/widgets/benzo-post-list.php:286
+#: includes/elementor/widgets/benzo-post-slider.php:435
+#: includes/elementor/widgets/benzo-post-slider.php:641
+#: includes/elementor/widgets/benzo-post-tab.php:552
+#: includes/elementor/widgets/benzo-post-tab.php:613
+#: includes/elementor/widgets/benzo-post-tab.php:859
+#: includes/elementor/widgets/benzo-post-ticker.php:178
+#: includes/elementor/widgets/benzo-search.php:193
+#: includes/elementor/widgets/benzo-social-followers.php:231
+#: includes/elementor/widgets/benzo-social-followers.php:262
+#: includes/helper/metaboxes.php:295
+#: includes/helper/metaboxes.php:561
+#: includes/helper/theme-options.php:397
+msgid "Padding"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:264
+#: includes/elementor/widgets/benzo-cf7.php:301
+#: includes/elementor/widgets/benzo-cf7.php:343
+#: includes/elementor/widgets/benzo-cf7.php:571
+#: includes/elementor/widgets/benzo-cf7.php:602
+#: includes/elementor/widgets/benzo-counter.php:344
+#: includes/elementor/widgets/benzo-mailchimp.php:239
+#: includes/elementor/widgets/benzo-mailchimp.php:270
+#: includes/elementor/widgets/benzo-mailchimp.php:367
+#: includes/elementor/widgets/benzo-mailchimp.php:398
+#: includes/elementor/widgets/benzo-masonry-posts.php:478
+#: includes/elementor/widgets/benzo-masonry-posts.php:538
+#: includes/elementor/widgets/benzo-masonry-posts.php:906
+#: includes/elementor/widgets/benzo-masonry-posts.php:940
+#: includes/elementor/widgets/benzo-post-grid.php:455
+#: includes/elementor/widgets/benzo-post-grid.php:500
+#: includes/elementor/widgets/benzo-post-grid.php:663
+#: includes/elementor/widgets/benzo-post-grid.php:1032
+#: includes/elementor/widgets/benzo-post-grid.php:1066
+#: includes/elementor/widgets/benzo-post-list.php:245
+#: includes/elementor/widgets/benzo-post-list.php:298
+#: includes/elementor/widgets/benzo-post-slider.php:447
+#: includes/elementor/widgets/benzo-post-slider.php:610
+#: includes/elementor/widgets/benzo-post-tab.php:625
+#: includes/elementor/widgets/benzo-post-tab.php:828
+#: includes/elementor/widgets/benzo-search.php:216
+#: includes/helper/metaboxes.php:316
+#: includes/helper/metaboxes.php:582
+#: includes/helper/theme-options.php:410
+msgid "Background Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:275
+msgid "Line Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:288
+msgid "Color & Typography"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:296
+msgid "Name"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:304
+#: includes/elementor/widgets/benzo-author-boxes.php:343
+#: includes/elementor/widgets/benzo-category-boxes.php:291
+#: includes/elementor/widgets/benzo-category-boxes.php:324
+#: includes/elementor/widgets/benzo-contact-info.php:306
+#: includes/elementor/widgets/benzo-contact-info.php:334
+#: includes/elementor/widgets/benzo-contact-info.php:383
+#: includes/elementor/widgets/benzo-counter.php:372
+#: includes/elementor/widgets/benzo-counter.php:419
+#: includes/elementor/widgets/benzo-counter.php:448
+#: includes/elementor/widgets/benzo-date.php:322
+#: includes/elementor/widgets/benzo-highlight-posts.php:398
+#: includes/elementor/widgets/benzo-highlight-posts.php:509
+#: includes/elementor/widgets/benzo-highlight-posts.php:554
+#: includes/elementor/widgets/benzo-highlight-posts.php:586
+#: includes/elementor/widgets/benzo-highlight-posts.php:597
+#: includes/elementor/widgets/benzo-image-gallery.php:298
+#: includes/elementor/widgets/benzo-masonry-posts.php:590
+#: includes/elementor/widgets/benzo-masonry-posts.php:632
+#: includes/elementor/widgets/benzo-masonry-posts.php:666
+#: includes/elementor/widgets/benzo-masonry-posts.php:894
+#: includes/elementor/widgets/benzo-masonry-posts.php:927
+#: includes/elementor/widgets/benzo-offcanvas.php:214
+#: includes/elementor/widgets/benzo-offcanvas.php:260
+#: includes/elementor/widgets/benzo-post-grid.php:715
+#: includes/elementor/widgets/benzo-post-grid.php:757
+#: includes/elementor/widgets/benzo-post-grid.php:791
+#: includes/elementor/widgets/benzo-post-grid.php:1020
+#: includes/elementor/widgets/benzo-post-grid.php:1053
+#: includes/elementor/widgets/benzo-post-list.php:403
+#: includes/elementor/widgets/benzo-post-list.php:442
+#: includes/elementor/widgets/benzo-post-slider.php:662
+#: includes/elementor/widgets/benzo-post-slider.php:704
+#: includes/elementor/widgets/benzo-post-slider.php:738
+#: includes/elementor/widgets/benzo-post-slider.php:948
+#: includes/elementor/widgets/benzo-post-tab.php:494
+#: includes/elementor/widgets/benzo-post-tab.php:514
+#: includes/elementor/widgets/benzo-post-tab.php:880
+#: includes/elementor/widgets/benzo-post-tab.php:922
+#: includes/elementor/widgets/benzo-post-tab.php:956
+#: includes/elementor/widgets/benzo-post-ticker.php:190
+#: includes/elementor/widgets/benzo-post-ticker.php:333
+#: includes/elementor/widgets/benzo-search.php:164
+#: includes/elementor/widgets/benzo-social-followers.php:274
+#: includes/elementor/widgets/benzo-social-followers.php:313
+#: includes/helper/theme-options.php:538
+msgid "Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-author-boxes.php:315
+#: includes/elementor/widgets/benzo-highlight-posts.php:410
+#: includes/elementor/widgets/benzo-highlight-posts.php:521
+#: includes/elementor/widgets/benzo-masonry-posts.php:601
+#: includes/elementor/widgets/benzo-post-grid.php:726
+#: includes/elementor/widgets/benzo-post-list.php:414
+#: includes/elementor/widgets/benzo-post-slider.php:673
+#: includes/elementor/widgets/benzo-post-tab.php:891
+#: includes/elementor/widgets/benzo-post-ticker.php:201
+msgid "Color(Hover)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:35
+msgid "Benzo Category Boxes"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:103
+#: includes/elementor/widgets/benzo-highlight-posts.php:108
+msgid "Design"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:106
+#: includes/elementor/widgets/benzo-highlight-posts.php:111
+#: includes/elementor/widgets/benzo-masonry-posts.php:171
+#: includes/elementor/widgets/benzo-post-grid.php:128
+#: includes/elementor/widgets/benzo-post-list.php:111
+#: includes/elementor/widgets/benzo-post-slider.php:128
+#: includes/elementor/widgets/benzo-post-tab.php:214
+msgid "Design One"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:107
+#: includes/elementor/widgets/benzo-highlight-posts.php:112
+#: includes/elementor/widgets/benzo-masonry-posts.php:172
+#: includes/elementor/widgets/benzo-post-grid.php:129
+#: includes/elementor/widgets/benzo-post-list.php:112
+#: includes/elementor/widgets/benzo-post-slider.php:129
+#: includes/elementor/widgets/benzo-post-tab.php:215
+msgid "Design Two"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:108
+#: includes/elementor/widgets/benzo-highlight-posts.php:113
+#: includes/elementor/widgets/benzo-masonry-posts.php:173
+#: includes/elementor/widgets/benzo-post-grid.php:130
+#: includes/elementor/widgets/benzo-post-slider.php:130
+#: includes/elementor/widgets/benzo-post-tab.php:216
+msgid "Design Three"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:117
+#: includes/wp-widgets/benzo-categories.php:22
+msgid "Select Categories"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:128
+msgid "Show Post Count"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:130
+#: includes/elementor/widgets/benzo-category-boxes.php:175
+#: includes/elementor/widgets/benzo-contact-info.php:160
+#: includes/elementor/widgets/benzo-counter.php:173
+#: includes/elementor/widgets/benzo-counter.php:208
+#: includes/elementor/widgets/benzo-highlight-posts.php:124
+#: includes/elementor/widgets/benzo-highlight-posts.php:148
+#: includes/elementor/widgets/benzo-masonry-posts.php:222
+#: includes/elementor/widgets/benzo-masonry-posts.php:247
+#: includes/elementor/widgets/benzo-masonry-posts.php:259
+#: includes/elementor/widgets/benzo-masonry-posts.php:271
+#: includes/elementor/widgets/benzo-masonry-posts.php:283
+#: includes/elementor/widgets/benzo-post-grid.php:179
+#: includes/elementor/widgets/benzo-post-grid.php:204
+#: includes/elementor/widgets/benzo-post-grid.php:216
+#: includes/elementor/widgets/benzo-post-grid.php:228
+#: includes/elementor/widgets/benzo-post-grid.php:240
+#: includes/elementor/widgets/benzo-post-list.php:123
+#: includes/elementor/widgets/benzo-post-list.php:135
+#: includes/elementor/widgets/benzo-post-list.php:147
+#: includes/elementor/widgets/benzo-post-list.php:159
+#: includes/elementor/widgets/benzo-post-slider.php:179
+#: includes/elementor/widgets/benzo-post-slider.php:204
+#: includes/elementor/widgets/benzo-post-slider.php:216
+#: includes/elementor/widgets/benzo-post-slider.php:228
+#: includes/elementor/widgets/benzo-post-slider.php:240
+#: includes/elementor/widgets/benzo-post-tab.php:265
+#: includes/elementor/widgets/benzo-post-tab.php:290
+#: includes/elementor/widgets/benzo-post-tab.php:302
+#: includes/elementor/widgets/benzo-post-tab.php:314
+#: includes/elementor/widgets/benzo-post-tab.php:326
+msgid "Show"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:131
+#: includes/elementor/widgets/benzo-category-boxes.php:176
+#: includes/elementor/widgets/benzo-contact-info.php:161
+#: includes/elementor/widgets/benzo-counter.php:174
+#: includes/elementor/widgets/benzo-counter.php:209
+#: includes/elementor/widgets/benzo-highlight-posts.php:125
+#: includes/elementor/widgets/benzo-highlight-posts.php:149
+#: includes/elementor/widgets/benzo-masonry-posts.php:223
+#: includes/elementor/widgets/benzo-masonry-posts.php:248
+#: includes/elementor/widgets/benzo-masonry-posts.php:260
+#: includes/elementor/widgets/benzo-masonry-posts.php:272
+#: includes/elementor/widgets/benzo-masonry-posts.php:284
+#: includes/elementor/widgets/benzo-post-grid.php:180
+#: includes/elementor/widgets/benzo-post-grid.php:205
+#: includes/elementor/widgets/benzo-post-grid.php:217
+#: includes/elementor/widgets/benzo-post-grid.php:229
+#: includes/elementor/widgets/benzo-post-grid.php:241
+#: includes/elementor/widgets/benzo-post-list.php:124
+#: includes/elementor/widgets/benzo-post-list.php:136
+#: includes/elementor/widgets/benzo-post-list.php:148
+#: includes/elementor/widgets/benzo-post-list.php:160
+#: includes/elementor/widgets/benzo-post-slider.php:180
+#: includes/elementor/widgets/benzo-post-slider.php:205
+#: includes/elementor/widgets/benzo-post-slider.php:217
+#: includes/elementor/widgets/benzo-post-slider.php:229
+#: includes/elementor/widgets/benzo-post-slider.php:241
+#: includes/elementor/widgets/benzo-post-tab.php:266
+#: includes/elementor/widgets/benzo-post-tab.php:291
+#: includes/elementor/widgets/benzo-post-tab.php:303
+#: includes/elementor/widgets/benzo-post-tab.php:315
+#: includes/elementor/widgets/benzo-post-tab.php:327
+msgid "Hide"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:149
+msgid "Post Count Text"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:151
+msgid "Posts Publish"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:173
+msgid "Show Button"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:188
+#: includes/elementor/widgets/benzo-highlight-posts.php:170
+#: includes/elementor/widgets/benzo-masonry-posts.php:293
+#: includes/elementor/widgets/benzo-masonry-posts.php:331
+#: includes/elementor/widgets/benzo-post-grid.php:250
+#: includes/elementor/widgets/benzo-post-grid.php:288
+#: includes/elementor/widgets/benzo-post-slider.php:250
+#: includes/elementor/widgets/benzo-post-tab.php:336
+#: includes/helper/theme-options.php:665
+msgid "Button Text"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:190
+msgid "View Posts"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:219
+msgid "Five"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:220
+msgid "Six"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:233
+msgid "Item"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:241
+#: includes/elementor/widgets/benzo-masonry-posts.php:426
+#: includes/elementor/widgets/benzo-post-grid.php:437
+#: includes/elementor/widgets/benzo-post-tab.php:572
+msgid "Items Gap"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:283
+#: includes/elementor/widgets/benzo-contact-info.php:149
+#: includes/elementor/widgets/benzo-contact-info.php:325
+#: includes/elementor/widgets/benzo-counter.php:356
+msgid "Content"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:313
+msgid "Count"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-category-boxes.php:336
+#: includes/elementor/widgets/benzo-contact-info.php:395
+#: includes/elementor/widgets/benzo-contact-info.php:415
+#: includes/elementor/widgets/benzo-contact-info.php:443
+#: includes/elementor/widgets/benzo-image-gallery.php:309
+#: includes/elementor/widgets/benzo-nav-menu.php:458
+#: includes/elementor/widgets/benzo-offcanvas.php:203
+#: includes/elementor/widgets/benzo-offcanvas.php:249
+#: includes/elementor/widgets/benzo-social-followers.php:146
+#: includes/elementor/widgets/benzo-social-followers.php:208
+#: includes/elementor/widgets/benzo-social-followers.php:285
+#: includes/elementor/widgets/benzo-social-followers.php:324
+#: includes/helper/theme-options.php:321
+msgid "Background"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:37
+msgid "Benzo Contact Form 7"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:98
+msgid "Form"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:105
+msgid "Select Your Form"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:110
+msgid "Contact Form 7 - plugin must be installed and there must be some contact forms made with the Contact Form 7 . For More information visit Theme Documentation"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:118
+#: includes/elementor/widgets/benzo-mailchimp.php:130
+msgid "Form Fields"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:126
+#: includes/elementor/widgets/benzo-highlight-posts.php:300
+#: includes/elementor/widgets/benzo-highlight-posts.php:448
+#: includes/elementor/widgets/benzo-mailchimp.php:138
+#: includes/elementor/widgets/benzo-offcanvas.php:175
+#: includes/elementor/widgets/benzo-offcanvas.php:292
+#: includes/elementor/widgets/benzo-post-grid.php:541
+#: includes/elementor/widgets/benzo-post-list.php:350
+#: includes/elementor/widgets/benzo-post-slider.php:488
+#: includes/elementor/widgets/benzo-post-tab.php:706
+#: includes/elementor/widgets/benzo-post-ticker.php:278
+#: includes/elementor/widgets/benzo-site-logo.php:196
+#: includes/template-builder/includes/template-metaboxes.php:177
+msgid "Width"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:157
+#: includes/elementor/widgets/benzo-highlight-posts.php:323
+#: includes/elementor/widgets/benzo-highlight-posts.php:471
+#: includes/elementor/widgets/benzo-mailchimp.php:160
+#: includes/elementor/widgets/benzo-offcanvas.php:189
+#: includes/elementor/widgets/benzo-post-grid.php:566
+#: includes/elementor/widgets/benzo-post-list.php:372
+#: includes/elementor/widgets/benzo-post-slider.php:513
+#: includes/elementor/widgets/benzo-post-tab.php:731
+#: includes/elementor/widgets/benzo-post-ticker.php:297
+#: includes/elementor/widgets/benzo-search.php:175
+#: includes/template-builder/includes/template-metaboxes.php:99
+msgid "Height"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:175
+msgid "Textarea Height"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:193
+msgid "Field Spacing Bottom"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:239
+#: includes/elementor/widgets/benzo-cf7.php:530
+#: includes/elementor/widgets/benzo-image-gallery.php:247
+#: includes/elementor/widgets/benzo-mailchimp.php:198
+#: includes/elementor/widgets/benzo-mailchimp.php:326
+msgid "Border Radius"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:260
+#: includes/elementor/widgets/benzo-mailchimp.php:211
+#: includes/elementor/widgets/benzo-mailchimp.php:339
+#: includes/helper/theme-options.php:951
+#: includes/helper/theme-options.php:955
+msgid "Typography"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:268
+msgid "Field Placeholder Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:283
+#: includes/elementor/widgets/benzo-contact-info.php:408
+msgid "Normal State"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:290
+#: includes/elementor/widgets/benzo-cf7.php:321
+msgid "Field Text Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:314
+#: includes/elementor/widgets/benzo-mailchimp.php:252
+msgid "Focus"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:332
+#: includes/elementor/widgets/benzo-cf7.php:613
+#: includes/elementor/widgets/benzo-contact-info.php:500
+#: includes/elementor/widgets/benzo-mailchimp.php:281
+#: includes/elementor/widgets/benzo-mailchimp.php:409
+#: includes/elementor/widgets/benzo-masonry-posts.php:953
+#: includes/elementor/widgets/benzo-post-grid.php:1079
+msgid "Border Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:360
+msgid "Form Fields Label"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:400
+msgid "Label Text Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:412
+msgid "Label Typography"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:422
+#: includes/elementor/widgets/benzo-mailchimp.php:298
+msgid "Submit Button"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:430
+msgid "Button Width"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:456
+#: includes/elementor/widgets/benzo-mailchimp.php:114
+msgid "Button Position"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:468
+#: includes/elementor/widgets/benzo-counter.php:331
+#: includes/elementor/widgets/benzo-date.php:273
+#: includes/elementor/widgets/benzo-masonry-posts.php:824
+#: includes/elementor/widgets/benzo-nav-menu.php:160
+#: includes/elementor/widgets/benzo-nav-menu.php:224
+#: includes/elementor/widgets/benzo-offcanvas.php:140
+#: includes/elementor/widgets/benzo-offcanvas.php:156
+#: includes/elementor/widgets/benzo-post-grid.php:950
+#: includes/elementor/widgets/benzo-post-list.php:174
+#: includes/elementor/widgets/benzo-post-tab.php:463
+#: includes/elementor/widgets/benzo-search.php:117
+#: includes/elementor/widgets/benzo-search.php:142
+#: includes/elementor/widgets/benzo-site-logo.php:145
+msgid "Right"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:552
+#: includes/elementor/widgets/benzo-mailchimp.php:221
+#: includes/elementor/widgets/benzo-mailchimp.php:349
+#: includes/elementor/widgets/benzo-masonry-posts.php:887
+#: includes/elementor/widgets/benzo-nav-menu.php:371
+#: includes/elementor/widgets/benzo-nav-menu.php:491
+#: includes/elementor/widgets/benzo-post-grid.php:1013
+#: includes/elementor/widgets/benzo-post-tab.php:487
+msgid "Normal"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:559
+#: includes/elementor/widgets/benzo-cf7.php:591
+#: includes/elementor/widgets/benzo-mailchimp.php:228
+#: includes/elementor/widgets/benzo-mailchimp.php:259
+#: includes/elementor/widgets/benzo-mailchimp.php:356
+#: includes/elementor/widgets/benzo-mailchimp.php:387
+#: includes/helper/theme-options.php:498
+msgid "Text Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-cf7.php:584
+#: includes/elementor/widgets/benzo-mailchimp.php:380
+#: includes/elementor/widgets/benzo-masonry-posts.php:920
+#: includes/elementor/widgets/benzo-post-grid.php:1046
+msgid "Hover"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:40
+msgid "Benzo Contact Info"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:101
+msgid "Contact Information"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:112
+msgid "Phone"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:120
+#: includes/elementor/widgets/benzo-masonry-posts.php:182
+#: includes/elementor/widgets/benzo-post-grid.php:139
+#: includes/elementor/widgets/benzo-post-slider.php:139
+#: includes/elementor/widgets/benzo-post-tab.php:225
+msgid "Title HTML Tag"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:125
+#: includes/elementor/widgets/benzo-masonry-posts.php:187
+#: includes/elementor/widgets/benzo-post-grid.php:144
+#: includes/elementor/widgets/benzo-post-slider.php:144
+#: includes/elementor/widgets/benzo-post-tab.php:230
+msgid "H3"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:129
+#: includes/elementor/widgets/benzo-masonry-posts.php:191
+#: includes/elementor/widgets/benzo-post-grid.php:148
+#: includes/elementor/widgets/benzo-post-slider.php:148
+#: includes/elementor/widgets/benzo-post-tab.php:234
+msgid "H4"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:133
+#: includes/elementor/widgets/benzo-masonry-posts.php:195
+#: includes/elementor/widgets/benzo-post-grid.php:152
+#: includes/elementor/widgets/benzo-post-slider.php:152
+#: includes/elementor/widgets/benzo-post-tab.php:238
+msgid "H5"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:137
+#: includes/elementor/widgets/benzo-masonry-posts.php:199
+#: includes/elementor/widgets/benzo-post-grid.php:156
+#: includes/elementor/widgets/benzo-post-slider.php:156
+#: includes/elementor/widgets/benzo-post-tab.php:242
+msgid "H6"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:158
+#: includes/elementor/widgets/benzo-counter.php:206
+msgid "Show Icon?"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:168
+#: includes/elementor/widgets/benzo-counter.php:216
+msgid "Icon Type"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:171
+#: includes/elementor/widgets/benzo-counter.php:219
+msgid "Icon Image"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:172
+#: includes/elementor/widgets/benzo-counter.php:220
+msgid "Icon Library"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:183
+#: includes/elementor/widgets/benzo-contact-info.php:354
+#: includes/elementor/widgets/benzo-counter.php:231
+#: includes/elementor/widgets/benzo-counter.php:440
+#: includes/elementor/widgets/benzo-date.php:291
+#: includes/elementor/widgets/benzo-image-gallery.php:271
+#: includes/elementor/widgets/benzo-social-followers.php:125
+#: includes/elementor/widgets/benzo-social-followers.php:304
+#: includes/helper/metaboxes.php:708
+msgid "Icon"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:211
+#: includes/elementor/widgets/benzo-counter.php:259
+#: includes/elementor/widgets/benzo-site-logo.php:188
+msgid "Image"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:237
+msgid "Information's"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:269
+#: includes/elementor/widgets/benzo-counter.php:391
+#: includes/elementor/widgets/benzo-counter.php:480
+msgid "Bottom Gap"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:289
+#: includes/elementor/widgets/benzo-social-followers.php:244
+#: includes/helper/metaboxes.php:306
+#: includes/helper/metaboxes.php:572
+#: includes/helper/theme-options.php:404
+msgid "Border"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:363
+#: includes/elementor/widgets/benzo-counter.php:460
+#: includes/elementor/widgets/benzo-post-ticker.php:315
+msgid "Icon Size"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:436
+msgid "Hover State"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:454
+msgid "Title Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:465
+msgid "Content Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:477
+#: includes/elementor/widgets/benzo-social-followers.php:157
+msgid "Icon Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-contact-info.php:489
+#: includes/elementor/widgets/benzo-social-followers.php:168
+msgid "Icon Background"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:37
+msgid "Benzo Counter"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:113
+#: includes/elementor/widgets/benzo-counter.php:364
+msgid "Counter"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:120
+msgid "Starting Number"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:130
+msgid "Ending Number"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:139
+msgid "Number Prefix"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:149
+msgid "Number Suffix"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:152
+msgid "Plus"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:159
+msgid "Animation Duration"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:170
+msgid "Thousand Separator"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:181
+msgid "Separator"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:199
+msgid "Raised Funds"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:287
+#: includes/elementor/widgets/benzo-date.php:314
+#: includes/elementor/widgets/benzo-image-gallery.php:211
+#: includes/helper/theme-options.php:560
+msgid "Style"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-counter.php:319
+msgid "Text Align"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:35
+msgid "Benzo Current Date"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:104
+msgid "Date Format"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:107
+#: includes/elementor/widgets/benzo-date.php:138
+#: includes/elementor/widgets/benzo-nav-menu.php:242
+#: includes/elementor/widgets/benzo-site-logo.php:108
+#: includes/elementor/widgets/benzo-site-logo.php:164
+#: includes/helper/metaboxes.php:188
+#: includes/helper/metaboxes.php:209
+#: includes/helper/metaboxes.php:234
+#: includes/helper/metaboxes.php:245
+#: includes/helper/metaboxes.php:266
+#: includes/helper/metaboxes.php:373
+#: includes/helper/metaboxes.php:456
+#: includes/helper/metaboxes.php:476
+#: includes/helper/metaboxes.php:501
+#: includes/helper/metaboxes.php:512
+#: includes/helper/metaboxes.php:532
+#: includes/helper/metaboxes.php:639
+#: includes/helper/theme-options.php:996
+#: includes/helper/theme-options.php:1016
+msgid "Default"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:108
+msgid "Wordpress Format"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:109
+#: includes/elementor/widgets/benzo-nav-menu.php:243
+#: includes/elementor/widgets/benzo-site-logo.php:109
+#: includes/elementor/widgets/benzo-site-logo.php:165
+#: includes/helper/metaboxes.php:246
+#: includes/helper/metaboxes.php:513
+#: includes/helper/theme-options.php:997
+#: includes/helper/theme-options.php:1017
+#: includes/template-builder/includes/template-metaboxes.php:66
+#: includes/template-builder/includes/template-metaboxes.php:91
+msgid "Custom"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:118
+msgid "Custom Date Format"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:121
+msgid "Set your date format, about this, please refer to the "
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:125
+msgid "Wordpress.org"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:135
+msgid "Time Zone"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:139
+msgid "(GMT-11:00) Midway Island"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:140
+msgid "(GMT-11:00) Samoa"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:141
+msgid "(GMT-10:00) Hawaii"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:142
+msgid "(GMT-09:00) Alaska"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:143
+msgid "(GMT-08:00) Pacific Time (US &amp; Canada)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:144
+msgid "(GMT-08:00) Tijuana"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:145
+msgid "(GMT-07:00) Arizona"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:146
+msgid "(GMT-07:00) Mountain Time (US &amp; Canada)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:147
+msgid "(GMT-07:00) Chihuahua"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:148
+msgid "(GMT-07:00) Mazatlan"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:149
+msgid "(GMT-06:00) Mexico City"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:150
+msgid "(GMT-06:00) Monterrey"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:151
+msgid "(GMT-06:00) Saskatchewan"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:152
+msgid "(GMT-06:00) Central Time (US &amp; Canada)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:153
+msgid "(GMT-05:00) Eastern Time (US &amp; Canada)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:154
+msgid "(GMT-05:00) Indiana (East)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:155
+msgid "(GMT-05:00) Bogota"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:156
+msgid "(GMT-05:00) Lima"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:157
+msgid "(GMT-04:30) Caracas"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:158
+msgid "(GMT-04:00) Atlantic Time (Canada)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:159
+msgid "(GMT-04:00) La Paz"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:160
+msgid "(GMT-04:00) Santiago"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:161
+msgid "(GMT-03:30) Newfoundland"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:162
+msgid "(GMT-03:00) Buenos Aires"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:163
+msgid "(GMT-03:00) Greenland"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:164
+msgid "(GMT-02:00) Stanley"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:165
+msgid "(GMT-01:00) Azores"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:166
+msgid "(GMT-01:00) Cape Verde Is."
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:167
+msgid "(GMT) Casablanca"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:168
+msgid "(GMT) Dublin"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:169
+msgid "(GMT) Lisbon"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:170
+msgid "(GMT) London"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:171
+msgid "(GMT) Monrovia"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:172
+msgid "(GMT+01:00) Amsterdam"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:173
+msgid "(GMT+01:00) Belgrade"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:174
+msgid "(GMT+01:00) Berlin"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:175
+msgid "(GMT+01:00) Bratislava"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:176
+msgid "(GMT+01:00) Brussels"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:177
+msgid "(GMT+01:00) Budapest"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:178
+msgid "(GMT+01:00) Copenhagen"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:179
+msgid "(GMT+01:00) Ljubljana"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:180
+msgid "(GMT+01:00) Madrid"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:181
+msgid "(GMT+01:00) Paris"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:182
+msgid "(GMT+01:00) Prague"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:183
+msgid "(GMT+01:00) Rome"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:184
+msgid "(GMT+01:00) Sarajevo"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:185
+msgid "(GMT+01:00) Skopje"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:186
+msgid "(GMT+01:00) Stockholm"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:187
+msgid "(GMT+01:00) Vienna"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:188
+msgid "(GMT+01:00) Warsaw"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:189
+msgid "(GMT+01:00) Zagreb"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:190
+msgid "(GMT+02:00) Athens"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:191
+msgid "(GMT+02:00) Bucharest"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:192
+msgid "(GMT+02:00) Cairo"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:193
+msgid "(GMT+02:00) Harare"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:194
+msgid "(GMT+02:00) Helsinki"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:195
+msgid "(GMT+02:00) Istanbul"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:196
+msgid "(GMT+02:00) Jerusalem"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:197
+msgid "(GMT+02:00) Kyiv"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:198
+msgid "(GMT+02:00) Minsk"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:199
+msgid "(GMT+02:00) Riga"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:200
+msgid "(GMT+02:00) Sofia"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:201
+msgid "(GMT+02:00) Tallinn"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:202
+msgid "(GMT+02:00) Vilnius"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:203
+msgid "(GMT+03:00) Baghdad"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:204
+msgid "(GMT+03:00) Kuwait"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:205
+msgid "(GMT+03:00) Nairobi"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:206
+msgid "(GMT+03:00) Riyadh"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:207
+msgid "(GMT+03:00) Moscow"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:208
+msgid "(GMT+03:30) Tehran"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:209
+msgid "(GMT+04:00) Baku"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:210
+msgid "(GMT+04:00) Volgograd"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:211
+msgid "(GMT+04:00) Muscat"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:212
+msgid "(GMT+04:00) Tbilisi"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:213
+msgid "(GMT+04:00) Yerevan"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:214
+msgid "(GMT+04:30) Kabul"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:215
+msgid "(GMT+05:00) Karachi"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:216
+msgid "(GMT+05:00) Tashkent"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:217
+msgid "(GMT+05:30) Kolkata"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:218
+msgid "(GMT+05:45) Kathmandu"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:219
+msgid "(GMT+06:00) Ekaterinburg"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:220
+msgid "(GMT+06:00) Almaty"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:221
+msgid "(GMT+06:00) Dhaka"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:222
+msgid "(GMT+07:00) Novosibirsk"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:223
+msgid "(GMT+07:00) Bangkok"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:224
+msgid "(GMT+07:00) Jakarta"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:225
+msgid "(GMT+08:00) Krasnoyarsk"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:226
+msgid "(GMT+08:00) Chongqing"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:227
+msgid "(GMT+08:00) Hong Kong"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:228
+msgid "(GMT+08:00) Kuala Lumpur"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:229
+msgid "(GMT+08:00) Perth"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:230
+msgid "(GMT+08:00) Singapore"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:231
+msgid "(GMT+08:00) Taipei"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:232
+msgid "(GMT+08:00) Ulaan Bataar"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:233
+msgid "(GMT+08:00) Urumqi"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:234
+msgid "(GMT+09:00) Irkutsk"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:235
+msgid "(GMT+09:00) Seoul"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:236
+msgid "(GMT+09:00) Tokyo"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:237
+msgid "(GMT+09:30) Adelaide"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:238
+msgid "(GMT+09:30) Darwin"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:239
+msgid "(GMT+10:00) Yakutsk"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:240
+msgid "(GMT+10:00) Brisbane"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:241
+msgid "(GMT+10:00) Canberra"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:242
+msgid "(GMT+10:00) Guam"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:243
+msgid "(GMT+10:00) Hobart"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:244
+msgid "(GMT+10:00) Melbourne"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:245
+msgid "(GMT+10:00) Port Moresby"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:246
+msgid "(GMT+10:00) Sydney"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:247
+msgid "(GMT+11:00) Vladivostok"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:248
+msgid "(GMT+12:00) Magadan"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:249
+msgid "(GMT+12:00) Auckland"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:250
+msgid "(GMT+12:00) Fiji"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:259
+#: includes/elementor/widgets/benzo-masonry-posts.php:810
+#: includes/elementor/widgets/benzo-post-grid.php:936
+#: includes/elementor/widgets/benzo-post-tab.php:449
+msgid "Alignment"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:287
+msgid "Title Style"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:290
+msgid "Text"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-date.php:300
+msgid "Title Text"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:40
+msgid "Benzo Highlight Posts"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:122
+msgid "Show Title"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:134
+msgid "Box Title"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:136
+msgid "Highlights"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:146
+msgid "Show More Button"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:158
+msgid "Button Link"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:172
+msgid "More Posts"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:193
+#: includes/elementor/widgets/benzo-masonry-posts.php:211
+#: includes/elementor/widgets/benzo-post-grid.php:168
+#: includes/elementor/widgets/benzo-post-list.php:200
+#: includes/elementor/widgets/benzo-post-slider.php:168
+#: includes/elementor/widgets/benzo-post-tab.php:254
+#: includes/elementor/widgets/benzo-post-ticker.php:105
+msgid "Title Word"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:206
+#: includes/elementor/widgets/benzo-masonry-posts.php:386
+#: includes/elementor/widgets/benzo-post-grid.php:397
+#: includes/elementor/widgets/benzo-post-list.php:213
+msgid "Wrapper Style"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:248
+msgid "Wide Post"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:292
+#: includes/elementor/widgets/benzo-highlight-posts.php:440
+#: includes/elementor/widgets/benzo-post-grid.php:521
+#: includes/elementor/widgets/benzo-post-list.php:330
+#: includes/elementor/widgets/benzo-post-slider.php:468
+#: includes/elementor/widgets/benzo-post-tab.php:683
+msgid "Post Media"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:346
+#: includes/elementor/widgets/benzo-image-gallery.php:259
+#: includes/elementor/widgets/benzo-masonry-posts.php:497
+#: includes/elementor/widgets/benzo-offcanvas.php:281
+#: includes/elementor/widgets/benzo-post-grid.php:592
+#: includes/elementor/widgets/benzo-post-slider.php:539
+#: includes/elementor/widgets/benzo-post-tab.php:644
+#: includes/elementor/widgets/benzo-post-tab.php:757
+msgid "Overly Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:361
+#: includes/elementor/widgets/benzo-masonry-posts.php:508
+#: includes/elementor/widgets/benzo-post-grid.php:618
+#: includes/elementor/widgets/benzo-post-slider.php:565
+#: includes/elementor/widgets/benzo-post-tab.php:658
+#: includes/elementor/widgets/benzo-post-tab.php:783
+msgid "opacity"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:432
+msgid "Small Style"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-highlight-posts.php:575
+msgid "Button"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:37
+msgid "Benzo Image Gallery"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:121
+msgid "Select Galley Images"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:139
+msgid "Lightbox"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:143
+#: includes/elementor/widgets/benzo-post-slider.php:346
+#: includes/elementor/widgets/benzo-post-slider.php:359
+#: includes/elementor/widgets/benzo-post-slider.php:372
+#: includes/elementor/widgets/benzo-post-ticker.php:127
+#: includes/helper/metaboxes.php:278
+#: includes/helper/metaboxes.php:544
+#: includes/helper/theme-options.php:625
+#: includes/helper/theme-options.php:636
+#: includes/helper/theme-options.php:657
+#: includes/helper/theme-options.php:711
+#: includes/helper/theme-options.php:722
+#: includes/helper/theme-options.php:754
+#: includes/helper/theme-options.php:765
+#: includes/helper/theme-options.php:828
+msgid "Yes"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:144
+#: includes/elementor/widgets/benzo-post-slider.php:347
+#: includes/elementor/widgets/benzo-post-slider.php:360
+#: includes/elementor/widgets/benzo-post-slider.php:373
+#: includes/elementor/widgets/benzo-post-ticker.php:128
+#: includes/helper/metaboxes.php:279
+#: includes/helper/metaboxes.php:545
+#: includes/helper/theme-options.php:626
+#: includes/helper/theme-options.php:637
+#: includes/helper/theme-options.php:658
+#: includes/helper/theme-options.php:712
+#: includes/helper/theme-options.php:723
+#: includes/helper/theme-options.php:755
+#: includes/helper/theme-options.php:766
+#: includes/helper/theme-options.php:829
+msgid "No"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:152
+msgid "Grid Column"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:164
+#: includes/elementor/widgets/benzo-image-gallery.php:180
+#: includes/elementor/widgets/benzo-image-gallery.php:196
+msgid "1 column"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:165
+#: includes/elementor/widgets/benzo-image-gallery.php:181
+#: includes/elementor/widgets/benzo-image-gallery.php:197
+msgid "2 column"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:166
+#: includes/elementor/widgets/benzo-image-gallery.php:182
+#: includes/elementor/widgets/benzo-image-gallery.php:198
+msgid "3 column"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:167
+#: includes/elementor/widgets/benzo-image-gallery.php:183
+#: includes/elementor/widgets/benzo-image-gallery.php:199
+msgid "4 column"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:168
+#: includes/elementor/widgets/benzo-image-gallery.php:184
+#: includes/elementor/widgets/benzo-image-gallery.php:200
+msgid "6 column"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:177
+msgid "Tablet"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:219
+msgid "Grid Gap"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-image-gallery.php:280
+#: includes/elementor/widgets/benzo-offcanvas.php:235
+msgid "Size"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-mailchimp.php:36
+msgid "Benzo Mailchimp"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-mailchimp.php:104
+msgid "Form ShortCode"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-mailchimp.php:117
+msgid "Inside"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-mailchimp.php:118
+msgid "Outside"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-mailchimp.php:119
+msgid "Bottom"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:39
+msgid "Benzo Masonry Posts"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:107
+#: includes/elementor/widgets/benzo-post-tab.php:112
+#: includes/elementor/widgets/benzo-post-tab.php:121
+msgid "Masonry Layout"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:110
+#: includes/elementor/widgets/benzo-post-tab.php:124
+msgid "Layout One"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:111
+#: includes/elementor/widgets/benzo-post-tab.php:125
+msgid "Layout Two"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:112
+#: includes/elementor/widgets/benzo-post-tab.php:126
+msgid "Layout Three"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:113
+#: includes/elementor/widgets/benzo-post-tab.php:127
+msgid "Layout Four"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:114
+#: includes/elementor/widgets/benzo-post-tab.php:128
+msgid "Layout Five"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:115
+#: includes/elementor/widgets/benzo-post-tab.php:129
+msgid "Layout Six"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:116
+#: includes/elementor/widgets/benzo-post-tab.php:130
+msgid "Layout Seven"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:125
+#: includes/elementor/widgets/benzo-post-slider.php:275
+#: includes/elementor/widgets/benzo-post-tab.php:142
+#: includes/elementor/widgets/benzo-post-ticker.php:114
+msgid "Additional Options"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:134
+#: includes/elementor/widgets/benzo-post-grid.php:107
+#: includes/elementor/widgets/benzo-post-slider.php:107
+#: includes/elementor/widgets/benzo-post-tab.php:108
+#: includes/elementor/widgets/benzo-post-tab.php:151
+#: includes/elementor/widgets/benzo-post-tab.php:190
+#: includes/helper/metaboxes.php:128
+#: includes/helper/metaboxes.php:401
+msgid "Layout"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:137
+#: includes/elementor/widgets/benzo-post-grid.php:110
+#: includes/elementor/widgets/benzo-post-slider.php:110
+#: includes/elementor/widgets/benzo-post-tab.php:154
+#: includes/elementor/widgets/benzo-post-tab.php:193
+msgid "Normal Layout"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:138
+#: includes/elementor/widgets/benzo-post-grid.php:111
+#: includes/elementor/widgets/benzo-post-slider.php:111
+#: includes/elementor/widgets/benzo-post-tab.php:155
+#: includes/elementor/widgets/benzo-post-tab.php:194
+msgid "Image Background"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:139
+#: includes/elementor/widgets/benzo-post-grid.php:112
+#: includes/elementor/widgets/benzo-post-slider.php:112
+#: includes/elementor/widgets/benzo-post-tab.php:156
+#: includes/elementor/widgets/benzo-post-tab.php:195
+msgid "Image Hover Background"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:168
+#: includes/elementor/widgets/benzo-post-grid.php:125
+#: includes/elementor/widgets/benzo-post-list.php:108
+#: includes/elementor/widgets/benzo-post-slider.php:125
+#: includes/elementor/widgets/benzo-post-tab.php:211
+msgid "Meta Design"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:220
+#: includes/elementor/widgets/benzo-post-grid.php:177
+#: includes/elementor/widgets/benzo-post-slider.php:177
+#: includes/elementor/widgets/benzo-post-tab.php:263
+msgid "Show Excerpt"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:233
+#: includes/elementor/widgets/benzo-post-grid.php:190
+#: includes/elementor/widgets/benzo-post-slider.php:190
+#: includes/elementor/widgets/benzo-post-tab.php:276
+msgid "Excerpt Word"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:245
+#: includes/elementor/widgets/benzo-post-grid.php:202
+#: includes/elementor/widgets/benzo-post-slider.php:202
+#: includes/elementor/widgets/benzo-post-tab.php:288
+msgid "Show Category"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:257
+#: includes/elementor/widgets/benzo-post-grid.php:214
+#: includes/elementor/widgets/benzo-post-list.php:133
+#: includes/elementor/widgets/benzo-post-slider.php:214
+#: includes/elementor/widgets/benzo-post-tab.php:300
+msgid "Show Author"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:269
+#: includes/elementor/widgets/benzo-post-grid.php:226
+#: includes/elementor/widgets/benzo-post-list.php:145
+#: includes/elementor/widgets/benzo-post-slider.php:226
+#: includes/elementor/widgets/benzo-post-tab.php:312
+msgid "Show Date"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:281
+#: includes/elementor/widgets/benzo-post-grid.php:238
+#: includes/elementor/widgets/benzo-post-slider.php:238
+#: includes/elementor/widgets/benzo-post-tab.php:324
+msgid "Show Read More"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:295
+#: includes/elementor/widgets/benzo-post-grid.php:252
+#: includes/elementor/widgets/benzo-post-slider.php:252
+#: includes/elementor/widgets/benzo-post-tab.php:338
+msgid "Read More"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:316
+#: includes/elementor/widgets/benzo-post-grid.php:273
+msgid "Navigation Type"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:319
+#: includes/elementor/widgets/benzo-post-grid.php:276
+msgid "None"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:320
+#: includes/elementor/widgets/benzo-post-grid.php:277
+msgid "Pagination"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:321
+#: includes/elementor/widgets/benzo-masonry-posts.php:333
+#: includes/elementor/widgets/benzo-post-grid.php:278
+#: includes/elementor/widgets/benzo-post-grid.php:290
+msgid "Load More"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:343
+#: includes/elementor/widgets/benzo-post-grid.php:300
+msgid "Enable Ajax?"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:356
+#: includes/elementor/widgets/benzo-post-grid.php:313
+msgid "Button URL"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:446
+#: includes/elementor/widgets/benzo-post-grid.php:468
+#: includes/elementor/widgets/benzo-post-list.php:266
+#: includes/elementor/widgets/benzo-post-slider.php:415
+#: includes/elementor/widgets/benzo-post-tab.php:593
+#: includes/elementor/widgets/benzo-post-ticker.php:170
+msgid "Post Item"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:530
+#: includes/elementor/widgets/benzo-post-grid.php:655
+#: includes/elementor/widgets/benzo-post-list.php:322
+#: includes/elementor/widgets/benzo-post-slider.php:602
+#: includes/elementor/widgets/benzo-post-tab.php:820
+msgid "Post Content"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:620
+#: includes/elementor/widgets/benzo-post-grid.php:745
+#: includes/elementor/widgets/benzo-post-slider.php:692
+#: includes/elementor/widgets/benzo-post-tab.php:910
+msgid "Excerpt"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:657
+#: includes/elementor/widgets/benzo-post-grid.php:782
+#: includes/elementor/widgets/benzo-post-list.php:433
+#: includes/elementor/widgets/benzo-post-slider.php:729
+#: includes/elementor/widgets/benzo-post-tab.php:947
+msgid "Post Meta"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:681
+#: includes/elementor/widgets/benzo-masonry-posts.php:718
+#: includes/elementor/widgets/benzo-post-grid.php:806
+#: includes/elementor/widgets/benzo-post-grid.php:844
+#: includes/elementor/widgets/benzo-post-list.php:457
+#: includes/elementor/widgets/benzo-post-list.php:494
+#: includes/elementor/widgets/benzo-post-slider.php:753
+#: includes/elementor/widgets/benzo-post-slider.php:790
+#: includes/elementor/widgets/benzo-post-tab.php:971
+#: includes/elementor/widgets/benzo-post-tab.php:1008
+msgid "Categories Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:706
+#: includes/elementor/widgets/benzo-post-grid.php:832
+#: includes/elementor/widgets/benzo-post-list.php:482
+#: includes/elementor/widgets/benzo-post-slider.php:778
+#: includes/elementor/widgets/benzo-post-tab.php:996
+msgid "Categories Typography"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:733
+#: includes/elementor/widgets/benzo-post-grid.php:859
+#: includes/elementor/widgets/benzo-post-slider.php:805
+#: includes/elementor/widgets/benzo-post-tab.php:1023
+msgid "Author Typography"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:745
+#: includes/elementor/widgets/benzo-post-grid.php:871
+#: includes/elementor/widgets/benzo-post-slider.php:817
+#: includes/elementor/widgets/benzo-post-tab.php:1035
+msgid "Author Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:759
+#: includes/elementor/widgets/benzo-post-grid.php:885
+#: includes/elementor/widgets/benzo-post-slider.php:831
+#: includes/elementor/widgets/benzo-post-tab.php:1049
+msgid "Date Typography"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:771
+#: includes/elementor/widgets/benzo-post-grid.php:897
+#: includes/elementor/widgets/benzo-post-slider.php:843
+#: includes/elementor/widgets/benzo-post-tab.php:1061
+msgid "Date Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:787
+#: includes/elementor/widgets/benzo-post-grid.php:913
+msgid "Navigation Style"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-masonry-posts.php:854
+#: includes/elementor/widgets/benzo-post-grid.php:980
+msgid "Full Width"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:38
+msgid "Benzo Nav Menu"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:122
+msgid "Menu"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:125
+msgid "Theme Default"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:126
+msgid "Custom Menu"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:135
+msgid "Select Menu"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:147
+msgid "Menu Alignment"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:176
+msgid "Menu Height"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:190
+#: includes/elementor/widgets/benzo-nav-menu.php:438
+#: includes/helper/theme-options.php:307
+msgid "Slide Panel"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:199
+msgid "Breakpoint"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:204
+msgid "Define when the toggle will appear?"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:211
+#: includes/elementor/widgets/benzo-offcanvas.php:128
+msgid "Toggle Alignment"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:239
+#: includes/elementor/widgets/benzo-nav-menu.php:252
+#: includes/elementor/widgets/benzo-site-logo.php:105
+msgid "Panel Logo"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:268
+#: includes/helper/theme-options.php:241
+msgid "Menu Items"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:276
+msgid "Item Spacing"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:290
+#: includes/elementor/widgets/benzo-nav-menu.php:349
+msgid "Item Padding"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:310
+#: includes/helper/theme-options.php:268
+msgid "Submenu"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:319
+#: includes/helper/theme-options.php:273
+msgid "Submenu Background"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:338
+#: includes/elementor/widgets/benzo-nav-menu.php:477
+#: includes/helper/theme-options.php:280
+#: includes/helper/theme-options.php:328
+msgid "Item Divider"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:378
+#: includes/elementor/widgets/benzo-nav-menu.php:409
+#: includes/elementor/widgets/benzo-nav-menu.php:498
+#: includes/elementor/widgets/benzo-nav-menu.php:519
+#: includes/helper/theme-options.php:287
+#: includes/helper/theme-options.php:335
+msgid "Item Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:389
+#: includes/elementor/widgets/benzo-nav-menu.php:421
+msgid "Submenu Item Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:402
+msgid "Hover/Current"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:446
+#: includes/helper/theme-options.php:312
+msgid "Toggler Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-nav-menu.php:512
+msgid "Current"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-offcanvas.php:35
+msgid "Benzo Offcanvas"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-offcanvas.php:119
+msgid "Select Template"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-offcanvas.php:152
+msgid "Canvas Position"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-offcanvas.php:167
+msgid "Toggle"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-offcanvas.php:227
+msgid "Close"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-offcanvas.php:273
+msgid "Canvas"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-grid.php:39
+msgid "Benzo Post Grid"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-grid.php:113
+#: includes/elementor/widgets/benzo-post-slider.php:113
+#: includes/elementor/widgets/benzo-post-tab.php:196
+msgid "Image left"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-grid.php:114
+#: includes/elementor/widgets/benzo-post-slider.php:114
+#: includes/elementor/widgets/benzo-post-tab.php:197
+msgid "Image Right"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-grid.php:115
+#: includes/elementor/widgets/benzo-post-slider.php:115
+#: includes/elementor/widgets/benzo-post-tab.php:198
+msgid "Image Left Boxed"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-grid.php:116
+#: includes/elementor/widgets/benzo-post-slider.php:116
+#: includes/elementor/widgets/benzo-post-tab.php:199
+msgid "Image Right Boxed"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:40
+msgid "Benzo Post List"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:121
+msgid "Show Categories"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:157
+msgid "Show Thumbnail"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:169
+msgid "Thumbnail Position"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:172
+msgid "Top"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:309
+msgid "Divider Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:508
+msgid "Author/Date Typography"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:520
+msgid "Author/Date Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-list.php:604
+msgid "By"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:39
+msgid "Benzo Post Slider"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:282
+#: includes/elementor/widgets/benzo-social-followers.php:254
+msgid "Items"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:342
+msgid "Arrow?"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:355
+msgid "Dots?"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:368
+#: includes/elementor/widgets/benzo-post-ticker.php:123
+msgid "Autoplay?"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:382
+#: includes/elementor/widgets/benzo-post-ticker.php:137
+msgid "Autoplay Time"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:389
+#: includes/elementor/widgets/benzo-post-ticker.php:144
+msgid "1s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:390
+#: includes/elementor/widgets/benzo-post-ticker.php:145
+msgid "2s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:391
+#: includes/elementor/widgets/benzo-post-ticker.php:146
+msgid "3s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:392
+#: includes/elementor/widgets/benzo-post-ticker.php:147
+msgid "4s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:393
+#: includes/elementor/widgets/benzo-post-ticker.php:148
+msgid "5s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:394
+#: includes/elementor/widgets/benzo-post-ticker.php:149
+msgid "6s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:395
+#: includes/elementor/widgets/benzo-post-ticker.php:150
+msgid "7s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:396
+#: includes/elementor/widgets/benzo-post-ticker.php:151
+msgid "8s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:397
+#: includes/elementor/widgets/benzo-post-ticker.php:152
+msgid "9s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:398
+#: includes/elementor/widgets/benzo-post-ticker.php:153
+msgid "10s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:399
+#: includes/elementor/widgets/benzo-post-ticker.php:154
+msgid "11s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:400
+#: includes/elementor/widgets/benzo-post-ticker.php:155
+msgid "12s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:401
+#: includes/elementor/widgets/benzo-post-ticker.php:156
+msgid "13s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:402
+#: includes/elementor/widgets/benzo-post-ticker.php:157
+msgid "14s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:403
+#: includes/elementor/widgets/benzo-post-ticker.php:158
+msgid "15s"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:859
+#: includes/elementor/widgets/benzo-post-ticker.php:270
+msgid "Arrows"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:870
+#: includes/elementor/widgets/benzo-post-slider.php:931
+msgid "Position"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:873
+#: includes/elementor/widgets/benzo-post-slider.php:934
+msgid "Left Top"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:874
+#: includes/elementor/widgets/benzo-post-slider.php:935
+msgid "Right Top"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:875
+#: includes/elementor/widgets/benzo-post-slider.php:937
+msgid "Left Bottom"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:876
+#: includes/elementor/widgets/benzo-post-slider.php:938
+msgid "Right Bottom"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:885
+msgid "Arrow color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:896
+msgid "Arrow Background"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:907
+msgid "Arrow Divider"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:920
+msgid "Dots"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:936
+msgid "Center Top"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:939
+msgid "Center Bottom"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-slider.php:959
+msgid "Color(Active)"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-tab.php:39
+msgid "Benzo Post Tab"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-tab.php:111
+msgid "Grid Layout"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-tab.php:429
+msgid "Filter Navigation"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-tab.php:507
+msgid "Active/hover"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-tab.php:532
+msgid "Post Wrapper"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-ticker.php:37
+msgid "Benzo Post Ticker"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-ticker.php:220
+msgid "Dots Size"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-ticker.php:239
+msgid "Dots Gap"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-post-ticker.php:257
+#: includes/helper/metaboxes.php:347
+#: includes/helper/metaboxes.php:613
+#: includes/helper/theme-options.php:429
+msgid "Dots Color"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-search.php:35
+msgid "Benzo Search"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-search.php:104
+msgid "Button Alignment"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-search.php:133
+msgid "Form Alignment"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-search.php:156
+msgid "Search Button"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-search.php:208
+msgid "Search Area"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-site-logo.php:36
+msgid "Benzo Site Logo"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-site-logo.php:118
+msgid "Custom Logo"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-site-logo.php:132
+msgid "Logo Alignment"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-site-logo.php:161
+msgid "URL Type"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-site-logo.php:174
+msgid "Custom URL"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-site-logo.php:231
+msgid "Max Width"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-social-followers.php:38
+msgid "Benzo Social Followers"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-social-followers.php:109
+msgid "Followers Count"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-social-followers.php:117
+#: includes/elementor/widgets/benzo-social-followers.php:134
+msgid "Followers Title"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-social-followers.php:179
+msgid "Social Items"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-social-followers.php:184
+msgid "12M"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-social-followers.php:185
+msgid "Followers"
+msgstr ""
+
+#: includes/elementor/widgets/benzo-social-followers.php:200
+msgid "Wrapper"
+msgstr ""
+
+#: includes/helper/ajax.php:35
+#: includes/helper/ajax.php:87
+msgid "Something went wrong..."
+msgstr ""
+
+#: includes/helper/helper.php:64
+msgid "No Contact From found"
+msgstr ""
+
+#: includes/helper/helper.php:67
+msgid "Please Install & Active Contact Contact Form 7"
+msgstr ""
+
+#: includes/helper/metaboxes.php:44
+msgid "Benzo Post Options"
+msgstr ""
+
+#: includes/helper/metaboxes.php:60
+msgid "Post Format"
+msgstr ""
+
+#: includes/helper/metaboxes.php:62
+msgid "Standard"
+msgstr ""
+
+#: includes/helper/metaboxes.php:63
+msgid "Gallery"
+msgstr ""
+
+#: includes/helper/metaboxes.php:64
+msgid "Video"
+msgstr ""
+
+#: includes/helper/metaboxes.php:65
+msgid "Audio"
+msgstr ""
+
+#: includes/helper/metaboxes.php:66
+#: includes/helper/metaboxes.php:101
+msgid "Quote"
+msgstr ""
+
+#: includes/helper/metaboxes.php:67
+#: includes/helper/metaboxes.php:113
+#: includes/helper/metaboxes.php:713
+msgid "Link"
+msgstr ""
+
+#: includes/helper/metaboxes.php:74
+msgid "Gallery Images"
+msgstr ""
+
+#: includes/helper/metaboxes.php:75
+msgid "Choose your Gallery Images"
+msgstr ""
+
+#: includes/helper/metaboxes.php:81
+#: includes/helper/metaboxes.php:95
+msgid "oEmbed URL"
+msgstr ""
+
+#: includes/helper/metaboxes.php:88
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/helper/metaboxes.php:89
+msgid "Add video Thumbnail"
+msgstr ""
+
+#: includes/helper/metaboxes.php:107
+msgid "Quote Author Name"
+msgstr ""
+
+#: includes/helper/metaboxes.php:114
+msgid "Type your link. Example: https://webtend.net"
+msgstr ""
+
+#: includes/helper/metaboxes.php:120
+msgid "Link Text"
+msgstr ""
+
+#: includes/helper/metaboxes.php:132
+msgid "Post Layout"
+msgstr ""
+
+#: includes/helper/metaboxes.php:137
+#: includes/helper/metaboxes.php:410
+msgid "Content Layout"
+msgstr ""
+
+#: includes/helper/metaboxes.php:144
+msgid "Select Post layout. Full width or In container"
+msgstr ""
+
+#: includes/helper/metaboxes.php:145
+#: includes/helper/metaboxes.php:159
+msgid "Default Comes From Theme Option"
+msgstr ""
+
+#: includes/helper/metaboxes.php:150
+#: includes/helper/metaboxes.php:421
+#: includes/helper/theme-options.php:610
+#: includes/helper/theme-options.php:696
+msgid "Sidebar"
+msgstr ""
+
+#: includes/helper/metaboxes.php:158
+#: includes/helper/metaboxes.php:428
+#: includes/helper/theme-options.php:617
+msgid "Select Page Sidebar. Left sidebar or right sidebar or No sidebar"
+msgstr ""
+
+#: includes/helper/metaboxes.php:165
+#: includes/helper/metaboxes.php:433
+msgid "Content Spacing"
+msgstr ""
+
+#: includes/helper/metaboxes.php:167
+#: includes/helper/metaboxes.php:435
+msgid "Default top: 40px, right: 20px, bottom: 100px, left: 20px"
+msgstr ""
+
+#: includes/helper/metaboxes.php:175
+#: includes/helper/metaboxes.php:443
+#: includes/helper/theme-options.php:117
+#: includes/template-builder/includes/template-metaboxes.php:51
+msgid "Header"
+msgstr ""
+
+#: includes/helper/metaboxes.php:180
+msgid "If you used theme builder for post header then disable default header"
+msgstr ""
+
+#: includes/helper/metaboxes.php:185
+#: includes/helper/metaboxes.php:453
+#: includes/helper/theme-options.php:136
+msgid "Default Header"
+msgstr ""
+
+#: includes/helper/metaboxes.php:186
+msgid "Enable or Disable post default header. Default comes form theme option"
+msgstr ""
+
+#: includes/helper/metaboxes.php:189
+#: includes/helper/metaboxes.php:210
+#: includes/helper/metaboxes.php:235
+#: includes/helper/metaboxes.php:267
+#: includes/helper/metaboxes.php:374
+#: includes/helper/metaboxes.php:457
+#: includes/helper/metaboxes.php:477
+#: includes/helper/metaboxes.php:502
+#: includes/helper/metaboxes.php:533
+#: includes/helper/metaboxes.php:640
+#: includes/helper/theme-options.php:79
+#: includes/helper/theme-options.php:139
+#: includes/helper/theme-options.php:158
+#: includes/helper/theme-options.php:373
+#: includes/helper/theme-options.php:383
+#: includes/helper/theme-options.php:465
+msgid "Enable"
+msgstr ""
+
+#: includes/helper/metaboxes.php:190
+#: includes/helper/metaboxes.php:211
+#: includes/helper/metaboxes.php:236
+#: includes/helper/metaboxes.php:268
+#: includes/helper/metaboxes.php:375
+#: includes/helper/metaboxes.php:458
+#: includes/helper/metaboxes.php:478
+#: includes/helper/metaboxes.php:503
+#: includes/helper/metaboxes.php:534
+#: includes/helper/metaboxes.php:641
+#: includes/helper/theme-options.php:80
+#: includes/helper/theme-options.php:140
+#: includes/helper/theme-options.php:159
+#: includes/helper/theme-options.php:374
+#: includes/helper/theme-options.php:384
+#: includes/helper/theme-options.php:466
+msgid "Disable"
+msgstr ""
+
+#: includes/helper/metaboxes.php:198
+msgid "You disabled default header. Set your post header form "
+msgstr ""
+
+#: includes/helper/metaboxes.php:198
+#: includes/helper/metaboxes.php:383
+#: includes/helper/metaboxes.php:465
+#: includes/helper/metaboxes.php:648
+#: includes/helper/theme-options.php:147
+#: includes/helper/theme-options.php:473
+msgid "here"
+msgstr ""
+
+#: includes/helper/metaboxes.php:206
+#: includes/helper/metaboxes.php:473
+#: includes/helper/theme-options.php:155
+msgid "Sticky Header"
+msgstr ""
+
+#: includes/helper/metaboxes.php:207
+#: includes/helper/metaboxes.php:474
+msgid "It will stick header at the top when page scrolling. Default comes form theme option"
+msgstr ""
+
+#: includes/helper/metaboxes.php:223
+#: includes/helper/metaboxes.php:227
+#: includes/helper/metaboxes.php:232
+#: includes/helper/metaboxes.php:490
+#: includes/helper/metaboxes.php:494
+#: includes/helper/metaboxes.php:499
+#: includes/helper/theme-options.php:362
+#: includes/helper/theme-options.php:366
+msgid "Page Title"
+msgstr ""
+
+#: includes/helper/metaboxes.php:243
+#: includes/helper/metaboxes.php:510
+msgid "Page Title Type"
+msgstr ""
+
+#: includes/helper/metaboxes.php:254
+#: includes/helper/metaboxes.php:521
+msgid "Custom Title"
+msgstr ""
+
+#: includes/helper/metaboxes.php:259
+msgid "News Details"
+msgstr ""
+
+#: includes/helper/metaboxes.php:264
+#: includes/helper/metaboxes.php:530
+msgid "Page Breadcrumb"
+msgstr ""
+
+#: includes/helper/metaboxes.php:276
+#: includes/helper/metaboxes.php:542
+msgid "Customize Style"
+msgstr ""
+
+#: includes/helper/metaboxes.php:286
+#: includes/helper/metaboxes.php:552
+#: includes/helper/theme-options.php:391
+msgid "Page Title Styling"
+msgstr ""
+
+#: includes/helper/metaboxes.php:360
+#: includes/helper/metaboxes.php:626
+#: includes/helper/theme-options.php:443
+#: includes/helper/theme-options.php:550
+#: includes/template-builder/includes/template-metaboxes.php:52
+msgid "Footer"
+msgstr ""
+
+#: includes/helper/metaboxes.php:365
+msgid "If you used theme builder for post footer then disable default footer"
+msgstr ""
+
+#: includes/helper/metaboxes.php:370
+#: includes/helper/metaboxes.php:636
+#: includes/helper/theme-options.php:462
+msgid "Default Footer"
+msgstr ""
+
+#: includes/helper/metaboxes.php:371
+msgid "Enable or Disable post default footer. Default comes form theme option"
+msgstr ""
+
+#: includes/helper/metaboxes.php:383
+msgid "You disabled default footer. Set your post footer form "
+msgstr ""
+
+#: includes/helper/metaboxes.php:394
+msgid "Benzo Page Options"
+msgstr ""
+
+#: includes/helper/metaboxes.php:405
+msgid "Page Layout"
+msgstr ""
+
+#: includes/helper/metaboxes.php:416
+msgid "Select Page layout. Full width or In container"
+msgstr ""
+
+#: includes/helper/metaboxes.php:448
+msgid "If you used theme builder for page header then disable default header"
+msgstr ""
+
+#: includes/helper/metaboxes.php:454
+msgid "Enable or Disable page default header. Default comes form theme option"
+msgstr ""
+
+#: includes/helper/metaboxes.php:465
+msgid "You disabled default header. Set your page header form "
+msgstr ""
+
+#: includes/helper/metaboxes.php:631
+msgid "If you used theme builder for page footer then disable default footer"
+msgstr ""
+
+#: includes/helper/metaboxes.php:637
+msgid "Enable or Disable page default footer. Default comes form theme option"
+msgstr ""
+
+#: includes/helper/metaboxes.php:648
+msgid "You disabled default footer. Set your page footer form "
+msgstr ""
+
+#: includes/helper/metaboxes.php:666
+msgid "Benzo Author Options"
+msgstr ""
+
+#: includes/helper/metaboxes.php:673
+msgid "Profile Picture"
+msgstr ""
+
+#: includes/helper/metaboxes.php:674
+msgid "Choose Picture"
+msgstr ""
+
+#: includes/helper/metaboxes.php:679
+msgid "User Title"
+msgstr ""
+
+#: includes/helper/metaboxes.php:685
+msgid "User Address"
+msgstr ""
+
+#: includes/helper/metaboxes.php:695
+msgid "Description"
+msgstr ""
+
+#: includes/helper/metaboxes.php:702
+msgid "User Social Links"
+msgstr ""
+
+#: includes/helper/metaboxes.php:703
+msgid "Add New"
+msgstr ""
+
+#: includes/helper/metaboxes.php:723
+msgid "Benzo Category Options"
+msgstr ""
+
+#: includes/helper/metaboxes.php:733
+msgid "Category Thumbnail"
+msgstr ""
+
+#: includes/helper/metaboxes.php:739
+msgid "Category Icon"
+msgstr ""
+
+#: includes/helper/metaboxes.php:745
+msgid "Category Color"
+msgstr ""
+
+#: includes/helper/metaboxes.php:746
+msgid "For design purpose"
+msgstr ""
+
+#: includes/helper/theme-options.php:54
+msgid "Theme Options"
+msgstr ""
+
+#: includes/helper/theme-options.php:56
+msgid "Benzo Options"
+msgstr ""
+
+#: includes/helper/theme-options.php:68
+#: includes/helper/theme-options.php:72
+msgid "Preloader"
+msgstr ""
+
+#: includes/helper/theme-options.php:77
+msgid "Preloader?"
+msgstr ""
+
+#: includes/helper/theme-options.php:87
+msgid "Preloader background"
+msgstr ""
+
+#: includes/helper/theme-options.php:97
+msgid "Preloader Image"
+msgstr ""
+
+#: includes/helper/theme-options.php:131
+msgid "If you used theme builder for site header then disable default theme header"
+msgstr ""
+
+#: includes/helper/theme-options.php:137
+msgid "Enable or Disable Theme default header"
+msgstr ""
+
+#: includes/helper/theme-options.php:147
+msgid "You disabled default theme header. Set your site header form "
+msgstr ""
+
+#: includes/helper/theme-options.php:156
+msgid "It will stick header at the top when page scrolling"
+msgstr ""
+
+#: includes/helper/theme-options.php:169
+msgid "Header Breakpoint"
+msgstr ""
+
+#: includes/helper/theme-options.php:171
+msgid "Enter when the slide menu will appear"
+msgstr ""
+
+#: includes/helper/theme-options.php:181
+#: includes/helper/theme-options.php:185
+msgid "Logo"
+msgstr ""
+
+#: includes/helper/theme-options.php:190
+msgid "Main logo"
+msgstr ""
+
+#: includes/helper/theme-options.php:201
+#: includes/helper/theme-options.php:218
+msgid "Logo Dimensions"
+msgstr ""
+
+#: includes/helper/theme-options.php:207
+msgid "Slide Panel Logo"
+msgstr ""
+
+#: includes/helper/theme-options.php:226
+msgid "Styling"
+msgstr ""
+
+#: includes/helper/theme-options.php:230
+msgid "Header Styling"
+msgstr ""
+
+#: includes/helper/theme-options.php:235
+msgid "Header Background"
+msgstr ""
+
+#: includes/helper/theme-options.php:246
+msgid "Menu Item Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:247
+#: includes/helper/theme-options.php:255
+msgid "This is the menu item font color."
+msgstr ""
+
+#: includes/helper/theme-options.php:254
+msgid "Active/Current Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:262
+msgid "Menu Typography"
+msgstr ""
+
+#: includes/helper/theme-options.php:294
+#: includes/helper/theme-options.php:342
+msgid "Item Hover Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:301
+#: includes/helper/theme-options.php:349
+msgid "Item Typography"
+msgstr ""
+
+#: includes/helper/theme-options.php:371
+msgid "Site Page Title"
+msgstr ""
+
+#: includes/helper/theme-options.php:381
+msgid "Site Breadcrumb"
+msgstr ""
+
+#: includes/helper/theme-options.php:457
+msgid "If you used theme builder for site footer then disable default theme header"
+msgstr ""
+
+#: includes/helper/theme-options.php:463
+msgid "Enable or Disable Theme default footer"
+msgstr ""
+
+#: includes/helper/theme-options.php:473
+msgid "You disabled default theme footer. Set your site footer form "
+msgstr ""
+
+#: includes/helper/theme-options.php:483
+#: includes/helper/theme-options.php:487
+msgid "Footer Widgets"
+msgstr ""
+
+#: includes/helper/theme-options.php:492
+msgid "Footer background"
+msgstr ""
+
+#: includes/helper/theme-options.php:506
+msgid "Hover Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:516
+msgid "Content Typography"
+msgstr ""
+
+#: includes/helper/theme-options.php:524
+msgid "Widget Title"
+msgstr ""
+
+#: includes/helper/theme-options.php:546
+msgid "Footer Copyright"
+msgstr ""
+
+#: includes/helper/theme-options.php:555
+msgid "Copyright Text"
+msgstr ""
+
+#: includes/helper/theme-options.php:556
+msgid "Copyright © 2022. All rights reserved."
+msgstr ""
+
+#: includes/helper/theme-options.php:565
+msgid "Copyright text color"
+msgstr ""
+
+#: includes/helper/theme-options.php:578
+msgid "Blog"
+msgstr ""
+
+#: includes/helper/theme-options.php:583
+#: includes/helper/theme-options.php:587
+msgid "Blog Archive"
+msgstr ""
+
+#: includes/helper/theme-options.php:592
+msgid "Blog Archive Title"
+msgstr ""
+
+#: includes/helper/theme-options.php:593
+msgid "Type title"
+msgstr ""
+
+#: includes/helper/theme-options.php:594
+#: includes/wp-widgets/benzo-recent-post.php:19
+msgid "Latest News"
+msgstr ""
+
+#: includes/helper/theme-options.php:599
+msgid "Archive Layout"
+msgstr ""
+
+#: includes/helper/theme-options.php:605
+msgid "Select Archive layout. Full width or In container.  Settings will also apply on the blog category and tag archive pages"
+msgstr ""
+
+#: includes/helper/theme-options.php:622
+#: includes/helper/theme-options.php:708
+msgid "Show Post Meta"
+msgstr ""
+
+#: includes/helper/theme-options.php:623
+msgid "Enable or Disable Post meta on Blog Archive page"
+msgstr ""
+
+#: includes/helper/theme-options.php:633
+msgid "Show Post Excerpt"
+msgstr ""
+
+#: includes/helper/theme-options.php:634
+msgid "Enable or Disable Post Excerpt on Blog Archive page"
+msgstr ""
+
+#: includes/helper/theme-options.php:644
+msgid "Excerpt Word Count"
+msgstr ""
+
+#: includes/helper/theme-options.php:645
+msgid "Set how many words you want to show in the post Excerpt"
+msgstr ""
+
+#: includes/helper/theme-options.php:654
+msgid "Show Read More Button"
+msgstr ""
+
+#: includes/helper/theme-options.php:655
+msgid "Enable or Disable Post Read More Button on Blog Archive page"
+msgstr ""
+
+#: includes/helper/theme-options.php:666
+msgid "Continue Reading"
+msgstr ""
+
+#: includes/helper/theme-options.php:676
+msgid "Blog Single"
+msgstr ""
+
+#: includes/helper/theme-options.php:680
+msgid "Blog single"
+msgstr ""
+
+#: includes/helper/theme-options.php:685
+msgid "Details Layout"
+msgstr ""
+
+#: includes/helper/theme-options.php:691
+msgid "Select Blog details layout. Full width or In container"
+msgstr ""
+
+#: includes/helper/theme-options.php:703
+msgid "Select Blog Details Sidebar. Left sidebar or right sidebar or No sidebar"
+msgstr ""
+
+#: includes/helper/theme-options.php:709
+msgid "Enable or Disable Post meta on Blog Details page"
+msgstr ""
+
+#: includes/helper/theme-options.php:719
+msgid "Show Post Share Links"
+msgstr ""
+
+#: includes/helper/theme-options.php:720
+msgid "Enable or Disable Post social share links."
+msgstr ""
+
+#: includes/helper/theme-options.php:730
+msgid "Social Share Links"
+msgstr ""
+
+#: includes/helper/theme-options.php:733
+msgid "Facebook"
+msgstr ""
+
+#: includes/helper/theme-options.php:734
+msgid "Twitter"
+msgstr ""
+
+#: includes/helper/theme-options.php:735
+msgid "Pinterest"
+msgstr ""
+
+#: includes/helper/theme-options.php:736
+msgid "Linkedin"
+msgstr ""
+
+#: includes/helper/theme-options.php:739
+msgid "Reddit"
+msgstr ""
+
+#: includes/helper/theme-options.php:740
+msgid "Whatsapp"
+msgstr ""
+
+#: includes/helper/theme-options.php:741
+msgid "Telegram"
+msgstr ""
+
+#: includes/helper/theme-options.php:751
+msgid "Show Related Tags"
+msgstr ""
+
+#: includes/helper/theme-options.php:752
+msgid "Enable or Disable related tag on Blog Details page"
+msgstr ""
+
+#: includes/helper/theme-options.php:762
+msgid "Show Post Nav"
+msgstr ""
+
+#: includes/helper/theme-options.php:763
+msgid "Enable or Disable Post nav on Blog Details page"
+msgstr ""
+
+#: includes/helper/theme-options.php:779
+msgid "Shop"
+msgstr ""
+
+#: includes/helper/theme-options.php:791
+msgid "Error 404"
+msgstr ""
+
+#: includes/helper/theme-options.php:795
+msgid "Error Page"
+msgstr ""
+
+#: includes/helper/theme-options.php:800
+msgid "Error Page Note"
+msgstr ""
+
+#: includes/helper/theme-options.php:801
+msgid "The page you are looking for doesn&rsquo;t exist. It may have been moved or removed altogether. Please try searching for some other page, or return to the website&rsquo;s homepage to find what you&rsquo;re looking for."
+msgstr ""
+
+#: includes/helper/theme-options.php:806
+msgid "Error Button Text"
+msgstr ""
+
+#: includes/helper/theme-options.php:807
+msgid "Return To Home."
+msgstr ""
+
+#: includes/helper/theme-options.php:818
+msgid "Search Result"
+msgstr ""
+
+#: includes/helper/theme-options.php:822
+#: includes/template-builder/includes/template-metaboxes.php:213
+#: includes/template-builder/includes/template-metaboxes.php:288
+msgid "Search Page"
+msgstr ""
+
+#: includes/helper/theme-options.php:827
+msgid "Show Search Form"
+msgstr ""
+
+#: includes/helper/theme-options.php:835
+msgid "Form Title"
+msgstr ""
+
+#: includes/helper/theme-options.php:836
+msgid "Search Here:"
+msgstr ""
+
+#: includes/helper/theme-options.php:844
+msgid "Form Note"
+msgstr ""
+
+#: includes/helper/theme-options.php:845
+msgid "If you are not happy with the results below please do another search"
+msgstr ""
+
+#: includes/helper/theme-options.php:859
+#: includes/helper/theme-options.php:863
+msgid "Custom Scripts"
+msgstr ""
+
+#: includes/helper/theme-options.php:868
+msgid "Js Code(Head)"
+msgstr ""
+
+#: includes/helper/theme-options.php:873
+msgid ""
+"Add your custom js code here. Must Be type without script tag and valid code, It will insert the code to wp_head hook.\r\n"
+"                    "
+msgstr ""
+
+#: includes/helper/theme-options.php:879
+msgid "Js Code(Footer)"
+msgstr ""
+
+#: includes/helper/theme-options.php:884
+msgid ""
+"Add your custom js code here. Must Be type without script tag and valid code, It will insert the code to wp_footer hook.\r\n"
+"                    "
+msgstr ""
+
+#: includes/helper/theme-options.php:890
+msgid "You Can add also custom css in Appearance>Customize>Additional CSS"
+msgstr ""
+
+#: includes/helper/theme-options.php:901
+#: includes/helper/theme-options.php:905
+msgid "Color Scheme"
+msgstr ""
+
+#: includes/helper/theme-options.php:910
+msgid "Primary Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:912
+msgid "Default: #fb2614"
+msgstr ""
+
+#: includes/helper/theme-options.php:917
+msgid "Secondary Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:919
+msgid "Default: #000000"
+msgstr ""
+
+#: includes/helper/theme-options.php:924
+msgid "Body Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:926
+msgid "Default: #636465"
+msgstr ""
+
+#: includes/helper/theme-options.php:931
+msgid "Common Border Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:933
+msgid "Default: #eaeaea"
+msgstr ""
+
+#: includes/helper/theme-options.php:938
+msgid "Common Light Color"
+msgstr ""
+
+#: includes/helper/theme-options.php:940
+msgid "Default: #f6f6f6"
+msgstr ""
+
+#: includes/helper/theme-options.php:960
+msgid "Primary Font"
+msgstr ""
+
+#: includes/helper/theme-options.php:977
+msgid "Secondary Font"
+msgstr ""
+
+#: includes/helper/theme-options.php:994
+msgid "Body Typography"
+msgstr ""
+
+#: includes/helper/theme-options.php:1004
+msgid "Body"
+msgstr ""
+
+#: includes/helper/theme-options.php:1014
+msgid "Heading Typography"
+msgstr ""
+
+#: includes/helper/theme-options.php:1024
+msgid "Heading 1"
+msgstr ""
+
+#: includes/helper/theme-options.php:1034
+msgid "Heading 2"
+msgstr ""
+
+#: includes/helper/theme-options.php:1044
+msgid "Heading 3"
+msgstr ""
+
+#: includes/helper/theme-options.php:1054
+msgid "Heading 4"
+msgstr ""
+
+#: includes/helper/theme-options.php:1064
+msgid "Heading 5"
+msgstr ""
+
+#: includes/helper/theme-options.php:1074
+msgid "Heading 6"
+msgstr ""
+
+#: includes/helper/theme-options.php:1090
+#: includes/helper/theme-options.php:1094
+msgid "Backup"
+msgstr ""
+
+#: includes/template-builder/includes/template-admin.php:26
+msgid "Theme Builder Mega Menu"
+msgstr ""
+
+#: includes/template-builder/includes/template-admin.php:43
+#: includes/template-builder/includes/template-admin.php:44
+#: includes/template-builder/includes/template-cpt.php:25
+msgid "Template Builder"
+msgstr ""
+
+#: includes/template-builder/includes/template-admin.php:60
+msgid "Type"
+msgstr ""
+
+#: includes/template-builder/includes/template-admin.php:61
+msgid "Info"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:26
+msgid "Template"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:27
+msgid "Templates"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:40
+#: includes/template-builder/includes/template-cpt.php:41
+msgid "Add New %s"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:42
+msgid "Edit %s"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:43
+msgid "New %s"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:44
+msgid "All %s"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:45
+msgid "View %s"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:46
+msgid "Search %s"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:47
+msgid "No %s found"
+msgstr ""
+
+#: includes/template-builder/includes/template-cpt.php:48
+msgid "No %s found in Trash"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:31
+msgid "Template Settings"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:43
+msgid "Common Settings"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:48
+msgid "Template Type"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:49
+msgid "Select Type"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:53
+msgid "Block"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:54
+msgid "Popup"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:55
+msgid "OffCanvas"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:62
+#: includes/template-builder/includes/template-metaboxes.php:74
+msgid "Popup Width"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:63
+msgid "Select or type a value (PX)"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:65
+#: includes/template-builder/includes/template-metaboxes.php:90
+msgid "Full"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:86
+msgid "Popup Height"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:87
+msgid "Set the popup max height."
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:89
+msgid "Fit Content"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:111
+msgid "Popup Position"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:112
+msgid "Choose the popup position on page."
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:114
+msgid "Center Center"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:115
+msgid "Center Left"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:116
+msgid "Center Right"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:117
+msgid "Bottom Center"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:118
+msgid "Top Center"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:119
+msgid "Bottom Left"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:120
+msgid "Top Left"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:121
+msgid "Bottom Right"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:122
+msgid "Top Right"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:130
+msgid "Popup Overly Color"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:137
+#: includes/template-builder/includes/template-metaboxes.php:144
+msgid "Popup Close Color"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:151
+msgid "Popup Close Size"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:163
+msgid "Popup Close Radius"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:169
+msgid "Popup Delay"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:191
+msgid "Display On"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:192
+#: includes/template-builder/includes/template-metaboxes.php:267
+msgid "Select the locations where this item should be visible."
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:193
+msgid "Add Display Rule"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:198
+msgid "Define Rule"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:203
+msgid "Display on"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:205
+#: includes/template-builder/includes/template-metaboxes.php:280
+msgid "Entire Website"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:206
+#: includes/template-builder/includes/template-metaboxes.php:281
+msgid "All Pages"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:207
+#: includes/template-builder/includes/template-metaboxes.php:282
+msgid "Front Page"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:208
+#: includes/template-builder/includes/template-metaboxes.php:283
+msgid "Post Page"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:209
+#: includes/template-builder/includes/template-metaboxes.php:284
+msgid "Post Details"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:210
+#: includes/template-builder/includes/template-metaboxes.php:285
+msgid "All Archive"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:211
+#: includes/template-builder/includes/template-metaboxes.php:286
+msgid "Date Archive"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:212
+#: includes/template-builder/includes/template-metaboxes.php:287
+msgid "Author Archive"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:214
+#: includes/template-builder/includes/template-metaboxes.php:289
+msgid "404 Page"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:215
+#: includes/template-builder/includes/template-metaboxes.php:290
+msgid "Specific Pages"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:216
+#: includes/template-builder/includes/template-metaboxes.php:291
+msgid "Specific Posts"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:217
+#: includes/template-builder/includes/template-metaboxes.php:292
+msgid "Shop Page"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:218
+#: includes/template-builder/includes/template-metaboxes.php:293
+msgid "Product Details"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:219
+#: includes/template-builder/includes/template-metaboxes.php:294
+msgid "Specific Products"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:225
+#: includes/template-builder/includes/template-metaboxes.php:226
+#: includes/template-builder/includes/template-metaboxes.php:300
+#: includes/template-builder/includes/template-metaboxes.php:301
+msgid "Select Pages"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:237
+#: includes/template-builder/includes/template-metaboxes.php:238
+#: includes/template-builder/includes/template-metaboxes.php:312
+#: includes/template-builder/includes/template-metaboxes.php:313
+msgid "Select Posts"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:249
+#: includes/template-builder/includes/template-metaboxes.php:250
+#: includes/template-builder/includes/template-metaboxes.php:324
+#: includes/template-builder/includes/template-metaboxes.php:325
+msgid "Select Products"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:266
+msgid "Hide On"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:268
+msgid "Add Hide Rule"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:273
+msgid "Hide Rule"
+msgstr ""
+
+#: includes/template-builder/includes/template-metaboxes.php:278
+msgid "Hide on"
+msgstr ""
+
+#: includes/wp-widgets/benzo-author.php:9
+msgid "*Benzo Authors"
+msgstr ""
+
+#: includes/wp-widgets/benzo-author.php:11
+msgid "Show Authors"
+msgstr ""
+
+#: includes/wp-widgets/benzo-author.php:17
+msgid "Best Author"
+msgstr ""
+
+#: includes/wp-widgets/benzo-author.php:25
+msgid "Specific Rule"
+msgstr ""
+
+#: includes/wp-widgets/benzo-categories.php:9
+msgid "*Benzo Categories"
+msgstr ""
+
+#: includes/wp-widgets/benzo-categories.php:11
+msgid "Show categories"
+msgstr ""
+
+#: includes/wp-widgets/benzo-categories.php:17
+msgid "Category"
+msgstr ""
+
+#: includes/wp-widgets/benzo-recent-post.php:11
+msgid "*Benzo Recent Post"
+msgstr ""
+
+#: includes/wp-widgets/benzo-recent-post.php:13
+msgid "Show Latest post"
+msgstr ""

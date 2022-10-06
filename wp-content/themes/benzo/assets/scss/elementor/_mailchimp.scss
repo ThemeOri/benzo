@@ -1,0 +1,48 @@
+/** ===== Mailchimp ===== **/
+.benzo-mailchimp-wrapper {
+    .mc4wp-form-fields {
+        position: relative;
+    }
+
+    input:focus {
+        border-color: $color-primary;
+    }
+
+
+    &.button_bottom {
+        input[type="submit"],
+        button[type="submit"] {
+            margin-top: 15px;
+        }
+    }
+
+    &.button_outside {
+        .mc4wp-form-fields {
+            display: flex;
+
+            @include respond-below(c480) {
+                flex-direction: column;
+            }
+        }
+
+        input[type="submit"],
+        button[type="submit"] {
+            width: auto;
+            max-width: auto;
+            flex: 0 0 auto;
+        }
+    }
+
+    &.button_inside {
+        input[type="submit"],
+        button[type="submit"] {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            top: 10px;
+            z-index: 2;
+            padding: 0 30px;
+            height: auto;
+        }
+    }
+}

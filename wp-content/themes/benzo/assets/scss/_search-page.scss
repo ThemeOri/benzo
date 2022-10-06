@@ -1,0 +1,39 @@
+/** ===== Search Page ===== **/
+.search-form-wrap {
+    background-color: $color-light;
+    padding: 60px;
+    margin-bottom: 60px;
+
+    .search-form-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .search-form {
+        position: relative;
+        display: flex;
+
+        .search-submit {
+            flex: 0 0 auto;
+            padding: 0;
+            width: 80px;
+
+            i {
+                margin: 0px;
+            }
+
+            &:hover {
+                background-color: $color-white;
+                border-color: $color-primary;
+            }
+        }
+
+        input:focus {
+            border-color: $color-primary;
+        }
+    }
+
+    p {
+        margin: 20px 0 0;
+    }
+}

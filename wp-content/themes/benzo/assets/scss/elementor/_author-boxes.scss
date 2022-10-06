@@ -1,0 +1,55 @@
+/** ===== Post Lists ===== **/
+.benzo-author-box {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    padding-top: 55px;
+    text-align: center;
+    position: relative;
+    background: #f5f5f5;
+
+    .author-content {
+        padding-bottom: 25px;
+
+        .name {
+            font-size: 24px;
+            margin: 0 0 5px;
+        }
+
+        .title {
+            display: block;
+            font: {
+                family: $font-secondary;
+                weight: 500;
+            }
+            color: $color-primary;
+            line-height: 1;
+        }
+    }
+
+    .author-thumbnail {
+        img {
+            max-width: 70%;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 80%;
+        bottom: 0;
+        left: 10%;
+        z-index: -1;
+        transition: 0.3s;
+        background: $color-primary;
+    }
+
+    &:hover {
+        &::after {
+            height: 10px;
+            transform: translateY(100%);
+        }
+    }
+}

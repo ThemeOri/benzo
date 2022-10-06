@@ -1,0 +1,75 @@
+/** ===== Popup ===== **/
+.benzo-popup-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    display: none;
+    animation: {
+        name: popupFadeIn;
+        timing-function: ease-in-out;
+        duration: .4s;
+    };
+
+    .popup-overly {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+
+    .popup-container {
+        position: relative;
+        z-index: 2;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        display: none;
+        animation: {
+            name: popupFadeIn;
+            duration: .5s;
+        };
+
+        .popup-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 2;
+            line-height: 1;
+            font-size: 22px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: $color-primary;
+            transition: 0.3s;
+        }
+    }
+
+    &.show-popup {
+        display: flex;
+
+        .popup-container {
+            display: block;
+        }
+    }
+}
+
+@keyframes popupFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
