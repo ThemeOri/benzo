@@ -3,14 +3,15 @@
     margin-bottom: 50px;
 
     .post-media {
-        margin-bottom: 35px;
         overflow: hidden;
     }
 
     .entry-summary {
         .entry-title {
-            font-size: 36px;
-            margin: 0 0 15px;
+            font-size: 30px;
+            border-bottom: 2px solid $color-border;
+            margin: 0 0 22px; 
+            padding: 0px 0px 20px 0px;
 
             @include respond-below(c1400) {
                 font-size: 30px;
@@ -30,12 +31,13 @@
             align-content: center;
             flex-wrap: wrap;
             font: {
-                size: 16px;
+                font-size: 15px;
                 family: $font-secondary;
             }
-            text-transform: uppercase;
-            line-height: 1.4;
-            margin-bottom: 8px;
+            font-weight: 400;
+            line-height: 25px;
+            margin-bottom: 5px;
+            text-transform: capitalize;
 
             @include respond-below(md) {
                 font-size: 15px;
@@ -44,6 +46,11 @@
             span {
                 display: block;
                 margin-bottom: 8px;
+                padding-right: 15px;
+                i {
+                  color: $color-primary;
+                  padding-right: 8px;
+                }
             }
 
             a {
@@ -56,71 +63,15 @@
 
             .category {
                 a {
-                    color: $color-primary;
-
                     &:hover {
-                        color: $color-secondary;
+                         color: $color-primary;
                     }
-                }
-            }
-
-            .date,
-            .admin {
-                position: relative;
-                padding-right: 10px;
-                margin-right: 10px;
-
-                &::after {
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    content: " / ";
-                    transform: translate(50%, -50%);
                 }
             }
         }
 
         p {
             margin: 0;
-        }
-
-        .read-more {
-            color: $color-body;
-            font: {
-                family: $font-secondary;
-                size: 14px;
-                weight: 700;
-            }
-            display: inline-block;
-            text-transform: uppercase;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
-            padding-bottom: 2px;
-            transition: 0.3s;
-
-            i {
-                margin-left: 8px;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 2px;
-                background-color: $color-primary;
-                transition: linear 0.3s;
-            }
-
-            &:hover {
-                color: $color-primary;
-
-                &::before {
-                    width: 100%;
-                }
-            }
         }
     }
 }
@@ -340,5 +291,24 @@
 @keyframes pulse {
     to {
         box-shadow: 0 0 0 45px transparent
+    }
+}
+
+.blog-content-wrapper {
+    border: 2px solid $color-border;
+    padding: 40px 40px 40px 40px;
+}
+
+.post-media.post-media-standard  img {
+    transform: scale(1.01);
+    transition: all 1s cubic-bezier(.25,.8,.25,1);
+}
+.entry-post {
+    &:hover{
+       .post-media.post-media-standard {
+         img {
+           transform: scale(1.22) rotateY(0deg);
+         }
+       }
     }
 }

@@ -84,7 +84,7 @@ if ( 'enabled' !== $active_title ) {
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-inner">
-            <h5 class="page-title"><?php echo implode( '', $title_output ); ?></h5>
+            <h2 class="page-title"><?php echo implode( '', $title_output ); ?></h2>
             <?php if ( 'disabled' !== $breadcrumb && function_exists( 'bcn_display' ) ): ?>
                 <div class="breadcrumb">
                     <?php bcn_display()?>

@@ -14,13 +14,13 @@ $show_meta     = Helper::get_option( 'archive_post_meta', 'yes' );
 $show_excerpt  = Helper::get_option( 'archive_post_excerpt', 'yes' );
 $excerpt_count = Helper::get_option( 'post_excerpt_count', 35 );
 $show_button   = Helper::get_option( 'archive_post_button', 'yes' );
-$button_text   = Helper::get_option( 'post_button_text', __( 'Continue Reading', 'benzo' ) );
+$button_text   = Helper::get_option( 'post_button_text', __( 'Read More_', 'benzo' ) );
 
 ?>
 
 <article id="post-<?php the_ID();?>" <?php post_class( 'entry-post clearfix' );?>>
     <?php Benzo_Post_Helper::render_media(); ?>
-    <div class="entry-summary">
+    <div class="entry-summary blog-content-wrapper">
 		<?php
             if( 'yes' === $show_meta ) {
                 Benzo_Post_Helper::render_meta();
@@ -37,7 +37,7 @@ $button_text   = Helper::get_option( 'post_button_text', __( 'Continue Reading',
             }
 
             if ( 'yes' === $show_button && ! empty( $button_text ) ) {
-                echo '<a href="' . esc_url( get_permalink() ) . '" class="read-more">' . esc_html( $button_text ) . ' <i class="far fa-angle-double-right"></i></a>';
+                echo '<a href="' . esc_url( get_permalink() ) . '" class="read-more theme-btn">' . esc_html( $button_text ) . ' </a>';
             }
         ?>
 	</div>

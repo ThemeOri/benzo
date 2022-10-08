@@ -42,14 +42,14 @@ class Benzo_Assets {
         $secondary_font = Benzo_Helper::get_option( 'secondary_font', ['font-family' => ''] );
 
         if ( '' == $primary_font || is_array( $primary_font ) && ! $primary_font['font-family'] ) {
-            if ( 'off' !== _x( 'on', 'Work Sans', 'benzo' ) ) {
-                $font_families[] = 'Work Sans:300,300i,400,400i,500,600,700';
+            if ( 'off' !== _x( 'on', 'Inter', 'benzo' ) ) {
+                $font_families[] = 'Inter:100,300,400,500,600,700,800,900';
             }
         }
 
         if ( '' == $primary_font || is_array( $secondary_font ) && ! $secondary_font['font-family'] ) {
-            if ( 'off' !== _x( 'on', 'Epilogue', 'benzo' ) ) {
-                $font_families[] = 'Epilogue:300,300i,400,400i,500,600,700';
+            if ( 'off' !== _x( 'on', 'Roboto', 'benzo' ) ) { 
+                $font_families[] = 'Roboto:100,300,400,500,700,900';
             }
         }
 
@@ -92,31 +92,31 @@ class Benzo_Assets {
         if ( is_array( $primary_font ) && $primary_font['font-family'] ) {
             $inline_css[] = '--font-primary: ' . $primary_font['font-family'];
         } else {
-            $inline_css[] = '--font-primary: Work Sans';
+            $inline_css[] = '--font-primary: Inter';
         }
 
         if ( is_array( $primary_font ) && $secondary_font['font-family'] ) {
             $inline_css[] = '--font-secondary: ' . $secondary_font['font-family'];
         } else {
-            $inline_css[] = '--font-secondary: Epilogue';
+            $inline_css[] = '--font-secondary: Roboto';
         }
 
         if ( ! empty( $primary_color ) ) {
             $inline_css[] = '--color-primary: ' . $primary_color;
         } else {
-            $inline_css[] = '--color-primary: #fb2614';
+            $inline_css[] = '--color-primary: #005DE0';
         }
 
         if ( ! empty( $secondary_color ) ) {
             $inline_css[] = '--color-secondary: ' . $secondary_color;
         } else {
-            $inline_css[] = '--color-secondary: #000000';
+            $inline_css[] = '--color-secondary: #0F0F11';
         }
 
         if ( ! empty( $body_color ) ) {
             $inline_css[] = '--color-body: ' . $body_color;
         } else {
-            $inline_css[] = '--color-body: #636465';
+            $inline_css[] = '--color-body: #535353';
         }
 
         $inline_css[] = '--color-white: #ffffff';
@@ -124,7 +124,7 @@ class Benzo_Assets {
         if ( ! empty( $border_color ) ) {
             $inline_css[] = '--color-border: ' . $border_color;
         } else {
-            $inline_css[] = '--color-border: #eaeaea';
+            $inline_css[] = '--color-border: #EEF0F1';
         }
 
         if ( ! empty( $light_color ) ) {

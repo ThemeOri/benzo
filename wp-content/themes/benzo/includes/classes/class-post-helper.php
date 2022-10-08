@@ -122,20 +122,20 @@ class Benzo_Post_Helper {
         }
         ?>
         <div class="entry-meta">
-            <span class="date">
-                <a href="#">
-                    <?php echo esc_html( get_the_date( 'M d, Y' ) ) ?>
-                </a>
+            <span class="category">
+                <i class="far fa-tags"></i>
+                <?php echo get_the_category_list( ', ' ) ?>
             </span>
             <span class="admin">
-                <?php esc_html_e( 'by', 'benzo' )?>
+                <i class="fal fa-user-circle"></i>
                 <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ?>">
                     <?php echo esc_html( get_the_author() ) ?>
                 </a>
             </span>
-            <span class="category">
-                <?php echo get_the_category_list( ', ' ) ?>
-            </span>
+            <span>
+                <i class="far fa-comment"></i>
+               <a href="<?php comments_link();?>"><?php comments_number();?></a>
+           </span>
         </div>
         <?php
     }

@@ -1,4 +1,14 @@
 /** ===== Header ===== **/
+.benzo-site-logo
+  {
+    a {
+      img {
+            max-width: 90px;
+        }
+    }
+  }  
+
+
 .header-navigation {
     display: flex;
     justify-content: space-between;

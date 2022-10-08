@@ -9,7 +9,7 @@ html {
 body {
     color: $color-body;
     font : {
-        family: $font-primary;
+        family: $font-secondary;
         weight: 400;
         size: 16px;
     }
@@ -207,7 +207,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-secondary;
+    font-family: $font-primary;
     font-weight: 700;
     line-height: 1.5;
     margin: 0 0 20px;
@@ -371,5 +371,42 @@ figure {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+/** ===== Button CSS ===== **/
+
+.theme-btn {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    color: $color-secondary;
+    padding: 13px 35px;
+    margin-top: 30px;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    text-transform: capitalize;
+    border: 2px solid $color-border;
+    &:after{
+        content: '';
+        position: absolute;
+        width: 0;
+        transition: all 0.5s ease-out 0s;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: -1;
+        background-color: $color-primary;
+    }
+    &:hover{
+      color: $color-white;
+      border: 2px solid transparent;
+        &::after {
+            width: 100%;
+        }
     }
 }
