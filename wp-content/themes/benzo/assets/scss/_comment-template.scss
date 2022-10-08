@@ -1,14 +1,14 @@
 /** ===== Comment Template ===== **/
 .comments-area {
-    margin: 40px 0 0;
-    padding: 40px 0 0;
-    border-top: 1px solid #f1f1f1;
+    margin: 25px 0 0;
+    padding: 25px 0 0;
 
     .comments-title,
     .comment-reply-title {
-        font-size: 36px;
+        font-size: 27px;
         margin: 0 0 30px;
-        line-height: 1.2;
+        line-height: 36px;
+        font-weight: 600;
 
         @include respond-below(lg) {
             font-size: 32px;
@@ -20,7 +20,7 @@
     }
 
     .comment-reply-title {
-        margin: 0 0 10px;
+        margin: 0 0 5px;
     }
 
     .comment-respond {
@@ -105,7 +105,7 @@
         }
 
         .logged-in-as {
-            font-weight: 600;
+            font-weight: 400;
             flex: 0 0 100%;
             margin: 0 0 20px;
 

@@ -13,6 +13,7 @@
         height: 100%;
         z-index: -1;
         opacity: 0.9;
+        clip-path: polygon(100% 0, 1000% 30%, 90% 95%, 67% 91%, 50% 96%, 29% 93%, 13% 98%, 0 99%, 0 0);
     }
 
     .page-title-inner {
@@ -43,11 +44,11 @@
         border: 6px solid var(--color-white);
         box-shadow: 0px 6px 20px rgba(0, 60, 143, 0.1);
         border-radius: 40px;
-        height: 80px;
-        width: 260px;
+        height: 80px; 
+        padding: 0px 50px;
         line-height: 70px;
-        left: 830px;
-        bottom: -35px;
+        left: 45%;
+        bottom: -20px;
 
         @include respond-below(lg) {
             margin-top: 8px;

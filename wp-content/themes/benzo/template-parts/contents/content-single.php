@@ -43,6 +43,9 @@ $show_nav          = Helper::get_option( 'blog_details_nav', 'yes' );
             <div class="entry-tags-share">
                 <?php if ( 'yes' === $show_tag ) : ?>
                 <div class="related-tags">
+                    <div class="tags-title">
+                        <span><?php esc_html_e('Tags:','benzo'); ?></span>
+                    </div>
                     <?php the_tags('', '', ''); ?>
                 </div>
                 <?php endif; ?>
@@ -53,11 +56,8 @@ $show_nav          = Helper::get_option( 'blog_details_nav', 'yes' );
                 ?>
             </div>
             <?php endif; ?>
-            <?php
-                if( 'yes' === $show_nav ) {
-                    Benzo_Post_Helper::post_navigation();
-                }
 
+            <?php
                 // If comments are open or we have at least one comment, load up the comment template.
                 if (comments_open() || get_comments_number()) :
                     comments_template();

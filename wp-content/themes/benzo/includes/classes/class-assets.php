@@ -130,7 +130,7 @@ class Benzo_Assets {
         if ( ! empty( $light_color ) ) {
             $inline_css[] = '--color-light: ' . $light_color;
         } else {
-            $inline_css[] = '--color-light: #f6f6f6';
+            $inline_css[] = '--color-light: #F5F5F5';
         }
 
         $output = '

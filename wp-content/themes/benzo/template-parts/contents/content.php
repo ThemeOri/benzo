@@ -19,6 +19,7 @@ $button_text   = Helper::get_option( 'post_button_text', __( 'Read More_', 'benz
 ?>
 
 <article id="post-<?php the_ID();?>" <?php post_class( 'entry-post clearfix' );?>>
+
     <?php Benzo_Post_Helper::render_media(); ?>
     <div class="entry-summary blog-content-wrapper">
 		<?php

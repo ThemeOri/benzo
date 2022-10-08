@@ -76,7 +76,7 @@ if ( post_password_required() ) {
             ] ),
             'comment_field'      => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true" placeholder="' . esc_attr__( 'Type Your Comment', 'benzo' ) . '" required></textarea></p>',
             'class_submit'       => 'submit-btn',
-            'label_submit'       => esc_html__( 'Post Comment', 'benzo' ),
+            'label_submit'       => esc_html__( 'Post Comment_', 'benzo' ),
             'format'             => 'xhtml',
         ];
 

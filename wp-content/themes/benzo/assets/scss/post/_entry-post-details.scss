@@ -5,8 +5,11 @@
     }
 
     .entry-title {
-        font-size: 36px;
-        margin: 0 0 15px;
+        margin: 0 0 30px;
+        border-bottom: 2px solid var(--color-border);
+        font-size: 30px;
+        line-height: 40px;
+        padding: 0px 0px 30px;
 
         @include respond-below(c1400) {
             font-size: 30px;
@@ -25,14 +28,14 @@
         display: flex;
         align-content: center;
         flex-wrap: wrap;
-        font-size: 16px;
         font: {
             size: 16px;
             family: $font-secondary;
         }
-        text-transform: uppercase;
-        line-height: 1.4;
         margin-bottom: 8px;
+        font-weight: 400;
+        line-height: 25px;
+        text-transform: capitalize;
 
         @include respond-below(md) {
             font-size: 15px;
@@ -41,6 +44,11 @@
         span {
             display: block;
             margin-bottom: 8px;
+            padding-right: 15px;
+            i {
+              color: $color-primary;
+              padding-right: 8px;
+            }
         }
 
         a {
@@ -51,29 +59,9 @@
             }
         }
 
-        .category {
-            a {
-                color: $color-primary;
-
-                &:hover {
-                    color: $color-secondary;
-                }
-            }
-        }
-
         .date,
         .admin {
             position: relative;
-            padding-right: 10px;
-            margin-right: 10px;
-
-            &::after {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                content: " / ";
-                transform: translate(50%, -50%);
-            }
         }
     }
 
@@ -134,8 +122,10 @@
         justify-content: space-between;
         align-items: center;
         margin: 40px 0 0;
-        padding: 30px 0 0;
-        border-top: 1px solid #f1f1f1;
+        border-top: 2px solid var(--color-border);
+        border-bottom: 2px solid var(--color-border);
+        padding-top: 25px;
+        padding-bottom: 25px;
 
         @include respond-below(md) {
             flex-direction: column;
@@ -145,21 +135,18 @@
         .related-tags {
             display: flex;
             flex-wrap: wrap;
-            margin: -10px 0 0 -10px;
+            align-items: baseline;
 
             a {
-                font-size: 14px;
+                font-size: 16px;
                 text-transform: capitalize;
                 line-height: 1;
-                color: $color-body;
-                background-color: $color-light;
-                margin: 10px 0 0 10px;
-                padding: 8px 15px;
+                color: var(--color-body);
+                margin: 0px 15px 0 0px;
                 transition: 0.3s;
 
                 &:hover {
-                    background-color: $color-primary;
-                    color: $color-white;
+                    color: $color-primary;
                 }
             }
         }
@@ -314,3 +301,14 @@
         }
     }
 }
+
+.tags-title {
+    span {
+        font-size: 16px;
+        font-weight: 500;
+        color: #0F0F11;
+        margin-right: 15px;
+    }
+}
+
+ 

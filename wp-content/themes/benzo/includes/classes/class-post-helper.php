@@ -71,6 +71,7 @@ class Benzo_Post_Helper {
             }
         }
         ?>
+        <?php if( has_post_thumbnail( ) ) : ?>
         <div class="<?php echo esc_attr( implode( ' ', $wrapper_class ) ) ?>">
             <?php if ( 'gallery' == $post_format && $post_gallery ): ?>
             <div class="gallery-slider-active">
@@ -107,6 +108,7 @@ class Benzo_Post_Helper {
                 the_post_thumbnail( $size, ['alt' => wp_kses_post( get_the_title() )] );
             endif; ?>
         </div>
+        <?php endif; ?>
         <?php
     }
 
@@ -138,60 +140,6 @@ class Benzo_Post_Helper {
            </span>
         </div>
         <?php
-    }
-
-    /**
-     * Post Navigation
-     *
-     * @return void
-     */
-    public static function post_navigation() {
-        global $post;
-        if ( 'post' === get_post_type() ) {
-            $prev = get_previous_post();
-            $next = get_next_post();
-            ?>
-            <div class="entry-post-navigation">
-                <?php if ( ! empty( $prev ) ) :
-                    $prev_id = $prev->ID; ?>
-                    <div class="prev-post">
-                    <?php if( has_post_thumbnail( $prev_id ) ) : ?>
-                        <div class="thumb">
-                            <?php echo get_the_post_thumbnail( $prev_id, 'thumbnail' ) ?>
-                        </div>
-                        <?php endif; ?>
-                        <div class="content">
-                            <a href="<?php echo esc_url( get_permalink( $prev_id ) ) ?>">
-                                <span><?php echo esc_html__( 'Previous Post', 'benzo' ) ?></span>
-                                <?php
-                                    $title = wp_trim_words( get_the_title( $prev_id ), 4 );
-                                    echo wp_kses_post( $title );
-                                ?>
-                            </a>
-                        </div>
-                    </div>
-                <?php endif; if ( ! empty( $next ) ) :
-                    $next_id = $next->ID; ?>
-                    <div class="next-post">
-                        <?php if( has_post_thumbnail( $next_id ) ) : ?>
-                        <div class="thumb">
-                            <?php echo get_the_post_thumbnail( $next_id, 'thumbnail' ) ?>
-                        </div>
-                        <?php endif; ?>
-                        <div class="content">
-                            <a href="<?php echo esc_url( get_permalink( $next_id ) ) ?>">
-                                <span><?php echo esc_html__( 'Next Post', 'benzo' ) ?></span>
-                                <?php
-                                    $title = wp_trim_words( get_the_title( $next_id ), 4 );
-                                    echo wp_kses_post( $title );
-                                ?>
-                            </a>
-                        </div>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <?php
-        }
     }
 
     /**

@@ -1,6 +1,6 @@
 /** ===== Search Page ===== **/
 .search-form-wrap {
-    background-color: $color-light;
+    border: 2px solid $color-border;
     padding: 60px;
     margin-bottom: 60px;
 
@@ -23,7 +23,8 @@
             }
 
             &:hover {
-                background-color: $color-white;
+                background-color: $color-primary;
+                color: $color-white;
                 border-color: $color-primary;
             }
         }
