@@ -88,12 +88,12 @@ if ( class_exists( 'CSF' ) ) {
                         <?php Benzo_Post_Helper::render_media( get_the_ID(), 'thumbnail' ); ?>
                     <?php endif;?>
                     <div class="post-desc">
+                        <span class="time"><?php echo esc_html( get_the_date( 'M d, Y' ) ) ?></span>
                         <h6>
                             <a href="<?php echo esc_url( get_the_permalink() ) ?>">
                                 <?php echo esc_html( $post_title ) ?>
                             </a>
                         </h6>
-                        <span class="time"><i class="far fa-calendar-alt"></i><?php echo esc_html( get_the_date( 'M d, Y' ) ) ?></span>
                     </div>
                 </li>
             <?php endwhile;

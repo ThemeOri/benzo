@@ -178,6 +178,7 @@ final class Benzo_Toolkit {
         require_once BT_WP_WIDGETS . '/benzo-recent-post.php';
         require_once BT_WP_WIDGETS . '/benzo-author.php';
         require_once BT_WP_WIDGETS . '/benzo-categories.php';
+        require_once BT_WP_WIDGETS . '/benzo-cta.php';
 
         require_once BT_INCLUDES . '/demo-config/demo-config.php';
     }

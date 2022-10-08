@@ -898,8 +898,8 @@ class Benzo_Theme_Options {
                     'id'       => 'light_color',
                     'type'     => 'color',
                     'title'    => esc_html__( 'Common Light Color', 'benzo-toolkit' ),
-                    'default'  => '#f6f6f6',
-                    'subtitle' => esc_html__( 'Default: #f6f6f6', 'benzo-toolkit' ),
+                    'default'  => '#F5F5F5',
+                    'subtitle' => esc_html__( 'Default: #F5F5F5', 'benzo-toolkit' ),
                 ],
             ],
         ] );
