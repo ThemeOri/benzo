@@ -57,6 +57,23 @@ $show_nav          = Helper::get_option( 'blog_details_nav', 'yes' );
             </div>
             <?php endif; ?>
 
+            <div class="author_area-wrapper">
+                <div class="author_area-thumb">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/author/author.png" alt="img">
+                </div>
+                <div class="author_area-content">
+                    <div class="author_area-title">
+                        <h4><a href="#">Lethioum hazard</a></h4>
+                    </div>
+                    <div class="author_area-date">
+                        <span>20 August, 2022 AT 10:30 AM</span>
+                    </div>
+                    <div class="author_area-des">
+                        <p>Fermentum aliquet cras cras mattis antec donec vestibulum tristique sollicitudin uterin adipisc cras montes. Viverra placerat vulputate antes suscipit augue dictum consectetuer luctus litora ligula inceptos ligula cubilia dictum.</p>
+                    </div>
+                </div>
+            </div>
+
             <?php
                 // If comments are open or we have at least one comment, load up the comment template.
                 if (comments_open() || get_comments_number()) :

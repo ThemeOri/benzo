@@ -177,8 +177,8 @@ class Benzo_Post_Helper {
             'end_size'  => 1,
             'mid_size'  => 1,
             'total'     => $max_page,
-            'prev_text' => '<i class="fas fa-angle-double-left"></i>',
-            'next_text' => '<i class="fas fa-angle-double-right"></i>',
+            'prev_text' => '<i class="far fa-long-arrow-left"></i>',
+            'next_text' => '<i class=" far fa-long-arrow-right"></i>',
         ] );
         ?>
         <ul class="benzo-pagination">

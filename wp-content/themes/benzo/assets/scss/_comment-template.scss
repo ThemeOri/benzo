@@ -1,12 +1,12 @@
 /** ===== Comment Template ===== **/
 .comments-area {
-    margin: 25px 0 0;
-    padding: 25px 0 0;
+    margin: 30px 0 0;
+    padding: 30px 0 0;
 
     .comments-title,
     .comment-reply-title {
         font-size: 27px;
-        margin: 0 0 30px;
+        margin: 0 0 25px;
         line-height: 36px;
         font-weight: 600;
 
@@ -142,7 +142,7 @@
 
             li {
                 &:first-child {
-                    margin-top: 40px;
+                   margin-top: 55px;
                 }
             }
         }
@@ -190,10 +190,10 @@
                 }
 
                 .name {
-                    font-size: 20px;
+                    font-size: 18px;
                     font-weight: 600;
                     margin-bottom: 10px;
-                    letter-spacing: -0.03em;
+                    text-transform: capitalize;
 
                     @include respond-below(c480) {
                         font-size: 18px;
@@ -206,7 +206,8 @@
                         size: 15px;
                         weight: 500;
                     }
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
+                    color: $color-primary;
 
                     @include respond-below(c480) {
                         font-size: 14px;

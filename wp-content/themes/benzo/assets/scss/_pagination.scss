@@ -1,34 +1,30 @@
 /** ===== Pagination ===== **/
 .benzo-pagination {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
     list-style: none;
     padding: 15px 0 0;
+    padding-top: 0;
     margin: 0;
 
     .page-numbers {
-        height: 60px;
-        width: 60px;
-        margin: 5px 5px 0;
+        height: 56px;
+        width: 50px;
+        margin: 0px 10px 0 0;
         padding: 0;
         color: $color-secondary;
         font: {
             family: $font-secondary;
-            size: 18px;
+            size: 16px;
         }
         line-height: 1;
-        border: 1px solid #f0f0f0;
+        border: 2px solid #EEF0F1;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: 0.3s;
-
-        @include respond-below(c1400) {
-            width: 45px;
-            height: 45px;
-            font-size: 15px;
-        }
+        border-radius: 25px;
 
         &.current,
         &:hover {

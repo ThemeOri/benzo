@@ -3,6 +3,10 @@
     padding: 220px 0 220px;
     position: relative;
 
+    @include respond-below(md) {
+       padding: 190px 0 190px;
+    }
+
     &:after{
         position: absolute;
         content: '';
@@ -14,6 +18,9 @@
         z-index: -1;
         opacity: 0.9;
         clip-path: polygon(100% 0, 1000% 30%, 90% 95%, 67% 91%, 50% 96%, 29% 93%, 13% 98%, 0 99%, 0 0);
+         @include respond-below(c1400) {
+          clip-path: polygon(100% 0, 1000% 30%, 90% 95%, 67% 91%, 50% 96%, 29% 93%, 4% 0%, 0 100%, 0 0);
+        }
     }
 
     .page-title-inner {
@@ -31,9 +38,9 @@
         margin: 0;
         line-height: 1;
 
-        @include respond-below(lg) {
-            max-width: 100%;
-        }
+        @include respond-below(md) {
+            font-size: 45px;
+       }
     }
 
     .breadcrumb {

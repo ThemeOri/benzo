@@ -132,8 +132,8 @@
             left: 50%;
             margin: -30px 0 0 -30px;
             z-index: 2;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background-color: $color-white;
             display: flex;
             align-items: center;
@@ -146,11 +146,11 @@
             &::after {
                 position: absolute;
                 content: '';
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 0.4;
+                top: 8px;
+                left: 0px;
+                width: 80%;
+                height: 80%;
+                opacity: 0.5;
                 border-radius: 50%;
                 background: $color-white;
                 transform: scale(1.3);
@@ -298,6 +298,9 @@
 .blog-content-wrapper {
     border: 2px solid $color-border;
     padding: 40px 40px 40px 40px;
+    @include respond-below(c480) {
+         padding: 25px;
+    }
 }
 
 .post-media.post-media-standard  img {

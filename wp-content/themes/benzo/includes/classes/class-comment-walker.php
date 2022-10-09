@@ -76,7 +76,7 @@ if ( ! class_exists( 'Benzo_Comment_Walker' ) ) {
                                     'depth'      => $depth,
                                     'before'     => '<span class="comment-reply-wrapper">',
                                     'after'      => '</span>',
-                                    'reply_text' => '' . esc_html__( 'Reply Comments', 'benzo' ),
+                                    'reply_text' => '' . esc_html__( 'Reply_', 'benzo' ),
                                     'max_depth'  => $max_depth_comment,
                                 ] ) );
                             ?>

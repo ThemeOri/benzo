@@ -75,7 +75,7 @@ if ( post_password_required() ) {
                 'url'    => '<p class="comment-form-url"><input id="url" name="url" type="url" placeholder="' . esc_attr__( 'Enter Website URL', 'benzo' ) . '" /></p>',
             ] ),
             'comment_field'      => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true" placeholder="' . esc_attr__( 'Type Your Comment', 'benzo' ) . '" required></textarea></p>',
-            'class_submit'       => 'submit-btn',
+            'class_submit'       => 'submit-btn comment-btn',
             'label_submit'       => esc_html__( 'Post Comment_', 'benzo' ),
             'format'             => 'xhtml',
         ];
