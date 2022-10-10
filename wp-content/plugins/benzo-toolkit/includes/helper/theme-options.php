@@ -802,13 +802,13 @@ class Benzo_Theme_Options {
                     'id'      => 'error_note',
                     'type'    => 'textarea',
                     'title'   => esc_html__( 'Error Page Note', 'benzo-toolkit' ),
-                    'default' => esc_html__( 'The page you are looking for doesn&rsquo;t exist. It may have been moved or removed altogether. Please try searching for some other page, or return to the website&rsquo;s homepage to find what you&rsquo;re looking for.', 'benzo-toolkit' ),
+                    'default' => esc_html__( 'The page which you are looking for does not exist galley of type and scrambled it to make a type specimen book. Please return to the homepage.', 'benzo-toolkit' ),
                 ],
                 [
                     'id'      => 'error_button_text',
                     'type'    => 'text',
                     'title'   => esc_html__( 'Error Button Text', 'benzo-toolkit' ),
-                    'default' => esc_html__( 'Return To Home.', 'benzo-toolkit' ),
+                    'default' => esc_html__( 'Return To Home_', 'benzo-toolkit' ),
                 ],
             ],
         ] );
