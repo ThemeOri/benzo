@@ -10,6 +10,7 @@
 use BenzoTheme\Classes\Benzo_Helper as Helper;
 use BenzoTheme\Classes\Benzo_Post_Helper;
 
+$show_thumb    = Helper::get_option( 'archive_post_thumb', 'yes' );
 $show_meta     = Helper::get_option( 'archive_post_meta', 'yes' );
 $show_excerpt  = Helper::get_option( 'archive_post_excerpt', 'yes' );
 $excerpt_count = Helper::get_option( 'post_excerpt_count', 35 );
@@ -20,7 +21,10 @@ $button_text   = Helper::get_option( 'post_button_text', __( 'Read More_', 'benz
 
 <article id="post-<?php the_ID();?>" <?php post_class( 'entry-post clearfix' );?>>
 
-    <?php Benzo_Post_Helper::render_media(); ?>
+    <?php if( 'yes' === $show_thumb ) {
+       Benzo_Post_Helper::render_media(); 
+      }
+    ?>
     <div class="entry-summary blog-content-wrapper">
 		<?php
             if( 'yes' === $show_meta ) {

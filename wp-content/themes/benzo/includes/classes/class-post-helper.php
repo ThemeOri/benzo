@@ -14,8 +14,8 @@ class Benzo_Post_Helper {
      * @return void
      */
     public static function render_media( $idd = '', $image_size = '', $class = '' ) {
-        $layout  = Benzo_Helper::content_layout();
-        $sidebar = Benzo_Helper::content_sidebar();
+        $layout    = Benzo_Helper::content_layout();
+        $sidebar   = Benzo_Helper::content_sidebar();
 
         if ( empty( $idd ) ) {
             $idd = get_the_ID();
@@ -72,15 +72,15 @@ class Benzo_Post_Helper {
         }
         ?>
         <?php if( has_post_thumbnail( ) ) : ?>
-        <div class="<?php echo esc_attr( implode( ' ', $wrapper_class ) ) ?>">
-            <div class="entry-posts-date">
+         <div class="entry-posts-date">
                <div class="entry-posts-date-name">
-                   <h5>Aug</h5>
+                   <h5><?php the_time( 'M' ); ?></h5>
                </div>
                <div class="entry-posts-date-number">
-                   <h5>09</h5>
+                   <h5><?php the_time( 'j' ); ?></h5>
                </div>
-            </div>    
+        </div>  
+        <div class="<?php echo esc_attr( implode( ' ', $wrapper_class ) ) ?>">    
             <?php if ( 'gallery' == $post_format && $post_gallery ): ?>
             <div class="gallery-slider-active">
                 <?php

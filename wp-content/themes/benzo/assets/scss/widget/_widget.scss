@@ -737,7 +737,18 @@
     height: 110px;
     padding: 0px 6px;
     left: 30px;
+    top: -10px;
     border-radius: 0px 0px 3px 3px;
+}
+.entry-posts-date::after {
+    position: absolute;
+    content: '';
+    right: -9px;
+    width: 9px;
+    height: 10px;
+    background: $color-primary;
+    top: 0;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 .entry-posts-date-name {
      h5 {
@@ -747,6 +758,9 @@
         text-align: center;
         margin-top: 9px;
         margin-bottom: 15px;
+        @include respond-below(c480) {
+          font-size: 18px;
+        }
     }
 }
 .entry-posts-date-number {
@@ -758,9 +772,23 @@
         line-height: 50px;
         margin-bottom: 0;
         border-radius: 3px;
+        @include respond-below(c480) {
+          font-size: 18px;
+        }
     }
 }
-
+.benzo-recent-posts {
+    .recent-post-loop {
+       .entry-posts-date {
+          display: none;
+       }
+    }
+}
+.author_area-thumb {
+     img {
+     border-radius: 50%;
+   }
+}
 
 
 

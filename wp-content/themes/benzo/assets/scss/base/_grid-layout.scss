@@ -25,6 +25,7 @@
     .content-area {
         flex: 0 0 65.91%;
         max-width: 65.91%;
+        position: relative;
 
         @include respond-below(lg) {
             flex: 0 0 100%;

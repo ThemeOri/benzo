@@ -60,6 +60,7 @@ $slide_panel_logo = Helper::get_option( 'slide_panel_logo', ['url' => BENZO_ASSE
                                 <img src="<?php echo esc_url( $slide_panel_logo['url'] ) ?>" alt="<?php echo get_bloginfo() ?>">
                             </div>
                         <?php endif;?>
+                        <?php if (has_nav_menu('primary_menu')) : ?>
                         <?php
                             wp_nav_menu( [
                                 'theme_location'  => 'primary_menu',
@@ -71,6 +72,7 @@ $slide_panel_logo = Helper::get_option( 'slide_panel_logo', ['url' => BENZO_ASSE
                                 'link_after'      => '</span>',
                             ] );
                         ?>
+                        <?php endif;?>
                     </div>
                 </div>
             </nav>

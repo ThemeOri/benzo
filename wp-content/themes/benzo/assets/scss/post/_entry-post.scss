@@ -3,10 +3,6 @@
     margin-bottom: 50px;
     position: relative;
 
-    .post-media {
-        overflow: hidden;
-    }
-
     .entry-summary {
         .entry-title {
             font-size: 30px;
@@ -78,8 +74,8 @@
 }
 
 .post-media {
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 
     .gallery-slider-active {
         position: relative;
