@@ -4,6 +4,10 @@
     padding: 60px;
     margin-bottom: 60px;
 
+    @include respond-below(c480){
+        padding: 30px;
+    }
+
     .search-form-title {
         font-size: 30px;
         margin-bottom: 25px;

@@ -19,8 +19,11 @@
         opacity: 0.9;
         clip-path: polygon(100% 0, 1000% 30%, 90% 95%, 67% 91%, 50% 96%, 29% 93%, 13% 98%, 0 99%, 0 0);
          @include respond-below(c1400) {
-          clip-path: polygon(100% 0, 1000% 30%, 90% 95%, 67% 91%, 50% 96%, 29% 93%, 4% 0%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 1000% 30%, 90% 95%, 67% 91%, 50% 96%, 29% 93%, 4% 90%, 0 91%, 0 0);
         }
+        @include respond-below(lg) {
+           clip-path: polygon(100% 0, 1000% 30%, 64% 95%, 67% 91%, 50% 96%, 29% 93%, 4% 90%, 0 92%, 0 0);
+       }
     }
 
     .page-title-inner {
@@ -40,7 +43,12 @@
 
         @include respond-below(md) {
             font-size: 45px;
+            line-height: 55px;
        }
+       @include respond-below(c480){
+         font-size: 40px;
+         line-height: 50px;
+      }
     }
 
     .breadcrumb {

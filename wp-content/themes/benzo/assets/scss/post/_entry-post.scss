@@ -79,6 +79,7 @@
 
 .post-media {
     overflow: hidden;
+    position: relative;
 
     .gallery-slider-active {
         position: relative;
@@ -235,43 +236,55 @@
 
 .entry-grid-post {
     margin-bottom: 30px;
-    line-height: 1;
-
-    .post-media {
-        margin-bottom: 25px;
-    }
+    line-height: 1; 
 
     .entry-title {
-        font-size: 22px;
+        font-size: 20px;
         margin: 0 0 15px;
+        font-weight: 600;
 
         @include respond-below( c1200 ) {
             font-size: 18px;
         }
     }
 
-    .entry-meta {
-        margin-bottom: 12px;
+    .entry-meta { 
+        margin-top: 8px;
+        margin-bottom: 20px;
         font: {
             family: $font-secondary;
-            size: 12px;
+            size: 16px;
         }
-        text-transform: uppercase;
+        text-transform: capitalize;
 
-        .date a {
+         a {
             color: $color-body;
 
             &:hover {
                 color: $color-primary;
             }
         }
+    span {
+      padding-right: 8px;
+      @include respond-below( c1400 ) {
+       margin-bottom: 10px;
+    }
+      @include respond-below(c480){
+        margin-bottom: 15px;
+     }
+      i {
+        color: var(--color-primary);
+        padding-right: 4px;
+      }
+    }
 
-        span:not(:first-child) {
-            &::before {
-                content: "/";
-                color: $color-primary;
-            }
-        }
+    @include respond-below( c1400 ) {
+       margin-bottom: 10px;
+    }
+    @include respond-below(c480){
+        margin-bottom: 5px;
+    }
+
     }
 
     .read-more {
@@ -303,7 +316,7 @@
     }
 }
 
-.post-media.post-media-standard  img {
+.post-media img {
     transform: scale(1.01);
     transition: all 1s cubic-bezier(.25,.8,.25,1);
 }
@@ -313,6 +326,24 @@
          img {
            transform: scale(1.22) rotateY(0deg);
          }
+       }
+    }
+}
+
+.blog-content-wrapper.search {
+    padding: 25px;
+}
+.entry-summary {
+    .entry-grid-btn {
+      margin-top: 5px;
+    }
+}
+.entry-grid-post {
+    &:hover{
+       .post-media {
+          img {
+            transform: scale(1.22) rotateY(0deg);
+          }
        }
     }
 }

@@ -139,10 +139,16 @@
             margin: 0 0 0 40px;
             padding: 0;
             list-style: none;
+            @include respond-below(c480) {
+                margin: 0 0 0 0px;
+            }
 
             li {
                 &:first-child {
                    margin-top: 55px;
+                   @include respond-below(c480) {
+                    margin-top: 40px;
+                 }
                 }
             }
         }
@@ -169,9 +175,6 @@
             }
 
             .comment-content {
-                @include respond-below(c480) {
-                    font-size: 15px;
-                }
 
                 p:last-of-type {
                     margin: 0;

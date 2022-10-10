@@ -9,10 +9,6 @@
 
 use BenzoTheme\Classes\Benzo_Helper;
 
-if ( is_404() ) {
-    return;
-}
-
 $active_title = Benzo_Helper::get_option( 'site_page_title', 'enabled' );
 $breadcrumb   = Benzo_Helper::get_option( 'site_breadcrumb', 'enabled' );
 $title        = '';
@@ -60,6 +56,8 @@ if ( is_home() ) {
     $title = Benzo_Helper::get_option( 'blog_archive_title', __( 'Latest News', 'benzo' ) );
 } elseif ( is_search() ) {
     $title = esc_html__( 'Search Results for: ', 'benzo' ) . get_search_query();
+} elseif ( is_404() ) {
+    $title = esc_html__( 'Page Not Found', 'benzo' );
 } elseif ( is_archive() ) {
     $title = wp_kses_post( get_the_archive_title() );
     if ( is_author() ) {

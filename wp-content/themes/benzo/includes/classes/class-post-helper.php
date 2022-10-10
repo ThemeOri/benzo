@@ -73,6 +73,14 @@ class Benzo_Post_Helper {
         ?>
         <?php if( has_post_thumbnail( ) ) : ?>
         <div class="<?php echo esc_attr( implode( ' ', $wrapper_class ) ) ?>">
+            <div class="entry-posts-date">
+               <div class="entry-posts-date-name">
+                   <h5>Aug</h5>
+               </div>
+               <div class="entry-posts-date-number">
+                   <h5>09</h5>
+               </div>
+            </div>    
             <?php if ( 'gallery' == $post_format && $post_gallery ): ?>
             <div class="gallery-slider-active">
                 <?php

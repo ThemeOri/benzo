@@ -11,8 +11,8 @@ use BenzoTheme\Classes\Benzo_Helper as Helper;
 
 get_header();
 
-$error_note  = Helper::get_option( 'error_note', __( 'The page you are looking for doesn&rsquo;t exist. It may have been moved or removed altogether. Please try searching for some other page, or return to the website&rsquo;s homepage to find what you&rsquo;re looking for.', 'benzo' ) );
-$button_text = Helper::get_option( 'error_button_text', __( 'Return To Home', 'benzo' ) );
+$error_note  = Helper::get_option( 'error_note', __( 'The page which you are looking for does not exist galley of type and scrambled it to make a type specimen book. Please return to the homepage.', 'benzo' ) );
+$button_text = Helper::get_option( 'error_button_text', __( 'Return To Home_', 'benzo' ) );
 
 ?>
 
@@ -24,9 +24,9 @@ $button_text = Helper::get_option( 'error_button_text', __( 'Return To Home', 'b
                 <?php if ( $error_note ): ?>
                     <p class="error-note"><?php echo esc_html( $error_note ) ?></p>
                 <?php endif;?>
-                <a class="error-btn" href="<?php echo esc_url( home_url( '/' ) ) ?>">
+                <a class="theme-btn" href="<?php echo esc_url( home_url( '/' ) ) ?>">
                     <?php echo esc_html( $button_text ) ?>
-                    <i class="fas fa-angle-double-right"></i></a>
+                    </a>
                 </a>
             </div>
         </div>

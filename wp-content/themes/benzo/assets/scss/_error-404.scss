@@ -12,8 +12,20 @@
 
     .error-title {
         font-size: 300px;
-        color: #dddddd;
+        color: $color-secondary;
         line-height: 1;
+        @include respond-below(c1400) {
+           font-size: 250px;
+       }
+        @include respond-below(lg) {
+            font-size: 250px;
+        }
+        @include respond-below(md) {
+            font-size: 200px;
+        }
+        @include respond-below(c480){
+         font-size: 130px;
+      }
     }
 
     .error-note {
