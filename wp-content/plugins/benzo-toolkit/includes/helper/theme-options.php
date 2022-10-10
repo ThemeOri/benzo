@@ -399,12 +399,6 @@ class Benzo_Theme_Options {
                     'output_mode' => 'padding',
                 ],
                 [
-                    'id'     => 'page_title_border',
-                    'type'   => 'border',
-                    'title'  => esc_html__( 'Border', 'benzo-toolkit' ),
-                    'output' => '.page-title-area',
-                ],
-                [
                     'id'          => 'page_title_bg',
                     'type'        => 'background',
                     'title'       => esc_html__( 'Background', 'benzo-toolkit' ),
@@ -414,6 +408,13 @@ class Benzo_Theme_Options {
                     'background_clip'       => false,
                     'background_blend_mode' => false,
                     'background-color'      => false,
+                ],
+                [
+                    'id'          => 'page_title_nav_bg',
+                    'type'        => 'color',
+                    'title'       => esc_html__( 'Breadcrumb Nav Background', 'benzo-toolkit' ),
+                    'output'      => ['.page-title-area .breadcrumb'],
+                    'output_mode' => 'background-color',
                 ], 
                 [
                     'id'     => 'page_title_typo',
@@ -426,14 +427,7 @@ class Benzo_Theme_Options {
                     'type'   => 'typography',
                     'title'  => esc_html( 'Breadcrumb Typography', 'benzo-toolkit' ),
                     'output' => '.page-title-area .breadcrumb, .page-title-area .breadcrumb a',
-                ],
-                [
-                    'id'          => 'page_title_dot',
-                    'type'        => 'color',
-                    'title'       => esc_html__( 'Dots Color', 'benzo-toolkit' ),
-                    'output'      => '.page-title-area .breadcrumb::before',
-                    'output_mode' => 'background-color',
-                ],
+                ], 
             ],
         ] );
     }
@@ -564,10 +558,17 @@ class Benzo_Theme_Options {
                     'content' => esc_html__( 'Style', 'benzo-toolkit' ),
                 ],
                 [
+                    'id'          => 'copyright_color_bg',
+                    'type'        => 'color',
+                    'title'       => esc_html__( 'Copyright Background', 'benzo-toolkit' ),
+                    'output'      => ['.default-footer'],
+                    'output_mode' => 'background-color',
+                ],
+                [
                     'id'     => 'copyright_color',
                     'type'   => 'color',
                     'title'  => esc_html__( 'Copyright text color', 'benzo-toolkit' ),
-                    'output' => '.site-default-footer .footer-copyright, .site-default-footer .footer-copyright a',
+                    'output' => '.default-footer .footer-copyright',
                 ],
             ],
         ] );
@@ -621,6 +622,17 @@ class Benzo_Theme_Options {
                     'desc'    => esc_html__( 'Select Page Sidebar. Left sidebar or right sidebar or No sidebar', 'benzo-toolkit' ),
                 ],
                 [
+                    'id'       => 'archive_post_thumb',
+                    'type'     => 'button_set',
+                    'title'    => esc_html__( 'Show Post Thumbnail', 'benzo-toolkit' ),
+                    'subtitle' => esc_html__( 'Enable or Disable Post thumbnail on Blog Archive page', 'benzo-toolkit' ),
+                    'options'  => [
+                        'yes' => esc_html__( 'Yes', 'benzo-toolkit' ),
+                        'no'  => esc_html__( 'No', 'benzo-toolkit' ),
+                    ],
+                    'default'  => 'yes',
+                ],
+                [
                     'id'       => 'archive_post_meta',
                     'type'     => 'button_set',
                     'title'    => esc_html__( 'Show Post Meta', 'benzo-toolkit' ),
@@ -667,7 +679,7 @@ class Benzo_Theme_Options {
                     'id'         => 'post_button_text',
                     'type'       => 'text',
                     'title'      => esc_html__( 'Button Text', 'benzo-toolkit' ),
-                    'default'    => esc_html__( 'Continue Reading', 'benzo-toolkit' ),
+                    'default'    => esc_html__( 'Read More_', 'benzo-toolkit' ),
                     'dependency' => [
                         'archive_post_button', '==', 'yes',
                     ],
@@ -754,17 +766,6 @@ class Benzo_Theme_Options {
                     'type'     => 'button_set',
                     'title'    => esc_html__( 'Show Related Tags', 'benzo-toolkit' ),
                     'subtitle' => esc_html__( 'Enable or Disable related tag on Blog Details page', 'benzo-toolkit' ),
-                    'options'  => [
-                        'yes' => esc_html__( 'Yes', 'benzo-toolkit' ),
-                        'no'  => esc_html__( 'No', 'benzo-toolkit' ),
-                    ],
-                    'default'  => 'yes',
-                ],
-                [
-                    'id'       => 'blog_details_nav',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__( 'Show Post Nav', 'benzo-toolkit' ),
-                    'subtitle' => esc_html__( 'Enable or Disable Post nav on Blog Details page', 'benzo-toolkit' ),
                     'options'  => [
                         'yes' => esc_html__( 'Yes', 'benzo-toolkit' ),
                         'no'  => esc_html__( 'No', 'benzo-toolkit' ),

@@ -35,7 +35,6 @@ class Benzo_Metaboxes {
 
         $this->post_metaboxes();
         $this->page_metaboxes();
-        $this->user_metaboxes();
         $this->category_metaboxes();
     }
 
@@ -648,70 +647,6 @@ class Benzo_Metaboxes {
                     'content'    => esc_html__( 'You disabled default footer. Set your page footer form ', 'benzo-toolkit' ) . '<a href="' . esc_url( $this->template_builder_url ) . '">' . esc_html__( 'here', 'benzo-toolkit' ) . '</a>',
                     'dependency' => [
                         'page_default_footer', '==', 'disabled',
-                    ],
-                ],
-            ],
-        ] );
-    }
-
-    public function user_metaboxes() {
-        // Create profile options
-        CSF::createProfileOptions( $this->user_prefix, [
-            'data_type' => 'serialize',
-        ] );
-
-        CSF::createSection( $this->user_prefix, [
-            'fields' => [
-                [
-                    'title' => esc_html__( 'Benzo Author Options', 'benzo-toolkit' ),
-                    'type'  => 'heading',
-                ],
-                [
-                    'id'           => 'user_profile_image',
-                    'type'         => 'media',
-                    'library'      => 'image',
-                    'title'        => esc_html__( 'Profile Picture', 'benzo-toolkit' ),
-                    'button_title' => esc_html__( 'Choose Picture', 'benzo-toolkit' ),
-                ],
-                [
-                    'id'      => 'user_title',
-                    'type'    => 'text',
-                    'title'   => esc_html__( 'User Title', 'benzo-toolkit' ),
-                    'default' => esc_html__( 'Editor', 'benzo-toolkit' ),
-                ],
-                [
-                    'id'     => 'user_address',
-                    'type'   => 'fieldset',
-                    'title'  => esc_html__( 'User Address', 'benzo-toolkit' ),
-                    'fields' => [
-                        [
-                            'id'    => 'user_address_title',
-                            'type'  => 'text',
-                            'title' => esc_html__( 'Title', 'benzo-toolkit' ),
-                        ],
-                        [
-                            'id'    => 'user_address_desc',
-                            'type'  => 'textarea',
-                            'title' => esc_html__( 'Description', 'benzo-toolkit' ),
-                        ],
-                    ],
-                ],
-                [
-                    'id'           => 'user_social_links',
-                    'type'         => 'repeater',
-                    'title'        => esc_html__( 'User Social Links', 'benzo-toolkit' ),
-                    'button_title' => esc_html__( 'Add New', 'benzo-toolkit' ),
-                    'fields'       => [
-                        [
-                            'id'    => 'social_icon',
-                            'type'  => 'icon',
-                            'title' => esc_html__( 'Icon', 'benzo-toolkit' ),
-                        ],
-                        [
-                            'id'    => 'social_link',
-                            'type'  => 'text',
-                            'title' => esc_html__( 'Link', 'benzo-toolkit' ),
-                        ],
                     ],
                 ],
             ],
