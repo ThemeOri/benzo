@@ -1,9 +1,17 @@
 /** ===== Footer ===== **/
 .default-footer {
-    background: #1E2C43;
+    background: #051632;
 
     .footer-widgets {
         padding: 80px 0 30px;
+        .widget.widget_categories li::after {
+           display: none;
+        }
+        .widget.widget_categories li:not(:last-child) {
+           border-bottom: none;
+           margin-bottom: 10px;
+           padding-bottom: 0;
+        }
     }
 
     .footer-row {
@@ -38,7 +46,7 @@
         color: #949aa0;
 
         a {
-            color: #949aa0;
+            color: #C4CAD4;
 
             &:hover {
                 color: $color-white;
@@ -48,7 +56,8 @@
         .widget-title {
             font-size: 20px;
             color: $color-white;
-            margin: 0 0 30px;
+            margin: 0 0 40px;
+            font-weight: 700;
         }
 
         &.widget_calendar {
@@ -80,10 +89,15 @@
             }
         }
     }
+}
 
-    .footer-copyright {
-        padding: 30px 0;
-        text-align: center;
-        color: #C4CAD4;
-    }
+
+
+.footer-copyright-area {
+  padding: 28px 0px;
+  background: #1E2C43;
+}
+.footer-copyright {
+  text-align: center;
+  color: #C4CAD4;
 }

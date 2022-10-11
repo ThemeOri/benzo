@@ -24,8 +24,16 @@ $copyright = Helper::get_option( 'copyright_text', __( 'Copyright © 2022. All r
             </div>
         </div>
         <?php endif;?>
-        <div class="footer-copyright">
-            <?php echo esc_html( $copyright ) ?>
-        </div>
     </div>
 </footer>
+
+<!-- Footer Copyright -->
+<div class="footer-copyright-area">
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-copyright">
+               <?php echo esc_html( $copyright ) ?>
+            </div>
+        </div>
+    </div>
+</div>

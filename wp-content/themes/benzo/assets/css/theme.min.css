@@ -977,7 +977,7 @@ blockquote cite {
 }
 
 .content-container {
-  padding: 150px 15px 100px;
+  padding: 150px 15px 115px;
   max-width: 1350px;
   width: 100%;
   margin: auto;
@@ -3844,10 +3844,18 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 
 /** ===== Footer ===== **/
 .default-footer {
-  background: #1E2C43;
+  background: #051632;
 }
 .default-footer .footer-widgets {
   padding: 80px 0 30px;
+}
+.default-footer .footer-widgets .widget.widget_categories li::after {
+  display: none;
+}
+.default-footer .footer-widgets .widget.widget_categories li:not(:last-child) {
+  border-bottom: none;
+  margin-bottom: 10px;
+  padding-bottom: 0;
 }
 .default-footer .footer-row {
   display: flex;
@@ -3881,7 +3889,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   color: #949aa0;
 }
 .default-footer .widget a {
-  color: #949aa0;
+  color: #C4CAD4;
 }
 .default-footer .widget a:hover {
   color: var(--color-white);
@@ -3889,7 +3897,8 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 .default-footer .widget .widget-title {
   font-size: 20px;
   color: var(--color-white);
-  margin: 0 0 30px;
+  margin: 0 0 40px;
+  font-weight: 700;
 }
 .default-footer .widget.widget_calendar caption {
   color: var(--color-white);
@@ -3909,8 +3918,13 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 .default-footer .widget.benzo-recent-posts h6 a {
   color: var(--color-white);
 }
-.default-footer .footer-copyright {
-  padding: 30px 0;
+
+.footer-copyright-area {
+  padding: 28px 0px;
+  background: #1E2C43;
+}
+
+.footer-copyright {
   text-align: center;
   color: #C4CAD4;
 }
@@ -4049,7 +4063,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 
 /** ===== Error 404 ===== **/
 .error-content-area {
-  padding: 100px 15px;
+  padding: 130px 15px 115px;
 }
 .error-content-area .row {
   justify-content: center;
