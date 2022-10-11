@@ -1,6 +1,27 @@
 ; (function($) {
 	'use strict';
 
+	/*==========  background  ==========*/
+	$("[data-background]").each(function() {
+		$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
+	});
+
+
+	/*==========  Hero Slider ==========*/
+	let sliderActive1 = '.hero-slider-active';
+	let sliderInit1 = new Swiper(sliderActive1, {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 0,
+		autoplay: {
+			delay: 9000,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
 	/**
 	 * Post Media Gallery
 	 */
