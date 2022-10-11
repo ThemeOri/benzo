@@ -41,6 +41,7 @@ class Template_Builder {
         include_once BT_INCLUDES . '/template-builder/includes/template-admin.php';
         include_once BT_INCLUDES . '/template-builder/includes/template-frontend.php';
     }
+
 }
 
 Template_Builder::instance();

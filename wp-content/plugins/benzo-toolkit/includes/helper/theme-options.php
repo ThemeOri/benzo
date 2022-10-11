@@ -257,6 +257,14 @@ class Benzo_Theme_Options {
                     'output_mode' => 'color',
                 ],
                 [
+                    'id'          => 'menu_item_border',
+                    'type'        => 'color',
+                    'title'       => esc_html__( 'Menu Item Border', 'benzo-toolkit' ),
+                    'desc'        => esc_html__( 'This is the menu border color', 'benzo-toolkit' ),
+                    'output'      => ['.benzo-nav-menu .nav-menu-wrapper ul.primary-menu > li > a::after'],
+                    'output_mode' => 'background-color',
+                ],
+                [
                     'id'     => 'menu_typography',
                     'type'   => 'typography',
                     'title'  => esc_html__( 'Menu Typography', 'benzo-toolkit' ),
@@ -488,7 +496,7 @@ class Benzo_Theme_Options {
                     'id'     => 'footer_background',
                     'type'   => 'background',
                     'title'  => esc_html__( 'Footer background', 'benzo-toolkit' ),
-                    'output' => '.site-default-footer',
+                    'output' => '.default-footer',
                 ],
                 [
                     'id'     => 'footer_text_color',
@@ -561,14 +569,14 @@ class Benzo_Theme_Options {
                     'id'          => 'copyright_color_bg',
                     'type'        => 'color',
                     'title'       => esc_html__( 'Copyright Background', 'benzo-toolkit' ),
-                    'output'      => ['.default-footer'],
+                    'output'      => ['.footer-copyright-area'],
                     'output_mode' => 'background-color',
                 ],
                 [
                     'id'     => 'copyright_color',
                     'type'   => 'color',
                     'title'  => esc_html__( 'Copyright text color', 'benzo-toolkit' ),
-                    'output' => '.default-footer .footer-copyright',
+                    'output' => '.footer-copyright',
                 ],
             ],
         ] );

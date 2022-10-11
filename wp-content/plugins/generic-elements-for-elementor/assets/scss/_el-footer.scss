@@ -1,0 +1,12 @@
+/*----------------------------------------*/
+/* Elementor Footer CSS
+/*----------------------------------------*/
+
+.zoom-instagram-widget__items-wrapper ul li {
+    list-style: none;
+}
+.zoom-instagram-widget__items-wrapper ul.zoom-instagram-widget__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+

@@ -1,0 +1,29 @@
+.generic-el-newsletter-subcribe form {
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+}
+.generic-el-newsletter-subcribe input[type="email"] {
+	width: 100%;
+	height: 50px;
+	background: #FFFFFF;
+	border-radius: 6px;
+	border: 0;
+	padding: 0 20px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #8E8CA4;
+}
+.generic-el-newsletter-subcribe button[type="submit"], .generic-el-newsletter-subcribe input[type="submit"] {
+	height: 50px;
+	padding: 0 20px;
+	top: 6864px;
+	background: #0487FF;
+	color: #FFFFFF;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 0;
+}
