@@ -72,6 +72,7 @@ class Benzo_Assets {
         wp_enqueue_style( 'benzo-fonts', $this->google_font_url(), [], null );
         wp_enqueue_style( 'fontawesome', BENZO_ASSETS . '/css/font-awesome.min.css', [], '5.14' );
         wp_enqueue_style( 'slick', BENZO_ASSETS . '/css/slick.min.css', [], '1.8.1' );
+        wp_enqueue_style( 'flaticon', BENZO_ASSETS . '/css/flaticon.css', [], '1.1.0' );
         wp_enqueue_style( 'magnific-popup', BENZO_ASSETS . '/css/magnific-popup.min.css', [], '1.1.0' );
         wp_enqueue_style( 'swiper-bundle', BENZO_ASSETS . '/css/swiper-bundle.min.css', [], '7.3.3' );
         wp_enqueue_style( 'benzo-theme', BENZO_ASSETS . '/css/theme.min.css', [], BENZO_VERSION );
