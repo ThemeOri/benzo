@@ -8,7 +8,7 @@ use Elementor\Widget_Base;
 
 defined( 'ABSPATH' ) || exit;
 
-class Benzo_Mailchimp extends Widget_Base {
+class Benzo_Heading extends Widget_Base {
 
     /**
      * Retrieve the widget name.
@@ -20,7 +20,7 @@ class Benzo_Mailchimp extends Widget_Base {
      * @return string Widget name.
      */
     public function get_name() {
-        return 'benzo-mailchimp';
+        return 'benzo-heading';
     }
 
     /**
@@ -33,7 +33,7 @@ class Benzo_Mailchimp extends Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return esc_html__( 'Benzo Mailchimp', 'benzo-toolkit' );
+        return esc_html__( 'Benzo Heading', 'benzo-toolkit' );
     }
 
     /**
@@ -46,7 +46,7 @@ class Benzo_Mailchimp extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'eicon-mailchimp';
+        return ' eicon-heading';
     }
 
     /**
@@ -78,7 +78,7 @@ class Benzo_Mailchimp extends Widget_Base {
      * @return array Widget keywords.
      */
     public function get_keywords() {
-        return ['Benzo', 'Toolkit', 'mailchimp', 'newsletter'];
+        return ['Benzo', 'Toolkit', 'heading', 'title'];
     }
 
     /**
@@ -100,323 +100,267 @@ class Benzo_Mailchimp extends Widget_Base {
         );
 
         $this->add_control(
-            'form_short_code', [
-                'label'       => esc_html__( 'Form ShortCode', 'benzo-toolkit' ),
-                'label_block' => true,
-                'type'        => Controls_Manager::TEXT,
-                'placeholder' => '[mc4wp_form id="2189"]',
-            ]
-        );
-
-        $this->add_control(
-            'button_position',
+            'widget_design',
             [
-                'label'   => esc_html__( 'Button Position', 'benzo-toolkit' ),
+                'label'   => esc_html__( 'Select Style', 'benzo-toolkit' ),
                 'type'    => Controls_Manager::SELECT,
                 'options' => [
-                    'button_inside'  => esc_html__( 'Inside', 'benzo-toolkit' ),
-                    'button_outside' => esc_html__( 'Outside', 'benzo-toolkit' ),
-                    'button_bottom'  => esc_html__( 'Bottom', 'benzo-toolkit' ),
+                    'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
                 ],
-                'default' => 'button_bottom',
+                'default' => 'design-1',
             ]
         );
 
         $this->end_controls_section();
 
         $this->start_controls_section(
-            'section_fields_style',
+            'section_fields_heading',
             [
-                'label' => esc_html__( 'Form Fields', 'benzo-toolkit' ),
-                'tab'   => Controls_Manager::TAB_STYLE,
+                'label' => esc_html__( 'Title & Description', 'benzo-toolkit' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'title',
+            [
+                'label' => esc_html__('Title', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'rows' => 4,
+                'default' => 'Heading Title',
+                'placeholder' => esc_html__('Heading Text', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'sub_title_up',
+            [
+                'label' => esc_html__('Sub Title Up', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => 'Heading Sub Title Up',
+                'placeholder' => esc_html__('Heading Sub Text Up', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'sub_title',
+            [
+                'label' => esc_html__('Sub Title', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => 'Heading Sub Title',
+                'placeholder' => esc_html__('Heading Sub Text', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'title_tag',
+            [
+                'label' => esc_html__('Title HTML Tag', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::CHOOSE,
+                'options' => [
+                    'h1' => [
+                        'title' => esc_html__('H1', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h1'
+                    ],
+                    'h2' => [
+                        'title' => esc_html__('H2', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h2'
+                    ],
+                    'h3' => [
+                        'title' => esc_html__('H3', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h3'
+                    ],
+                    'h4' => [
+                        'title' => esc_html__('H4', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h4'
+                    ],
+                    'h5' => [
+                        'title' => esc_html__('H5', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h5'
+                    ],
+                    'h6' => [
+                        'title' => esc_html__('H6', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h6'
+                    ]
+                ],
+                'default' => 'h2',
+                'toggle' => false,
+            ]
+        );
+
+            $this->add_responsive_control(
+            'align',
+            [
+                'label' => esc_html__('Alignment', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'benzo-toolkit'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'benzo-toolkit'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'benzo-toolkit'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'default' => 'center',
+                'toggle' => true,
+                'selectors' => [
+                    '{{WRAPPER}}' => 'text-align: {{VALUE}};'
+                ]
+            ]
+        );
+
+        $this->end_controls_section();
+
+       $this->start_controls_section(
+            '_section_style_content',
+            [
+                'label' => esc_html__('Style Heading Title & Content', 'generic-elements'),
+                'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        // Title
+        $this->add_control(
+            '_heading_title',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Title', 'webtend-el-title'),
+                'separator' => 'before'
             ]
         );
 
         $this->add_responsive_control(
-            'field_width',
+            'title_spacing',
             [
-                'label'      => esc_html__( 'Width', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['%', 'px'],
-                'range'      => [
-                    '%'  => [
-                        'min' => 1,
-                        'max' => 100,
-                    ],
-                    'px' => [
-                        'min' => 1,
-                        'max' => 500,
-                    ],
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])' => 'width: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'field_height',
-            [
-                'label'      => esc_html__( 'Height', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
+                'label' => esc_html__('Bottom Spacing', 'generic-elements'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
-                'range'      => [
-                    'px' => [
-                        'min' => 1,
-                        'max' => 500,
-                    ],
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])' => 'height: {{SIZE}}{{UNIT}};',
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
-        $this->add_responsive_control(
-            'field_padding',
+        $this->add_control(
+            'title_color',
             [
-                'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                'label' => esc_html__('Text Color', 'generic-elements'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-title' => 'color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_group_control(
-            Group_Control_Border::get_type(),
+            \Elementor\Group_Control_Typography::get_type(),
             [
-                'name'     => 'field_input_border',
-                'selector' => '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])',
+                'name' => 'title',
+                'selector' => '{{WRAPPER}} .webtend-el-title',
+            ]
+        );
+
+        // Sub Title Up  
+        $this->add_control(
+            '_content_subtitle_up',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Sub Title Up', 'generic-elements'),
+                'separator' => 'before'
             ]
         );
 
         $this->add_responsive_control(
-            'field_radius',
+            'subtitle_up_spacing',
             [
-                'label'      => esc_html__( 'Border Radius', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                'label' => esc_html__('Bottom Spacing', 'generic-elements'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-subtitle-up' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'subtitle_up_color',
+            [
+                'label' => esc_html__('Text Color', 'generic-elements'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-subtitle-up' => 'color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_group_control(
-            Group_Control_Typography::get_type(),
+            \Elementor\Group_Control_Typography::get_type(),
             [
-                'name'     => 'field_typography',
-                'label'    => esc_html__( 'Typography', 'benzo-toolkit' ),
-                'selector' => '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])',
+                'name' => 'subtitle_up',
+                'selector' => '{{WRAPPER}} .webtend-el-subtitle-up',
             ]
         );
 
-        $this->start_controls_tabs( 'field_tabs' );
-
-        $this->start_controls_tab(
-            'field_normal',
-            [
-                'label' => esc_html__( 'Normal', 'benzo-toolkit' ),
-            ]
-        );
-
+        // Subtitle
         $this->add_control(
-            'field_text_color',
+            '_subtitle_subtitle',
             [
-                'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'field_bg_color',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"])' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->start_controls_tab(
-            'field_focus',
-            [
-                'label' => esc_html__( 'Focus', 'benzo-toolkit' ),
-            ]
-        );
-
-        $this->add_control(
-            'field_text_focus',
-            [
-                'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"]):focus' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'field_bg_color_focus',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"]):focus' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'field_border_focus',
-            [
-                'label'     => esc_html__( 'Border Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input:not([type="submit"]):focus' => 'border-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            'section_button_style',
-            [
-                'label' => esc_html__( 'Submit Button', 'benzo-toolkit' ),
-                'tab'   => Controls_Manager::TAB_STYLE,
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Subtitle', 'generic-elements'),
+                'separator' => 'before'
             ]
         );
 
         $this->add_responsive_control(
-            'button_padding',
+            'subtitle_spacing',
             [
-                'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit], {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                'label' => esc_html__('Bottom Spacing', 'generic-elements'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-subtitle' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'subtitle_color',
+            [
+                'label' => esc_html__('Text Color', 'generic-elements'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-subtitle' => 'color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_group_control(
-            Group_Control_Border::get_type(),
+            \Elementor\Group_Control_Typography::get_type(),
             [
-                'name'     => 'button_border',
-                'selector' => '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit], {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]',
+                'name' => 'subtitle',
+                'selector' => '{{WRAPPER}} .webtend-el-subtitle',
             ]
         );
 
-        $this->add_responsive_control(
-            'button_radius',
-            [
-                'label'      => esc_html__( 'Border Radius', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit], {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'name'     => 'button_typography',
-                'label'    => esc_html__( 'Typography', 'benzo-toolkit' ),
-                'selector' => '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit], {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]',
-            ]
-        );
-
-        $this->start_controls_tabs( 'button_tabs' );
-
-        $this->start_controls_tab(
-            'field_button_normal',
-            [
-                'label' => esc_html__( 'Normal', 'benzo-toolkit' ),
-            ]
-        );
-
-        $this->add_control(
-            'button_text_color',
-            [
-                'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit], {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_bg_color',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit], {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->start_controls_tab(
-            'field_button_hover',
-            [
-                'label' => esc_html__( 'Hover', 'benzo-toolkit' ),
-            ]
-        );
-
-        $this->add_control(
-            'button_text_focus',
-            [
-                'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit]:hover, {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]:hover' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_bg_color_focus',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit]:hover, {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]:hover' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_border_focus',
-            [
-                'label'     => esc_html__( 'Border Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-mailchimp-wrapper input[type=submit]:hover, {{WRAPPER}} .benzo-mailchimp-wrapper button[type=submit]:hover' => 'border-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
 
         $this->end_controls_section();
     }
@@ -432,11 +376,34 @@ class Benzo_Mailchimp extends Widget_Base {
      */
     protected function render() {
         $settings = $this->get_settings_for_display();
+        $this->add_inline_editing_attributes('title', 'basic');
+        $this->add_render_attribute('title', 'class', 'webtend-el-title');
+        $title = wp_kses_post($settings['title']);
 
         ?>
 
-        <div class="benzo-mailchimp-wrapper <?php echo esc_attr( $settings['button_position'] ) ?>">
-            <?php echo do_shortcode( $settings['form_short_code'] ); ?>
+        <div class="benzo-header-area-one">
+            <div class="heading-subtitle-wrapper">
+                <div class="subtitle-one-icon">
+                    <span><i class="fal fa-star"></i></span>
+                </div>
+                <div class="subtitle-content-wrapper">
+                    <?php if ($settings['sub_title_up']) : ?>
+                    <h6 class="webtend-el-subtitle-up"><?php echo wp_kses_post($settings['sub_title_up']); ?></h6>
+                    <?php endif; ?>
+                    <?php if ($settings['sub_title']) : ?>
+                    <h5 class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></h5>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="heading-title-one">
+                 <?php printf(
+                    '<%1$s %2$s>%3$s</%1$s>',
+                    tag_escape($settings['title_tag']),
+                    $this->get_render_attribute_string('title'),
+                    $title
+                ); ?>
+            </div>
         </div>
 
         <?php
