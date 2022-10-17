@@ -5,8 +5,7 @@
 	$("[data-background]").each(function() {
 		$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
 	});
-
-
+ 
 	/*==========  Hero Slider ==========*/
 	let sliderActive1 = '.hero-slider-active';
 	let sliderInit1 = new Swiper(sliderActive1, {
