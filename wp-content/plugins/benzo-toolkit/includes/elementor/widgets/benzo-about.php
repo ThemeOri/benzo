@@ -9,7 +9,7 @@ use Elementor\Utils;
 
 defined( 'ABSPATH' ) || exit;
 
-class Benzo_service extends Widget_Base {
+class Benzo_About extends Widget_Base {
 
     /**
      * Retrieve the widget name.
@@ -21,7 +21,7 @@ class Benzo_service extends Widget_Base {
      * @return string Widget name.
      */
     public function get_name() {
-        return 'benzo-service';
+        return 'benzo-about';
     }
 
     /**
@@ -34,7 +34,7 @@ class Benzo_service extends Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return esc_html__( 'Benzo Service', 'benzo-toolkit' );
+        return esc_html__( 'Benzo About', 'benzo-toolkit' );
     }
 
     /**
@@ -47,7 +47,7 @@ class Benzo_service extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'eicon-text-field';
+        return 'eicon-import-kit';
     }
 
     /**
@@ -79,7 +79,7 @@ class Benzo_service extends Widget_Base {
      * @return array Widget keywords.
      */
     public function get_keywords() {
-        return ['Benzo', 'Toolkit', 'box', 'service'];
+        return ['Benzo', 'Toolkit', 'image', 'about'];
     }
 
     /**
@@ -115,47 +115,22 @@ class Benzo_service extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_media',
+            'section_media',
             [
-                'label' => esc_html__('Icon / Image', 'benzo-toolkit'),
+                'label' => esc_html__('Image', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
 
-        $this->add_control(
-            'media_type',
-            [
-                'label'          => esc_html__('Media Type', 'benzo-toolkit'),
-                'type'           => \Elementor\Controls_Manager::CHOOSE,
-                'label_block'    => false,
-                'options'        => [
-                    'icon'  => [
-                        'title' => esc_html__('Icon', 'benzo-toolkit'),
-                        'icon'  => 'far fa-grin-wink',
-                    ],
-                    'image' => [
-                        'title' => esc_html__('Image', 'benzo-toolkit'),
-                        'icon'  => 'eicon-image',
-                    ],
-                ],
-                'default'        => 'icon',
-                'toggle'         => false,
-                'style_transfer' => true,
-            ]
-        );
-
-        $this->add_control(
+         $this->add_control(
             'image',
             [
-                'label'     => esc_html__('Image', 'benzo-toolkit'),
-                'type'      => \Elementor\Controls_Manager::MEDIA,
-                'default'   => [
+                'label' => esc_html__('Image', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],
-                'condition' => [
-                    'media_type' => 'image'
-                ],
-                'dynamic'   => [
+                'dynamic' => [
                     'active' => true,
                 ]
             ]
@@ -164,59 +139,32 @@ class Benzo_service extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Image_Size::get_type(),
             [
-                'name'      => 'thumbnail',
-                'default'   => 'medium_large',
+                'name' => 'thumbnails',
+                'default' => 'large',
                 'separator' => 'none',
-                'exclude'   => [
-                    'full',
-                    'custom',
-                    'large',
-                    'shop_catalog',
-                    'shop_single',
-                    'shop_thumbnail'
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ]
             ]
         );
 
-        $this->add_control(
-            'icons',
-            [
-                'label'      => esc_html__('Icons', 'benzo-toolkit'),
-                'type'       => \Elementor\Controls_Manager::ICONS,
-                'show_label' => true,
-                'default'    => [
-                    'value'   => 'far fa-grin-wink',
-                    'library' => 'solid',
-                ],
-                'condition'  => [
-                    'media_type' => 'icon',
-                ],
-
-            ]
-        );
 
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_title',
+            'section_experience',
             [
-                'label' => esc_html__('Title & Description', 'benzo-toolkit'),
+                'label' => esc_html__('Experience', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
 
         $this->add_control(
-            'title',
+            'experience_title',
             [
-                'label' => esc_html__('Title', 'benzo-toolkit'),
+                'label' => esc_html__('Experience Title', 'benzo-toolkit'),
                 'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'rows' => 4,
-                'default' => 'Heading Title',
-                'placeholder' => esc_html__('Heading Text', 'benzo-toolkit'),
+                'default' => 'Experience Title',
+                'placeholder' => esc_html__('Experience Title', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -224,13 +172,14 @@ class Benzo_service extends Widget_Base {
         );
 
         $this->add_control(
-            'title_url',
+            'experience_symbols',
             [
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label' => esc_html__('Experience Symbols', 'benzo-toolkit'),
                 'label_block' => true,
-                'show_label' => false,
-                'placeholder' => esc_html__('Type link here', 'benzo-toolkit'),
-                'default' => esc_html__('#', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'rows' => 4,
+                'default' => '+',
+                'placeholder' => esc_html__('+', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -238,11 +187,11 @@ class Benzo_service extends Widget_Base {
         );
 
         $this->add_control(
-            'description',
+            'description_experience',
             [
-                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'label' => esc_html__('Description Experience', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
-                'placeholder' => esc_html__('Heading Description Text', 'benzo-toolkit'),
+                'placeholder' => esc_html__('Description Experience Text', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -309,31 +258,6 @@ class Benzo_service extends Widget_Base {
                 'selectors' => [
                     '{{WRAPPER}}' => 'text-align: {{VALUE}};'
                 ]
-            ]
-        );
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            '_section_button',
-            [
-                'label' => esc_html__('Button', 'benzo-toolkit'),
-                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-            ]
-        );
-
-        $this->add_control(
-            'button_link',
-            [
-                'label' => esc_html__('Link', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => 'https://example.com',
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'default' => [
-                    'url' => '#'
-                ],
             ]
         );
 
@@ -493,28 +417,13 @@ class Benzo_service extends Widget_Base {
 
         ?>
 
-        <div class="features_area-wrapper">
-            <div class="features_top-icon">
-                <div class="features_icon-thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/features-icon.png" alt="img">
-                    <span>
-                       <?php \Elementor\Icons_Manager::render_icon($settings['icons'], ['aria-hidden' => 'true']); ?>
-                    </span>
+        <div class="about__one-wrapper">
+            <div class="about__one-thumb">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-1.png" alt="img">
+                <div class="about__one-experience">
+                    <h5>20<span>+</span></h5>
+                    <p>Years of <br> Experience</p>
                 </div>
-            </div>
-            <div class="features_item-content webtend-el-des">
-                <?php if ($settings['title']) : ?>
-                <div class="features_item-title">
-                    <h3 class="webtend-el-title"><a class="webtend-el-title" href="<?php echo esc_url($settings['title_url']); ?>"><?php echo wp_kses_post($settings['title']); ?></a></h3>
-                </div>
-                <?php endif; ?>
-                <?php if ($settings['description']) : ?>
-                <p><?php echo wp_kses_post($settings['description']); ?></p>
-                <?php endif; ?>
-                <a class="features-sp-btn" href="<?php echo esc_url($settings['button_link']['url']); ?>">
-                    <i class="fal fa-long-arrow-right"></i>
-                    <i class="fal fa-long-arrow-right"></i>
-                </a>
             </div>
         </div>
 
