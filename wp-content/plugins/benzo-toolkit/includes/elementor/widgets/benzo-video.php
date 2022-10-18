@@ -115,9 +115,9 @@ class Benzo_Video extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_shape',
+            '_section_image',
             [
-                'label' => esc_html__('BG Shape', 'benzo-toolkit'),
+                'label' => esc_html__('Image', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -148,95 +148,9 @@ class Benzo_Video extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_media',
+            '_section_video',
             [
-                'label' => esc_html__('Icon / Image', 'benzo-toolkit'),
-                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-            ]
-        );
-
-        $this->add_control(
-            'media_type',
-            [
-                'label'          => esc_html__('Media Type', 'benzo-toolkit'),
-                'type'           => \Elementor\Controls_Manager::CHOOSE,
-                'label_block'    => false,
-                'options'        => [
-                    'icon'  => [
-                        'title' => esc_html__('Icon', 'benzo-toolkit'),
-                        'icon'  => 'far fa-grin-wink',
-                    ],
-                    'image' => [
-                        'title' => esc_html__('Image', 'benzo-toolkit'),
-                        'icon'  => 'eicon-image',
-                    ],
-                ],
-                'default'        => 'icon',
-                'toggle'         => false,
-                'style_transfer' => true,
-            ]
-        );
-
-        $this->add_control(
-            'image',
-            [
-                'label'     => esc_html__('Image', 'benzo-toolkit'),
-                'type'      => \Elementor\Controls_Manager::MEDIA,
-                'default'   => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ],
-                'dynamic'   => [
-                    'active' => true,
-                ]
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Image_Size::get_type(),
-            [
-                'name'      => 'thumbnail',
-                'default'   => 'medium_large',
-                'separator' => 'none',
-                'exclude'   => [
-                    'full',
-                    'custom',
-                    'large',
-                    'shop_catalog',
-                    'shop_single',
-                    'shop_thumbnail'
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ]
-            ]
-        );
-
-        $this->add_control(
-            'icons',
-            [
-                'label'      => esc_html__('Icons', 'benzo-toolkit'),
-                'type'       => \Elementor\Controls_Manager::ICONS,
-                'show_label' => true,
-                'default'    => [
-                    'value'   => 'far fa-grin-wink',
-                    'library' => 'solid',
-                ],
-                'condition'  => [
-                    'media_type' => 'icon',
-                ],
-
-            ]
-        );
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            '_section_title',
-            [
-                'label' => esc_html__('Title & Description', 'benzo-toolkit'),
+                'label' => esc_html__('Video', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -257,25 +171,14 @@ class Benzo_Video extends Widget_Base {
         );
 
         $this->add_control(
-            'title_url',
+            'video_url',
             [
+                'label' => esc_html__('URL', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'label_block' => true,
-                'show_label' => false,
+                'show_label' => true,
                 'placeholder' => esc_html__('Type link here', 'benzo-toolkit'),
                 'default' => esc_html__('#', 'benzo-toolkit'),
-                'dynamic' => [
-                    'active' => true,
-                ]
-            ]
-        );
-
-        $this->add_control(
-            'description',
-            [
-                'label' => esc_html__('Description', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-                'placeholder' => esc_html__('Heading Description Text', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -348,45 +251,6 @@ class Benzo_Video extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_button',
-            [
-                'label' => esc_html__('Button', 'benzo-toolkit'),
-                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-            ]
-        );
-
-        $this->add_control(
-            'button_text',
-            [
-                'label' => esc_html__('Button Text', 'benzo-toolkit'),
-                'label_block' => true,
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => 'Button Text',
-                'placeholder' => esc_html__('Button Text', 'benzo-toolkit'),
-                'dynamic' => [
-                    'active' => true,
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_link',
-            [
-                'label' => esc_html__('Link', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => 'https://example.com',
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'default' => [
-                    'url' => '#'
-                ],
-            ]
-        );
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
             '_section_style_button',
             [
                 'label' => esc_html__('Style Title & Content', 'benzo-toolkit'),
@@ -404,32 +268,12 @@ class Benzo_Video extends Widget_Base {
             ]
         );
 
-        $this->add_responsive_control(
-            'title_spacing',
-            [
-                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
        $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
                 'label' => esc_html__('Typography', 'benzo-toolkit'),
                 'selector' => '{{WRAPPER}} .webtend-el-title',
-            ]
-        );
-
-        $this->start_controls_tabs('title_tabs');
-        $this->start_controls_tab(
-            'title_normal_tab',
-            [
-                'label' => esc_html__('Normal', 'benzo-toolkit'),
             ]
         );
 
@@ -443,232 +287,6 @@ class Benzo_Video extends Widget_Base {
                 ],
             ]
         );
-        $this->end_controls_tab();
-
-        $this->start_controls_tab(
-            'title_hover_tab',
-            [
-                'label' => esc_html__('Hover', 'benzo-toolkit'),
-            ]
-        );
-
-        $this->add_control(
-            'title_hvr_color',
-            [
-                'label' => esc_html__('Color', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-title:hover > a' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-        $this->end_controls_tabs();
-
-        // description
-        $this->add_control(
-            '_content_description',
-            [
-                'type' => \Elementor\Controls_Manager::HEADING,
-                'label' => esc_html__('Description', 'benzo-toolkit'),
-                'separator' => 'before'
-            ]
-        );
-
-        $this->add_responsive_control(
-            'description_spacing',
-            [
-                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-des p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'description_color',
-            [
-                'label' => esc_html__('Text Color', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-des p' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Typography::get_type(),
-            [
-                'name' => 'description',
-                'selector' => '{{WRAPPER}} .webtend-el-des p',
-            ]
-        );
-
-         $this->add_responsive_control(
-            'description_spacing',
-            [
-                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-des p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->end_controls_section();
-
-        // Button 
-        $this->start_controls_section(
-            'section_button_style',
-            [
-                'label' => esc_html__( 'Button', 'benzo-toolkit' ),
-                'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-        $this->add_responsive_control(
-            'button_padding',
-            [
-                'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
-                'selectors'  => [
-                    '{{WRAPPER}} .webtend-el-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            [
-                'name'     => 'button_border',
-                'selector' => '{{WRAPPER}} .webtend-el-btn',
-            ]
-        );
-
-        $this->add_responsive_control(
-            'button_radius',
-            [
-                'label'      => esc_html__( 'Border Radius', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .webtend-el-btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'name'     => 'button_typography',
-                'label'    => esc_html__( 'Typography', 'benzo-toolkit' ),
-                'selector' => '{{WRAPPER}} .webtend-el-btn',
-            ]
-        );
-
-        $this->start_controls_tabs( 'button_tabs' );
-
-        $this->start_controls_tab(
-            'field_button_normal',
-            [
-                'label' => esc_html__( 'Normal', 'benzo-toolkit' ),
-            ]
-        );
-
-        $this->add_control(
-            'button_text_color',
-            [
-                'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-btn' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_bg_color',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-btn' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_bg_after_color',
-            [
-                'label'     => esc_html__( 'Background After Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-el-btn::after' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_bg_before_color',
-            [
-                'label'     => esc_html__( 'Background Before Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-el-btn::before' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->start_controls_tab(
-            'field_button_hover',
-            [
-                'label' => esc_html__( 'Hover', 'benzo-toolkit' ),
-            ]
-        );
-
-        $this->add_control(
-            'button_text_focus',
-            [
-                'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-btn:hover' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_bg_color_focus',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-btn:hover' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_border_focus',
-            [
-                'label'     => esc_html__( 'Border Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-btn:hover' => 'border-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
 
         $this->end_controls_section();
         
@@ -693,13 +311,15 @@ class Benzo_Video extends Widget_Base {
 
          <div class="video__wrapper-one">
             <div class="video__thumb">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/video/video.jpg" alt="img">
+              <img src="<?php echo esc_attr( $settings['image']['url'] ) ?>" alt="img">
               <div class="video__content">
+              <?php if ($settings['title']) : ?>
                  <div class="video-title">
-                    <h5>View our <br> intro video</h5>
+                    <h5 class="webtend-el-title"><?php echo wp_kses_post($settings['title']); ?></h5>
                  </div>
+                 <?php endif; ?>
                  <div class="video-play">
-                    <a class="popup-video slider-popup" href="#"><i class="fal fa-play"></i></a>
+                    <a class="popup-video slider-popup" href="<?php echo esc_url($settings['video_url']); ?>"><i class="fas fa-play"></i></a>
                  </div>
               </div>
             </div>
