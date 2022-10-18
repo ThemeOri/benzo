@@ -6726,9 +6726,9 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   border-radius: 3px;
   display: flex;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 15px 60px;
+  bottom: 30px;
+  right: 30px;
+  padding: 24px 49px;
 }
 
 .video__thumb {
@@ -6741,6 +6741,165 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   font-size: 18px;
   font-weight: 600;
   line-height: 26px;
+  margin-right: 60px;
+  text-align: right;
+}
+
+.video-play {
+  position: relative;
+  margin-top: 10px;
+}
+.video-play .popup-video.slider-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  z-index: 2;
+  width: 52.5px;
+  height: 52.5px;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-primary);
+  animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+}
+.video-play .popup-video.slider-popup::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: -1px;
+  width: 90%;
+  height: 90%;
+  opacity: 0.5;
+  border-radius: 50%;
+  background: var(--color-white);
+  transform: scale(1.3);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  animation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+  z-index: -1;
+}
+
+/** ===== Fan Fact CSS ===== **/
+.fanfact__area-wrapper {
+  border: 2px solid var(--color-border);
+  border-radius: 3px;
+  padding: 33px 70px 30px 0px;
+}
+
+.fanfact__area-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fanfact-icon-one {
+  margin-right: 20px;
+}
+.fanfact-icon-one span {
+  font-size: 45px;
+  color: var(--color-primary);
+}
+
+.fanfact-content-one {
+  text-align: left;
+}
+.fanfact-content-one h2 {
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+.fanfact-content-one h2 span {
+  color: #000000;
+  font-size: 40px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.fanfact-content-one span {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/** ===== Project CSS ===== **/
+.project__wrapper-bg {
+  position: relative;
+  background: #051632;
+  padding: 95px 0px 280px 0px;
+}
+
+.project-shape {
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+
+.project__wrapper-slider {
+  margin-top: -220px;
+}
+
+.project-slider-item:hover .project-slider-content {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.project-slider-item:hover .project-slider-arrow {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.project-slider-thumb {
+  position: relative;
+}
+
+.project-slider-content {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  right: 195px;
+  padding: 20px 35px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 500ms ease;
+  background-color: var(--color-white);
+  transform: scale(1, 0.3);
+}
+.project-slider-content span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+}
+.project-slider-content h4 {
+  margin-bottom: 0;
+}
+.project-slider-content h4 a {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000;
+  transition: 0.3s;
+}
+.project-slider-content h4 a:hover {
+  color: var(--color-primary);
+}
+
+.services-two-active {
+  margin-right: -660px !important;
+}
+
+.project-slider-arrow {
+  position: absolute;
+  right: -24px;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  transition: all 500ms ease;
+  border-radius: 25px;
+  font-size: 20px;
 }
 
 /** ===== Popup ===== **/

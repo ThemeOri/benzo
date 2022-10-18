@@ -27,6 +27,42 @@
 		time: 1000
 	});
 
+	const service = new Swiper(".services-two-active", {
+		// Default parameters
+		slidesPerView: 3,
+		spaceBetween: 20,
+		loop: true,
+		navigation: {
+			nextEl: ".services-button-next",
+			prevEl: ".services-button-prev",
+		},
+		// Responsive breakpoints
+		breakpoints: {	
+			'1400': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+			'992': {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			'768': {
+				slidesPerView: 3,
+			},
+			'576': {
+				slidesPerView: 3,
+			},
+			'0': {
+				slidesPerView: 3,
+			},
+		},
+	});
+
+
+
+
 	/**
 	 * Post Media Gallery
 	 */
@@ -52,7 +88,7 @@
 	 * Post Media video
 	 */
 	function postMediaVideo() {
-		var popupButton = $('.post-media-video .popup-video')
+		var popupButton = $('.post-media-video, .popup-video')
 		popupButton.magnificPopup({
 			type: 'iframe',
 		});

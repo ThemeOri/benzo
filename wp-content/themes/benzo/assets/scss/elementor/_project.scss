@@ -1,0 +1,74 @@
+/** ===== Project CSS ===== **/
+.project__wrapper-bg {
+    position: relative;
+	background: #051632;
+    padding: 95px 0px 280px 0px;
+}
+.project-shape {
+	position: absolute;
+	right: 0;
+	top: 40px;
+}
+.project__wrapper-slider {
+	margin-top: -220px;
+}
+.project-slider-item {
+    &:hover{
+        .project-slider-content {
+            opacity: 1;
+            transform: scale(1,1);
+        }
+        .project-slider-arrow {
+            color: $color-white;
+            background: $color-primary;
+        }
+    }
+}
+.project-slider-thumb {
+	position: relative;
+}
+.project-slider-content {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	right: 195px;
+	padding: 20px 35px;
+	border-radius: 4px;
+    opacity: 0;
+	transition: all 500ms ease;
+	background-color: $color-white;
+    transform: scale(1,0.3);
+    span {
+        font-weight: 500;
+	    font-size: 16px;
+	    line-height: 26px;
+    }
+    h4 {
+        margin-bottom: 0;
+        a {
+            font-weight: 600;
+	        font-size: 20px;
+	        line-height: 26px;
+            color: #000;
+            transition: .3s;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+}
+.services-two-active {
+	margin-right: -660px !important;
+}
+.project-slider-arrow {
+	position: absolute;
+	right: -24px;
+	top: 25px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	transition: all 500ms ease;
+	border-radius: 25px;
+    font-size: 20px;
+}
