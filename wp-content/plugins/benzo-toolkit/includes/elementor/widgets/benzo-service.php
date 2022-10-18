@@ -107,6 +107,7 @@ class Benzo_service extends Widget_Base {
                 'type'    => Controls_Manager::SELECT,
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -323,6 +324,23 @@ class Benzo_service extends Widget_Base {
         );
 
         $this->add_control(
+            'button_text',
+            [
+                'label' => esc_html__('Button Text', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => 'Button Text',
+                'placeholder' => esc_html__('Button Text', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'condition' => [
+                    'widget_design' => 'design-2',
+                ],
+            ]
+        );
+
+        $this->add_control(
             'button_link',
             [
                 'label' => esc_html__('Link', 'benzo-toolkit'),
@@ -493,6 +511,7 @@ class Benzo_service extends Widget_Base {
 
         ?>
 
+       <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
         <div class="features_area-wrapper">
             <div class="features_top-icon">
                 <div class="features_icon-thumb">
@@ -505,7 +524,9 @@ class Benzo_service extends Widget_Base {
             <div class="features_item-content webtend-el-des">
                 <?php if ($settings['title']) : ?>
                 <div class="features_item-title">
-                    <h3 class="webtend-el-title"><a class="webtend-el-title" href="<?php echo esc_url($settings['title_url']); ?>"><?php echo wp_kses_post($settings['title']); ?></a></h3>
+                    <h3 class="webtend-el-title"><a class="webtend-el-title" href="<?php echo esc_url($settings['title_url']); ?>">
+                    <?php echo wp_kses_post($settings['title']); ?>
+                 </a></h3>
                 </div>
                 <?php endif; ?>
                 <?php if ($settings['description']) : ?>
@@ -517,6 +538,29 @@ class Benzo_service extends Widget_Base {
                 </a>
             </div>
         </div>
+        <?php endif; ?>
+
+        <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+            <div class="service__wrapper-one">
+               <div class="service-icon-wrapper">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/features-icon.png" alt="img">
+                   <div class="service-icon-top">
+                     <span>
+                     <?php \Elementor\Icons_Manager::render_icon($settings['icons'], ['aria-hidden' => 'true']); ?>
+                    </span>
+                   </div>
+               </div>
+               <div class="service-content-one webtend-el-des">
+               <?php if ($settings['title']) : ?>
+                  <h3 class="webtend-el-title"><a class="webtend-el-title" href="<?php echo esc_url($settings['title_url']); ?>"><?php echo wp_kses_post($settings['title']); ?></a></h3>
+                  <?php endif; ?>
+                  <?php if ($settings['description']) : ?>
+                  <p><?php echo wp_kses_post($settings['description']); ?></p>
+                  <?php endif; ?>
+                  <a class="service-content-one-btn" href="<?php echo esc_url($settings['button_link']['url']); ?>"><?php echo wp_kses_post($settings['button_text']); ?></a>
+               </div>
+            </div>
+        <?php endif; ?>
 
         <?php
 }

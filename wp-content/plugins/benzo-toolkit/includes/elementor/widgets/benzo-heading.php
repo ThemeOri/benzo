@@ -233,7 +233,7 @@ class Benzo_Heading extends Widget_Base {
        $this->start_controls_section(
             '_section_style_content',
             [
-                'label' => esc_html__('Style Heading Title & Content', 'generic-elements'),
+                'label' => esc_html__('Style Heading Title & Content', 'benzo-toolkit'),
                 'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
@@ -251,7 +251,7 @@ class Benzo_Heading extends Widget_Base {
         $this->add_responsive_control(
             'title_spacing',
             [
-                'label' => esc_html__('Bottom Spacing', 'generic-elements'),
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'selectors' => [
@@ -263,7 +263,7 @@ class Benzo_Heading extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => esc_html__('Text Color', 'generic-elements'),
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .webtend-el-title' => 'color: {{VALUE}}',
@@ -284,7 +284,7 @@ class Benzo_Heading extends Widget_Base {
             '_content_subtitle_up',
             [
                 'type' => \Elementor\Controls_Manager::HEADING,
-                'label' => esc_html__('Sub Title Up', 'generic-elements'),
+                'label' => esc_html__('Sub Title Up', 'benzo-toolkit'),
                 'separator' => 'before'
             ]
         );
@@ -292,7 +292,7 @@ class Benzo_Heading extends Widget_Base {
         $this->add_responsive_control(
             'subtitle_up_spacing',
             [
-                'label' => esc_html__('Bottom Spacing', 'generic-elements'),
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'selectors' => [
@@ -304,7 +304,7 @@ class Benzo_Heading extends Widget_Base {
         $this->add_control(
             'subtitle_up_color',
             [
-                'label' => esc_html__('Text Color', 'generic-elements'),
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .webtend-el-subtitle-up' => 'color: {{VALUE}}',
@@ -325,7 +325,7 @@ class Benzo_Heading extends Widget_Base {
             '_subtitle_subtitle',
             [
                 'type' => \Elementor\Controls_Manager::HEADING,
-                'label' => esc_html__('Subtitle', 'generic-elements'),
+                'label' => esc_html__('Subtitle', 'benzo-toolkit'),
                 'separator' => 'before'
             ]
         );
@@ -333,7 +333,7 @@ class Benzo_Heading extends Widget_Base {
         $this->add_responsive_control(
             'subtitle_spacing',
             [
-                'label' => esc_html__('Bottom Spacing', 'generic-elements'),
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'selectors' => [
@@ -345,7 +345,7 @@ class Benzo_Heading extends Widget_Base {
         $this->add_control(
             'subtitle_color',
             [
-                'label' => esc_html__('Text Color', 'generic-elements'),
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .webtend-el-subtitle' => 'color: {{VALUE}}',
@@ -381,7 +381,7 @@ class Benzo_Heading extends Widget_Base {
         $title = wp_kses_post($settings['title']);
 
         ?>
-
+        <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
         <div class="benzo-header-area-one">
             <div class="heading-subtitle-wrapper">
                 <div class="subtitle-one-icon">
@@ -405,6 +405,36 @@ class Benzo_Heading extends Widget_Base {
                 ); ?>
             </div>
         </div>
+        <?php endif; ?>
+
+        <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+
+            <div class="benzo-header-area-one two">
+            <div class="heading-subtitle-wrapper">
+                <div class="subtitle-one-icon">
+                    <span><i class="fal fa-star"></i></span>
+                </div>
+                <div class="subtitle-content-wrapper">
+                    <?php if ($settings['sub_title_up']) : ?>
+                    <h6 class="webtend-el-subtitle-up"><?php echo wp_kses_post($settings['sub_title_up']); ?></h6>
+                    <?php endif; ?>
+                    <?php if ($settings['sub_title']) : ?>
+                    <h5 class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></h5>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="heading-title-one">
+                 <?php printf(
+                    '<%1$s %2$s>%3$s</%1$s>',
+                    tag_escape($settings['title_tag']),
+                    $this->get_render_attribute_string('title'),
+                    $title
+                ); ?>
+            </div>
+        </div>  
+
+       <?php endif; ?>
+
 
         <?php
 }
