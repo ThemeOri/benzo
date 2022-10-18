@@ -9,7 +9,7 @@ use Elementor\Utils;
 
 defined( 'ABSPATH' ) || exit;
 
-class Benzo_Project extends Widget_Base {
+class Benzo_Testimonial extends Widget_Base {
 
     /**
      * Retrieve the widget name.
@@ -21,7 +21,7 @@ class Benzo_Project extends Widget_Base {
      * @return string Widget name.
      */
     public function get_name() {
-        return 'benzo-project';
+        return 'benzo-testimonial';
     }
 
     /**
@@ -34,7 +34,7 @@ class Benzo_Project extends Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return esc_html__( 'Benzo Project', 'benzo-toolkit' );
+        return esc_html__( 'Benzo Testimonial', 'benzo-toolkit' );
     }
 
     /**
@@ -47,7 +47,7 @@ class Benzo_Project extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'eicon-slider-device';
+        return 'eicon-testimonial';
     }
 
     /**
@@ -79,7 +79,7 @@ class Benzo_Project extends Widget_Base {
      * @return array Widget keywords.
      */
     public function get_keywords() {
-        return ['Benzo', 'Toolkit', 'box', 'video','play'];
+        return ['Benzo', 'Toolkit', 'Testimonial', 'slider'];
     }
 
     /**
@@ -586,83 +586,80 @@ class Benzo_Project extends Widget_Base {
 
         ?>
 
-        <div class="project__wrapper-bg">
-            <div class="project-shape">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/project-pattern.png" alt="img">
-            </div>
-            <div class="container">
-            <div class="row align-items-center">
-            <div class="col-lg-10">
-                <div class="benzo-header-area-one two">
-                <div class="heading-subtitle-wrapper">
-                    <div class="subtitle-one-icon">
-                        <span><i class="fal fa-star"></i></span>
-                    </div>
-                    <div class="subtitle-content-wrapper">
-                        <?php if ($settings['sub_title_up']) : ?>
-                        <h6 class="webtend-el-subtitle-up"><?php echo wp_kses_post($settings['sub_title_up']); ?></h6>
-                        <?php endif; ?>
-                        <?php if ($settings['sub_title']) : ?>
-                        <h5 class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></h5>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="heading-title-one">
-                    <?php printf(
-                        '<%1$s %2$s>%3$s</%1$s>',
-                        tag_escape($settings['title_tag']),
-                        $this->get_render_attribute_string('title'),
-                        $title
-                    ); ?>
-                </div>
-            </div>
-                </div>
-                <div class="col-lg-2">
-                <div class="services-two-nav">
-                    <div class="services-button-prev"><i class="fal fa-long-arrow-left"></i></i></div>
-                    <div class="services-button-next"><i class="fal fa-long-arrow-right"></i></div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="project__wrapper-slider">
-           <div class="container">
-              <div class="row">
-                <div class="col-lg-9">
-                      <div class="project-slider-one">
-                        <div class="swiper-container services-two-active">
-                            <div class="swiper-wrapper">
-                            <?php foreach ($settings['slides'] as $slide) : 
-                                if (!empty($slide['image']['id'])) {
-                                    $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
-                                }
-                            ?>
-                                <div class="swiper-slide">
-                                    <div class="project-slider-item">
-                                        <div class="project-slider-thumb">
-                                            <img src="<?php print esc_url($slide['image']['url']); ?>" alt="img">
-                                            <div class="project-slider-content">
-                                            <?php if ($slide['subtitle']) : ?>
-                                                <span class="webtend-el-subtitle-s"><?php echo wp_kses_post($slide['subtitle']); ?></span>
-                                            <?php endif; ?>
-                                            <?php if ($slide['slider_title']) : ?>
-                                                <h4><a class="webtend-el-title-s" href="<?php echo esc_url($slide['slider_url']); ?>"><?php echo wp_kses_post($slide['slider_title']); ?></a></h4>
-                                            <?php endif; ?>
-                                            <?php if ($slide['slider_url']) : ?>
-                                                <a class="project-slider-arrow" href="<?php echo esc_url($slide['slider_url']); ?>"><i class="fal fa-long-arrow-right"></i></a>
-                                            <?php endif; ?>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div class="testimonial__wrapper-one">
+            <div class="swiper-container testimonial-active">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimoniyal-item">
+                            <div class="testimoniyal-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimoniyal/test-1.jpg" alt="img">
+                                <div class="testimoniyal-quote">
+                                    <span><i class="fal fa-quote-right"></i></span>
                                 </div>
-                                <?php endforeach; ?>
                             </div>
-                         </div>
-                      </div>
+                            <div class="testimoniyal-content">
+                                <h4>Ronald Brown</h4>
+                                <span>Senior executive of webtend</span>
+                                <ul>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                </ul>
+                                <p>Felis commodo libero velos pedels sapien same quam integer sodale lobortis eude duise natoque Iaculis 
+                                adipiscing dui iaculis varius laoret nostra duis purus lobortis curabitur donec move corn litora</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimoniyal-item">
+                            <div class="testimoniyal-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimoniyal/test-1.jpg" alt="img">
+                                <div class="testimoniyal-quote">
+                                    <span><i class="fal fa-quote-right"></i></span>
+                                </div>
+                            </div>
+                            <div class="testimoniyal-content">
+                                <h4>Ronald Brown</h4>
+                                <span>Senior executive of webtend</span>
+                                <ul>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                </ul>
+                                <p>Felis commodo libero velos pedels sapien same quam integer sodale lobortis eude duise natoque Iaculis 
+                                adipiscing dui iaculis varius laoret nostra duis purus lobortis curabitur donec move corn litora</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimoniyal-item">
+                            <div class="testimoniyal-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimoniyal/test-1.jpg" alt="img">
+                                <div class="testimoniyal-quote">
+                                    <span><i class="fal fa-quote-right"></i></span>
+                                </div>
+                            </div>
+                            <div class="testimoniyal-content">
+                                <h4>Ronald Brown</h4>
+                                <span>Senior executive of webtend</span>
+                                <ul>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                    <li><i class="fal fa-star"></i></li>
+                                </ul>
+                                <p>Felis commodo libero velos pedels sapien same quam integer sodale lobortis eude duise natoque Iaculis 
+                                adipiscing dui iaculis varius laoret nostra duis purus lobortis curabitur donec move corn litora</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-           </div>
+            </div>
         </div>
 
         <?php
