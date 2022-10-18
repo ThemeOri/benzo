@@ -479,6 +479,14 @@ figure {
   opacity: 1;
 }
 
+.common-el-btn {
+  border: 2px solid transparent;
+  padding: 15px 32px;
+}
+.common-el-btn:hover {
+  border: 2px solid var(--color-border);
+}
+
 /** ===== Input Fields ===== **/
 input,
 button,
@@ -6281,7 +6289,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   }
 }
 
-/** ===== Heading CSS ===== **/
+/** ===== Heading Style Two CSS ===== **/
 .benzo-header-area-one {
   text-align: center;
 }
@@ -6345,7 +6353,15 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   }
 }
 
-/** ===== Service CSS ===== **/
+/** ===== Heading Style One CSS ===== **/
+.benzo-header-area-one.two {
+  text-align: inherit;
+}
+.benzo-header-area-one.two .heading-subtitle-wrapper {
+  justify-content: inherit;
+}
+
+/** ===== Service One CSS ===== **/
 .features_area-wrapper {
   border: 2px solid var(--color-border);
   border-radius: 3px;
@@ -6459,6 +6475,61 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   margin-bottom: 30px;
 }
 
+/** ===== Service Two CSS ===== **/
+.service__wrapper-one {
+  position: relative;
+  border: 2px solid var(--color-border);
+  border-radius: 3px;
+  padding: 30px 30px 30px 70px;
+  text-align: start;
+  transition: all 500ms ease;
+}
+.service__wrapper-one:hover .service-icon-wrapper img {
+  transform: translateY(-5px) translate3d(0, -5px, 0);
+}
+.service__wrapper-one:hover .service-icon-top span {
+  transform: translateY(-5px) translate3d(0, -5px, 0);
+}
+
+.service-icon-wrapper {
+  position: relative;
+}
+.service-icon-wrapper img {
+  transition: all 500ms ease;
+}
+
+.service-icon-wrapper {
+  position: absolute;
+  left: -30px;
+  top: 50px;
+}
+
+.service-icon-top {
+  position: absolute;
+  top: 6px;
+  left: 30px;
+}
+.service-icon-top span {
+  font-size: 40px;
+  color: var(--color-primary);
+  transition: all 500ms ease;
+}
+
+.service-content-one h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.service-content-one p {
+  margin-bottom: 10px;
+}
+
+.service-content-one-btn {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
 /** ===== About CSS ===== **/
 .about__one-thumb {
   position: relative;
@@ -6522,8 +6593,8 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 .about__one-experience h5 {
   color: var(--color-white);
   font-weight: 900;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 50px;
   font-family: var(--font-secondary);
   margin-bottom: 10px;
 }
@@ -6535,8 +6606,8 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   }
 }
 .about__one-experience h5 span {
-  font-size: 36px;
-  line-height: 50px;
+  font-size: 60px;
+  line-height: 60px;
 }
 .about__one-experience p {
   font-size: 27px;
@@ -6559,6 +6630,32 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   }
 }
 
+.about__author-info {
+  display: flex;
+  align-items: center;
+}
+
+.about__author {
+  display: flex;
+}
+
+.about__author-thumb {
+  margin-right: 15px;
+}
+
+.about__author-content {
+  margin-right: 30px;
+}
+.about__author-content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.about__author-content span {
+  color: #051632;
+  font-size: 16px;
+}
+
 /** ===== About Animation CSS ===== **/
 @keyframes up_down_animations {
   0% {
@@ -6577,6 +6674,75 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
     opacity: 1;
   }
 }
+/** ===== Features CSS ===== **/
+.features__area-wrapper-full {
+  position: relative;
+  padding: 60px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 500ms ease;
+}
+.features__area-wrapper-full:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: #051632;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.features__area-wrapper-full:hover {
+  background-color: var(--color-primary);
+}
+.features__area-wrapper-full:hover .features-btn {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+.features__area-wrapper-full:hover .features__area-full-icon span {
+  transform: translateY(-5px) translate3d(0, -5px, 0);
+}
+
+.features__area-full-icon span {
+  color: var(--color-white);
+  font-size: 40px;
+  margin-bottom: 5px;
+  transition: all 500ms ease;
+}
+
+.features__area-full-content h3 a {
+  color: var(--color-white);
+}
+.features__area-full-content p {
+  color: var(--color-white);
+  margin-bottom: 30px;
+}
+
+/** ===== Video CSS ===== **/
+.video__content {
+  background: var(--color-primary);
+  border-radius: 3px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px 60px;
+}
+
+.video__thumb {
+  position: relative;
+}
+
+.video-title h5 {
+  color: var(--color-white);
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
 /** ===== Popup ===== **/
 .benzo-popup-wrapper {
   position: fixed;

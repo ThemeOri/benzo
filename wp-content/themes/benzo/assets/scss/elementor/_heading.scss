@@ -1,4 +1,4 @@
-/** ===== Heading CSS ===== **/
+/** ===== Heading Style Two CSS ===== **/
 .benzo-header-area-one {
 	text-align: center;
 }
@@ -55,6 +55,11 @@
       }
     }
 }
- 
-
+/** ===== Heading Style One CSS ===== **/
+.benzo-header-area-one.two{
+	 text-align: inherit;
+	.heading-subtitle-wrapper {
+		justify-content: inherit;
+	}
+}
  

@@ -151,9 +151,10 @@ class Benzo_Assets {
      */
     public function enqueue_scripts() {
         wp_enqueue_script( 'slick', BENZO_ASSETS . '/js/slick.min.js', ['jquery'], '1.8.1', true );
-        wp_enqueue_script( 'magnific-popup', BENZO_ASSETS . '/js/magnific-popup.min.js', ['jquery'], '1.1.0', true );
-        wp_enqueue_script( 'parallax', BENZO_ASSETS . '/js/parallax.min.js', ['jquery'], '1.0', true );
+        wp_enqueue_script( 'magnific-popup', BENZO_ASSETS . '/js/magnific-popup.min.js', ['jquery'], '1.1.0', true ); 
         wp_enqueue_script( 'swiper-bundle', BENZO_ASSETS . '/js/swiper-bundle.min.js', ['jquery'], '7.3.3', true );
+        wp_enqueue_script( 'counterup', BENZO_ASSETS . '/js/jquery.counterup.min.js', ['jquery'], '4.0.1', true );
+        wp_enqueue_script( 'waypoints', BENZO_ASSETS . '/js/jquery.waypoints.min.js', ['jquery'], '4.0.1', true );
         wp_enqueue_script( 'benzo-theme', BENZO_ASSETS . '/js/theme.js', ['jquery'], BENZO_VERSION, true );
 
         wp_localize_script(

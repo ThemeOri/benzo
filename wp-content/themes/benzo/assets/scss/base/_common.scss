@@ -490,3 +490,11 @@ figure {
         }
     }
 }
+
+.common-el-btn {
+    border: 2px solid transparent;
+    padding: 15px 32px;
+    &:hover{
+        border: 2px solid $color-border;
+    }
+}

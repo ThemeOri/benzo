@@ -1,4 +1,4 @@
-/** ===== Service CSS ===== **/
+/** ===== Service One CSS ===== **/
 .features_area-wrapper {
 	border: 2px solid $color-border;
 	border-radius: 3px;
@@ -108,5 +108,63 @@
 	p {
 	 margin-bottom: 30px;
    }
+}
+
+/** ===== Service Two CSS ===== **/
+.service__wrapper-one {
+	position: relative;
+	border: 2px solid $color-border;
+	border-radius: 3px;
+	padding: 30px 30px 30px 70px;
+	text-align: start;
+	transition: all 500ms ease;
+	&:hover{
+		.service-icon-wrapper {
+			img {
+				transform: translateY(-5px) translate3d(0, -5px, 0);
+			}
+		}
+		.service-icon-top {
+			span {
+				transform: translateY(-5px) translate3d(0, -5px, 0);
+			}
+		}
+	}
+}
+.service-icon-wrapper {
+	position: relative;
+	img {
+		transition: all 500ms ease;
+	}
+}
+.service-icon-wrapper {
+	position: absolute;
+	left: -30px;
+	top: 50px;
+}
+.service-icon-top {
+	position: absolute;
+	top: 6px;
+	left: 30px;
+	span {
+		font-size: 40px;
+		color: $color-primary;
+		transition: all 500ms ease;
+	}
+}
+.service-content-one {
+	h3 {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 10px;
+	}
+	p {
+		margin-bottom: 10px;
+	}
+}
+.service-content-one-btn {
+	font-weight: 600;
+	color: $color-secondary;
 }
  

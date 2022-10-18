@@ -1,0 +1,23 @@
+/** ===== Video CSS ===== **/
+.video__content {
+	background: $color-primary;
+	border-radius: 3px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px 60px;
+}
+.video__thumb{
+  position: relative;
+}
+.video-title {
+    h5 {
+        color: $color-white;
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+}
+ 

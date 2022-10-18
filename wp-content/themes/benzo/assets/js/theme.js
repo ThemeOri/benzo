@@ -21,6 +21,12 @@
 		},
 	});
 
+	/*==========  CounterUp ==========*/
+	$('.counter').counterUp({
+		delay: 10,
+		time: 1000
+	});
+
 	/**
 	 * Post Media Gallery
 	 */

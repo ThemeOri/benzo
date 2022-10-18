@@ -59,8 +59,8 @@
 	h5 {
 	 color: $color-white;
 	 font-weight: 900;
-	 font-size: 60px;
-	 line-height: 60px;
+	 font-size: 36px;
+	line-height: 50px;
 	 font-family: var(--font-secondary);
 	 margin-bottom: 10px;
 	 @include respond-below(c480){
@@ -69,8 +69,8 @@
         margin-bottom: 5px;
     }
 	 span {
-	    font-size: 36px;
-	    line-height: 50px;
+		font-size: 60px;
+	    line-height: 60px;
 	 }
    }
    p {
@@ -90,6 +90,33 @@
 		bottom: -45px;
     }
 }
+
+.about__author-info {
+	display: flex;
+	align-items: center;
+  }
+  .about__author {
+	display: flex;
+  }
+  .about__author-thumb {
+	margin-right: 15px;
+}
+  .about__author-content {
+	margin-right: 30px;
+	h5 {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 4px;
+	}
+	span {
+		color: #051632;
+		font-size: 16px;
+	}
+  }
+
+
+
+
 /** ===== About Animation CSS ===== **/
 @keyframes up_down_animations {
   0% {
