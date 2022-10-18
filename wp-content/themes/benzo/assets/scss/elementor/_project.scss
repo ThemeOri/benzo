@@ -18,14 +18,19 @@
             opacity: 1;
             transform: scale(1,1);
         }
-        .project-slider-arrow {
-            color: $color-white;
-            background: $color-primary;
+        .project-slider-thumb {
+            img {
+                transform: scale(1.05,1.05) rotate(2deg);
+            }
         }
     }
 }
 .project-slider-thumb {
 	position: relative;
+    overflow: hidden;
+    img {
+        transition: all 500ms ease;
+    }
 }
 .project-slider-content {
 	position: absolute;
@@ -34,10 +39,8 @@
 	right: 195px;
 	padding: 20px 35px;
 	border-radius: 4px;
-    opacity: 0;
 	transition: all 500ms ease;
 	background-color: $color-white;
-    transform: scale(1,0.3);
     span {
         font-weight: 500;
 	    font-size: 16px;
@@ -71,4 +74,47 @@
 	transition: all 500ms ease;
 	border-radius: 25px;
     font-size: 20px;
+    color: $color-white;
+    background: $color-primary;
+    &:hover{
+        color: $color-white;
+    }
+}
+.services-two-nav {
+	display: flex;
+	align-items: center;
+}
+.services-button-prev {
+	border: 2px solid #EEF0F1;
+	border-radius: 20px 0px 0px 20px;
+	opacity: 0.3;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	padding: 2px 16px;
+    margin-right: 3px;
+    transition: .3s;
+    &:hover{
+        color: $color-white;
+        background: $color-primary;
+        border: 2px solid transparent;
+        opacity: 1;
+    }
+}
+.services-button-next{
+    border: 2px solid #EEF0F1;
+	border-radius: 0px 20px 20px 0px;
+	opacity: 0.3;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	padding: 2px 16px;
+    margin-left: 3px;
+    transition: .3s;
+    &:hover{
+        color: $color-white;
+        background: $color-primary;
+        border: 2px solid transparent;
+        opacity: 1;
+    }
 }

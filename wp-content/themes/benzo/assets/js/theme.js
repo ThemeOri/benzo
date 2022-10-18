@@ -27,6 +27,7 @@
 		time: 1000
 	});
 
+	/*==========  Services Slider ==========*/
 	const service = new Swiper(".services-two-active", {
 		// Default parameters
 		slidesPerView: 3,
@@ -60,6 +61,40 @@
 		},
 	});
 
+
+	/*==========  Testimonial Slider ==========*/
+	const testimonial = new Swiper(".testimonial-active", {
+		// Default parameters
+		slidesPerView: 3,
+		spaceBetween: 30,
+		centeredSlides: true,
+		loop: true,
+		// Responsive breakpoints
+		breakpoints: {	
+			'1400': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+			'992': {
+				slidesPerView: 2,
+				spaceBetween: 15,
+				centeredSlides: false,
+			},
+			'768': {
+				slidesPerView: 2,
+				centeredSlides: false,
+				spaceBetween: 15,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
 
 
 
