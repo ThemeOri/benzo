@@ -9,7 +9,7 @@ use Elementor\Utils;
 
 defined( 'ABSPATH' ) || exit;
 
-class Benzo_Testimonial extends Widget_Base {
+class Benzo_Icon_List extends Widget_Base {
 
     /**
      * Retrieve the widget name.
@@ -21,7 +21,7 @@ class Benzo_Testimonial extends Widget_Base {
      * @return string Widget name.
      */
     public function get_name() {
-        return 'benzo-testimonial';
+        return 'benzo-icon-list';
     }
 
     /**
@@ -34,7 +34,7 @@ class Benzo_Testimonial extends Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return esc_html__( 'Benzo Testimonial', 'benzo-toolkit' );
+        return esc_html__( 'Benzo Icon List', 'benzo-toolkit' );
     }
 
     /**
@@ -47,7 +47,7 @@ class Benzo_Testimonial extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'eicon-testimonial';
+        return 'eicon-bullet-list';
     }
 
     /**
@@ -79,7 +79,7 @@ class Benzo_Testimonial extends Widget_Base {
      * @return array Widget keywords.
      */
     public function get_keywords() {
-        return ['Benzo', 'Toolkit', 'Testimonial', 'slider'];
+        return ['Benzo', 'Toolkit', 'Process', 'List','Features','Icon'];
     }
 
     /**
@@ -115,20 +115,33 @@ class Benzo_Testimonial extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_slides',
+            '_section_icon_list',
             [
-                'label' => esc_html__('Testimoniyal Slider', 'benzo-toolkit'),
+                'label' => esc_html__('Icon List', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
 
         $repeater = new \Elementor\Repeater();
 
+		$repeater->add_control(
+			'selected_icon',
+			[
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'label_block' => true,
+				'default' => [
+					'value' => 'fas fa-smile-wink',
+					'library' => 'fa-solid',
+				],
+			]
+		);
+
         $repeater->add_control(
-            'image',
+            'bg_image',
             [
                 'type' => \Elementor\Controls_Manager::MEDIA,
-                'label' => esc_html__('Profile Image', 'benzo-toolkit'),
+                'label' => esc_html__('Icon BG Image', 'benzo-toolkit'),
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],
@@ -139,12 +152,13 @@ class Benzo_Testimonial extends Widget_Base {
         );
 
         $repeater->add_control(
-            'client_name',
+            'shape_image',
             [
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-                'label_block' => true,
-                'default' => esc_html__('Client Name', 'benzo-toolkit'),
-                'placeholder' => esc_html__('Type client name here', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'label' => esc_html__('Shape Image', 'benzo-toolkit'),
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -152,12 +166,12 @@ class Benzo_Testimonial extends Widget_Base {
         );
 
         $repeater->add_control(
-            'designation',
+            'slider_title',
             [
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'label_block' => true,
-                'default' => esc_html__('Designation', 'benzo-toolkit'),
-                'placeholder' => esc_html__('Type designation here', 'benzo-toolkit'),
+                'default' => esc_html__('Title', 'benzo-toolkit'),
+                'placeholder' => esc_html__('Type title here', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -165,12 +179,25 @@ class Benzo_Testimonial extends Widget_Base {
         );
 
         $repeater->add_control(
-            'messages',
+            'slider_url',
+            [
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'label_block' => true,
+                'default' => esc_html__('URL', 'benzo-toolkit'),
+                'placeholder' => esc_html__('#', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $repeater->add_control(
+            'slider_description',
             [
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'label_block' => true,
-                'default' => esc_html__('Messages', 'benzo-toolkit'),
-                'placeholder' => esc_html__('Type messages here', 'benzo-toolkit'),
+                'default' => esc_html__('Description', 'benzo-toolkit'),
+                'placeholder' => esc_html__('Type description here', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -183,7 +210,7 @@ class Benzo_Testimonial extends Widget_Base {
                 'show_label' => false,
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
-                'title_field' => '<# print(client_name || "Carousel Item"); #>',
+                'title_field' => '<# print(slider_title || "Carousel Item"); #>',
                 'default' => [
                     [
                         'image' => [
@@ -218,18 +245,17 @@ class Benzo_Testimonial extends Widget_Base {
 
         $this->end_controls_section();
 
-        // Style Slider Title & Content
         $this->start_controls_section(
-            '_section_style_slider',
+            '_section_style_content',
             [
-                'label' => esc_html__('Style Slider Title & Content', 'benzo-toolkit'),
+                'label' => esc_html__('Style Icon Title & Content', 'benzo-toolkit'),
                 'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
 
         // Title
         $this->add_control(
-            '_heading_slider_title',
+            '_heading_title',
             [
                 'type' => \Elementor\Controls_Manager::HEADING,
                 'label' => esc_html__('Title', 'webtend-el-title'),
@@ -238,7 +264,7 @@ class Benzo_Testimonial extends Widget_Base {
         );
 
         $this->add_responsive_control(
-            'title_slider_spacing',
+            'title_spacing',
             [
                 'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
@@ -250,7 +276,7 @@ class Benzo_Testimonial extends Widget_Base {
         );
 
         $this->add_control(
-            'title_slider_color',
+            'title_color',
             [
                 'label' => esc_html__('Text Color', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::COLOR,
@@ -263,40 +289,40 @@ class Benzo_Testimonial extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'title-slider',
+                'name' => 'title',
                 'selector' => '{{WRAPPER}} .webtend-el-title',
             ]
         );
 
-        // Subtitle
-        $this->add_control(
-            '_slider_subtitle',
+         // description
+         $this->add_control(
+            '_content_description',
             [
                 'type' => \Elementor\Controls_Manager::HEADING,
-                'label' => esc_html__('Subtitle', 'benzo-toolkit'),
+                'label' => esc_html__('Description', 'benzo-toolkit'),
                 'separator' => 'before'
             ]
         );
 
         $this->add_responsive_control(
-            'subtitle_slider_spacing',
+            'description_spacing',
             [
                 'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'selectors' => [
-                    '{{WRAPPER}} .webtend-el-subtitle' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .webtend-el-content p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         $this->add_control(
-            'subtitle_slider_color',
+            'description_color',
             [
                 'label' => esc_html__('Text Color', 'benzo-toolkit'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .webtend-el-subtitle' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .webtend-el-content p' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -304,53 +330,14 @@ class Benzo_Testimonial extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'subtitle-slider',
-                'selector' => '{{WRAPPER}} .webtend-el-subtitle',
+                'name' => 'description',
+                'selector' => '{{WRAPPER}} .webtend-el-content p',
             ]
         );
 
-            // description
-            $this->add_control(
-                '_content_description',
-                [
-                    'type' => \Elementor\Controls_Manager::HEADING,
-                    'label' => esc_html__('Description', 'benzo-toolkit'),
-                    'separator' => 'before'
-                ]
-            );
-    
-            $this->add_responsive_control(
-                'description_spacing',
-                [
-                    'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
-                    'type' => \Elementor\Controls_Manager::SLIDER,
-                    'size_units' => ['px'],
-                    'selectors' => [
-                        '{{WRAPPER}} .webtend-el-content p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                    ],
-                ]
-            );
-    
-            $this->add_control(
-                'description_color',
-                [
-                    'label' => esc_html__('Text Color', 'benzo-toolkit'),
-                    'type' => \Elementor\Controls_Manager::COLOR,
-                    'selectors' => [
-                        '{{WRAPPER}} .webtend-el-content p' => 'color: {{VALUE}}',
-                    ],
-                ]
-            );
-    
-            $this->add_group_control(
-                \Elementor\Group_Control_Typography::get_type(),
-                [
-                    'name' => 'description',
-                    'selector' => '{{WRAPPER}} .webtend-el-content p',
-                ]
-            );
 
         $this->end_controls_section();
+
         
     }
 
@@ -377,49 +364,38 @@ class Benzo_Testimonial extends Widget_Base {
 
         ?>
 
-        <div class="testimonial__wrapper-one">
-            <div class="swiper-container testimonial-active">
-                <div class="swiper-wrapper">
-                <?php foreach ($settings['slides'] as $slide) : 
-                     if (!empty($slide['image']['id'])) {
-                        $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
-                    }
-                ?>
-                    <div class="swiper-slide">
-                        <div class="testimoniyal-item">
-                            <div class="testimoniyal-thumb">
-                                <img src="<?php print esc_url($slide['image']['url']); ?>" alt="img">
-                                <div class="testimoniyal-quote">
-                                    <span><i class="fal fa-quote-right"></i></span>
-                                </div>
-                            </div>
-                            <div class="testimoniyal-content webtend-el-content">
-                            <?php if (!empty($slide['client_name'])) : ?>
-                                <h4 class="webtend-el-title"><?php echo wp_kses_post($slide['client_name']); ?></h4>
-                                <?php endif; ?>
-                                <?php if (!empty($slide['designation'])) : ?>
-                                <span class="webtend-el-subtitle"><?php echo wp_kses_post($slide['designation']); ?></span>
-                                <?php endif; ?>
-                                <ul>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <?php if (!empty($slide['messages'])) : ?>
-                                <p><?php echo wp_kses_post($slide['messages']); ?></p>
-                                <?php endif; ?>
-                            </div>
+       <div class="process__list-wrapper-one">
+        <?php foreach ($settings['slides'] as $slide) : 
+                if (!empty($slide['bg_image']['id'])) {
+                    $bg_image = wp_get_attachment_image_url($slide['bg_image']['id'], $settings['thumbnail_size']);
+                }
+                if (!empty($slide['shape_image']['id'])) {
+                    $shape_image = wp_get_attachment_image_url($slide['shape_image']['id'], $settings['thumbnail_size']);
+                }
+        ?>
+            <div class="process__list-item">
+                <div class="process-icon-list">
+                    <div class="process-icon-bg-thumb">
+                        <img src="<?php print esc_url($slide['bg_image']['url']); ?>" alt="img">
+                        <div class="process-icon-one">
+                        <span><i class="<?php echo $slide['selected_icon']['value'];?>"></i></span>
                         </div>
                     </div>
-                    <?php endforeach; ?>
+                    <div class="process-icon-shape">
+                       <img src="<?php print esc_url($slide['shape_image']['url']); ?>" alt="img">
+                    </div>
                 </div>
-                <div class="testimoniyal-pagination">
-                 <div class="pagination"></div>
+                <div class="process__list-content webtend-el-content">
+                    <?php if (!empty($slide['slider_title'])) : ?>
+                    <h4 class="webtend-el-title"><a class="webtend-el-title" href="<?php echo esc_url($slide['slider_url']); ?>"><?php echo wp_kses_post($slide['slider_title']); ?></a></h4>
+                    <?php endif; ?>
+                    <?php if (!empty($slide['slider_description'])) : ?>
+                    <p><?php echo wp_kses_post($slide['slider_description']); ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
-        </div>
+            <?php endforeach; ?>
+       </div>
 
         <?php
 }

@@ -230,6 +230,7 @@ final class Benzo_Toolkit {
 
         printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
     }
+
 }
 
 /**
