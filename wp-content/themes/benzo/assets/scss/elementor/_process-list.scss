@@ -1,0 +1,42 @@
+/** ===== Process List ===== **/
+.process__list-item {
+	margin-bottom: 40px;
+}
+  .process-icon-bg-thumb {
+    position: relative;
+  }
+  .process-icon-one {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    span {
+        color: $color-white;
+        font-size: 35px;
+    }
+  }
+  .process-icon-list {
+	float: left;
+    position: relative;
+}
+.process-icon-bg-thumb {
+	margin-right: 30px;
+}
+.process__list-content {
+    overflow: hidden;
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+}
+.process-icon-shape {
+	position: absolute;
+	left: 35px;
+	bottom: -60px;
+}
+.process__list-wrapper-one > div:last-child .process-icon-shape{
+    display: none;
+}
+.process__list-item:last-child {
+    margin-bottom: 0;
+}

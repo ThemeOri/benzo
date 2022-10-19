@@ -1064,6 +1064,17 @@ blockquote cite {
   margin: auto;
 }
 
+.box-container {
+  width: 100%;
+  max-width: 1650px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
 .content-container {
   padding: 150px 15px 115px;
   max-width: 1350px;
@@ -1111,15 +1122,6 @@ blockquote cite {
 .content-wrapper.no-sidebar .content-area {
   flex: 0 0 100%;
   max-width: 100%;
-}
-
-.elementor .elementor-section.elementor-section-boxed > .elementor-container {
-  max-width: 1350px;
-  flex-grow: 1;
-}
-
-.elementor-container .elementor-column .elementor-widget-wrap.elementor-element-populated {
-  padding: 0;
 }
 
 /*===== Layout Grid ======*/
@@ -6951,6 +6953,248 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   background: var(--color-primary);
   border: 2px solid transparent;
   opacity: 1;
+}
+
+/** ===== Testimoniyal CSS ===== **/
+.testimoniyal-item {
+  background: var(--color-white);
+  padding: 50px 45px 50px 40px;
+}
+
+.testimoniyal-thumb {
+  float: left;
+  margin-right: 25px;
+  position: relative;
+}
+.testimoniyal-thumb img {
+  margin-bottom: 20px;
+}
+.testimoniyal-thumb::before {
+  position: absolute;
+  content: "";
+  right: -15px;
+  top: 10px;
+  background: var(--color-border);
+  width: 2px;
+  height: 60px;
+}
+
+.testimoniyal-content {
+  overflow: hidden;
+  text-align: left;
+}
+.testimoniyal-content h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.testimoniyal-content span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  display: block;
+}
+.testimoniyal-content ul {
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+.testimoniyal-content ul li {
+  list-style: none;
+  display: inline-block;
+}
+.testimoniyal-content ul li i {
+  color: #FEAF15;
+}
+.testimoniyal-content p {
+  margin-bottom: 0;
+}
+
+.testimoniyal-quote span {
+  font-size: 45px;
+  color: var(--color-primary);
+}
+
+/** ===== Testimoniyal Pagination CSS ===== **/
+.testimoniyal-pagination {
+  padding-top: 35px;
+  text-align: center !important;
+}
+
+.testimoniyal-pagination span.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #D9D9D9;
+  border-radius: 3px;
+  transition: all 0.4s ease-out 0s;
+  opacity: 1;
+}
+
+.testimoniyal-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--color-primary);
+  border-radius: 5px;
+  width: 50px;
+  height: 10px;
+}
+
+/** ===== Brand CSS ===== **/
+.brand-bg {
+  background: var(--color-primary);
+  padding: 60px 90px 60px 80px;
+}
+
+.brand-item {
+  text-align: center;
+}
+
+/** ===== Process List ===== **/
+.process__list-item {
+  margin-bottom: 40px;
+}
+
+.process-icon-bg-thumb {
+  position: relative;
+}
+
+.process-icon-one {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+.process-icon-one span {
+  color: var(--color-white);
+  font-size: 35px;
+}
+
+.process-icon-list {
+  float: left;
+  position: relative;
+}
+
+.process-icon-bg-thumb {
+  margin-right: 30px;
+}
+
+.process__list-content {
+  overflow: hidden;
+}
+.process__list-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.process-icon-shape {
+  position: absolute;
+  left: 35px;
+  bottom: -60px;
+}
+
+.process__list-wrapper-one > div:last-child .process-icon-shape {
+  display: none;
+}
+
+.process__list-item:last-child {
+  margin-bottom: 0;
+}
+
+/** ===== Skills CSS ===== **/
+.progress__bar-wrapper {
+  position: relative;
+}
+
+.bg-color-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 67%;
+  height: 100%;
+}
+
+.include-thumb {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.progress-bar {
+  margin: 0 0 10px;
+  overflow: hidden;
+  padding-right: 24px;
+}
+
+.progress-title-holder {
+  padding-bottom: 7px;
+  position: relative;
+  margin: 5px 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.progress-title {
+  z-index: 100;
+}
+
+.progress-number-wrapper {
+  width: 100%;
+  z-index: 10;
+}
+
+.progress-number-mark {
+  margin-bottom: 4px;
+  border-radius: 3px;
+  background-color: rgb(22, 23, 29);
+  padding: 0 8px;
+  position: absolute;
+  bottom: 0;
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.progress-number-wrapper,
+.progress-number-mark {
+  font-family: Open Sans, sans-serif;
+  font-size: 11px;
+  line-height: 24px;
+  height: 24px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.down-arrow {
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid #16171d;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.progress-content-outter {
+  height: 12px;
+  background-color: #ffffff;
+}
+
+.progress-content {
+  height: 21px;
+  background-color: rgba(67, 243, 183, 0.92);
+  width: 0%; /* Initial value */
 }
 
 /** ===== Popup ===== **/

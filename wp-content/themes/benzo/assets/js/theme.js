@@ -69,6 +69,10 @@
 		spaceBetween: 30,
 		centeredSlides: true,
 		loop: true,
+		pagination: {
+			el: ".pagination",
+			clickable: true,
+		},
 		// Responsive breakpoints
 		breakpoints: {	
 			'1400': {
@@ -96,6 +100,46 @@
 		},
 	});
 
+	/*==========  Brand Slider  ==========*/
+	var swiper = new Swiper(".band-active", {
+		loop: true,
+		speed: 1500,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 3500,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 3
+			},
+			575: {
+				slidesPerView: 4
+			},
+			992: {
+				slidesPerView: 5
+			},
+			1200: {
+				slidesPerView: 5
+			},
+		}
+	});
+
+	/*==========  Skills Bar  ==========*/
+	jQuery('.progress-bar').each(function() {
+		jQuery(this).find('.progress-content').animate({
+		  width:jQuery(this).attr('data-percentage')
+		},2000);
+		
+		jQuery(this).find('.progress-number-mark').animate(
+		  {left:jQuery(this).attr('data-percentage')},
+		  {
+		   duration: 2000,
+		   step: function(now, fx) {
+			 var data = Math.round(now);
+			 jQuery(this).find('.percent').html(data + '%');
+		   }
+		});  
+	  });
 
 
 	/**

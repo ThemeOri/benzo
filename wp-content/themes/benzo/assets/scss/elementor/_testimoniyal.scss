@@ -1,0 +1,79 @@
+/** ===== Testimoniyal CSS ===== **/
+.testimoniyal-item {
+	background: $color-white;
+    padding: 50px 45px 50px 40px;
+}
+.testimoniyal-thumb {
+	float: left;
+    margin-right: 25px;
+    position: relative;
+    img {
+        margin-bottom: 20px;
+    }
+    &::before{
+        position: absolute;
+        content: '';
+        right: -15px;
+        top: 10px;
+        background: $color-border;
+        width: 2px;
+        height: 60px;
+    }
+}
+.testimoniyal-content {
+	overflow: hidden;
+	text-align: left;
+    h4 {
+        font-weight: 600;
+	    font-size: 20px;
+	    line-height: 20px;
+        margin-bottom: 8px;
+    }
+    span {
+        font-weight: 400;
+	    font-size: 16px;
+	    line-height: 20px;
+	    text-transform: capitalize;
+        margin-bottom: 10px;
+        display: block;
+    }
+    ul {
+        padding-left: 0;
+        margin-bottom: 10px;
+        li {
+            list-style: none;
+	        display: inline-block;
+            i {
+                color: #FEAF15;
+            }
+        }
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+.testimoniyal-quote {
+    span {
+        font-size: 45px;
+        color: $color-primary;
+    }
+}
+/** ===== Testimoniyal Pagination CSS ===== **/
+.testimoniyal-pagination {
+	padding-top: 35px;
+	text-align: center !important;
+}
+.testimoniyal-pagination span.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background: #D9D9D9;
+	border-radius: 3px;
+    transition: all 0.4s ease-out 0s;
+    opacity: 1;
+}
+.testimoniyal-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: $color-primary;
+    border-radius: 5px;
+    width: 50px;
+    height: 10px;
+}

@@ -6,6 +6,17 @@
     margin: auto;
 }
 
+.box-container {
+    width: 100%;
+    max-width: 1650px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
 .content-container {
     padding: 150px 15px 115px;
     max-width: 1350px;
@@ -57,23 +68,6 @@
         .content-area {
             flex: 0 0 100%;
             max-width: 100%;
-        }
-    }
-}
-
-.elementor {
-    .elementor-section {
-        &.elementor-section-boxed > .elementor-container {
-            max-width: 1350px;
-            flex-grow: 1;
-        }
-    }
-}
-
-.elementor-container {
-    .elementor-column {
-        .elementor-widget-wrap.elementor-element-populated {
-            padding: 0;
         }
     }
 }
