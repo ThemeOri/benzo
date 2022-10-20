@@ -92,6 +92,7 @@ class Benzo_CF7 extends Widget_Base {
      * @access protected
      */
     protected function register_controls() {
+        
         $this->start_controls_section(
             'widget_content',
             [

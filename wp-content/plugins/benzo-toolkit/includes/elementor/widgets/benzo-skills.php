@@ -1,6 +1,7 @@
 <?php
 namespace BenzoToolkit\ElementorAddon\Widgets;
 
+use BenzoToolkit\Helper\Benzo_Toolkit_Helper;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Typography;
@@ -93,6 +94,7 @@ class Benzo_Skills extends Widget_Base {
      */
     protected function register_controls() {
 
+
         $this->start_controls_section(
             'widget_content',
             [
@@ -166,6 +168,20 @@ class Benzo_Skills extends Widget_Base {
         );
 
         $this->add_control(
+            'description',
+            [
+                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'default' => 'Description',
+                'placeholder' => esc_html__('Description', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
             'title_tag',
             [
                 'label' => esc_html__('Title HTML Tag', 'benzo-toolkit'),
@@ -231,9 +247,9 @@ class Benzo_Skills extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_slides',
+            '_section_skils',
             [
-                'label' => esc_html__('Testimoniyal Slider', 'benzo-toolkit'),
+                'label' => esc_html__('Skill List', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -241,26 +257,12 @@ class Benzo_Skills extends Widget_Base {
         $repeater = new \Elementor\Repeater();
 
         $repeater->add_control(
-            'image',
-            [
-                'type' => \Elementor\Controls_Manager::MEDIA,
-                'label' => esc_html__('Profile Image', 'benzo-toolkit'),
-                'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
-                'dynamic' => [
-                    'active' => true,
-                ]
-            ]
-        );
-
-        $repeater->add_control(
-            'client_name',
+            'skill_title',
             [
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'label_block' => true,
-                'default' => esc_html__('Client Name', 'benzo-toolkit'),
-                'placeholder' => esc_html__('Type client name here', 'benzo-toolkit'),
+                'default' => esc_html__('Skill Title', 'benzo-toolkit'),
+                'placeholder' => esc_html__('Type skill title here', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -268,30 +270,18 @@ class Benzo_Skills extends Widget_Base {
         );
 
         $repeater->add_control(
-            'designation',
+            'skill_percent',
             [
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'label_block' => true,
-                'default' => esc_html__('Designation', 'benzo-toolkit'),
-                'placeholder' => esc_html__('Type designation here', 'benzo-toolkit'),
+                'default' => esc_html__('65%', 'benzo-toolkit'),
+                'placeholder' => esc_html__('percent', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
             ]
         );
 
-        $repeater->add_control(
-            'messages',
-            [
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-                'label_block' => true,
-                'default' => esc_html__('Messages', 'benzo-toolkit'),
-                'placeholder' => esc_html__('Type messages here', 'benzo-toolkit'),
-                'dynamic' => [
-                    'active' => true,
-                ]
-            ]
-        );
 
         $this->add_control(
             'slides',
@@ -299,7 +289,7 @@ class Benzo_Skills extends Widget_Base {
                 'show_label' => false,
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
-                'title_field' => '<# print(client_name || "Carousel Item"); #>',
+                'title_field' => '<# print(skill_title || "Carousel Item"); #>',
                 'default' => [
                     [
                         'image' => [
@@ -320,14 +310,38 @@ class Benzo_Skills extends Widget_Base {
             ]
         );
 
-        $this->add_group_control(
-            \Elementor\Group_Control_Image_Size::get_type(),
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'skill_form',
             [
-                'name' => 'thumbnail',
-                'default' => 'medium_large',
-                'separator' => 'before',
-                'exclude' => [
-                    'custom'
+                'label' => esc_html__( 'Form', 'benzo-toolkit' ),
+            ]
+        );
+
+        $this->add_control(
+            'form_id',
+            [
+                'label'       => esc_html__( 'Select Your Form', 'benzo-toolkit' ),
+                'type'        => Controls_Manager::SELECT,
+                'label_block' => true,
+                'options'     => Benzo_Toolkit_Helper::get_all_cf7(),
+                'default'     => '0',
+                'description' => esc_html__( "Contact Form 7 - plugin must be installed and there must be some contact forms made with the Contact Form 7 . For More information visit Theme Documentation", 'benzo-toolkit' ),
+            ]
+        );
+
+        $this->add_control(
+            'form_title',
+            [
+                'label' => esc_html__('Form Title', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'rows' => 4,
+                'default' => 'Form Title',
+                'placeholder' => esc_html__('Form Title', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
                 ]
             ]
         );
@@ -465,6 +479,47 @@ class Benzo_Skills extends Widget_Base {
             ]
         );
 
+        // description
+        $this->add_control(
+            '_content_description',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_responsive_control(
+            'description_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'description_color',
+            [
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'description',
+                'selector' => '{{WRAPPER}} .webtend-el-content p',
+            ]
+        );
+
 
         $this->end_controls_section();
         
@@ -496,10 +551,10 @@ class Benzo_Skills extends Widget_Base {
         <div class="progress__bar-wrapper">
             <div class="bg-color-thumb include-thumb" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/skill/skill.png"></div>
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-5">
                         <!-- Heading Area -->
-                        <div class="benzo-header-area-one two">
+                        <div class="benzo-header-area-one two webtend-el-content">
                         <div class="heading-subtitle-wrapper">
                             <div class="subtitle-one-icon">
                                 <span><i class="fal fa-star"></i></span>
@@ -521,13 +576,18 @@ class Benzo_Skills extends Widget_Base {
                                 $title
                             ); ?>
                         </div>
+                        <?php if ($settings['description']) : ?>
+                        <p><?php echo wp_kses_post($settings['description']); ?></p>
+                        <?php endif; ?>
                      </div>  
 
                         <div class="progress__bar-item">
-                            <!-- First bar -->
-                            <div class="progress-bar" data-percentage="55%">
+                        <?php foreach ($settings['slides'] as $slide) : ?>
+                            <div class="progress-bar" data-percentage="<?php echo esc_attr($slide['skill_percent']); ?>">
                                 <h4 class="progress-title-holder">
-                                    <span class="progress-title">Photoshop</span>
+                                    <?php if (!empty($slide['skill_title'])) : ?>
+                                    <span class="progress-title"><?php echo wp_kses_post($slide['skill_title']); ?></span>
+                                    <?php endif; ?>
                                     <span class="progress-number-wrapper">
                                     <span class="progress-number-mark">
                                         <span class="percent"></span>
@@ -539,40 +599,25 @@ class Benzo_Skills extends Widget_Base {
                                     <div class="progress-content"></div>
                                 </div>
                             </div> 
-                                <!-- Second bar -->
-                            <div class="progress-bar" data-percentage="75%">
-                                <h4 class="progress-title-holder clearfix">
-                                    <span class="progress-title">Illustrator</span>
-                                    <span class="progress-number-wrapper">
-                                    <span class="progress-number-mark">
-                                        <span class="percent"></span>
-                                        <span class="down-arrow"></span>
-                                    </span>
-                                    </span>
-                                </h4>
-                                <div class="progress-content-outter">
-                                    <div class="progress-content"></div>
-                                </div>
-                            </div>
-                                <!-- Third bar -->
-                            <div class="progress-bar" data-percentage="100%">
-                                <h4 class="progress-title-holder clearfix">
-                                    <span class="progress-title">InDesign</span>
-                                    <span class="progress-number-wrapper">
-                                    <span class="progress-number-mark">
-                                        <span class="percent"></span>
-                                        <span class="down-arrow"></span>
-                                    </span>
-                                    </span>
-                                </h4>
-                                <div class="progress-content-outter">
-                                    <div class="progress-content"></div>
-                                </div>
-                            </div> 
+                            <?php endforeach; ?>
                         </div>
                     </div>
                     <div class="col-lg-7">
-
+                        <div class="skill__form-wrapper">
+                            <div class="skill__form-shape"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/statics line.png" alt="img"> </div>
+                            <div class="form-wrapper" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/shape/skill-shape.png">
+                            <?php if ($settings['form_title']) : ?>
+                            <div class="skill-form-title">
+                                    <h3><?php echo wp_kses_post($settings['form_title']); ?></h3>
+                                </div>
+                                <?php endif; ?>
+                                 <?php  if ( function_exists( 'wpcf7' ) && ! empty( $settings['form_id'] ) ): ?>
+                                    <div class="benzo-skills">
+                                        <?php echo do_shortcode( '[contact-form-7 id="' . $settings['form_id'] . '"]' ); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
