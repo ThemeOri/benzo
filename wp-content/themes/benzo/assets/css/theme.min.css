@@ -1131,6 +1131,10 @@ blockquote cite {
   max-width: 100%;
 }
 
+.d-none {
+  display: none;
+}
+
 /*===== Layout Grid ======*/
 .row {
   display: flex;
@@ -5855,6 +5859,58 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   margin-bottom: 35px;
   padding-bottom: 35px;
   border-bottom: 1px solid #f0f0f0;
+}
+
+/** ===== Post Lists Update CSS ===== **/
+.blog-item-one {
+  position: relative;
+  text-align: center;
+}
+.blog-item-one:hover .blog-thumb-one img {
+  transform: scale(1.22) rotateY(0deg);
+}
+
+.blog-thumb-one {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.blog-thumb-one img {
+  transform: scale(1.01);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.blog-meta-one ul {
+  padding-left: 0px;
+  margin-bottom: 5px;
+}
+.blog-meta-one ul li {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin-right: 13px;
+}
+.blog-meta-one ul li i {
+  color: var(--color-primary);
+  margin-right: 8px;
+}
+.blog-meta-one ul li:last-child {
+  margin-right: 0px;
+}
+.blog-meta-one ul li a {
+  color: var(--color-body);
+  transition: 0.3s;
+}
+.blog-meta-one ul li a:hover {
+  color: var(--color-primary);
+}
+
+.blog-content-one h3 a {
+  font-size: 27px;
+  line-height: 36px;
+}
+.blog-content-one p {
+  margin-bottom: 30px;
 }
 
 /** ===== Post Lists ===== **/
