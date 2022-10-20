@@ -522,6 +522,98 @@ class Benzo_Skills extends Widget_Base {
 
 
         $this->end_controls_section();
+
+        $this->start_controls_section(
+            '_skill_style_content',
+            [
+                'label' => esc_html__('Style Skills Title & Content', 'benzo-toolkit'),
+                'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        // Title
+        $this->add_control(
+            '_skill_title',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Skills Title', 'webtend-el-skill-title'),
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_responsive_control(
+            'skill_title_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-skill-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'skill_title_color',
+            [
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-skill-title' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'skill_title',
+                'selector' => '{{WRAPPER}} .webtend-el-skill-title',
+            ]
+        );
+
+        // Form Title   
+        $this->add_control(
+            '_content_form_title',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Form Title', 'benzo-toolkit'),
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_responsive_control(
+            'form_title_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-formtitle' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'form_title_color',
+            [
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-formtitle' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'form_title',
+                'selector' => '{{WRAPPER}} .webtend-el-formtitle',
+            ]
+        );
+
+        $this->end_controls_section();
         
     }
 
@@ -586,7 +678,7 @@ class Benzo_Skills extends Widget_Base {
                             <div class="progress-bar" data-percentage="<?php echo esc_attr($slide['skill_percent']); ?>">
                                 <h4 class="progress-title-holder">
                                     <?php if (!empty($slide['skill_title'])) : ?>
-                                    <span class="progress-title"><?php echo wp_kses_post($slide['skill_title']); ?></span>
+                                    <span class="progress-title webtend-el-skill-title"><?php echo wp_kses_post($slide['skill_title']); ?></span>
                                     <?php endif; ?>
                                     <span class="progress-number-wrapper">
                                     <span class="progress-number-mark">
@@ -608,7 +700,7 @@ class Benzo_Skills extends Widget_Base {
                             <div class="form-wrapper" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/shape/skill-shape.png">
                             <?php if ($settings['form_title']) : ?>
                             <div class="skill-form-title">
-                                    <h3><?php echo wp_kses_post($settings['form_title']); ?></h3>
+                                    <h3 class="webtend-el-formtitle"><?php echo wp_kses_post($settings['form_title']); ?></h3>
                                 </div>
                                 <?php endif; ?>
                                  <?php  if ( function_exists( 'wpcf7' ) && ! empty( $settings['form_id'] ) ): ?>

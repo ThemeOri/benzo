@@ -115,10 +115,11 @@ class Benzo_Post_List extends Widget_Base {
             ]
         );
 
+        
         $this->add_control(
-            'show_categories',
+            'show_date',
             [
-                'label'        => esc_html__( 'Show Categories', 'benzo-toolkit' ),
+                'label'        => esc_html__( 'Show Date', 'benzo-toolkit' ),
                 'type'         => Controls_Manager::SWITCHER,
                 'label_on'     => esc_html__( 'Show', 'benzo-toolkit' ),
                 'label_off'    => esc_html__( 'Hide', 'benzo-toolkit' ),
@@ -126,23 +127,24 @@ class Benzo_Post_List extends Widget_Base {
                 'default'      => 'yes',
             ]
         );
+
+        $this->add_control(
+            'show_tag',
+            [
+                'label'        => esc_html__( 'Show Tags', 'benzo-toolkit' ),
+                'type'         => Controls_Manager::SWITCHER,
+                'label_on'     => esc_html__( 'Show', 'benzo-toolkit' ),
+                'label_off'    => esc_html__( 'Hide', 'benzo-toolkit' ),
+                'return_value' => 'yes',
+                'default'      => 'yes',
+            ]
+        );
+
 
         $this->add_control(
             'show_author',
             [
                 'label'        => esc_html__( 'Show Author', 'benzo-toolkit' ),
-                'type'         => Controls_Manager::SWITCHER,
-                'label_on'     => esc_html__( 'Show', 'benzo-toolkit' ),
-                'label_off'    => esc_html__( 'Hide', 'benzo-toolkit' ),
-                'return_value' => 'yes',
-                'default'      => 'yes',
-            ]
-        );
-
-        $this->add_control(
-            'show_date',
-            [
-                'label'        => esc_html__( 'Show Date', 'benzo-toolkit' ),
                 'type'         => Controls_Manager::SWITCHER,
                 'label_on'     => esc_html__( 'Show', 'benzo-toolkit' ),
                 'label_off'    => esc_html__( 'Hide', 'benzo-toolkit' ),
@@ -164,21 +166,18 @@ class Benzo_Post_List extends Widget_Base {
         );
 
         $this->add_control(
-            'thumbnail_position',
+            'show_comments',
             [
-                'label'     => esc_html__( 'Thumbnail Position', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::SELECT,
-                'options'   => [
-                    'thumbnail-top'   => esc_html__( 'Top', 'benzo-toolkit' ),
-                    'thumbnail-left'  => esc_html__( 'Left', 'benzo-toolkit' ),
-                    'thumbnail-right' => esc_html__( 'Right', 'benzo-toolkit' ),
-                ],
-                'default'   => 'thumbnail-top',
-                'condition' => [
-                    'show_thumbnail' => 'yes',
-                ],
+                'label'        => esc_html__( 'Show Comments', 'benzo-toolkit' ),
+                'type'         => Controls_Manager::SWITCHER,
+                'label_on'     => esc_html__( 'Show', 'benzo-toolkit' ),
+                'label_off'    => esc_html__( 'Hide', 'benzo-toolkit' ),
+                'return_value' => 'yes',
+                'default'      => 'yes',
             ]
         );
+
+       
 
         $this->add_group_control(
             Group_Control_Image_Size::get_type(),
@@ -545,82 +544,151 @@ class Benzo_Post_List extends Widget_Base {
         $settings = $this->get_settings_for_display();
         $wrapper_class = ['benzo-post-list', $settings['thumbnail_position'], 'meta-' . $settings['meta_design']];
         ?>
-        <ul class="<?php echo esc_attr( implode( ' ', $wrapper_class ) ) ?>">
-            <?php
-                $query = Benzo_Query_Builder::build_query( $settings );
-                if( $query->have_posts() ) :
-                    while ( $query->have_posts() ): $query->the_post();
-                    if ( $settings['title_word'] ) {
-                        $title = wp_trim_words( get_the_title(), $settings['title_word'], '..' );
-                    } else {
-                        $title = get_the_title();
-                    }
-                    ?>
-                    <li>
-                        <?php
-                            if( 'yes' == $settings['show_thumbnail'] ) {
-                                Benzo_Post_Helper::render_media( get_the_ID(), $settings['thumbnail_size'] );
-                            }
+        <div class="d-none">
+            <ul class="<?php echo esc_attr( implode( ' ', $wrapper_class ) ) ?>">
+                <?php
+                    $query = Benzo_Query_Builder::build_query( $settings );
+                    if( $query->have_posts() ) :
+                        while ( $query->have_posts() ): $query->the_post();
+                        if ( $settings['title_word'] ) {
+                            $title = wp_trim_words( get_the_title(), $settings['title_word'], '..' );
+                        } else {
+                            $title = get_the_title();
+                        }
                         ?>
-                        <div class="post-content">
+                        <li>
                             <?php
-                                if ( 'design-1' === $settings['meta_design'] && 'yes' == $settings['show_categories'] ) {
-                                    Benzo_Post_Templates::post_category( get_the_ID() );
+                                if( 'yes' == $settings['show_thumbnail'] ) {
+                                    Benzo_Post_Helper::render_media( get_the_ID(), $settings['thumbnail_size'] );
                                 }
+                            ?>
+                            <div class="post-content">
+                                <?php
+                                    if ( 'design-1' === $settings['meta_design'] && 'yes' == $settings['show_categories'] ) {
+                                        Benzo_Post_Templates::post_category( get_the_ID() );
+                                    }
 
-                                if ( 'design-2' === $settings['meta_design'] ) : ?>
-                                    <div class="post-meta">
-                                        <?php  if( 'yes' === $settings['show_date'] ) : ?>
+                                    if ( 'design-2' === $settings['meta_design'] ) : ?>
+                                        <div class="post-meta">
+                                            <?php  if( 'yes' === $settings['show_date'] ) : ?>
+                                            <span class="post-date">
+                                                <?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?>
+                                            </span>
+                                            <?php endif; ?>
+                                            <?php  if( 'yes' === $settings['show_author'] ) : ?>
+                                            <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="author-name">
+                                                <?php
+                                                    esc_html_e( 'By ', 'benzo-toolkit' );
+                                                    echo esc_html( get_the_author_meta( 'display_name' ) );
+                                                ?>
+                                            </a>
+                                            <?php endif; ?>
+                                            <?php
+                                                if ( 'yes' === $settings['show_categories'] ) {
+                                                    Benzo_Post_Templates::post_category( get_the_ID() );
+                                                }
+                                            ?>
+                                        </div>
+                                    <?php endif;
+                                ?>
+                                <h5 class="post-title">
+                                    <a href="<?php echo esc_url( get_the_permalink() ) ?>">
+                                        <?php echo wp_kses_post( $title ) ?>
+                                    </a>
+                                </h5>
+                                <?php if ( 'design-1' == $settings['meta_design'] ) : ?>
+                                    <?php if ( 'yes' == $settings['show_date'] || 'yes' == $settings['show_author'] ) : ?>
+                                    <div class="author-date">
+                                        <?php if( 'yes' == $settings['show_author'] ) : ?>
+                                        <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="author-name">
+                                            <?php echo esc_html__( 'By', 'benzo-toolkit' ) . ' ' . esc_html( get_the_author_meta( 'display_name' ) ); ?>
+                                        </a>
+                                        <?php endif; ?>
+                                        <?php if( 'yes' == $settings['show_date'] ) : ?>
                                         <span class="post-date">
+                                            <i class="far fa-calendar-alt"></i>
                                             <?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?>
                                         </span>
                                         <?php endif; ?>
-                                        <?php  if( 'yes' === $settings['show_author'] ) : ?>
-                                        <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="author-name">
-                                            <?php
-                                                esc_html_e( 'By ', 'benzo-toolkit' );
-                                                echo esc_html( get_the_author_meta( 'display_name' ) );
-                                            ?>
-                                        </a>
-                                        <?php endif; ?>
-                                        <?php
-                                            if ( 'yes' === $settings['show_categories'] ) {
-                                                Benzo_Post_Templates::post_category( get_the_ID() );
-                                            }
-                                        ?>
                                     </div>
-                                <?php endif;
-                            ?>
-                            <h5 class="post-title">
-                                <a href="<?php echo esc_url( get_the_permalink() ) ?>">
-                                    <?php echo wp_kses_post( $title ) ?>
-                                </a>
-                            </h5>
-                            <?php if ( 'design-1' == $settings['meta_design'] ) : ?>
-                                <?php if ( 'yes' == $settings['show_date'] || 'yes' == $settings['show_author'] ) : ?>
-                                <div class="author-date">
-                                    <?php if( 'yes' == $settings['show_author'] ) : ?>
-                                    <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="author-name">
-                                        <?php echo esc_html__( 'By', 'benzo-toolkit' ) . ' ' . esc_html( get_the_author_meta( 'display_name' ) ); ?>
-                                    </a>
                                     <?php endif; ?>
-                                    <?php if( 'yes' == $settings['show_date'] ) : ?>
-                                    <span class="post-date">
-                                        <i class="far fa-calendar-alt"></i>
-                                        <?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?>
-                                    </span>
-                                    <?php endif; ?>
-                                </div>
                                 <?php endif; ?>
-                            <?php endif; ?>
+                            </div>
+                        </li>
+                        <?php
+                        endwhile;
+                    endif;
+                    wp_reset_query();
+                ?>
+            </ul>
+        </div>
+
+        
+        <div class="blog__wrapper-one">
+            <div class="container">
+                <div class="row">
+                <?php
+                    $query = Benzo_Query_Builder::build_query( $settings );
+                    if( $query->have_posts() ) :
+                        while ( $query->have_posts() ): $query->the_post();
+                        if ( $settings['title_word'] ) {
+                            $title = wp_trim_words( get_the_title(), $settings['title_word'], '..' );
+                        } else {
+                            $title = get_the_title();
+                        }
+                        ?>
+                    <div class="col-lg-4">
+                        <div class="blog-item-one">
+                        <?php  if( 'yes' === $settings['show_date'] ) : ?>
+                            <div class="entry-posts-date">
+                                <div class="entry-posts-date-name">
+                                    <h5><?php the_time( 'M' ); ?></h5>
+                                </div>
+                                <div class="entry-posts-date-number">
+                                    <h5><?php the_time( 'j' ); ?></h5>
+                                </div>
+                           </div>
+                           <?php endif; ?>
+                            <div class="blog-thumb-one">
+                            <?php
+                                if( 'yes' == $settings['show_thumbnail'] ) {
+                                    Benzo_Post_Helper::render_media( get_the_ID(), $settings['thumbnail_size'] );
+                                }
+                            ?>
+                            </div>
+                            <div class="blog-meta-one">
+                                <ul>
+                                <?php  if( 'yes' === $settings['show_tag'] ) : ?>
+                                    <li><i class="fal fa-tags"></i> <?php the_tags('', '', ''); ?></li>
+                                    <?php endif; ?>
+                                    <?php if( 'yes' == $settings['show_author'] ) : ?>
+                                    <li><i class="far fa-user-circle"></i><span><?php the_author(); ?></span></li>
+                                    <?php endif; ?>
+                                    <?php if( 'yes' == $settings['show_comments'] ) : ?>
+                                    <li><i class="far fa-comment"></i> <span><?php comments_number();?></span></li>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                            <div class="blog-content-one">
+                                <h3><a href="<?php echo esc_url( get_the_permalink() ) ?>"><?php echo wp_kses_post( $title ) ?></a></h3>
+                                <p>Felistan commodo into libero pedels sapien same <br> quam sodale lobor eude duise</p>
+                                <a class="features-sp-btn" href="<?php echo esc_url( get_the_permalink() ) ?>">
+                                    <i class="fal fa-long-arrow-right"></i>
+                                    <i class="fal fa-long-arrow-right"></i>
+                               </a>
+                            </div>
                         </div>
-                    </li>
-                    <?php
-                    endwhile;
-                endif;
-                wp_reset_query();
-            ?>
-        </ul>
+                    </div>
+                     <?php
+                        endwhile;
+                    endif;
+                    wp_reset_query();
+                ?>
+                </div>
+            </div>
+        </div>
+
+
         <?php
     }
 }

@@ -115,17 +115,6 @@ if ( ! class_exists( 'Benzo_Query_Builder' ) ) {
                     ]
                 );
 
-                $self->add_control(
-                    'exclude_tags',
-                    [
-                        'label'        => esc_html__( 'Exclude These Tags', 'benzo-toolkit' ),
-                        'type'         => Controls_Manager::SWITCHER,
-                        'label_on'     => esc_html__( 'On', 'benzo-toolkit' ),
-                        'label_off'    => esc_html__( 'Off', 'benzo-toolkit' ),
-                        'return_value' => 'yes',
-                        'description'  => esc_html__( 'Leave empty for all', 'benzo-toolkit' ),
-                    ]
-                );
             }
 
             if ( ! isset( $array['hide_individual_posts'] ) ) {
@@ -145,13 +134,6 @@ if ( ! class_exists( 'Benzo_Query_Builder' ) ) {
                     ]
                 );
 
-                $self->add_control(
-                    'exclude_any',
-                    [
-                        'label' => esc_html__( 'Exclude These Posts', 'benzo-toolkit' ),
-                        'type'  => Controls_Manager::SWITCHER,
-                    ]
-                );
             }
 
             $self->add_control(
@@ -168,30 +150,6 @@ if ( ! class_exists( 'Benzo_Query_Builder' ) ) {
                     'multiple'    => true,
                     'label_block' => true,
                     'options'     => self::by_author_suggester(),
-                ]
-            );
-
-            $self->add_control(
-                'exclude_author',
-                [
-                    'label'        => esc_html__( 'Exclude Author', 'benzo-toolkit' ),
-                    'type'         => Controls_Manager::SWITCHER,
-                    'label_on'     => esc_html__( 'On', 'benzo-toolkit' ),
-                    'label_off'    => esc_html__( 'Off', 'benzo-toolkit' ),
-                    'return_value' => 'yes',
-                    'description'  => esc_html__( 'Filter by author name', 'benzo-toolkit' ),
-                ]
-            );
-
-            $self->add_control(
-                'hide_sticky_post',
-                [
-                    'label'        => esc_html__( 'Hide Sticky Post', 'benzo-toolkit' ),
-                    'type'         => Controls_Manager::SWITCHER,
-                    'label_on'     => esc_html__( 'On', 'benzo-toolkit' ),
-                    'label_off'    => esc_html__( 'Off', 'benzo-toolkit' ),
-                    'return_value' => 'yes',
-                    'default'      => 'yes',
                 ]
             );
 
