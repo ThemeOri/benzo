@@ -141,6 +141,9 @@
 		});  
 	  });
 
+	/*==========  Nice Select ==========*/
+	  $('.skill-select-info').niceSelect();
+
 
 	/**
 	 * Post Media Gallery

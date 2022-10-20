@@ -498,3 +498,12 @@ figure {
         border: 2px solid $color-border;
     }
 }
+
+.skils-form-btn{
+    &::after{
+        background: #F6F6F6;
+    }
+    &::before{
+        background: #F6F6F6;
+    }
+}
