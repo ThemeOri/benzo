@@ -126,6 +126,21 @@ class Benzo_Hero_slider extends Widget_Base {
         $repeater = new \Elementor\Repeater();
 
         $repeater->add_control(
+            'slider_condition',
+            [
+                'label' => __('Slider condition', 'benzo-toolkit'),
+                'type' => Controls_Manager::SELECT,
+                'options' => [
+                    'design-1' => esc_html__('Style 1', 'benzo-toolkit'),
+                    'design-2' => esc_html__('Style 2', 'benzo-toolkit')
+                ],
+                'default' => 'design-1',
+                'frontend_available' => true,
+                'style_transfer' => true,
+            ]
+        );
+
+        $repeater->add_control(
             'image',
             [
                 'type' => \Elementor\Controls_Manager::MEDIA,
@@ -148,9 +163,13 @@ class Benzo_Hero_slider extends Widget_Base {
                 'label' => esc_html__('Video URL', 'benzo-toolkit'),
                 'default' => esc_html__('video url', 'benzo-toolkit'),
                 'placeholder' => esc_html__('#', 'benzo-toolkit'),
+                'condition' => [
+                    'slider_condition' => ['design-1'],
+                ],
                 'dynamic' => [
                     'active' => true,
-                ]
+                ],
+
             ]
         );
 
@@ -163,9 +182,12 @@ class Benzo_Hero_slider extends Widget_Base {
                 'label' => esc_html__('Sub Title', 'benzo-toolkit'),
                 'default' => esc_html__('Subtitle', 'benzo-toolkit'),
                 'placeholder' => esc_html__('Type subtitle here', 'benzo-toolkit'),
+                'condition' => [
+                    'slider_condition' => ['design-1'],
+                ],
                 'dynamic' => [
                     'active' => true,
-                ]
+                ],
             ]
         );
 
@@ -180,6 +202,24 @@ class Benzo_Hero_slider extends Widget_Base {
                 'dynamic' => [
                     'active' => true,
                 ]
+            ]
+        );
+
+        $repeater->add_control(
+            'description',
+            [
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'label_block' => true,
+                'show_label' => true,
+                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'default' => esc_html__('Description', 'benzo-toolkit'),
+                'placeholder' => esc_html__('Type description here', 'benzo-toolkit'),
+                'condition' => [
+                    'slider_condition' => ['design-2'],
+                ],
+                'dynamic' => [
+                    'active' => true,
+                ],
             ]
         );
 
@@ -375,6 +415,47 @@ class Benzo_Hero_slider extends Widget_Base {
             [
                 'name' => 'title',
                 'selector' => '{{WRAPPER}} .webtend-el-title',
+            ]
+        );
+
+         // description
+         $this->add_control(
+            '_content_description',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_responsive_control(
+            'description_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'description_color',
+            [
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'description',
+                'selector' => '{{WRAPPER}} .webtend-el-content p',
             ]
         );
 
@@ -697,24 +778,27 @@ class Benzo_Hero_slider extends Widget_Base {
     protected function render() {
 
         $settings = $this->get_settings_for_display();
+        extract($settings);
 
         if (empty($settings['slides'])) {
             return;
         }
 
         $title = wp_kses_post($settings['title'] ?? '');
+        $this->add_inline_editing_attributes('title', 'basic');
+        $this->add_render_attribute('title', 'class', 'webtend-el-title');
 
         ?>
-
+        <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
         <div class="slider-area-one">
           <div class="hero-slider-active swiper-container">
             <div class="swiper-wrapper">
-               <?php foreach ($settings['slides'] as $key => $slide) : 
+               <?php foreach ($settings['slides'] as $slide) : 
                 $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
 
                 ?>
                 <div class="slider-item-one swiper-slide">
-                    <div class="slider-area-one-bg" data-background="<?php print esc_url($image); ?>"></div>
+                    <div class="slider-area-one-bg" data-background="<?php print esc_url($slide['image']['url']); ?>"></div>
                       <div class="container">
                           <div class="row">
                               <div class="col-lg-12">
@@ -750,6 +834,53 @@ class Benzo_Hero_slider extends Widget_Base {
                </div>
           </div>
         </div>
+        <?php endif; ?>
+
+        <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+            <div class="slider-area-two">
+                <div class=" swiper-container hero-slider-active2">
+                <div class="swiper-wrapper">
+                <?php foreach ($settings['slides'] as $slide) : 
+                     if (!empty($slide['image']['id'])) {
+                        $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
+                    }
+                ?>
+                <div class="swiper-slide">
+                <div class="slider-area-bg" data-background="<?php print esc_url($slide['image']['url']); ?>">
+                <div class="slider-bg-shape-one"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/slider-shape-1.png" alt="img"></div>
+                <div class="slider-bg-shape-two"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/slider-shape-2.png" alt="img"></div>
+                <div class="slider-bg-shape"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="slider-content-two webtend-el-content">
+                                   <?php if (!empty($slide['title'])) : ?>
+                                    <h2 class="webtend-el-title"><?php echo wp_kses_post($slide['title']); ?></h2>
+                                    <?php endif; ?>
+                                    <?php if (!empty($slide['description'])) : ?>
+                                    <p><?php echo wp_kses_post($slide['description']); ?></p>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="slider-two-btn">
+                                    <!-- Button Style one -->
+                                    <a class="benzo-el-btn webtend-el-btn" href="<?php echo esc_url($slide['button_link']['url']); ?>"><?php echo wp_kses_post($slide['button_text']); ?></a>
+                                    <!-- Button Style Two -->
+                                    <a class="benzo-el-btn el-btn-white webtend-el-btn2" href="<?php echo esc_url($slide['button2_link_two']['url']); ?>"><?php echo wp_kses_post($slide['button2_text_two']); ?></a>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                     </div>
+                  </div>
+                  <?php endforeach; ?>
+                 </div>
+               </div>
+               <div class="hero__slider-two">
+                  <div class="hero__slider-two-next swiper-button-next"><i class="fal fa-chevron-right"></i></div>
+                  <div class="hero__slider-two-prev swiper-button-prev"><i class="fal fa-chevron-left"></i></div>
+               </div>
+            </div>
+        <?php endif; ?>     
 
         <?php
 }

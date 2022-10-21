@@ -206,184 +206,12 @@ class Benzo_Post_List extends Widget_Base {
 
         Benzo_Query_Builder::render_loop_options( $this, ['post_type' => 'post'] );
 
-        $this->start_controls_section(
-            'wrapper_style',
-            [
-                'label' => esc_html__( 'Wrapper Style', 'benzo-toolkit' ),
-                'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-        $this->add_responsive_control(
-            'wrapper_padding',
-            [
-                'label'      => esc_html__( 'Margin', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-post-list' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'wrapper_margin',
-            [
-                'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-post-list' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'wrapper_bg',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            [
-                'name'     => 'wrapper_border',
-                'selector' => '{{WRAPPER}} .benzo-post-list',
-            ]
-        );
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            'post_item_style',
-            [
-                'label' => esc_html__( 'Post Item', 'benzo-toolkit' ),
-                'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-        $this->add_responsive_control(
-            'post_item_padding',
-            [
-                'label'      => esc_html__( 'Margin', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-post-list li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'post_item_margin',
-            [
-                'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-post-list li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'post_item_bg',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list li' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'divider',
-            [
-                'label'     => esc_html__( 'Divider Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list li:not(:last-child)' => 'border-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_section();
 
         $this->start_controls_section(
             'post_content_style',
             [
-                'label' => esc_html__( 'Post Content', 'benzo-toolkit' ),
+                'label' => esc_html__( 'Post Content Style', 'benzo-toolkit' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-        $this->add_control(
-            'post_media_style',
-            [
-                'label' => esc_html__( 'Post Media', 'benzo-toolkit' ),
-                'type'   => Controls_Manager::HEADING,
-            ]
-        );
-
-        $this->add_responsive_control(
-            'post_media_margin',
-            [
-                'label'      => esc_html__( 'Margin', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-post-list li .post-media' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'post_media_width',
-            [
-                'label'      => esc_html__( 'Width', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],
-                'range'      => [
-                    '%'  => [
-                        'min' => 1,
-                        'max' => 100,
-                    ],
-                    'px' => [
-                        'min' => 1,
-                        'max' => 1000,
-                    ],
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-post-list li .post-media' => 'width: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'post_media_height',
-            [
-                'label'      => esc_html__( 'Height', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],
-                'range'      => [
-                    '%'  => [
-                        'min' => 1,
-                        'max' => 100,
-                    ],
-                    'px' => [
-                        'min' => 1,
-                        'max' => 1000,
-                    ],
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-post-list li .post-media' => 'height: {{SIZE}}{{UNIT}};',
-                ],
             ]
         );
 
@@ -396,13 +224,25 @@ class Benzo_Post_List extends Widget_Base {
             ]
         );
 
+        $this->add_responsive_control(
+            'title_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .benzo-post-list' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
         $this->add_control(
             'title_color',
             [
                 'label'     => esc_html__( 'Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list .post-title a' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .benzo-post-list' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -413,7 +253,7 @@ class Benzo_Post_List extends Widget_Base {
                 'label'     => esc_html__( 'Color(Hover)', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list .post-title:hover a' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .benzo-post-list:hover' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -422,7 +262,48 @@ class Benzo_Post_List extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name'     => 'title_typography',
-                'selector' => '{{WRAPPER}} .benzo-post-list .post-title',
+                'selector' => '{{WRAPPER}} .benzo-post-list',
+            ]
+        );
+
+        // description
+        $this->add_control(
+            '_content_description',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_responsive_control(
+            'description_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'description_color',
+            [
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'description',
+                'selector' => '{{WRAPPER}} .webtend-el-content p',
             ]
         );
 
@@ -435,96 +316,76 @@ class Benzo_Post_List extends Widget_Base {
             ]
         );
 
-        $this->add_control(
-            'meta_3_color',
+        $this->add_responsive_control(
+            'meta_spacing',
             [
-                'label'     => esc_html__( 'Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list .post-meta'   => 'color: {{VALUE}}',
-                    '{{WRAPPER}} .benzo-post-list .post-meta a' => 'color: {{VALUE}}',
-                ],
-                'condition' => [
-                    'meta_design' => 'design-2',
+                    '{{WRAPPER}} .blog-meta-one ul li' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         $this->add_control(
-            'meta_3_cat_color',
+            'meta_color',
             [
-                'label'     => esc_html__( 'Categories Color', 'benzo-toolkit' ),
+                'label'     => esc_html__( 'Meta Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list .post-meta .post-categories a' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .blog-meta-one ul li'   => 'color: {{VALUE}}',
                 ],
-                'condition' => [
-                    'meta_design' => 'design-2',
+                
+            ]
+        );
+
+        $this->add_control(
+            'meta_icon_color',
+            [
+                'label'     => esc_html__( 'Meta Icon Color', 'benzo-toolkit' ),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .blog-meta-one ul li i'   => 'color: {{VALUE}}',
                 ],
+                
             ]
         );
 
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'meta_3_typography',
-                'selector'  => '{{WRAPPER}} .benzo-post-list .post-meta',
-                'condition' => [
-                    'meta_design' => 'design-2',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'label'     => esc_html__( 'Categories Typography', 'benzo-toolkit' ),
-                'name'      => 'category_typography',
-                'selector'  => '{{WRAPPER}} .benzo-post-list.meta-design-1 .post-categories a',
-                'condition' => [
-                    'meta_design!' => 'design-2',
-                ],
+                'name'      => 'meta_typography',
+                'selector'  => '{{WRAPPER}} .blog-meta-one ul li',
             ]
         );
 
         $this->add_control(
-            'category_color',
+            'author_heading',
             [
-                'label'     => esc_html__( 'Categories Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list.meta-design-1 .post-categories a' => 'color: {{VALUE}}',
-                ],
-                'condition' => [
-                    'meta_design!' => 'design-2',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'label'     => esc_html__( 'Author/Date Typography', 'benzo-toolkit' ),
-                'name'      => 'author_typography',
-                'selector'  => '{{WRAPPER}} .benzo-post-list .author-date',
-                'condition' => [
-                    'meta_design!' => 'design-2',
-                ],
+                'label'     => esc_html__( 'Post Author', 'benzo-toolkit' ),
+                'type'      => Controls_Manager::HEADING,
+                'separator' => 'before',
             ]
         );
 
         $this->add_control(
             'author_color',
             [
-                'label'     => esc_html__( 'Author/Date Color', 'benzo-toolkit' ),
+                'label'     => esc_html__( 'Author Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-post-list .author-date' => 'color: {{VALUE}}',
-                    '{{WRAPPER}} .benzo-post-list .author-date a' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .blog-meta-one ul li a'   => 'color: {{VALUE}}',
                 ],
-                'condition' => [
-                    'meta_design!' => 'design-2',
-                ],
+                
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name'      => 'author_typography',
+                'selector'  => '{{WRAPPER}} .blog-meta-one ul li a',
             ]
         );
 
@@ -669,8 +530,8 @@ class Benzo_Post_List extends Widget_Base {
                                     <?php endif; ?>
                                 </ul>
                             </div>
-                            <div class="blog-content-one">
-                                <h3><a href="<?php echo esc_url( get_the_permalink() ) ?>"><?php echo wp_kses_post( $title ) ?></a></h3>
+                            <div class="blog-content-one webtend-el-content">
+                                <h3><a class="benzo-post-list" href="<?php echo esc_url( get_the_permalink() ) ?>"><?php echo wp_kses_post( $title ) ?></a></h3>
                                 <p>Felistan commodo into libero pedels sapien same <br> quam sodale lobor eude duise</p>
                                 <a class="features-sp-btn" href="<?php echo esc_url( get_the_permalink() ) ?>">
                                     <i class="fal fa-long-arrow-right"></i>
