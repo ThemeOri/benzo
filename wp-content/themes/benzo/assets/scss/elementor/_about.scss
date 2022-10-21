@@ -1,4 +1,4 @@
-/** ===== About CSS ===== **/
+/** ===== About One CSS ===== **/
 .about__one-thumb {
 	position: relative;
 	&:after{
@@ -114,6 +114,20 @@
 	}
   }
 
+/** ===== About Two CSS ===== **/
+.about-two-heading-style {
+	.heading__style-three {
+		span {
+			padding-left: 40px;
+			&::after{
+				left: -1px;
+			}
+			&::before{
+				display: none;
+			}
+		}
+	}
+}
 
 
 

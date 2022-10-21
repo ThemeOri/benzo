@@ -1,4 +1,4 @@
-/** ===== Features CSS ===== **/
+/** ===== Features One CSS ===== **/
 .features__area-wrapper-full {
     position: relative;
     padding: 60px;
@@ -49,4 +49,47 @@
         margin-bottom: 30px;
     }
   }
-   
+/** ===== Features Two CSS ===== **/
+.fearures-icon-two i {
+	color: $color-primary;
+	font-size: 40px;
+    margin-bottom: 20px;
+    transition: all 500ms ease;
+}
+.fearures-content-two {
+    h4 {
+        margin-bottom: 15px;
+        a {
+            font-weight: 600;
+	        font-size: 20px;
+        }
+    }
+    p {
+      margin-bottom: 0px;
+    }
+}
+
+.fearures__area-wrapper-two {
+    background: #F6F6F6;
+    border-radius: 5px;
+    padding: 15px;
+    transition: all 500ms ease;
+  }
+  .fearures-item-two {
+    border: 5px solid $color-white;
+    border-radius: 5px;
+    padding: 35px 30px 30px 30px;
+    transition: all 500ms ease;
+  }
+  .fearures__area-wrapper-two {
+    &:hover{
+        background: $color-primary;
+    .fearures-item-two {
+        background: $color-white;
+        border: 5px solid $color-white;
+     }
+     i{
+        transform: translateY(-5px) translate3d(0, -5px, 0);
+     }
+    }
+  }
