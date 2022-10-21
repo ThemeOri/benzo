@@ -107,6 +107,7 @@ class Benzo_Heading extends Widget_Base {
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
                     'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
+                    'design-3' => esc_html__( 'Design Three', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -140,11 +141,14 @@ class Benzo_Heading extends Widget_Base {
         $this->add_control(
             'sub_title_up',
             [
-                'label' => esc_html__('Sub Title Up', 'benzo-toolkit'),
+                'label' => esc_html__('Title Up', 'benzo-toolkit'),
                 'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => 'Heading Sub Title Up',
                 'placeholder' => esc_html__('Heading Sub Text Up', 'benzo-toolkit'),
+                'condition' => [
+                    'widget_design' => ['design-1','design-2'],
+                ],
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -285,7 +289,10 @@ class Benzo_Heading extends Widget_Base {
             [
                 'type' => \Elementor\Controls_Manager::HEADING,
                 'label' => esc_html__('Sub Title Up', 'benzo-toolkit'),
-                'separator' => 'before'
+                'separator' => 'before',
+                'condition' => [
+                    'widget_design' => ['design-1','design-2'],
+                ],
             ]
         );
 
@@ -298,6 +305,9 @@ class Benzo_Heading extends Widget_Base {
                 'selectors' => [
                     '{{WRAPPER}} .webtend-el-subtitle-up' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                 ],
+                'condition' => [
+                    'widget_design' => ['design-1','design-2'],
+                ],
             ]
         );
 
@@ -309,6 +319,9 @@ class Benzo_Heading extends Widget_Base {
                 'selectors' => [
                     '{{WRAPPER}} .webtend-el-subtitle-up' => 'color: {{VALUE}}',
                 ],
+                'condition' => [
+                    'widget_design' => ['design-1','design-2'],
+                ],
             ]
         );
 
@@ -317,6 +330,9 @@ class Benzo_Heading extends Widget_Base {
             [
                 'name' => 'subtitle_up',
                 'selector' => '{{WRAPPER}} .webtend-el-subtitle-up',
+                'condition' => [
+                    'widget_design' => ['design-1','design-2'],
+                ],
             ]
         );
 
@@ -408,7 +424,6 @@ class Benzo_Heading extends Widget_Base {
         <?php endif; ?>
 
         <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
-
             <div class="benzo-header-area-one two">
             <div class="heading-subtitle-wrapper">
                 <div class="subtitle-one-icon">
@@ -424,7 +439,7 @@ class Benzo_Heading extends Widget_Base {
                 </div>
             </div>
             <div class="heading-title-one">
-                 <?php printf(
+                <?php printf(
                     '<%1$s %2$s>%3$s</%1$s>',
                     tag_escape($settings['title_tag']),
                     $this->get_render_attribute_string('title'),
@@ -432,8 +447,21 @@ class Benzo_Heading extends Widget_Base {
                 ); ?>
             </div>
         </div>  
-
        <?php endif; ?>
+
+       <?php if ( 'design-3' === $settings['widget_design'] ) : ?>
+           <div class="heading__style-three">
+                <?php if ($settings['sub_title']) : ?>
+                <span class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></span>
+                <?php endif; ?>
+                <?php printf(
+                    '<%1$s %2$s>%3$s</%1$s>',
+                    tag_escape($settings['title_tag']),
+                    $this->get_render_attribute_string('title'),
+                    $title
+                ); ?>
+           </div>
+        <?php endif; ?> 
 
 
         <?php

@@ -155,6 +155,40 @@ class Benzo_Hero_slider extends Widget_Base {
         );
 
         $repeater->add_control(
+            'slider_shape_one',
+            [
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'label' => esc_html__('Slider Shape One', 'benzo-toolkit'),
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+                'condition' => [
+                    'slider_condition' => ['design-2'],
+                ],
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $repeater->add_control(
+            'slider_shape_two',
+            [
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'label' => esc_html__('Slider Shape Two', 'benzo-toolkit'),
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+                'condition' => [
+                    'slider_condition' => ['design-2'],
+                ],
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $repeater->add_control(
             'video_url',
             [
                 'type' => \Elementor\Controls_Manager::TEXT,
@@ -844,11 +878,19 @@ class Benzo_Hero_slider extends Widget_Base {
                      if (!empty($slide['image']['id'])) {
                         $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
                     }
+                    if (!empty($slide['slider_shape_one']['id'])) {
+                        $slider_shape_one = wp_get_attachment_image_url($slide['slider_shape_one']['id'], $settings['thumbnail_size']);
+                    }
+                    if (!empty($slide['slider_shape_two']['id'])) {
+                        $slider_shape_two = wp_get_attachment_image_url($slide['slider_shape_two']['id'], $settings['thumbnail_size']);
+                    }
                 ?>
                 <div class="swiper-slide">
                 <div class="slider-area-bg" data-background="<?php print esc_url($slide['image']['url']); ?>">
-                <div class="slider-bg-shape-one"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/slider-shape-1.png" alt="img"></div>
-                <div class="slider-bg-shape-two"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/slider-shape-2.png" alt="img"></div>
+                <div class="slider-shape-wrapper">
+                 <div class="slider-bg-shape-one"><img src="<?php print esc_url($slide['slider_shape_one']['url']); ?>" alt="img"></div>
+                 <div class="slider-bg-shape-two"><img src="<?php print esc_url($slide['slider_shape_two']['url']); ?>" alt="img"></div>
+                </div>
                 <div class="slider-bg-shape"></div>
                     <div class="container">
                         <div class="row">

@@ -107,6 +107,7 @@ class Benzo_Features extends Widget_Base {
                 'type'    => Controls_Manager::SELECT,
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -119,6 +120,9 @@ class Benzo_Features extends Widget_Base {
             [
                 'label' => esc_html__('BG Shape', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'condition' => [
+                    'widget_design' => ['design-1'],
+                ],
             ]
         );
 
@@ -148,90 +152,26 @@ class Benzo_Features extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            '_section_media',
-            [
-                'label' => esc_html__('Icon / Image', 'benzo-toolkit'),
-                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-            ]
-        );
+			'section_icon',
+			[
+				'label' => esc_html__( 'Icon', 'benzo-toolkit' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
 
-        $this->add_control(
-            'media_type',
-            [
-                'label'          => esc_html__('Media Type', 'benzo-toolkit'),
-                'type'           => \Elementor\Controls_Manager::CHOOSE,
-                'label_block'    => false,
-                'options'        => [
-                    'icon'  => [
-                        'title' => esc_html__('Icon', 'benzo-toolkit'),
-                        'icon'  => 'far fa-grin-wink',
-                    ],
-                    'image' => [
-                        'title' => esc_html__('Image', 'benzo-toolkit'),
-                        'icon'  => 'eicon-image',
-                    ],
-                ],
-                'default'        => 'icon',
-                'toggle'         => false,
-                'style_transfer' => true,
-            ]
-        );
+		$this->add_control(
+			'icon',
+			[
+				'label' => esc_html__( 'Icon', 'benzo-toolkit' ),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'default' => [
+					'value' => 'fas fa-circle',
+					'library' => 'fa-solid',
+				],
+			]
+		);
 
-        $this->add_control(
-            'image',
-            [
-                'label'     => esc_html__('Image', 'benzo-toolkit'),
-                'type'      => \Elementor\Controls_Manager::MEDIA,
-                'default'   => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ],
-                'dynamic'   => [
-                    'active' => true,
-                ]
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Image_Size::get_type(),
-            [
-                'name'      => 'thumbnail',
-                'default'   => 'medium_large',
-                'separator' => 'none',
-                'exclude'   => [
-                    'full',
-                    'custom',
-                    'large',
-                    'shop_catalog',
-                    'shop_single',
-                    'shop_thumbnail'
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ]
-            ]
-        );
-
-        $this->add_control(
-            'icons',
-            [
-                'label'      => esc_html__('Icons', 'benzo-toolkit'),
-                'type'       => \Elementor\Controls_Manager::ICONS,
-                'show_label' => true,
-                'default'    => [
-                    'value'   => 'far fa-grin-wink',
-                    'library' => 'solid',
-                ],
-                'condition'  => [
-                    'media_type' => 'icon',
-                ],
-
-            ]
-        );
-
-        $this->end_controls_section();
+		$this->end_controls_section();
 
         $this->start_controls_section(
             '_section_title',
@@ -352,6 +292,9 @@ class Benzo_Features extends Widget_Base {
             [
                 'label' => esc_html__('Button', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'condition' => [
+                    'widget_design' => ['design-1'],
+                ],
             ]
         );
 
@@ -691,11 +634,12 @@ class Benzo_Features extends Widget_Base {
 
         ?>
 
+         <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
          <div class="features__area-wrapper-full" data-background="<?php echo esc_attr( $settings['image']['url'] ) ?>">
            <div class="features__area-full-item">
              <div class="features__area-full-icon">
                  <span>
-                  <?php \Elementor\Icons_Manager::render_icon($settings['icons'], ['aria-hidden' => 'true']); ?>
+                  <?php \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
                 </span>
              </div>
              <div class="features__area-full-content webtend-el-des">
@@ -713,6 +657,28 @@ class Benzo_Features extends Widget_Base {
              </div>
            </div>
          </div>
+         <?php endif; ?>
+
+         <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+            <div class="fearures__area-wrapper-two">
+               <div class="fearures-item-two">
+                    <div class="fearures-icon-two">
+                      <?php \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
+                    </div>
+                    <div class="fearures-content-two webtend-el-des">
+                        <?php if ($settings['title']) : ?>
+                        <h4 class="webtend-el-title"><a class="webtend-el-title" href="<?php echo esc_url($settings['title_url']); ?>">
+                          <?php echo wp_kses_post($settings['title']); ?>
+                         </a>
+                        </h4>
+                        <?php endif; ?>
+                        <?php if ($settings['description']) : ?>
+                        <p><?php echo wp_kses_post($settings['description']); ?></p>
+                        <?php endif; ?>
+                    </div>
+               </div>
+            </div>
+        <?php endif; ?>    
 
         <?php
 }

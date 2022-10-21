@@ -107,8 +107,114 @@ class Benzo_About extends Widget_Base {
                 'type'    => Controls_Manager::SELECT,
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Three', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
+            ]
+        );
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'section_fields_heading',
+            [
+                'label' => esc_html__( 'Title & Description', 'benzo-toolkit' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'condition' => [
+                    'widget_design' => ['design-2'],
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'title',
+            [
+                'label' => esc_html__('Title', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'rows' => 4,
+                'default' => 'Heading Title',
+                'placeholder' => esc_html__('Heading Text', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'sub_title',
+            [
+                'label' => esc_html__('Sub Title', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => 'Heading Sub Title',
+                'placeholder' => esc_html__('Heading Sub Text', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'title_tag',
+            [
+                'label' => esc_html__('Title HTML Tag', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::CHOOSE,
+                'options' => [
+                    'h1' => [
+                        'title' => esc_html__('H1', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h1'
+                    ],
+                    'h2' => [
+                        'title' => esc_html__('H2', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h2'
+                    ],
+                    'h3' => [
+                        'title' => esc_html__('H3', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h3'
+                    ],
+                    'h4' => [
+                        'title' => esc_html__('H4', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h4'
+                    ],
+                    'h5' => [
+                        'title' => esc_html__('H5', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h5'
+                    ],
+                    'h6' => [
+                        'title' => esc_html__('H6', 'benzo-toolkit'),
+                        'icon' => 'eicon-editor-h6'
+                    ]
+                ],
+                'default' => 'h2',
+                'toggle' => false,
+            ]
+        );
+
+            $this->add_responsive_control(
+            'align',
+            [
+                'label' => esc_html__('Alignment', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'benzo-toolkit'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'benzo-toolkit'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'benzo-toolkit'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'default' => 'center',
+                'toggle' => true,
+                'selectors' => [
+                    '{{WRAPPER}}' => 'text-align: {{VALUE}};'
+                ]
             ]
         );
 
@@ -414,8 +520,12 @@ class Benzo_About extends Widget_Base {
         extract($settings);
 
         $title = wp_kses_post($settings['title'] ?? '');
+        $this->add_inline_editing_attributes('title', 'basic');
+        $this->add_render_attribute('title', 'class', 'webtend-el-title');
+        $title = wp_kses_post($settings['title']);
 
         ?>
+        <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
         <div class="about__one-wrapper">
             <div class="about__one-thumb">
             <?php if ( $settings['image']['url'] ): ?>
@@ -433,6 +543,65 @@ class Benzo_About extends Widget_Base {
                 </div>
             </div>
         </div>
+        <?php endif; ?>
+        
+        <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+
+        <div class="about__wrapper-two">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="about-left-thumb">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-3.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-middle-thumb">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-2.jpg" alt="img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-4.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="about-right-content">
+                            <div class="about-two-heading-style">
+                                <div class="heading__style-three">
+                                <?php if ($settings['sub_title']) : ?>
+                                <span class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></span>
+                                <?php endif; ?>
+                                <?php printf(
+                                        '<%1$s %2$s>%3$s</%1$s>',
+                                        tag_escape($settings['title_tag']),
+                                        $this->get_render_attribute_string('title'),
+                                        $title
+                                    ); 
+                                ?>
+                                </div>
+                            </div>
+                            <p>Belis commodo libero velos pedels be sapien same quam integer sodale lobortis eude duise natoque Iaculis 
+                            adipiscing duilarty iaculis varius laorey nostra duis purus lobortis curabitur donec</p>
+                            <div class="about-author-two">
+                                <div class="about-author-two-thumb">
+                                    <img src="<?php echo get_template_directory_uri(); ?>" alt="img">
+                                </div>
+                                <div class="about-author-content">
+                                    <h5>Robert Climate,<span>Founder & CEO</span></h5>
+                                    <p>Belis commodo liberod velos pedels better sapiens same quam integer sodale lobosie</p>
+                                </div>
+                                <div class="about-two-list">
+                                    <ul>
+                                        <li><i class="fal fa-check-circle"></i> Excellence Engineering</li>
+                                        <li><i class="fal fa-check-circle"></i> Bring your ideas to life</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php endif; ?>
+
         <?php
 }
 }
