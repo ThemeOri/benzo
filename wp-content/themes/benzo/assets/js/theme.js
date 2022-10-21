@@ -6,7 +6,7 @@
 		$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
 	});
  
-	/*==========  Hero Slider ==========*/
+	/*==========  Hero Slider One ==========*/
 	let sliderActive1 = '.hero-slider-active';
 	let sliderInit1 = new Swiper(sliderActive1, {
 		slidesPerView: 1,
@@ -14,6 +14,25 @@
 		spaceBetween: 0,
 		autoplay: {
 			delay: 9000,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	/*==========  Hero Slider Two ==========*/
+	let sliderActive2 = '.hero-slider-active2';
+	let sliderInit2 = new Swiper(sliderActive2, {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 0,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay: {
+			delay: 5000,
 		},
 		navigation: {
 			nextEl: '.swiper-button-next',
