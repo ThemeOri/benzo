@@ -550,18 +550,22 @@ class Benzo_About extends Widget_Base {
         <div class="about__wrapper-two">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-3">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="about-left-gallery">
                         <div class="about-left-thumb">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-3.jpg" alt="img">
                         </div>
-                    </div>
-                    <div class="col-lg-4">
                         <div class="about-middle-thumb">
+                            <div class="about-middle-one">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-2.jpg" alt="img">
+                            </div>
+                            <div class="about-middle-two">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-4.jpg" alt="img">
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-6">
                         <div class="about-right-content">
                             <div class="about-two-heading-style">
                                 <div class="heading__style-three">
@@ -576,24 +580,45 @@ class Benzo_About extends Widget_Base {
                                     ); 
                                 ?>
                                 </div>
-                            </div>
-                            <p>Belis commodo libero velos pedels be sapien same quam integer sodale lobortis eude duise natoque Iaculis 
+                                <p>Belis commodo libero velos pedels be sapien same quam integer sodale lobortis eude duise natoque Iaculis 
                             adipiscing duilarty iaculis varius laorey nostra duis purus lobortis curabitur donec</p>
+                            </div>
                             <div class="about-author-two">
                                 <div class="about-author-two-thumb">
-                                    <img src="<?php echo get_template_directory_uri(); ?>" alt="img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/author/about-two.png" alt="img">
                                 </div>
                                 <div class="about-author-content">
-                                    <h5>Robert Climate,<span>Founder & CEO</span></h5>
+                                    <h5>Robert Climate, <span> Founder & CEO </span></h5>
                                     <p>Belis commodo liberod velos pedels better sapiens same quam integer sodale lobosie</p>
-                                </div>
-                                <div class="about-two-list">
-                                    <ul>
-                                        <li><i class="fal fa-check-circle"></i> Excellence Engineering</li>
-                                        <li><i class="fal fa-check-circle"></i> Bring your ideas to life</li>
-                                    </ul>
+                                    <div class="about-author-quote-two">
+                                     <i class="fal fa-quote-right"></i>
+                                    </div>
                                 </div>
                             </div>
+                                <div class="about-two-list">
+                                    <ul>
+                                        <li><h5><i class="fal fa-check-circle"></i> Excellence Engineering</h5></li>
+                                        <li><h5><i class="fal fa-check-circle"></i>Bring your ideas to life</h5></li>
+                                    </ul>
+                                </div>
+                                <div class="about-video-two">
+                                    <div class="about-video-thumb-two">
+                                       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about-video.png" alt="img">
+                                       <a class="popup-video about-popup-two" href="https://www.youtube.com/watch?v=P_Q4gn16yDA"><i class="fas fa-play"></i></a>
+                                    </div>
+                                    <div class="about-video-content-two">
+                                        <p>Conubia elementum metus pulvinar turps aliquam senectus luctus bed curabitur rutrum suspendise 
+                                            convallis torquent  a hymenaeos adipiscing sitting eleifend pulvinar and ridiculus. Venenatis 
+                                            natoque suspense mattis turpis orci cursus </p>
+                                    </div>
+                                </div>
+                                <div class="about-button-support">
+                                    <a class="about-support-btn benzo-el-btn webtend-el-btn" href="#">Learn More_</a>
+                                    <div class="about-support-two">
+                                        <span>Free Support:</span>
+                                        <h5><a href="tel:08 (520) 526-2250">08 (520) 526-2250</a></h5>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
