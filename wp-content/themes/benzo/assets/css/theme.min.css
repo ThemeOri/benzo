@@ -7892,6 +7892,70 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   animation-iteration-count: infinite;
 }
 
+/** ===== CTA CSS ===== **/
+.cta__area-wrapper .pl-0 {
+  padding: 0;
+}
+.cta__area-wrapper .pr-0 {
+  padding: 0;
+}
+
+.cta-left-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-primary);
+  border-radius: 5px 0px 0px 5px;
+  padding: 55px 60px 50px 60px;
+}
+
+.cta-left-content {
+  text-align: left;
+}
+
+.cta-left-content h3 {
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+.cta-left-content p {
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+
+.cta-left-btn .features-sp-btn {
+  height: 42px;
+  line-height: 40px;
+  padding: 0px 25px;
+  opacity: 0.6;
+  color: var(--color-border);
+}
+
+.cta-right-item {
+  background: #041324;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.cta-right-content {
+  text-align: left;
+}
+.cta-right-content h3 {
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+.cta-right-content p {
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+
+.cta-right-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #041324;
+  border-radius: 0px 5px 5px 0px;
+  padding: 55px 60px 50px 60px;
+}
+
 /** ===== Popup ===== **/
 .benzo-popup-wrapper {
   position: fixed;
