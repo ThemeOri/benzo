@@ -108,6 +108,7 @@ class Benzo_service extends Widget_Base {
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
                     'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
+                    'design-3' => esc_html__( 'Design Three', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -561,6 +562,25 @@ class Benzo_service extends Widget_Base {
                </div>
             </div>
         <?php endif; ?>
+
+        <?php if ( 'design-3' === $settings['widget_design'] ) : ?>
+
+             <div class="search__area-wrapper-three">
+                 <div class="search-item">
+                    <div class="search-icon-wrapper">
+                        <div class="search-icon-item">
+                          <i class="fal fa-print-search"></i>
+                        </div>
+                    </div>
+                    <div class="search-content-three">
+                        <h4><a href="#">Market Research</a></h4>
+                        <p>Belis commodo be liberod velos pedelsen better set sapiens same quam in integer sodale</p>
+                        <a class="search-content-three-btn" href="#">Learn More_</a>
+                    </div>
+                 </div>
+             </div>
+
+        <?php endif; ?>    
 
         <?php
 }
