@@ -6782,6 +6782,21 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   color: var(--color-secondary);
 }
 
+/** ===== Service Two CSS ===== **/
+.search-item {
+  display: flex;
+  align-items: center;
+}
+
+.search-content-three {
+  text-align: left;
+}
+
+.search-content-three {
+  text-align: left;
+  margin-left: 25px;
+}
+
 /** ===== About One CSS ===== **/
 .about__one-thumb {
   position: relative;
