@@ -9,7 +9,7 @@ use Elementor\Utils;
 
 defined( 'ABSPATH' ) || exit;
 
-class Benzo_button extends Widget_Base {
+class Benzo_CTA extends Widget_Base {
 
     /**
      * Retrieve the widget name.
@@ -21,7 +21,7 @@ class Benzo_button extends Widget_Base {
      * @return string Widget name.
      */
     public function get_name() {
-        return 'benzo-button';
+        return 'benzo-cta';
     }
 
     /**
@@ -34,7 +34,7 @@ class Benzo_button extends Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return esc_html__( 'Benzo Button', 'benzo-toolkit' );
+        return esc_html__( 'Benzo CTA', 'benzo-toolkit' );
     }
 
     /**
@@ -47,7 +47,7 @@ class Benzo_button extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return ' eicon-button';
+        return 'eicon-image-rollover';
     }
 
     /**
@@ -79,7 +79,7 @@ class Benzo_button extends Widget_Base {
      * @return array Widget keywords.
      */
     public function get_keywords() {
-        return ['Benzo', 'Toolkit', 'button', 'cta'];
+        return ['Benzo', 'Toolkit', 'cta', 'action','call'];
     }
 
     /**
@@ -115,9 +115,9 @@ class Benzo_button extends Widget_Base {
         $this->end_controls_section();
 
         $this->start_controls_section(
-            'section_media',
+            '_section_media',
             [
-                'label' => esc_html__('Author Image', 'benzo-toolkit'),
+                'label' => esc_html__('CTA Image', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -136,50 +136,25 @@ class Benzo_button extends Widget_Base {
             ]
         );
 
-        $this->add_group_control(
-            \Elementor\Group_Control_Image_Size::get_type(),
-            [
-                'name' => 'thumbnails',
-                'default' => 'large',
-                'separator' => 'none',
-            ]
-        );
-
-
         $this->end_controls_section();
 
         $this->start_controls_section(
-            'section_author',
+            '_section_title',
             [
-                'label' => esc_html__('Author Info', 'benzo-toolkit'),
+                'label' => esc_html__('Title & Description', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
 
         $this->add_control(
-            'author_title',
+            'title',
             [
                 'label' => esc_html__('Title', 'benzo-toolkit'),
                 'label_block' => true,
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'rows' => 4,
-                'default' => 'Title',
-                'placeholder' => esc_html__('Title', 'benzo-toolkit'),
-                'dynamic' => [
-                    'active' => true,
-                ]
-            ]
-        );
-
-        $this->add_control(
-            'author_designation',
-            [
-                'label' => esc_html__('Designation', 'benzo-toolkit'),
-                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'rows' => 4,
-                'default' => 'designation',
-                'placeholder' => esc_html__('designation', 'benzo-toolkit'),
+                'default' => 'Team Title',
+                'placeholder' => esc_html__('Team Text', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -187,7 +162,6 @@ class Benzo_button extends Widget_Base {
         );
 
         $this->end_controls_section();
-
 
         // Button
         $this->start_controls_section(
@@ -229,104 +203,11 @@ class Benzo_button extends Widget_Base {
 
         $this->end_controls_section();
 
-        $this->start_controls_section(
-            '_section_style_content',
-            [
-                'label' => esc_html__('Style Author Title & Content', 'benzo-toolkit'),
-                'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-        // Title
-        $this->add_control(
-            '_heading_title',
-            [
-                'type' => \Elementor\Controls_Manager::HEADING,
-                'label' => esc_html__('Title', 'webtend-el-title'),
-                'separator' => 'before'
-            ]
-        );
-
-        $this->add_responsive_control(
-            'title_spacing',
-            [
-                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'title_color',
-            [
-                'label' => esc_html__('Text Color', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-title' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Typography::get_type(),
-            [
-                'name' => 'title',
-                'selector' => '{{WRAPPER}} .webtend-el-title',
-            ]
-        );
-
-        // Subtitle
-        $this->add_control(
-            'designation_style',
-            [
-                'type' => \Elementor\Controls_Manager::HEADING,
-                'label' => esc_html__('Designation', 'benzo-toolkit'),
-                'separator' => 'before'
-            ]
-        );
-
-        $this->add_responsive_control(
-            'designation_spacing',
-            [
-                'label' => esc_html__('Designation Spacing', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-subtitle' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'designation_color',
-            [
-                'label' => esc_html__('Text Color', 'benzo-toolkit'),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .webtend-el-subtitle' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Typography::get_type(),
-            [
-                'name' => 'designation',
-                'selector' => '{{WRAPPER}} .webtend-el-subtitle',
-            ]
-        );
-
-
-        $this->end_controls_section();
-
         // Button 
         $this->start_controls_section(
             'section_button_style',
             [
-                'label' => esc_html__( 'Button One', 'benzo-toolkit' ),
+                'label' => esc_html__( 'Button', 'benzo-toolkit' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -472,6 +353,58 @@ class Benzo_button extends Widget_Base {
         $this->end_controls_tabs();
 
         $this->end_controls_section();
+
+        $this->start_controls_section(
+            '_section_style_button',
+            [
+                'label' => esc_html__('Style Title & Content', 'benzo-toolkit'),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+         // Title
+        $this->add_control(
+            '_heading_title',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Title', 'benzo-toolkit'),
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_responsive_control(
+            'title_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+       $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'title_typography',
+                'label' => esc_html__('Typography', 'benzo-toolkit'),
+                'selector' => '{{WRAPPER}} .webtend-el-title',
+            ]
+        );
+
+        $this->add_control(
+            'title_color',
+            [
+                'label' => esc_html__('Color', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-title' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
         
     }
 
@@ -492,27 +425,26 @@ class Benzo_button extends Widget_Base {
 
         ?>
 
-       <div class="about__author-info">
-          <div class="about__author">
-          <?php if ( $settings['image']['url'] ): ?>
-             <div class="about__author-thumb">
-                <img src="<?php echo esc_attr( $settings['image']['url'] ) ?>" alt="img">
-             </div>
-             <?php endif;?>
-             <?php if ($settings['author_title']) : ?>
-             <div class="about__author-content">
-               <h5 class="webtend-el-title"><?php echo wp_kses_post($settings['author_title']); ?></h5>
-               <span class="webtend-el-subtitle"><?php echo wp_kses_post($settings['author_designation']); ?></span>
-             </div>
-             <?php endif;?>
-          </div>
-          <div class="common-btn">
-           <a class="benzo-el-btn webtend-el-btn common-el-btn" href="<?php echo esc_url($settings['button_link']['url']); ?>">
-             <?php echo wp_kses_post($settings['button_text']); ?>
-           </a>
-        </div>
-       </div>
-
+       <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
+            <div class="cta__wrapper-one">
+                <div class="cta__item-one">
+                    <div class="cta__item-thumb-one">
+                    <?php if ( $settings['image']['url'] ): ?>
+                       <img src="<?php echo esc_attr( $settings['image']['url'] ) ?>" alt="img">
+                    <?php endif;?>   
+                       <div class="cta__item-content-one">
+                        <?php if ($settings['title']) : ?>
+                            <h3 class="webtend-el-title"><?php echo wp_kses_post($settings['title']); ?></h3>
+                        <?php endif;?>    
+                        <a class="benzo-el-btn webtend-el-btn common-el-btn btn-round" href="<?php echo esc_url($settings['button_link']['url']); ?>">
+                         <?php echo wp_kses_post($settings['button_text']); ?>
+                        </a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+  
         <?php
 }
 }

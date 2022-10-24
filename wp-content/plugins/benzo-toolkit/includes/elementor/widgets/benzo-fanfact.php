@@ -107,6 +107,7 @@ class Benzo_Fanfact extends Widget_Base {
                 'type'    => Controls_Manager::SELECT,
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -367,6 +368,7 @@ class Benzo_Fanfact extends Widget_Base {
 
         ?>
 
+       <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
         <div class="fanfact__area-wrapper">
           <div class="fanfact__area-item">
              <div class="fanfact-icon-one">
@@ -386,6 +388,56 @@ class Benzo_Fanfact extends Widget_Base {
              </div>
           </div>
         </div>
+        <?php endif; ?>
+
+        <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+            <div class="fanfact__area-two">
+                <div class="container">
+                    <div class="row fanfact-bg-two">
+                        <div class="col-lg-3">
+                            <div class="fanfact-item-two">
+                                <div class="fanfact-icon-two">
+                                    <i class="fanfact-icon-up fal fa-thumbs-up"></i>
+                                </div>
+                                <div class="fanfact-content-two">
+                                    <h3><span>308</span>+</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="fanfact-item-two">
+                                <div class="fanfact-icon-two">
+                                   <i class="fanfact-icon-up fal fa-thumbs-up"></i>
+                                </div>
+                                <div class="fanfact-content-two">
+                                    <h3><span>308</span>+</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="fanfact-item-two">
+                                <div class="fanfact-icon-two">
+                                   <i class="fanfact-icon-up fal fa-thumbs-up"></i>
+                                </div>
+                                <div class="fanfact-content-two">
+                                    <h3><span>308</span>+</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="fanfact-item-two">
+                                <div class="fanfact-icon-two">
+                                   <i class="fanfact-icon-up fal fa-thumbs-up"></i>
+                                </div>
+                                <div class="fanfact-content-two">
+                                    <h3><span>308</span>+</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
 
         <?php
 }
