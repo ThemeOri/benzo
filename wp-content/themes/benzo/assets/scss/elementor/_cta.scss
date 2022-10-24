@@ -53,6 +53,17 @@
     }
 }
 
+.cta__item-one {
+    transition: all 500ms ease;
+    &:hover{
+      .cta__item-thumb-one {
+        img {
+            transform: scale(1.22) rotateY(0deg);
+        }
+      }
+    }
+}
+
 .cta-right-item {
     display: flex;
     align-items: center;
@@ -60,4 +71,25 @@
     background: #041324;
 	border-radius: 0px 5px 5px 0px;
     padding: 55px 60px 50px 60px;
+}
+.cta__item-thumb-one {
+	position: relative;
+    overflow: hidden;
+    img {
+      transition: all 500ms ease;
+    }
+}
+.cta__item-content-one {
+    position: absolute;
+    text-align: center;
+    top: 24.5%;
+    padding: 0px 78px;
+    h3 {
+        color: $color-white;
+        margin-bottom: 35px;
+    }
+}
+.benzo-el-btn.webtend-el-btn.btn-round {
+	border-radius: 28px;
+	padding: 15px 40px;
 }

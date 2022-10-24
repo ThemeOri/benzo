@@ -7413,7 +7413,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   z-index: -1;
 }
 
-/** ===== Fan Fact CSS ===== **/
+/** ===== Fan Fact One CSS ===== **/
 .fanfact__area-wrapper {
   border: 2px solid var(--color-border);
   border-radius: 3px;
@@ -7453,6 +7453,58 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+}
+
+/** ===== Fan Fact Two CSS ===== **/
+.fanfact-bg-two {
+  background: var(--color-primary);
+}
+
+.fanfact-item-two {
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+}
+
+.fanfact-content-two h3 {
+  margin-bottom: 0;
+}
+
+.fanfact-icon-two i {
+  background: var(--color-white);
+  color: var(--color-primary);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50px;
+  font-size: 35px;
+}
+
+.fanfact-icon-two i {
+  background: var(--color-white);
+  color: var(--color-primary);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50px;
+  font-size: 35px;
+  position: relative;
+  text-align: center;
+}
+
+.fanfact-icon-two {
+  position: relative;
+}
+
+.fanfact-icon-two::before {
+  position: absolute;
+  content: "";
+  left: 100px;
+  top: -5px;
+  background: var(--color-white);
+  opacity: 0.5;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
 }
 
 /** ===== Project CSS ===== **/
@@ -8006,6 +8058,13 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   margin-bottom: 0;
 }
 
+.cta__item-one {
+  transition: all 500ms ease;
+}
+.cta__item-one:hover .cta__item-thumb-one img {
+  transform: scale(1.22) rotateY(0deg);
+}
+
 .cta-right-item {
   display: flex;
   align-items: center;
@@ -8013,6 +8072,30 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   background: #041324;
   border-radius: 0px 5px 5px 0px;
   padding: 55px 60px 50px 60px;
+}
+
+.cta__item-thumb-one {
+  position: relative;
+  overflow: hidden;
+}
+.cta__item-thumb-one img {
+  transition: all 500ms ease;
+}
+
+.cta__item-content-one {
+  position: absolute;
+  text-align: center;
+  top: 24.5%;
+  padding: 0px 78px;
+}
+.cta__item-content-one h3 {
+  color: var(--color-white);
+  margin-bottom: 35px;
+}
+
+.benzo-el-btn.webtend-el-btn.btn-round {
+  border-radius: 28px;
+  padding: 15px 40px;
 }
 
 /** ===== Contact One CSS ===== **/
@@ -8126,6 +8209,77 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   font-family: "Font Awesome 5 Pro";
   z-index: 9;
   opacity: 0.5;
+}
+
+/** ===== Team Member CSS ===== **/
+.team-member-item {
+  transition: all 500ms ease;
+}
+.team-member-item:hover .team-member-content {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1, 1);
+}
+.team-member-item:hover .team-member-thumb img {
+  transform: scale(1.22) rotateY(0deg);
+}
+.team-member-item:hover .team-member-thumb::after {
+  opacity: 0.2;
+}
+
+.team-member-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.team-member-thumb img {
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.team-member-content {
+  text-align: left;
+}
+.team-member-content h3 {
+  font-size: 27px;
+  margin-bottom: 0;
+}
+.team-member-content span {
+  margin-bottom: 5px;
+}
+
+.team-member-content {
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+  background: var(--color-white);
+  padding: 30px 80px 30px 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease;
+  transform: scale(1, 0.3);
+  z-index: 1;
+}
+
+.team-member-content::before {
+  position: absolute;
+  content: "";
+  left: 40px;
+  bottom: -30px;
+  width: 58px;
+  height: 30px;
+  background: var(--color-white);
+  clip-path: polygon(78% 0, 0 0, 100% 100%);
+}
+
+.team-member-thumb::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #D9D9D9;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 500ms ease;
 }
 
 /** ===== Popup ===== **/

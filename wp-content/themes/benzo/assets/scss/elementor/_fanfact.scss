@@ -1,4 +1,4 @@
-/** ===== Fan Fact CSS ===== **/
+/** ===== Fan Fact One CSS ===== **/
 .fanfact__area-wrapper {
 	border: 2px solid $color-border;
 	border-radius: 3px;
@@ -35,4 +35,57 @@
         font-size: 18px;
         line-height: 28px;
     }
+}
+
+/** ===== Fan Fact Two CSS ===== **/
+
+.fanfact-bg-two{
+    background: $color-primary;
+}
+.fanfact-item-two {
+	text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+.fanfact-content-two {
+    h3 {
+        margin-bottom: 0;
+    }
+}
+.fanfact-icon-two {
+    i {
+        background: $color-white;
+        color: $color-primary;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 50px;
+        font-size: 35px;
+    }
+}
+.fanfact-icon-two {
+    i {
+        background: var(--color-white);
+        color: var(--color-primary);
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 50px;
+        font-size: 35px;
+        position: relative;
+        text-align: center;
+    }
+}
+.fanfact-icon-two {
+    position: relative;
+}
+.fanfact-icon-two::before {
+	position: absolute;
+	content: '';
+	left: 100px;
+	top: -5px;
+	background: $color-white;
+    opacity: 0.5;
+	width: 90px;
+	height: 90px;
+	border-radius: 50px;
 }
