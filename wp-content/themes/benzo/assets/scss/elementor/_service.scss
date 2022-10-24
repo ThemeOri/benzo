@@ -168,16 +168,60 @@
 	color: $color-secondary;
 }
 /** ===== Service Two CSS ===== **/
-
-.search-item {
+.search__area-wrapper-three {
 	display: flex;
 	align-items: center;
+	border: 2px solid #EEF0F1;
+	border-radius: 5px;
+	padding: 30px 20px 35px 30px;
+	transition: all 500ms ease;
+	&:hover{
+		background: $color-white;
+		box-shadow: 0px 6px 20px rgba(48, 79, 121, 0.1);
+		border-radius: 5px;
+		border: 2px solid transparent;
+		.search-icon-item{
+			transform: translateY(-5px) translate3d(0, -5px, 0);
+		}
+	}
 }
+
 .search-content-three {
 	text-align: left;
 }
-.search-content-three {
-	text-align: left;
-	margin-left: 25px;
+.search-icon-item {
+	width: 90px;
+	height: 90px;
+	background: $color-primary;
+	border: 5px solid #84B7FF;
+	color: $color-white;
+	line-height: 91px;
+	text-align: center;
+	border-radius: 50px;
+	float: left;
+   margin-right: 25px;
+   transition: all 500ms ease;
+   i {
+	 font-size: 35px;
+   }
 }
- 
+.search-content-three {
+	h4 {
+		margin-bottom: 8px;
+		a {
+		  font-size: 20px;
+		}
+	}
+	p {
+		margin-bottom: 10px;
+	}
+}
+.search-content-three-btn {
+	font-weight: 600;
+	color: $color-body;
+	transition: .3s;
+	&:hover{
+		color: $color-primary;
+	}
+}
+

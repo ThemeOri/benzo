@@ -1,0 +1,109 @@
+/** ===== Contact One CSS ===== **/
+.contact-form-one input, select {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 3px;
+	height: 65px;
+	margin-bottom: 20px;
+    color: $color-white;
+    opacity: 0.5;
+    transition: .3s;
+    &:focus{
+        border: 1px solid $color-primary;
+    }
+}
+.contact-info-textarea {
+    position: relative;
+    textarea{
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        height: 160px;
+        resize: none;
+        margin-bottom: 20px;
+        color: $color-white;
+        opacity: 0.5;
+        transition: .3s;
+        &:focus{
+          border: 1px solid $color-primary;
+        }
+    }
+    &::before{
+        position: absolute;
+        content: "\f075";
+        right: 25px;
+        top: 20px;
+        color: $color-white;
+        font-family: "Font Awesome 5 Pro";
+        z-index: 9;
+        opacity: 0.5;
+    }
+}
+.contact-info-select {
+    .nice-select {
+        float: none;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        height: 65px;
+        span {
+            margin-top: 14px;
+            color: $color-white;
+            opacity: 0.5;
+        }
+        .list{
+            width: 100%;
+        }
+        transition: .3s;
+        &:focus{
+          border: 1px solid $color-primary;
+        }
+    }
+    
+}
+.contact-one-btn {
+    text-align: left;
+    .benzo-el-btn.webtend-el-btn.conatct-btn-one {
+        padding: 20px 33px;
+        border-radius: 3px;
+    }
+}
+.contact-info-phone {
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "\f590";
+        right: 25px;
+        top: 20px;
+        color: $color-white;
+        font-family: "Font Awesome 5 Pro";
+        z-index: 9;
+        opacity: 0.5;
+    }
+}
+.contact-info-mail {
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "\f1d8";
+        right: 25px;
+        top: 20px;
+        color: $color-white;
+        font-family: "Font Awesome 5 Pro";
+        z-index: 9;
+        opacity: 0.5;
+    }
+}
+.contact-info-name {
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "\f2bd";
+        right: 25px;
+        top: 20px;
+        color: $color-white;
+        font-family: "Font Awesome 5 Pro";
+        z-index: 9;
+        opacity: 0.5;
+    }
+}

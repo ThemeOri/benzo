@@ -6783,18 +6783,62 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 }
 
 /** ===== Service Two CSS ===== **/
-.search-item {
+.search__area-wrapper-three {
   display: flex;
   align-items: center;
+  border: 2px solid #EEF0F1;
+  border-radius: 5px;
+  padding: 30px 20px 35px 30px;
+  transition: all 500ms ease;
+}
+.search__area-wrapper-three:hover {
+  background: var(--color-white);
+  box-shadow: 0px 6px 20px rgba(48, 79, 121, 0.1);
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+.search__area-wrapper-three:hover .search-icon-item {
+  transform: translateY(-5px) translate3d(0, -5px, 0);
 }
 
 .search-content-three {
   text-align: left;
 }
 
-.search-content-three {
-  text-align: left;
-  margin-left: 25px;
+.search-icon-item {
+  width: 90px;
+  height: 90px;
+  background: var(--color-primary);
+  border: 5px solid #84B7FF;
+  color: var(--color-white);
+  line-height: 91px;
+  text-align: center;
+  border-radius: 50px;
+  float: left;
+  margin-right: 25px;
+  transition: all 500ms ease;
+}
+.search-icon-item i {
+  font-size: 35px;
+}
+
+.search-content-three h4 {
+  margin-bottom: 8px;
+}
+.search-content-three h4 a {
+  font-size: 20px;
+}
+.search-content-three p {
+  margin-bottom: 10px;
+}
+
+.search-content-three-btn {
+  font-weight: 600;
+  color: var(--color-body);
+  transition: 0.3s;
+}
+.search-content-three-btn:hover {
+  color: var(--color-primary);
 }
 
 /** ===== About One CSS ===== **/
@@ -7969,6 +8013,119 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   background: #041324;
   border-radius: 0px 5px 5px 0px;
   padding: 55px 60px 50px 60px;
+}
+
+/** ===== Contact One CSS ===== **/
+.contact-form-one input, select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  height: 65px;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.contact-form-one input:focus, select:focus {
+  border: 1px solid var(--color-primary);
+}
+
+.contact-info-textarea {
+  position: relative;
+}
+.contact-info-textarea textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  height: 160px;
+  resize: none;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.contact-info-textarea textarea:focus {
+  border: 1px solid var(--color-primary);
+}
+.contact-info-textarea::before {
+  position: absolute;
+  content: "\f075";
+  right: 25px;
+  top: 20px;
+  color: var(--color-white);
+  font-family: "Font Awesome 5 Pro";
+  z-index: 9;
+  opacity: 0.5;
+}
+
+.contact-info-select .nice-select {
+  float: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  height: 65px;
+  transition: 0.3s;
+}
+.contact-info-select .nice-select span {
+  margin-top: 14px;
+  color: var(--color-white);
+  opacity: 0.5;
+}
+.contact-info-select .nice-select .list {
+  width: 100%;
+}
+.contact-info-select .nice-select:focus {
+  border: 1px solid var(--color-primary);
+}
+
+.contact-one-btn {
+  text-align: left;
+}
+.contact-one-btn .benzo-el-btn.webtend-el-btn.conatct-btn-one {
+  padding: 20px 33px;
+  border-radius: 3px;
+}
+
+.contact-info-phone {
+  position: relative;
+}
+.contact-info-phone::before {
+  position: absolute;
+  content: "\f590";
+  right: 25px;
+  top: 20px;
+  color: var(--color-white);
+  font-family: "Font Awesome 5 Pro";
+  z-index: 9;
+  opacity: 0.5;
+}
+
+.contact-info-mail {
+  position: relative;
+}
+.contact-info-mail::before {
+  position: absolute;
+  content: "\f1d8";
+  right: 25px;
+  top: 20px;
+  color: var(--color-white);
+  font-family: "Font Awesome 5 Pro";
+  z-index: 9;
+  opacity: 0.5;
+}
+
+.contact-info-name {
+  position: relative;
+}
+.contact-info-name::before {
+  position: absolute;
+  content: "\f2bd";
+  right: 25px;
+  top: 20px;
+  color: var(--color-white);
+  font-family: "Font Awesome 5 Pro";
+  z-index: 9;
+  opacity: 0.5;
 }
 
 /** ===== Popup ===== **/

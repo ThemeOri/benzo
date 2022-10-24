@@ -161,7 +161,7 @@
 	  });
 
 	/*==========  Nice Select ==========*/
-	  $('.skill-select-info').niceSelect();
+	  $('.skill-select-info select, .contact-info-select select').niceSelect();
 
 
 	/**
