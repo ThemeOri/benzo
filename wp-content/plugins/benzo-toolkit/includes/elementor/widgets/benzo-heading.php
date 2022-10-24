@@ -108,6 +108,7 @@ class Benzo_Heading extends Widget_Base {
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
                     'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
                     'design-3' => esc_html__( 'Design Three', 'benzo-toolkit' ),
+                    'design-4' => esc_html__( 'Design Four', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -163,6 +164,23 @@ class Benzo_Heading extends Widget_Base {
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => 'Heading Sub Title',
                 'placeholder' => esc_html__('Heading Sub Text', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'description',
+            [
+                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'default' => 'description',
+                'placeholder' => esc_html__('description', 'benzo-toolkit'),
+                'condition' => [
+                    'widget_design' => ['design-4'],
+                ],
                 'dynamic' => [
                     'active' => true,
                 ]
@@ -377,6 +395,48 @@ class Benzo_Heading extends Widget_Base {
             ]
         );
 
+        // description
+        $this->add_control(
+            '_content_description',
+            [
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'label' => esc_html__('Description', 'benzo-toolkit'),
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_responsive_control(
+            'description_spacing',
+            [
+                'label' => esc_html__('Bottom Spacing', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'description_color',
+            [
+                'label' => esc_html__('Text Color', 'benzo-toolkit'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .webtend-el-content p' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'description',
+                'selector' => '{{WRAPPER}} .webtend-el-content p',
+            ]
+        );
+
+
 
         $this->end_controls_section();
     }
@@ -463,6 +523,28 @@ class Benzo_Heading extends Widget_Base {
            </div>
         <?php endif; ?> 
 
+        <?php if ( 'design-4' === $settings['widget_design'] ) : ?>
+            <div class="heading-style-four webtend-el-content">
+            <div class="about-two-heading-style">
+                <div class="heading__style-three">
+                <?php if ($settings['sub_title']) : ?>
+                <span class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></span>
+                <?php endif; ?>
+                <?php printf(
+                        '<%1$s %2$s>%3$s</%1$s>',
+                        tag_escape($settings['title_tag']),
+                        $this->get_render_attribute_string('title'),
+                        $title
+                    ); 
+                ?>
+                </div>
+            </div>
+            <?php if ($settings['description']) : ?>
+                <p class="heading-style-four"><?php echo wp_kses_post($settings['description']); ?></p>
+            <?php endif; ?>
+            </div>
+
+        <?php endif; ?>
 
         <?php
 }

@@ -119,86 +119,22 @@ class Benzo_service extends Widget_Base {
         $this->start_controls_section(
             '_section_media',
             [
-                'label' => esc_html__('Icon / Image', 'benzo-toolkit'),
+                'label' => esc_html__('Icon', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
 
         $this->add_control(
-            'media_type',
-            [
-                'label'          => esc_html__('Media Type', 'benzo-toolkit'),
-                'type'           => \Elementor\Controls_Manager::CHOOSE,
-                'label_block'    => false,
-                'options'        => [
-                    'icon'  => [
-                        'title' => esc_html__('Icon', 'benzo-toolkit'),
-                        'icon'  => 'far fa-grin-wink',
-                    ],
-                    'image' => [
-                        'title' => esc_html__('Image', 'benzo-toolkit'),
-                        'icon'  => 'eicon-image',
-                    ],
-                ],
-                'default'        => 'icon',
-                'toggle'         => false,
-                'style_transfer' => true,
-            ]
-        );
-
-        $this->add_control(
-            'image',
-            [
-                'label'     => esc_html__('Image', 'benzo-toolkit'),
-                'type'      => \Elementor\Controls_Manager::MEDIA,
-                'default'   => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ],
-                'dynamic'   => [
-                    'active' => true,
-                ]
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Image_Size::get_type(),
-            [
-                'name'      => 'thumbnail',
-                'default'   => 'medium_large',
-                'separator' => 'none',
-                'exclude'   => [
-                    'full',
-                    'custom',
-                    'large',
-                    'shop_catalog',
-                    'shop_single',
-                    'shop_thumbnail'
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ]
-            ]
-        );
-
-        $this->add_control(
-            'icons',
-            [
-                'label'      => esc_html__('Icons', 'benzo-toolkit'),
-                'type'       => \Elementor\Controls_Manager::ICONS,
-                'show_label' => true,
-                'default'    => [
-                    'value'   => 'far fa-grin-wink',
-                    'library' => 'solid',
-                ],
-                'condition'  => [
-                    'media_type' => 'icon',
-                ],
-
-            ]
-        );
+			'icon',
+			[
+				'label' => esc_html__( 'Icon', 'benzo-toolkit' ),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'default' => [
+					'value' => 'fas fa-circle',
+					'library' => 'fa-solid',
+				],
+			]
+		);
 
         $this->end_controls_section();
 
@@ -336,7 +272,7 @@ class Benzo_service extends Widget_Base {
                     'active' => true,
                 ],
                 'condition' => [
-                    'widget_design' => 'design-2',
+                    'widget_design' => ['design-2', 'design-3'],
                 ],
             ]
         );
@@ -566,18 +502,20 @@ class Benzo_service extends Widget_Base {
         <?php if ( 'design-3' === $settings['widget_design'] ) : ?>
 
              <div class="search__area-wrapper-three">
-                 <div class="search-item">
-                    <div class="search-icon-wrapper">
-                        <div class="search-icon-item">
-                          <i class="fal fa-print-search"></i>
-                        </div>
+                <div class="search_icon-wrapper">
+                    <div class="search-icon-item">
+                      <?php \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
                     </div>
-                    <div class="search-content-three">
-                        <h4><a href="#">Market Research</a></h4>
-                        <p>Belis commodo be liberod velos pedelsen better set sapiens same quam in integer sodale</p>
-                        <a class="search-content-three-btn" href="#">Learn More_</a>
-                    </div>
-                 </div>
+                </div>
+                <div class="search-content-three webtend-el-des">
+                       <?php if ($settings['title']) : ?>
+                        <h4 class="webtend-el-title"><a class="webtend-el-title" href="<?php echo esc_url($settings['title_url']); ?>"><?php echo wp_kses_post($settings['title']); ?></a></h4>
+                        <?php endif; ?>
+                        <?php if ($settings['description']) : ?>
+                        <p><?php echo wp_kses_post($settings['description']); ?></p>
+                        <?php endif; ?>
+                        <a class="search-content-three-btn" href="<?php echo esc_url($settings['button_link']['url']); ?>"><?php echo wp_kses_post($settings['button_text']); ?></a>
+                </div>
              </div>
 
         <?php endif; ?>    

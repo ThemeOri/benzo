@@ -703,7 +703,7 @@ class Benzo_Skills extends Widget_Base {
                                     <h3 class="webtend-el-formtitle"><?php echo wp_kses_post($settings['form_title']); ?></h3>
                                 </div>
                                 <?php endif; ?>
-                                 <?php  if ( function_exists( 'wpcf7' ) && ! empty( $settings['form_id'] ) ): ?>
+                                <?php  if ( function_exists( 'wpcf7' ) && ! empty( $settings['form_id'] ) ): ?>
                                     <div class="benzo-skills">
                                         <?php echo do_shortcode( '[contact-form-7 id="' . $settings['form_id'] . '"]' ); ?>
                                     </div>

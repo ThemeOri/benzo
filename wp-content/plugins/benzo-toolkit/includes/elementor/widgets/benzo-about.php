@@ -1232,6 +1232,7 @@ class Benzo_About extends Widget_Base {
         $title = wp_kses_post($settings['title']);
 
         ?>
+        
         <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
         <div class="about__one-wrapper">
             <div class="about__one-thumb">

@@ -6,10 +6,11 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Typography;
 use Elementor\Widget_Base;
+use Elementor\Utils;
 
 defined( 'ABSPATH' ) || exit;
 
-class Benzo_CF7 extends Widget_Base {
+class Benzo_cf7 extends Widget_Base {
 
     /**
      * Retrieve the widget name.
@@ -21,7 +22,7 @@ class Benzo_CF7 extends Widget_Base {
      * @return string Widget name.
      */
     public function get_name() {
-        return 'benzo-cf7';
+        return 'benzo- cf7';
     }
 
     /**
@@ -47,7 +48,7 @@ class Benzo_CF7 extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'eicon-mail';
+        return 'eicon-envelope';
     }
 
     /**
@@ -79,7 +80,7 @@ class Benzo_CF7 extends Widget_Base {
      * @return array Widget keywords.
      */
     public function get_keywords() {
-        return ['benzo', 'toolkit', 'form', 'contact', 'cf7', 'form'];
+        return ['Benzo', 'Toolkit', 'conatct', 'cf7'];
     }
 
     /**
@@ -92,9 +93,33 @@ class Benzo_CF7 extends Widget_Base {
      * @access protected
      */
     protected function register_controls() {
-        
+
+
         $this->start_controls_section(
             'widget_content',
+            [
+                'label' => esc_html__( 'General', 'benzo-toolkit' ),
+            ]
+        );
+
+        $this->add_control(
+            'widget_design',
+            [
+                'label'   => esc_html__( 'Select Style', 'benzo-toolkit' ),
+                'type'    => Controls_Manager::SELECT,
+                'options' => [
+                    'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
+                ],
+                'default' => 'design-1',
+            ]
+        );
+
+        $this->end_controls_section();
+
+
+        $this->start_controls_section(
+            'skill_form',
             [
                 'label' => esc_html__( 'Form', 'benzo-toolkit' ),
             ]
@@ -107,26 +132,27 @@ class Benzo_CF7 extends Widget_Base {
                 'type'        => Controls_Manager::SELECT,
                 'label_block' => true,
                 'options'     => Benzo_Toolkit_Helper::get_all_cf7(),
-                'default'     => '0',
                 'description' => esc_html__( "Contact Form 7 - plugin must be installed and there must be some contact forms made with the Contact Form 7 . For More information visit Theme Documentation", 'benzo-toolkit' ),
+                'default' => 'contact-form',
             ]
         );
 
         $this->end_controls_section();
+
         $this->start_controls_section(
-            'section_fields_style',
+            '_section_fields_style',
             [
-                'label' => esc_html__( 'Form Fields', 'benzo-toolkit' ),
-                'tab'   => Controls_Manager::TAB_STYLE,
+                'label' => __('Form Fields', 'benzo-toolkit'),
+                'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
         $this->add_responsive_control(
             'field_width',
             [
-                'label'          => esc_html__( 'Width', 'benzo-toolkit' ),
-                'type'           => Controls_Manager::SLIDER,
-                'default'        => [
+                'label' => __('Width', 'benzo-toolkit'),
+                'type' => Controls_Manager::SLIDER,
+                'default' => [
                     'unit' => '%',
                 ],
                 'tablet_default' => [
@@ -135,9 +161,9 @@ class Benzo_CF7 extends Widget_Base {
                 'mobile_default' => [
                     'unit' => '%',
                 ],
-                'size_units'     => ['%', 'px'],
-                'range'          => [
-                    '%'  => [
+                'size_units' => ['%', 'px'],
+                'range' => [
+                    '%' => [
                         'min' => 1,
                         'max' => 100,
                     ],
@@ -146,8 +172,8 @@ class Benzo_CF7 extends Widget_Base {
                         'max' => 500,
                     ],
                 ],
-                'selectors'      => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)' => 'width: {{SIZE}}{{UNIT}};',
+                'selectors' => [
+                    '{{WRAPPER}} .contact-form-one input, select' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -155,65 +181,17 @@ class Benzo_CF7 extends Widget_Base {
         $this->add_responsive_control(
             'field_height',
             [
-                'label'      => esc_html__( 'Height', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
+                'label' => __('Height', 'benzo-toolkit'),
+                'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
-                'range'      => [
-                    'px' => [
-                        'min' => 1,
-                        'max' => 200,
-                    ],
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)' => 'height: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'field_textarea_height',
-            [
-                'label'      => esc_html__( 'Textarea Height', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'range'      => [
-                    'px' => [
-                        'min' => 1,
-                        'max' => 800,
-                    ],
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control.wpcf7-textarea' => 'height: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'field_margin',
-            [
-                'label'      => esc_html__( 'Field Spacing Bottom', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px'],
-                'range'      => [
+                'range' => [
                     'px' => [
                         'min' => 0,
                         'max' => 100,
                     ],
                 ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'field_padding',
-            [
-                'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                'selectors' => [
+                    '{{WRAPPER}} .contact-form-one input, select' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -221,358 +199,168 @@ class Benzo_CF7 extends Widget_Base {
         $this->add_control(
             'hr',
             [
-                'type'  => Controls_Manager::DIVIDER,
+                'type' => Controls_Manager::DIVIDER,
                 'style' => 'thick',
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            [
-                'name'     => 'field_border',
-                'selector' => '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)',
             ]
         );
 
         $this->add_responsive_control(
             'field_border_radius',
             [
-                'label'      => esc_html__( 'Border Radius', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
+                'label' => __('Border Radius', 'benzo-toolkit'),
+                'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'hr2',
-            [
-                'type'  => Controls_Manager::DIVIDER,
-                'style' => 'thick',
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'name'     => 'field_typography',
-                'label'    => esc_html__( 'Typography', 'benzo-toolkit' ),
-                'selector' => '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)',
-            ]
-        );
-
-        $this->add_control(
-            'field_placeholder_color',
-            [
-                'label'     => esc_html__( 'Field Placeholder Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 ::-webkit-input-placeholder' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .benzo-cf7 ::-moz-placeholder'          => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .benzo-cf7 ::-ms-input-placeholder'     => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .contact-form-one input, select' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
-        $this->start_controls_tabs( 'tabs_field_state' );
-
-        $this->start_controls_tab(
-            'tab_field_normal',
-            [
-                'label' => esc_html__( 'Normal State', 'benzo-toolkit' ),
-            ]
-        );
-
         $this->add_control(
-            'field_text_color',
+            'field_color',
             [
-                'label'     => esc_html__( 'Field Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
+                'label' => __('Text Color', 'benzo-toolkit'),
+                'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .contact-form-one input, select, textarea' => 'color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_control(
-            'field_bg_color',
+            'field_color_textarea',
             [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
+                'label' => __('Textarea Color', 'benzo-toolkit'),
+                'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit)' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}} .contact-form-one textarea' => 'color: {{VALUE}}',
                 ],
             ]
         );
 
-        $this->end_controls_tab();
-
-        $this->start_controls_tab(
-            'tab_field_focus',
-            [
-                'label' => esc_html__( 'Focus', 'benzo-toolkit' ),
-            ]
-        );
-
         $this->add_control(
-            'field_focus_text_color',
+            'field_bg_color_input',
             [
-                'label'     => esc_html__( 'Field Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
+                'label' => __('Field BG Color', 'bdevs-element'),
+                'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit):focus' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .contact-form-one input, select' => 'background-color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_control(
-            'field_focus_border_color',
+            'field_bg_color_textarea',
             [
-                'label'     => esc_html__( 'Border Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
+                'label' => __('Textarea BG Color', 'bdevs-element'),
+                'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit):focus' => 'border-color: {{VALUE}}',
+                    '{{WRAPPER}} .contact-form-one textarea' => 'background-color: {{VALUE}}',
                 ],
-            ]
-        );
-
-        $this->add_control(
-            'field_focus_bg_color',
-            [
-                'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-form-control:not(.wpcf7-submit):focus' => 'background-color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            'wpf-form-label',
-            [
-                'label' => esc_html__( 'Form Fields Label', 'benzo-toolkit' ),
-                'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-        $this->add_responsive_control(
-            'label_margin',
-            [
-                'label'      => esc_html__( 'Margin', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 label' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'label_padding',
-            [
-                'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 label' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'hr3',
-            [
-                'type'  => Controls_Manager::DIVIDER,
-                'style' => 'thick',
-            ]
-        );
-
-        $this->add_control(
-            'label_color',
-            [
-                'label'     => esc_html__( 'Label Text Color', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 label' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'name'     => 'label_typography',
-                'label'    => esc_html__( 'Label Typography', 'benzo-toolkit' ),
-                'selector' => '{{WRAPPER}} .benzo-cf7 label',
             ]
         );
 
         $this->end_controls_section();
 
+        // Button 
         $this->start_controls_section(
-            'submit',
+            'section_button_style',
             [
-                'label' => esc_html__( 'Submit Button', 'benzo-toolkit' ),
+                'label' => esc_html__( 'Button', 'benzo-toolkit' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
 
         $this->add_responsive_control(
-            'button_width',
-            [
-                'label'      => esc_html__( 'Button Width', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],
-                'default'    => [
-                    'unit' => '%',
-                    'size' => 100,
-                ],
-                'range'      => [
-                    '%'  => [
-                        'min' => 1,
-                        'max' => 100,
-                    ],
-                    'px' => [
-                        'min' => 1,
-                        'max' => 800,
-                    ],
-                ],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]' => 'width: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'submit_btn_position',
-            [
-                'label'     => esc_html__( 'Button Position', 'benzo-toolkit' ),
-                'type'      => Controls_Manager::CHOOSE,
-                'options'   => [
-                    'left'   => [
-                        'title' => esc_html__( 'Left', 'benzo-toolkit' ),
-                        'icon'  => 'eicon-h-align-left',
-                    ],
-                    'center' => [
-                        'title' => esc_html__( 'Center', 'benzo-toolkit' ),
-                        'icon'  => 'eicon-h-align-center',
-                    ],
-                    'right'  => [
-                        'title' => esc_html__( 'Right', 'benzo-toolkit' ),
-                        'icon'  => 'eicon-h-align-right',
-                    ],
-                ],
-                'toggle'    => false,
-                'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .input-submit' => 'text-align: {{Value}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'submit_margin',
-            [
-                'label'      => esc_html__( 'Margin', 'benzo-toolkit' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'submit_padding',
+            'button_padding',
             [
                 'label'      => esc_html__( 'Padding', 'benzo-toolkit' ),
                 'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
+                'size_units' => ['px', '%', 'em'],
                 'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .webtend-el-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
-            ]
-        );
-
-        $this->add_control(
-            'hr4',
-            [
-                'type'  => Controls_Manager::DIVIDER,
-                'style' => 'thick',
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'name'     => 'submit_typography',
-                'selector' => '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]',
             ]
         );
 
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
-                'name'     => 'submit_border',
-                'selector' => '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]',
+                'name'     => 'button_border',
+                'selector' => '{{WRAPPER}} .webtend-el-btn',
             ]
         );
 
         $this->add_responsive_control(
-            'submit_border_radius',
+            'button_radius',
             [
                 'label'      => esc_html__( 'Border Radius', 'benzo-toolkit' ),
                 'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors'  => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .webtend-el-btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
-        $this->add_control(
-            'hr5',
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
             [
-                'type'  => Controls_Manager::DIVIDER,
-                'style' => 'thick',
+                'name'     => 'button_typography',
+                'label'    => esc_html__( 'Typography', 'benzo-toolkit' ),
+                'selector' => '{{WRAPPER}} .webtend-el-btn',
             ]
         );
 
-        $this->start_controls_tabs( 'tabs_button_style' );
+        $this->start_controls_tabs( 'button_tabs' );
 
         $this->start_controls_tab(
-            'tab_button_normal',
+            'field_button_normal',
             [
                 'label' => esc_html__( 'Normal', 'benzo-toolkit' ),
             ]
         );
 
         $this->add_control(
-            'submit_color',
+            'button_text_color',
             [
                 'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
-                'default'   => '',
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .webtend-el-btn' => 'color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_control(
-            'submit_bg_color',
+            'button_bg_color',
             [
                 'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit, {{WRAPPER}} .benzo-cf7 button[type=submit]' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .webtend-el-btn' => 'background-color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'button_bg_after_color',
+            [
+                'label'     => esc_html__( 'Background After Color', 'benzo-toolkit' ),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .benzo-el-btn::after' => 'background-color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'button_bg_before_color',
+            [
+                'label'     => esc_html__( 'Background Before Color', 'benzo-toolkit' ),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .benzo-el-btn::before' => 'background-color: {{VALUE}}',
                 ],
             ]
         );
@@ -580,41 +368,41 @@ class Benzo_CF7 extends Widget_Base {
         $this->end_controls_tab();
 
         $this->start_controls_tab(
-            'tab_button_hover',
+            'field_button_hover',
             [
                 'label' => esc_html__( 'Hover', 'benzo-toolkit' ),
             ]
         );
 
         $this->add_control(
-            'submit_hover_color',
+            'button_text_focus',
             [
                 'label'     => esc_html__( 'Text Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit:hover, {{WRAPPER}} .benzo-cf7 button[type=submit]:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .webtend-el-btn:hover' => 'color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_control(
-            'submit_hover_bg_color',
+            'button_bg_color_focus',
             [
                 'label'     => esc_html__( 'Background Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit:hover, {{WRAPPER}} .benzo-cf7 button[type=submit]:hover' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .webtend-el-btn:hover' => 'background-color: {{VALUE}}',
                 ],
             ]
         );
 
         $this->add_control(
-            'submit_hover_border_color',
+            'button_border_focus',
             [
                 'label'     => esc_html__( 'Border Color', 'benzo-toolkit' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .benzo-cf7 .wpcf7-submit:hover, {{WRAPPER}} .benzo-cf7 button[type=submit]:hover' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .webtend-el-btn:hover' => 'border-color: {{VALUE}}',
                 ],
             ]
         );
@@ -624,6 +412,7 @@ class Benzo_CF7 extends Widget_Base {
         $this->end_controls_tabs();
 
         $this->end_controls_section();
+        
     }
 
     /**
@@ -636,12 +425,25 @@ class Benzo_CF7 extends Widget_Base {
      * @access protected
      */
     protected function render() {
-        $settings = $this->get_settings();
+        $settings = $this->get_settings_for_display();
+        extract($settings);
 
-        if ( function_exists( 'wpcf7' ) && ! empty( $settings['form_id'] ) ): ?>
-            <div class="benzo-cf7">
+        if (empty($settings['slides'])) {
+            return;
+        }
+
+        $this->add_inline_editing_attributes('title', 'basic');
+        $this->add_render_attribute('title', 'class', 'webtend-el-title');
+        $title = wp_kses_post($settings['title']);
+
+        ?>
+
+        <div class="contact-form-one">
+        <?php  if ( function_exists( 'wpcf7' ) && ! empty( $settings['form_id'] ) ): ?>
                 <?php echo do_shortcode( '[contact-form-7 id="' . $settings['form_id'] . '"]' ); ?>
-            </div>
-        <?php endif;
-    }
+        <?php endif; ?>
+        </div>
+
+        <?php
+}
 }
