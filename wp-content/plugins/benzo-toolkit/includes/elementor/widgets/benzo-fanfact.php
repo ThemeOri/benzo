@@ -108,6 +108,7 @@ class Benzo_Fanfact extends Widget_Base {
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
                     'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
+                    'design-3' => esc_html__( 'Design Three', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -118,86 +119,27 @@ class Benzo_Fanfact extends Widget_Base {
         $this->start_controls_section(
             '_section_media',
             [
-                'label' => esc_html__('Icon / Image', 'benzo-toolkit'),
+                'label' => esc_html__('Icon', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-            ]
-        );
-
-        $this->add_control(
-            'media_type',
-            [
-                'label'          => esc_html__('Media Type', 'benzo-toolkit'),
-                'type'           => \Elementor\Controls_Manager::CHOOSE,
-                'label_block'    => false,
-                'options'        => [
-                    'icon'  => [
-                        'title' => esc_html__('Icon', 'benzo-toolkit'),
-                        'icon'  => 'far fa-grin-wink',
-                    ],
-                    'image' => [
-                        'title' => esc_html__('Image', 'benzo-toolkit'),
-                        'icon'  => 'eicon-image',
-                    ],
-                ],
-                'default'        => 'icon',
-                'toggle'         => false,
-                'style_transfer' => true,
-            ]
-        );
-
-        $this->add_control(
-            'image',
-            [
-                'label'     => esc_html__('Image', 'benzo-toolkit'),
-                'type'      => \Elementor\Controls_Manager::MEDIA,
-                'default'   => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
                 'condition' => [
-                    'media_type' => 'image'
+                    'widget_design' => ['design-1'],
                 ],
-                'dynamic'   => [
-                    'active' => true,
-                ]
-            ]
-        );
-
-        $this->add_group_control(
-            \Elementor\Group_Control_Image_Size::get_type(),
-            [
-                'name'      => 'thumbnail',
-                'default'   => 'medium_large',
-                'separator' => 'none',
-                'exclude'   => [
-                    'full',
-                    'custom',
-                    'large',
-                    'shop_catalog',
-                    'shop_single',
-                    'shop_thumbnail'
-                ],
-                'condition' => [
-                    'media_type' => 'image'
-                ]
             ]
         );
 
         $this->add_control(
-            'icons',
-            [
-                'label'      => esc_html__('Icons', 'benzo-toolkit'),
-                'type'       => \Elementor\Controls_Manager::ICONS,
-                'show_label' => true,
-                'default'    => [
-                    'value'   => 'far fa-grin-wink',
-                    'library' => 'solid',
-                ],
-                'condition'  => [
-                    'media_type' => 'icon',
-                ],
+			'icon',
+			[
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'label_block' => true,
+				'default' => [
+					'value' => 'fas fa-smile-wink',
+					'library' => 'fa-solid',
+				],
+			]
+		);
 
-            ]
-        );
 
         $this->end_controls_section();
 
@@ -206,6 +148,9 @@ class Benzo_Fanfact extends Widget_Base {
             [
                 'label' => esc_html__('Fan Fact Content', 'benzo-toolkit'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'condition' => [
+                    'widget_design' => ['design-1','design-3'],
+                ],
             ]
         );
 
@@ -253,6 +198,99 @@ class Benzo_Fanfact extends Widget_Base {
                 ]
             ]
         );
+
+        $this->end_controls_section();
+
+
+        $this->start_controls_section(
+            '_section_fanfact_list',
+            [
+                'label' => esc_html__('Fan Fact List', 'benzo-toolkit'),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $repeater = new \Elementor\Repeater();
+
+		$repeater->add_control(
+			'selected_icon',
+			[
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'label_block' => true,
+				'default' => [
+					'value' => 'fas fa-smile-wink',
+					'library' => 'fa-solid',
+				],
+			]
+		);
+
+        $repeater->add_control(
+            'fanfact_title',
+            [
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'label_block' => true,
+                'default' => esc_html__('300', 'benzo-toolkit'),
+                'placeholder' => esc_html__('300', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $repeater->add_control(
+            'fanfact_symbols',
+            [
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'label_block' => true,
+                'default' => esc_html__('+', 'benzo-toolkit'),
+                'placeholder' => esc_html__('+', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $repeater->add_control(
+            'fanfact_subtitle',
+            [
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'label_block' => true,
+                'default' => esc_html__('Sub Title', 'benzo-toolkit'),
+                'placeholder' => esc_html__('Type sub title here', 'benzo-toolkit'),
+                'dynamic' => [
+                    'active' => true,
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'slides',
+            [
+                'show_label' => false,
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'title_field' => '<# print(fanfact_title || "Carousel Item"); #>',
+                'default' => [
+                    [
+                        'image' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                    [
+                        'image' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                    [
+                        'image' => [
+                            'url' => \Elementor\Utils::get_placeholder_image_src(),
+                        ],
+                    ],
+                ]
+            ]
+        );
+
 
         $this->end_controls_section();
 
@@ -364,6 +402,10 @@ class Benzo_Fanfact extends Widget_Base {
         $settings = $this->get_settings_for_display();
         extract($settings);
 
+        if (empty($settings['slides'])) {
+            return;
+        }
+
         $title = wp_kses_post($settings['title'] ?? '');
 
         ?>
@@ -372,7 +414,7 @@ class Benzo_Fanfact extends Widget_Base {
         <div class="fanfact__area-wrapper">
           <div class="fanfact__area-item">
              <div class="fanfact-icon-one">
-                <span> <?php \Elementor\Icons_Manager::render_icon($settings['icons'], ['aria-hidden' => 'true']); ?></span>
+                <span>  <i class="fanfact-icon-up <?php echo $settings['icon']['value'];?>"></i></span>
              </div>
              <div class="fanfact-content-one">
              <?php if ($settings['title']) : ?>
@@ -394,50 +436,40 @@ class Benzo_Fanfact extends Widget_Base {
             <div class="fanfact__area-two">
                 <div class="container">
                     <div class="row fanfact-bg-two">
+                    <?php foreach ($settings['slides'] as $slide) : ?>
                         <div class="col-lg-3">
                             <div class="fanfact-item-two">
                                 <div class="fanfact-icon-two">
-                                    <i class="fanfact-icon-up fal fa-thumbs-up"></i>
+                                    <i class="fanfact-icon-up <?php echo $slide['selected_icon']['value'];?>"></i>
                                 </div>
                                 <div class="fanfact-content-two">
-                                    <h3><span>308</span>+</h3>
+                                <?php if (!empty($slide['fanfact_title'])) : ?>
+                                <h3 class="webtend-el-title"><span class="counter webtend-el-title"><?php echo wp_kses_post($slide['fanfact_title']); ?></span><?php echo wp_kses_post($slide['fanfact_symbols']); ?></h3>
+                                <?php endif; ?>
+                                <?php if (!empty($slide['fanfact_subtitle'])) : ?>
+                                    <h5 class="webtend-el-subtitle"> <?php echo wp_kses_post($slide['fanfact_subtitle']); ?> </h5>
+                                <?php endif; ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="fanfact-item-two">
-                                <div class="fanfact-icon-two">
-                                   <i class="fanfact-icon-up fal fa-thumbs-up"></i>
-                                </div>
-                                <div class="fanfact-content-two">
-                                    <h3><span>308</span>+</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="fanfact-item-two">
-                                <div class="fanfact-icon-two">
-                                   <i class="fanfact-icon-up fal fa-thumbs-up"></i>
-                                </div>
-                                <div class="fanfact-content-two">
-                                    <h3><span>308</span>+</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="fanfact-item-two">
-                                <div class="fanfact-icon-two">
-                                   <i class="fanfact-icon-up fal fa-thumbs-up"></i>
-                                </div>
-                                <div class="fanfact-content-two">
-                                    <h3><span>308</span>+</h3>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         <?php endif; ?>
+
+        <?php if ( 'design-3' === $settings['widget_design'] ) : ?>
+            <div class="fanfact-percent-area">
+                <div class="fanfact-percent-content">
+                <?php if ($settings['title']) : ?>
+                    <h5 class="webtend-el-title"><span class="counter webtend-el-title"><?php echo wp_kses_post($settings['title']); ?></span><?php echo wp_kses_post($settings['symbols']); ?></h5>
+                <?php endif; ?>
+                <?php if ($settings['sub_title']) : ?>
+                    <p class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></p>
+                <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>    
 
         <?php
 }

@@ -107,6 +107,7 @@ class Benzo_Project extends Widget_Base {
                 'type'    => Controls_Manager::SELECT,
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -586,84 +587,90 @@ class Benzo_Project extends Widget_Base {
 
         ?>
 
-        <div class="project__wrapper-bg">
-            <div class="project-shape">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/project-pattern.png" alt="img">
+       <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
+            <div class="project__wrapper-bg">
+                <div class="project-shape">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/project-pattern.png" alt="img">
+                </div>
+                <div class="container">
+                <div class="row align-items-center">
+                <div class="col-lg-10">
+                    <div class="benzo-header-area-one two">
+                    <div class="heading-subtitle-wrapper">
+                        <div class="subtitle-one-icon">
+                            <span><i class="fal fa-star"></i></span>
+                        </div>
+                        <div class="subtitle-content-wrapper">
+                            <?php if ($settings['sub_title_up']) : ?>
+                            <h6 class="webtend-el-subtitle-up"><?php echo wp_kses_post($settings['sub_title_up']); ?></h6>
+                            <?php endif; ?>
+                            <?php if ($settings['sub_title']) : ?>
+                            <h5 class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></h5>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="heading-title-one">
+                        <?php printf(
+                            '<%1$s %2$s>%3$s</%1$s>',
+                            tag_escape($settings['title_tag']),
+                            $this->get_render_attribute_string('title'),
+                            $title
+                        ); ?>
+                    </div>
+                </div>
+                    </div>
+                    <div class="col-lg-2">
+                    <div class="services-two-nav">
+                        <div class="services-button-prev"><i class="fal fa-long-arrow-left"></i></i></div>
+                        <div class="services-button-next"><i class="fal fa-long-arrow-right"></i></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
+            <div class="project__wrapper-slider">
             <div class="container">
-            <div class="row align-items-center">
-            <div class="col-lg-10">
-                <div class="benzo-header-area-one two">
-                <div class="heading-subtitle-wrapper">
-                    <div class="subtitle-one-icon">
-                        <span><i class="fal fa-star"></i></span>
-                    </div>
-                    <div class="subtitle-content-wrapper">
-                        <?php if ($settings['sub_title_up']) : ?>
-                        <h6 class="webtend-el-subtitle-up"><?php echo wp_kses_post($settings['sub_title_up']); ?></h6>
-                        <?php endif; ?>
-                        <?php if ($settings['sub_title']) : ?>
-                        <h5 class="webtend-el-subtitle"><?php echo wp_kses_post($settings['sub_title']); ?></h5>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="heading-title-one">
-                    <?php printf(
-                        '<%1$s %2$s>%3$s</%1$s>',
-                        tag_escape($settings['title_tag']),
-                        $this->get_render_attribute_string('title'),
-                        $title
-                    ); ?>
-                </div>
-            </div>
-                </div>
-                <div class="col-lg-2">
-                <div class="services-two-nav">
-                    <div class="services-button-prev"><i class="fal fa-long-arrow-left"></i></i></div>
-                    <div class="services-button-next"><i class="fal fa-long-arrow-right"></i></div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="project__wrapper-slider">
-           <div class="container">
-              <div class="row">
-                <div class="col-lg-9">
-                      <div class="project-slider-one">
-                        <div class="swiper-container services-two-active">
-                            <div class="swiper-wrapper">
-                            <?php foreach ($settings['slides'] as $slide) : 
-                                if (!empty($slide['image']['id'])) {
-                                    $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
-                                }
-                            ?>
-                                <div class="swiper-slide">
-                                    <div class="project-slider-item">
-                                        <div class="project-slider-thumb">
-                                            <img src="<?php print esc_url($slide['image']['url']); ?>" alt="img">
-                                            <div class="project-slider-content">
-                                            <?php if ($slide['subtitle']) : ?>
-                                                <span class="webtend-el-subtitle-s"><?php echo wp_kses_post($slide['subtitle']); ?></span>
-                                            <?php endif; ?>
-                                            <?php if ($slide['slider_title']) : ?>
-                                                <h4><a class="webtend-el-title-s" href="<?php echo esc_url($slide['slider_url']); ?>"><?php echo wp_kses_post($slide['slider_title']); ?></a></h4>
-                                            <?php endif; ?>
-                                            <?php if ($slide['slider_url']) : ?>
-                                                <a class="project-slider-arrow" href="<?php echo esc_url($slide['slider_url']); ?>"><i class="fal fa-long-arrow-right"></i></a>
-                                            <?php endif; ?>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="project-slider-one">
+                            <div class="swiper-container services-two-active">
+                                <div class="swiper-wrapper">
+                                <?php foreach ($settings['slides'] as $slide) : 
+                                    if (!empty($slide['image']['id'])) {
+                                        $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
+                                    }
+                                ?>
+                                    <div class="swiper-slide">
+                                        <div class="project-slider-item">
+                                            <div class="project-slider-thumb">
+                                                <img src="<?php print esc_url($slide['image']['url']); ?>" alt="img">
+                                                <div class="project-slider-content">
+                                                <?php if ($slide['subtitle']) : ?>
+                                                    <span class="webtend-el-subtitle-s"><?php echo wp_kses_post($slide['subtitle']); ?></span>
+                                                <?php endif; ?>
+                                                <?php if ($slide['slider_title']) : ?>
+                                                    <h4><a class="webtend-el-title-s" href="<?php echo esc_url($slide['slider_url']); ?>"><?php echo wp_kses_post($slide['slider_title']); ?></a></h4>
+                                                <?php endif; ?>
+                                                <?php if ($slide['slider_url']) : ?>
+                                                    <a class="project-slider-arrow" href="<?php echo esc_url($slide['slider_url']); ?>"><i class="fal fa-long-arrow-right"></i></a>
+                                                <?php endif; ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php endforeach; ?>
                                 </div>
-                                <?php endforeach; ?>
                             </div>
-                         </div>
-                      </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-           </div>
-        </div>
+            </div>
+            </div>
+        <?php endif; ?>    
+        
+        <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+            <h2>Hello World</h2>
+        <?php endif; ?> 
 
         <?php
 }

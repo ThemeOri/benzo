@@ -107,6 +107,7 @@ class Benzo_Testimonial extends Widget_Base {
                 'type'    => Controls_Manager::SELECT,
                 'options' => [
                     'design-1' => esc_html__( 'Design One', 'benzo-toolkit' ),
+                    'design-2' => esc_html__( 'Design Two', 'benzo-toolkit' ),
                 ],
                 'default' => 'design-1',
             ]
@@ -377,6 +378,7 @@ class Benzo_Testimonial extends Widget_Base {
 
         ?>
 
+        <?php if ( 'design-1' === $settings['widget_design'] ) : ?>
         <div class="testimonial__wrapper-one">
             <div class="swiper-container testimonial-active">
                 <div class="swiper-wrapper">
@@ -420,6 +422,35 @@ class Benzo_Testimonial extends Widget_Base {
                 </div>
             </div>
         </div>
+        <?php endif; ?>
+
+        <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
+            
+            <div class="testimonial__wrapper-two myslider">
+            <?php foreach ($settings['slides'] as $slide) : 
+                     if (!empty($slide['image']['id'])) {
+                        $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
+                    }
+            ?>
+                <div class="testimonial-item-two">
+                    <div class="testimonial-thumb-two">
+                        <img src="<?php print esc_url($slide['image']['url']); ?>" alt="img">
+                        <div class="testimonial-quote-two">
+                            <i class="fal fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content-two webtend-el-content">
+                        <?php if (!empty($slide['messages'])) : ?>
+                            <p><?php echo wp_kses_post($slide['messages']); ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($slide['client_name'])) : ?>
+                        <h4 class="webtend-el-title"><?php echo wp_kses_post($slide['client_name']); ?> <span class="webtend-el-subtitle"> <?php echo wp_kses_post($slide['designation']); ?> </span></h4> 
+                        <?php endif; ?>   
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+    <?php endif; ?>  
 
         <?php
 }
