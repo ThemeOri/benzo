@@ -120,6 +120,9 @@ class Benzo_Project extends Widget_Base {
             [
                 'label' => esc_html__( 'Title & Description', 'benzo-toolkit' ),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'condition' => [
+                    'widget_design' => ['design-1'],
+                ],
             ]
         );
 
@@ -286,7 +289,7 @@ class Benzo_Project extends Widget_Base {
             [
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'label_block' => true,
-                'default' => esc_html__('URL', 'benzo-toolkit'),
+                'default' => esc_html__('#', 'benzo-toolkit'),
                 'placeholder' => esc_html__('#', 'benzo-toolkit'),
                 'dynamic' => [
                     'active' => true,
@@ -340,6 +343,9 @@ class Benzo_Project extends Widget_Base {
             [
                 'label' => esc_html__('Style Heading Title & Content', 'benzo-toolkit'),
                 'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
+                'condition' => [
+                    'widget_design' => ['design-1'],
+                ],
             ]
         );
 
@@ -669,7 +675,39 @@ class Benzo_Project extends Widget_Base {
         <?php endif; ?>    
         
         <?php if ( 'design-2' === $settings['widget_design'] ) : ?>
-            <h2>Hello World</h2>
+            <div class="project__wrapper-two">
+                <div class="container-fluid project-side-p">
+                <div class="swiper-container project-active">
+                  <div class="swiper-wrapper">
+                  <?php foreach ($settings['slides'] as $slide) : 
+                        if (!empty($slide['image']['id'])) {
+                            $image = wp_get_attachment_image_url($slide['image']['id'], $settings['thumbnail_size']);
+                        }
+                   ?>
+                    <div class="swiper-slide">
+                        <div class="project__wrapper-item-two">
+                            <div class="project-item-thumb-two">
+                                <img src="<?php print esc_url($slide['image']['url']); ?>" alt="img">
+                            <div class="project__wrapper-content-two">
+                                <?php if ($slide['slider_title']) : ?>
+                                <div class="project-item-title-two">
+                                    <h3><a class="webtend-el-title-s" href="<?php echo esc_url($slide['slider_url']); ?>"><?php echo wp_kses_post($slide['slider_title']); ?></a></h3>
+                                </div>
+                                <?php endif; ?>
+                                <?php if ($slide['subtitle']) : ?>
+                                <div class="project-item-subtitle-two">
+                                    <span class="webtend-el-subtitle-s"><?php echo wp_kses_post($slide['subtitle']); ?></span>
+                                </div>
+                                <?php endif; ?>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                  </div>
+                </div>
+                </div>
+            </div>
         <?php endif; ?> 
 
         <?php
