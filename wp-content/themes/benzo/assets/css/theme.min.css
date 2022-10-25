@@ -7462,7 +7462,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 
 .fanfact-item-two {
   text-align: center;
-  padding: 50px 0px 50px 0px;
+  padding: 60px 0px 50px 0px;
 }
 
 .fanfact-content-two h3 {
@@ -7493,6 +7493,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 
 .fanfact-icon-two {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .fanfact-icon-two::before {
@@ -7505,6 +7506,68 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   width: 90px;
   height: 90px;
   border-radius: 50px;
+}
+
+.fanfact-content-two h3 {
+  color: var(--color-white);
+  font-size: 40px;
+}
+.fanfact-content-two h3 span {
+  font-size: 40px;
+  color: var(--color-white);
+  font-weight: 700;
+}
+.fanfact-content-two h5 {
+  color: var(--color-white);
+  opacity: 0.9;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.fanfact-item-two::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 190px;
+  background: var(--color-white);
+  opacity: 0.5;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fanfact-bg-two > div:last-child .fanfact-item-two::after {
+  display: none;
+}
+
+/** ===== Fan Fact Three CSS ===== **/
+.fanfact-percent-content {
+  background: var(--color-white);
+  box-shadow: 0px 6px 20px rgba(0, 50, 120, 0.06);
+  text-align: center;
+  position: absolute;
+  border-bottom: 3px solid var(--color-primary);
+  padding: 30px 30px 30px 30px;
+  left: 125px;
+  top: 18px;
+}
+.fanfact-percent-content h5 {
+  color: var(--color-primary);
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.fanfact-percent-content h5 span {
+  color: var(--color-primary);
+  font-size: 30px;
+  font-weight: 900;
+  font-family: var(--font-secondary);
+}
+.fanfact-percent-content p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 27px;
 }
 
 /** ===== Project CSS ===== **/
@@ -7632,7 +7695,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   opacity: 1;
 }
 
-/** ===== Testimoniyal CSS ===== **/
+/** ===== Testimoniyal One CSS ===== **/
 .testimoniyal-item {
   background: var(--color-white);
   padding: 50px 45px 50px 40px;
@@ -7714,6 +7777,78 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   border-radius: 5px;
   width: 50px;
   height: 10px;
+}
+
+/** ===== Testimoniyal Two CSS ===== **/
+.testimonial-thumb-two {
+  float: left;
+  margin-right: 30px;
+}
+.testimonial-thumb-two img {
+  margin-bottom: 30px;
+}
+
+.testimonial-content-two {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 13px;
+  margin-bottom: 28px;
+}
+.testimonial-content-two h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.testimonial-content-two h4 span {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+.testimonial-content-two p {
+  font-size: 20px;
+}
+.testimonial-content-two:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 515px;
+  height: 1px;
+  background: #DEDEDE;
+}
+
+.testimonial-quote-two {
+  text-align: center;
+}
+.testimonial-quote-two i {
+  color: var(--color-primary);
+  font-size: 40px;
+}
+
+.testimonial__wrapper-two ul.slick-dots li {
+  position: relative;
+  list-style: none;
+  transition: all 0.3s ease-out 0s;
+}
+.testimonial__wrapper-two ul.slick-dots li:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 111px;
+  width: 10px;
+  height: 10px;
+  background-color: #D9D9D9;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.testimonial__wrapper-two ul.slick-dots li button {
+  display: none;
+}
+
+.testimonial__wrapper-two ul.slick-dots li.slick-active::before {
+  width: 50px;
+  height: 10px;
+  background-color: var(--color-primary);
+  left: 125px;
+  border-radius: 5px;
 }
 
 /** ===== Brand CSS ===== **/

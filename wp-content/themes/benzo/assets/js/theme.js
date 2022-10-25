@@ -81,7 +81,7 @@
 	});
 
 
-	/*==========  Testimonial Slider ==========*/
+	/*==========  Testimonial One Slider ==========*/
 	const testimonial = new Swiper(".testimonial-active", {
 		// Default parameters
 		slidesPerView: 3,
@@ -118,6 +118,18 @@
 			},
 		},
 	});
+
+
+/*==========  Testimonial Two Slider ==========*/
+	$('.myslider').slick({
+		vertical: true,
+		verticalSwiping: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		arrows: false,
+		dots: true,
+			
+		});
 
 	/*==========  Brand Slider  ==========*/
 	var swiper = new Swiper(".band-active", {

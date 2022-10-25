@@ -1,4 +1,4 @@
-/** ===== Testimoniyal CSS ===== **/
+/** ===== Testimoniyal One CSS ===== **/
 .testimoniyal-item {
 	background: $color-white;
     padding: 50px 45px 50px 40px;
@@ -77,3 +77,82 @@
     width: 50px;
     height: 10px;
 }
+
+/** ===== Testimoniyal Two CSS ===== **/
+
+.testimonial-thumb-two {
+    float: left;
+    margin-right: 30px;
+    img {
+        margin-bottom: 30px;
+    }
+}
+  .testimonial-content-two {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 13px;
+    margin-bottom: 28px;   
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        span {
+            font-size: 15px;
+            font-weight: 500;
+            color: $color-primary;
+        }
+    }
+   p {
+    font-size: 20px;
+   }
+   &:before{
+    position: absolute;
+	content: '';
+	bottom: 0;
+	width: 515px;
+	height: 1px;
+	background: #DEDEDE;
+   }
+}
+
+.testimonial-quote-two {
+    text-align: center;
+    i {
+        color: $color-primary;
+        font-size: 40px;
+    }
+}
+.testimonial__wrapper-two {
+    ul.slick-dots {
+        li {
+            position: relative;
+            list-style: none;
+            transition: all 0.3s ease-out 0s;
+            &:before{
+                position: absolute;
+                content: "";
+                top: 100%;
+                left: 111px;
+                width: 10px;
+                height: 10px;
+                background-color: #D9D9D9;
+                border-radius: 3px;
+                cursor: pointer
+            }
+            button {
+                display: none;
+            }
+        }
+    }
+}
+.testimonial__wrapper-two ul.slick-dots li.slick-active::before{
+    width: 50px;
+    height: 10px;
+    background-color: $color-primary;
+    left: 125px;
+    border-radius: 5px;
+}
+
+
+
+
+
