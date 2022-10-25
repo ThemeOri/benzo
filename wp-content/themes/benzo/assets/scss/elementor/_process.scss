@@ -1,0 +1,22 @@
+/** ===== Process CSS ===== **/
+
+.work_process-item {
+    text-align: center;
+  }
+  .work-process-icon {
+    line-height: 103px;
+    border: 1px solid $color-primary;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    width: 105.1px;
+    height: 102.2px;
+    span {
+        font-size: 40px;
+        color: $color-primary;
+    }
+}
+

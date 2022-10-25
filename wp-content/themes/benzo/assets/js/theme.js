@@ -155,6 +155,43 @@
 		}
 	});
 
+	/*==========  Project One Slider ==========*/
+	const project = new Swiper(".project-active", {
+		// Default parameters
+		slidesPerView: 4,
+		spaceBetween: 30,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		navigation: {
+			nextEl: ".services-button-next",
+			prevEl: ".services-button-prev",
+		},
+		// Responsive breakpoints
+		breakpoints: {	
+			'1400': {
+				slidesPerView: 4,
+			},
+			'1200': {
+				slidesPerView: 4,
+			},
+			'992': {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			'768': {
+				slidesPerView: 3,
+			},
+			'576': {
+				slidesPerView: 3,
+			},
+			'0': {
+				slidesPerView: 3,
+			},
+		},
+	});
+
 	/*==========  Skills Bar  ==========*/
 	jQuery('.progress-bar').each(function() {
 		jQuery(this).find('.progress-content').animate({
