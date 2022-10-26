@@ -453,8 +453,64 @@ class Benzo_Process extends Widget_Base {
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="work_process-item">
+                            <div class="process-shape-one">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/process-1.png" alt="img">
+                            </div>
                             <div class="work-process-icon">
-                              <span><i class="fal fa-calendar-check"></i></span>
+                              <div class="work-process-top">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-1.png" alt="img">
+                              </div>
+                              <div class="work-process-top-down">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon1.1.png" alt="img">
+                              </div>
+                            </div>
+                            <div class="work-process-content-wrapper">
+                                <h4><a href="#">Apply Service</a></h4>
+                                <p>Belis commodo be liberod velos pedelsen better sapiens same quam in integer sodale pretium curae incidunt erat </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="work_process-item">
+                            <div class="work-process-icon">
+                              <div class="work-process-top">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/Icon5.png" alt="img">
+                              </div>
+                              <div class="work-process-top-down">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon1.1.png" alt="img">
+                              </div>
+                            </div>
+                            <div class="work-process-content-wrapper">
+                                <h4><a href="#">Apply Service</a></h4>
+                                <p>Belis commodo be liberod velos pedelsen better sapiens same quam in integer sodale pretium curae incidunt erat </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="work_process-item">
+                            <div class="work-process-icon">
+                              <div class="work-process-top">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-1.png" alt="img">
+                              </div>
+                              <div class="work-process-top-down">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon1.1.png" alt="img">
+                              </div>
+                            </div>
+                            <div class="work-process-content-wrapper">
+                                <h4><a href="#">Apply Service</a></h4>
+                                <p>Belis commodo be liberod velos pedelsen better sapiens same quam in integer sodale pretium curae incidunt erat </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="work_process-item">
+                            <div class="work-process-icon">
+                              <div class="work-process-top">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-1.png" alt="img">
+                              </div>
+                              <div class="work-process-top-down">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon1.1.png" alt="img">
+                              </div>
                             </div>
                             <div class="work-process-content-wrapper">
                                 <h4><a href="#">Apply Service</a></h4>
