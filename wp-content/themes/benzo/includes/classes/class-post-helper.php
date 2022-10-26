@@ -225,4 +225,5 @@ class Benzo_Post_Helper {
         <?php endif; ?>
         <?php
     }
+
 }

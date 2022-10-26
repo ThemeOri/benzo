@@ -167,8 +167,7 @@
     }
 }
 
-
-/** ===== Post Lists Update CSS ===== **/
+/** ===== Post Lists One Update CSS ===== **/
 .blog-item-one {
     position: relative;
 	text-align: center;
@@ -228,3 +227,102 @@
         margin-bottom: 30px;
     }
 }
+
+/** ===== Post Lists Two Update CSS ===== **/
+.blog-post-item-two {
+    &:hover{
+     .blog-post-thumb-two {
+           img {
+             transform: scale(1.22) rotateY(0deg);
+           }
+        }
+    }
+}
+.blog-post-thumb-two {
+	margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+        transition: all 500ms ease;
+    }
+
+}
+.blog-post-meta-two {
+    ul {
+        padding-left: 0;
+        margin-bottom: 8px;
+        li {
+            display: inline-block;
+            font-size: 15px;
+            text-transform: capitalize;
+            margin-right: 12px;
+            a {
+                color: $color-body;
+                transition: all 500ms ease;
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+            i {
+                margin-right: 7px;
+            }
+        }
+    }
+}
+.blog-post-content-two {
+    h3 {
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+    p {
+       margin-bottom: 30px;
+    }
+}
+.blog-btn-two.btn-round {
+    font-weight: 600;
+    font-size: 16px;
+    color: $color-body;
+	border: 2px solid $color-border;
+	border-radius: 28px;
+	height: 55px;
+	line-height: 53px;
+	padding: 0px 36px;
+    transition: all 500ms ease;
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        border: 2px solid transparent;
+    }
+}
+.entry-posts-date-two {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	background: $color-white;
+	text-align: center;
+	border-radius: 3px;
+    padding: 8px 6px;
+}
+.entry-posts-date-name-two {
+    h5 {
+        margin-bottom: 14px;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
+.entry-posts-date-number-two {
+    h5 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 0;
+        background: $color-primary;
+        color: $color-white;
+        padding: 7px 13px;
+        border-radius: 3px
+    }
+}
+

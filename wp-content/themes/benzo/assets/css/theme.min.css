@@ -5861,7 +5861,7 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
   border-bottom: 1px solid #f0f0f0;
 }
 
-/** ===== Post Lists Update CSS ===== **/
+/** ===== Post Lists One Update CSS ===== **/
 .blog-item-one {
   position: relative;
   text-align: center;
@@ -5911,6 +5911,95 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 }
 .blog-content-one p {
   margin-bottom: 30px;
+}
+
+/** ===== Post Lists Two Update CSS ===== **/
+.blog-post-item-two:hover .blog-post-thumb-two img {
+  transform: scale(1.22) rotateY(0deg);
+}
+
+.blog-post-thumb-two {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.blog-post-thumb-two img {
+  transition: all 500ms ease;
+}
+
+.blog-post-meta-two ul {
+  padding-left: 0;
+  margin-bottom: 8px;
+}
+.blog-post-meta-two ul li {
+  display: inline-block;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin-right: 12px;
+}
+.blog-post-meta-two ul li a {
+  color: var(--color-body);
+  transition: all 500ms ease;
+}
+.blog-post-meta-two ul li a:hover {
+  color: var(--color-primary);
+}
+.blog-post-meta-two ul li i {
+  margin-right: 7px;
+}
+
+.blog-post-content-two h3 {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+.blog-post-content-two p {
+  margin-bottom: 30px;
+}
+
+.blog-btn-two.btn-round {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-body);
+  border: 2px solid var(--color-border);
+  border-radius: 28px;
+  height: 55px;
+  line-height: 53px;
+  padding: 0px 36px;
+  transition: all 500ms ease;
+}
+.blog-btn-two.btn-round:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid transparent;
+}
+
+.entry-posts-date-two {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--color-white);
+  text-align: center;
+  border-radius: 3px;
+  padding: 8px 6px;
+}
+
+.entry-posts-date-name-two h5 {
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.entry-posts-date-number-two h5 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 7px 13px;
+  border-radius: 3px;
 }
 
 /** ===== Post Lists ===== **/
@@ -8488,25 +8577,66 @@ body.admin-bar .benzo-nav-menu .slide-panel-wrapper .slide-panel-content {
 }
 
 /** ===== Process CSS ===== **/
+.work_process-item:hover .work-process-top {
+  display: none;
+}
+.work_process-item:hover .work-process-top-down {
+  display: block;
+}
+.work_process-item:hover .work-process-content-wrapper:hover {
+  background: var(--color-primary);
+}
+.work_process-item:hover .work-process-content-wrapper:hover h4 a {
+  color: var(--color-white);
+}
+.work_process-item:hover .work-process-content-wrapper:hover p {
+  color: var(--color-white);
+}
+
 .work_process-item {
+  position: relative;
   text-align: center;
 }
 
 .work-process-icon {
-  line-height: 103px;
-  border: 1px solid var(--color-primary);
-  display: inline-block;
-  border-radius: 50%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 30px;
-  width: 105.1px;
-  height: 102.2px;
+  margin-bottom: 35px;
 }
-.work-process-icon span {
-  font-size: 40px;
-  color: var(--color-primary);
+
+.work-process-top img {
+  transition: all 500ms ease;
+}
+
+.work-process-top-down {
+  display: none;
+}
+.work-process-top-down img {
+  transition: all 500ms ease;
+}
+
+.work-process-content-wrapper {
+  background: var(--color-white);
+  box-shadow: 0px 4px 15px rgba(187, 187, 187, 0.02);
+  padding: 40px 35px 35px 35px;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+.work-process-content-wrapper h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.work-process-content-wrapper h4 a {
+  color: #000;
+}
+.work-process-content-wrapper p {
+  margin-bottom: 0;
+  line-height: 27px;
+}
+
+.process-shape-one {
+  position: absolute;
+  right: -60px;
+  top: 15px;
 }
 
 /** ===== Popup ===== **/

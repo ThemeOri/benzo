@@ -37,3 +37,4 @@ require_once BENZO_CLASSES . '/class-comment-walker.php';
 require_once BENZO_ADMIN . '/class-admin-panel.php';
 require_once BENZO_INCLUDES . '/library/class-tgm-plugin-activation.php';
 require_once BENZO_INCLUDES . '/library/required-plugin.php';
+
